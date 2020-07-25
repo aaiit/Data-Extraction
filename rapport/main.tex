@@ -1,13 +1,86 @@
-\documentclass[12pt, a4paper]{report}
-\usepackage[utf8]{inputenc}
-\usepackage{caption}
-
-\usepackage{float}
-
-\usepackage{natbib}
+\documentclass{article}
 \usepackage{graphicx}
+\graphicspath{{/}}
+\usepackage[utf8]{inputenc}
+\usepackage[french]{babel}
+\usepackage[OT1]{fontenc}
+\usepackage{float}
+\usepackage{amssymb}
+\usepackage{amsmath}
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=black
+}
+
+\newcommand\norm[1]{\left\lVert#1\right\rVert}
+
+\newcommand\Inn{%
+  \mathrel{\ooalign{$\subset$\cr\hfil\scalebox{0.8}[1]{$=$}\hfil\cr}}%
+}
 
 \begin{document}
+
+
+
+ 
+\begin{titlepage}
+  \begin{sffamily}
+  \begin{center}
+       \includegraphics[scale=0.5]{um5r.png}\hfill \hfill\includegraphics[scale=0.35]{ensias.png}~\\[0.75cm]
+   
+    % only works if a paragraph has started.
+    \textsc{\LARGE Université Mohammed V de RABAT \\[0.15cm]
+        Ecole Ntionale Supérieure d'Informatique et d'Analyse des Systèmes}\\[1cm]
+
+    \textsc{\Large \underline{\underline{Rapport  de stage}}}\\[1cm]
+
+    % Title
+    \HRule \\[0.4cm]
+    { \huge \bfseries Data Extraction \\[0.4cm] }
+
+    \HRule \\[2cm]
+    % Author and supervisor
+    \begin{minipage}{0.6\textwidth}
+      \begin{flushleft} \large
+        \emph{Encadré par : } \textsc{Abdellatif El Afia}\\
+        \emph{Filière : } Ingénierie Intélligence Artificielle \\
+        \emph{Module : }      Optimisation Non Linéaire\\
+        
+      \end{flushleft}
+    \end{minipage}
+    \newline \vskip1cm
+    \begin{minipage}{0.5\textwidth}
+      \begin{center} \large
+        \emph{Realisé par:} \\
+                            \textsc{Sabah}
+                            \textsc{aida T.}
+                            \textsc{Ayoub Assis}
+                            \textsc{Ait Hammadi Abdellatif}
+                            \textsc{hossin O.}
+      \end{center}
+    \end{minipage}
+    \vskip2cm
+    \vfill
+
+    % Bottom of the page
+    {\large \emph{Année universitaire : } 2019 - 2020}
+
+  \end{center}
+  \end{sffamily}
+\end{titlepage}
+
+\clearpage
+
+
+\vfill
+\newpage
+\tableofcontents
+\newpage
 
 \chapter{Data extractor}
 \section{Introduction}
