@@ -8,3 +8,8 @@ def index(request):
     # return HttpResponse('Hello from Python!')
     return render(request, "choose.html")
 
+
+def form(request):
+    # return HttpResponse('Hello from Python!')
+    return render(request, "f.html")
+
