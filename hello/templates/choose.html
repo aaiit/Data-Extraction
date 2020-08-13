@@ -1,0 +1,99 @@
+<style type="text/css">
+    
+    .note
+{
+    text-align: center;
+    height: 80px;
+    background: -webkit-linear-gradient(left, #0072ff, #8811c5);
+    color: #fff;
+    font-weight: bold;
+    line-height: 80px;
+}
+.form-content
+{
+    padding: 5%;
+    border: 1px solid #ced4da;
+    margin-bottom: 2%;
+}
+.form-control{
+    border-radius:1.5rem;
+}
+.btnSubmit
+{
+    border:none;
+    border-radius:1.5rem;
+    padding: 1%;
+    width: 20%;
+    cursor: pointer;
+    background: #0062cc;
+    color: #fff;
+}
+
+
+</style>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<div class="container register-form">
+            <div class="form">
+                <div class="note">
+                    <p>Twitter Scrapping</p>
+                </div>
+
+                <div class="form-content">
+                    <div class="row">
+                        <div class="col-md-8">
+                         
+
+                         <div class="form-group">
+
+                        <button onclick="ok()" type="button" class="btn btn-primary btn-lg btn-block">Extraire des tweets</button>
+                               
+                            </div>
+                            <div class="form-group">
+                               
+
+    <br class="ensias">
+    
+                        <button type="button" class="btn btn-outline-primary ensias">photo</button>
+                        <button type="button" class="btn btn-outline-secondary ensias">texte</button>
+                        <button type="button" class="btn btn-outline-success ensias">  video </button>
+
+    <br class="ensias">
+                            </div>
+
+                        <button type="button" class="btn btn-primary btn-lg btn-block">Extraire les commentaires d'un tweets</button>
+
+                        <button type="button" class="btn btn-primary btn-lg btn-block">Extraire le tweet le plus liké</button>
+
+                        <button type="button" class="btn btn-primary btn-lg btn-block">Extraire le commentaire le plus liké d'un tweet</button>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+
+
+<script type="text/javascript">
+    
+    $(".ensias").hide();
+    var on=1;
+    function ok() {
+        if(on){
+
+        $(".ensias").show();
+
+        }else{
+            $(".ensias").hide();
+        }
+        on=1-on;
+    }
+</script>
