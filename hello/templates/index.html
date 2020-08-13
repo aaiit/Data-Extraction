@@ -1,58 +1,134 @@
-{% extends "base.html" %}
-{% load static %}
+<style type="text/css">
+  .width30 {
+    width: 30%;
+  }
+  .width70 {
+    width: 70%; 
+  }
+  .floatL{
+    float: left;
+  }
+  .width50{
+    width: 50%;
+  }
+  .floatR{
+    float: right;
+  }
+  .btn{
+    width: 100%;
+    border-radius: 0px;
+  }
+  .width100{
+    width: 100%;
+  }
+  .row{
+    margin-left: -20px;
+    margin-right: -20px;
 
-{% block content %}
+  }
+  .boxStyle{
+    padding: 20px; 
+    border-radius: 25px; 
+    border-top: 6px solid #dc3545;
+    border-bottom: 6px solid #28a745;
+  }
+</style>
 
-<div class="jumbotron text-center">
-  <div class="container">
-    <a href="/" class="lang-logo">
-      <img src="{% static 'lang-logo.png'%}">
-    </a>
-    <h1>Getting Started with Python on Heroku</h1>
-    <p>This is a sample Python application deployed to Heroku. It's a reasonably simple app - but a good foundation for understanding how to get the most out of the Heroku platform.</p>
-    <a type="button" class="btn btn-lg btn-default" href="https://devcenter.heroku.com/articles/getting-started-with-python"><span class="glyphicon glyphicon-flash"></span> Getting Started with Python</a>
-    <a type="button" class="btn btn-lg btn-primary" href="https://github.com/heroku/python-getting-started"><span class="glyphicon glyphicon-download"></span> Source on GitHub</a>
-  </div>
-</div>
-<div class="container">
-  <div class="alert alert-info text-center" role="alert">
-    To deploy your own copy, and learn the fundamentals of the Heroku platform, head over to the <a href="https://devcenter.heroku.com/articles/getting-started-with-python" class="alert-link">Getting Started with Python on Heroku</a> tutorial.
-  </div>
-  <hr>
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<body class="bg-dark">
+  <header class="bg-dark" style="height: 60px; padding: 5px;">
+    <h3 class="text-light" style="text-align: center;">Twitter Scraping</h3>
+  </header>
+  <div class="container bg-dark">
   <div class="row">
-    <div class="col-md-6">
-      <h3><span class="glyphicon glyphicon-info-sign"></span> How this sample app works</h3>
-      <ul>
-        <li>This app was deployed to Heroku, either using Git or by using <a href="https://github.com/heroku/python-getting-started">Heroku Button</a> on the repository.</li>
-
-        <li>When Heroku received the source code, it fetched all the dependencies in the <a href="https://github.com/heroku/python-getting-started/blob/master/Pipfile">Pipfile</a>, creating a deployable slug.</li>
-        <li>The platform then spins up a dyno, a lightweight container that provides an isolated environment in which the slug can be mounted and executed.</li>
-        <li>You can scale your app, manage it, and deploy over <a href="https://addons.heroku.com/">150 add-on services</a>, from the Dashboard or CLI.</li>
-      </ul>
-    </div>
-    <div class="col-md-6">
-      <h3><span class="glyphicon glyphicon-link"></span> Next Steps</h3>
-      <ul>
-        <li>If you are following the <a href="https://devcenter.heroku.com/articles/getting-started-with-python">Getting Started</a> guide, then please head back to the tutorial and follow the next steps!</li>
-        <li>If you deployed this app by deploying the Heroku Button, then in a command line shell, run:</li>
-        <ul>
-          <li><code>git clone https://github.com/heroku/python-getting-started.git</code> - this will create a local copy of the source code for the app</li>
-          <li><code>cd python-getting-started</code> - change directory into the local source code repository</li>
-          <li><code>heroku git:remote -a &lt;your-app-name></code> - associate the Heroku app with the repository</li>
-          <li>You'll now be set up to run the app locally, or <a href="https://devcenter.heroku.com/articles/getting-started-with-python#push-local-changes">deploy changes</a> to Heroku</li>
-        </ul>
-      </ul>
-      <h3><span class="glyphicon glyphicon-link"></span> Helpful Links</h3>
-      <ul>
-        <li><a href="https://www.heroku.com/home">Heroku</a></li>
-        <li><a href="https://devcenter.heroku.com/">Heroku Dev Center</a></li>
-        <li><a href="https://devcenter.heroku.com/articles/getting-started-with-python">Getting Started with Python on Heroku</a></li>
-        <li><a href="https://devcenter.heroku.com/articles/django-app-configuration">Configuring Django Apps for Heroku</a></li>
-      </ul>
-    </div>
-  </div> <!-- row -->
-   <div class="alert alert-info text-center" role="alert">
-    Please do work through the Getting Started guide, even if you do know how to build such an application.  The guide covers the basics of working with Heroku, and will familiarize you with all the concepts you need in order to build and deploy your own apps.
+    <div class="col-sm-1"></div>
+    <div class="col-sm-2"></div>    
+    <div class="col-sm-6 bg-light boxStyle">
+      <form name="theform" action="" onSubmit="validate()" >
+  <div class="form-group">
+    <div class="width30 floatL"><label>Query</label></div>
+    <div class="width70 floatR"><input id="firstname" class="width100 form-control" name="firstname" type="text" value="" size="20">
+  </div><br><br>
+  <div class="form-group">
+    <div class="width30 floatL"><label>Langage</label></div>
+    <div class="width70 floatR"><input class="width100 form-control" name="lastname" type="text" value="" size="20"></div>
+  </div><br>
+  <div class="form-group">
+    <div class="width30 floatL"><label>Count</label></div>
+    <div class="width70 floatR"><input class="width100 form-control" name="email"  src=""   type="text" value="" size="20"></div>
+  </div><br>
+  <div class="form-group">
+    <div class="width30 floatL"><label>Like limit</label></div>
+    <div class="width70 floatR"><input class="width100 form-control" name="email"  src=""   type="text" value="" size="20"></div>
+  </div><br>
+  <div class="form-group">
+    <div class="width30 floatL"><label>Comment limit</label></div>
+    <div class="width70 floatR"><input class="width100 form-control" name="email"  src=""   type="text" value="" size="20"></div>
+  </div><br>
+    <div class="form-group">
+    <div class="width30 floatL"><label>Interests:</label></div>
   </div>
-</div>
-{% endblock %}
+  <div class="width70 floatR"><div class="form-group">
+    <input name="ch" value="travel" type="radio">
+    <label for="customRadio">Text</label>
+    <input name="ch" value="reading" type="radio">
+    <label for="customRadio">Image</label>
+    <input name="ch" value="swimming" type="radio">
+    <label for="customRadio">Video</label>
+    </div></div><br><br><br>
+
+    <div class="form-group">
+    <div class="row">
+  <div class="width50"><input class="btn btn-success" type="submit"   value="Download csv" style="font-weight: bold"></div>
+  <div class="width50"><input class="btn btn-danger" type="reset" style="font-weight: bold"></div>    
+    </div>
+    </div>
+     </form>      
+    </div>
+    <div class="col-sm-1"></div>
+    <div class="col-sm-2"></div>
+  </div> 
+  </div> 
+   <div class="text-light" style="text-align: center; margin-top: 10px;"><p> ENSIAS</p></div>       
+</body>
+
+
+
+<script type="text/javascript">
+  function validate(){
+    var alertText="";
+    var f=theform.ch.value;  
+    var r=theform.ch.value; 
+    var s=theform.ch.value;
+    var fn=document.getElementById("firstname").value;
+    var ln=theform.lastname.value;
+    var m=theform.email.value;
+    var co=theform.country.value;
+    var ag=theform.age.value;
+    var ad=theform.address.value; 
+    if(fn===""){alertText=alertText+"1-please enter firstname\n";}    
+    if(ln===""){alertText+="2-please enter lastname\n";}    
+    if(m===""){alertText+="3-please enter email\n";}    
+    if(ag===""){alertText+=" 4-please enter Age\n";}       
+    if(ad===""){alertText+="5- please enter adress\n";}    
+    if(co===""){alertText+="6-please enter country\n";}    
+    if(isNaN(ag)){ window.alert(" The Age NOT Number");}
+    var group = theform.ch;
+    for (var i=0; i<group.length; i++) {
+    if (group[i].checked)
+    break;
+    }
+    if (i==group.length){
+    alertText+="7-please enter interests\n";
+    }
+
+    if(alertText!=="") {window.alert(alertText);}
+    if(m.indexOf('@')==-1 && m.indexOf('\.')==-1) window.alert("The Count without the @ and dot");
+  }//end function
+</script>
