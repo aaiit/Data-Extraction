@@ -10,5 +10,5 @@ import hello.views
 urlpatterns = [
     path("", hello.views.index, name="index"),
     path("form/", hello.views.form, name="fff"),
-    # path("admin/", admin.site.urls),
+    path("standard-operators/", hello.views.standardOperators),
 ]

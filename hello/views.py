@@ -13,3 +13,6 @@ def form(request):
     # return HttpResponse('Hello from Python!')
     return render(request, "f.html")
 
+
+def standardOperators(request):
+	return render(request, "standard-operators.html")
