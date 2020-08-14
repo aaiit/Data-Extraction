@@ -60,14 +60,14 @@
                                 <input id="len" type="text" class="form-control" placeholder="Count" value=""  />
                             </div>
                             <div class="form-group">
-                                <input type="text" class="form-control" placeholder="until YYYY-MM-DD" value=""  />
+                                <input id="date"type="text" class="form-control" placeholder="since YYYY-MM-DD" value=""  />
                             </div>
                         </div>
 
                          <div class="col-md-6">
                             <div class="form-group">
-                               <!--  <input type="text" class="form-control" placeholder="result_type" value=""/> -->
-
+                                <input type="text" class="form-control" placeholder="Until  YYYY-MM-DD" value=""/>
+<br>
                                <FORM id="rt">
                                 <SELECT name="nom" size="1">
                                 <OPTION>recent
@@ -93,7 +93,7 @@
 
 
 
-
+<br>
 
 
                     <button type="button" class="btnSubmit" onclick="ook('csv')" >Download Csv</button>
@@ -130,9 +130,10 @@
       var lang=document.getElementById("lang").value;
       var len=Number(document.getElementById("len").value);
       var rt=$("#rt").serializeArray()[0].value;
-      var fields = {'q': q, 'lang': lang, 'result_type': rt,"len":len,"type":type};
+      var date=$("#date").serializeArray()[0].value;
+      var fields = {'q': q, 'lang': lang, 'result_type': rt,"len":len,"since":date,"type":type};
       console.log(fields);
-      // var fields = {'q': 'covid19', 'lang': 'en', 'result_type': 'popular'};
+      // var fields = {'q': 'covid19', 'lang': 'en', 'result_type': 'popular',"len":2,"output":[['created_at', 'id_str', 'full_text', 'truncated', 'user.id']};
 
         $.ajaxSetup({
               headers: { "X-CSRFToken": get_cookie('csrftoken') }});
@@ -167,4 +168,27 @@
     function Exporter(r,name) {
       download(name,r);
     }
+  </script>
+
+
+
+
+  <script type="text/javascript">
+    
+    var o=['created_at', 'id_str', 'full_text', 'truncated', 'user.id', 'retweet_count', 'favorite_count', 'lang', 'extended_entities.media.id', 'extended_entities.media.media_url_https', 'extended_entities.media.type', 'entities.media', 'entities.urls'];
+
+      function bt(name,id){
+        return `<button  id="`+id+`" onclick="wanted(`+id+`)" type="button" class="btn btn-outline-secondary ensias">`+name+`</button>`;
+      }
+      var i=0;
+      for(var c of o)
+      {
+        $( "#wrapper1" ).append( bt(c,i) );
+        i++;
+
+      }
+
+      function wanted(n){
+        $("#"+n).attr("class","btn btn-outline-primary");
+      }
   </script>
