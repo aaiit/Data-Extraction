@@ -4,18 +4,18 @@ import json
 from .models import Greeting
 from django.views.decorators.csrf import csrf_exempt
 
-
+from Core import *
 # Create your views here.
 def index(request):
-	# return HttpResponse('Hello from Python!')
 	return render(request, "choose.html")
 
 @csrf_exempt 
 def form(request):
 	# return HttpResponse('Hello from Python!')
 	if request.method=='POST':
-		data=json.loads(request.body)
-		return HttpResponse("You send data")
+		fields=json.loads(request.body)
+		#fields = {'q': 'covid19', 'lang': 'en', 'result_type': 'popular'}
+		return HttpResponse(test(fields))
 	return render(request, "f.html")
 
 
