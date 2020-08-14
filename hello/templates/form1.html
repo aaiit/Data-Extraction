@@ -121,7 +121,7 @@
       var rt=$("#rt").serializeArray()[0].value;
       var fields = {'q': q, 'lang': q, 'result_type': rt,"count":len};
       console.log(fields);
-      var fields = {'q': 'covid19', 'lang': 'en', 'result_type': 'popular'};
+      // var fields = {'q': 'covid19', 'lang': 'en', 'result_type': 'popular'};
 
         $.ajaxSetup({
               headers: { "X-CSRFToken": get_cookie('csrftoken') }});
