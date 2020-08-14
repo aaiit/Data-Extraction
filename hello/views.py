@@ -25,12 +25,9 @@ def formImage(request):
 	# return HttpResponse('Hello from Python!')
 	if request.method=='POST':
 		fields=json.loads(request.body)
-		# downloadImages(fields)
+		downloadImages(fields)
 		path_to_file="downloadImages.zip"
-		zip_file = open(path_to_file, 'r')
-		response = HttpResponse(zip_file, content_type='application/force-download')
-		response['Content-Disposition'] = 'attachment; filename="%s"' % 'foo.zip'
-		return response
+		return HttpResponse("/static/downloadImages.zip")
 		
 	return render(request, "fimage.html")
 

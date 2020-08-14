@@ -86,7 +86,7 @@
 
 
 
-                    <button type="button" class="btnSubmit" onclick="ook('csv')" >Download </button>
+                    <a id="bta"><button id="bt" type="button" class="btnSubmit" onclick="ook('csv')" >Download </button></a>
                  
                 </div>
             </div>
@@ -124,7 +124,7 @@
       // var to=$("#until").serializeArray()[0].value;
       // var fields = {'q': q, 'lang': lang, 'result_type': rt,"len":len,"since":from,"until":to,"type":type};
       // console.log(fields);
-
+        $("#bt").text("wait...");
         $.ajaxSetup({
               headers: { "X-CSRFToken": get_cookie('csrftoken') }});
         $.ajax({
@@ -135,7 +135,9 @@
             dataType: 'text',
             success: function(result) {
                 console.log(result);
-                Exporter(result,"data.zip");
+                $("#bt").text("final click ");
+                $("#bt").attr("onclick","");
+                $("#bta").attr("href","/static/downloadImages.zip");
             }
         });
 
