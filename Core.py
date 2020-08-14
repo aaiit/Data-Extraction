@@ -1,7 +1,5 @@
 import json
 
-from pandas import DataFrame
-
 from Twitter.Keys import *
 from Twitter.TwitterApi import Twitter
 
@@ -9,6 +7,8 @@ consumer_key = 'UFkzPnRg6teYYVpopicJlHu2L'
 consumer_secret = 'CNuHKlXlI4nY2YtX1RFFwthZQ0ziebfkLfrxd6T6xZp9FX7w7P'
 
 t = Twitter(consumer_key, consumer_secret)
+
+
 # keys=['id_str','user.id','retweet_count','full_text','entities.media','entities.urls']
 # tweet=tweets[0]['id_str']
 # print(tweets[0]['retweet_count'],tweet)
@@ -21,8 +21,27 @@ t = Twitter(consumer_key, consumer_secret)
 # trends=t.get_available_places_with_trends()
 # print(json.dumps(sorted(trends,key=lambda x: x['tweet_volume'] if x['tweet_volume'] else 1,reverse=True),indent=4))
 
-def test(fields):
-	# fields = {'q': 'covid19', 'lang': 'en', 'result_type': 'popular'}
-	tweets = t.search_tweets_images(fields.pop('len',10), fields, TWEET_IMAGES_KEYS)
-	return json.dumps(tweets, default=str, indent=4)
+def flatten_json(y):
+    out = {}
 
+    def flatten(x, name=''):
+        if type(x) is dict:
+            for a in x:
+                flatten(x[a], name + a + '_')
+        elif type(x) is list:
+            i = 0
+            for a in x:
+                flatten(a, name + str(i) + '_')
+                i += 1
+        else:
+            out[name[:-1]] = x
+
+    flatten(y)
+    return out
+
+
+def test(fields):
+    # fields = {'q': 'covid19', 'lang': 'en', 'result_type': 'popular'}
+    type = fields.pop('type', 'json')
+    tweets = t.search_tweets_images(fields.pop('len', 10), fields, TWEET_IMAGES_KEYS)
+    return json.dumps(tweets, default=str, indent=4) if type == 'json' else flatten_json(tweets)
