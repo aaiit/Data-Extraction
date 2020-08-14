@@ -1,7 +1,5 @@
 import json
 
-from pandas import DataFrame
-
 from Twitter.Keys import *
 from Twitter.TwitterApi import Twitter
 
