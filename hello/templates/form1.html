@@ -52,7 +52,7 @@
                                 <input id="qq" type="text" class="form-control" placeholder="Query" value=""/>
                             </div>
                             <div class="form-group">
-                                <input id="lang" type="text" class="form-control" placeholder="Langage comme fr,ar,en,..." value=""/>
+                                <input id="lang" type="text" class="form-control" placeholder="Langage  fr,ar,en,..." value=""/>
                             </div>
                         </div>
                         <div class="col-md-6">
@@ -66,7 +66,7 @@
 
                          <div class="col-md-6">
                             <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Until  YYYY-MM-DD" value=""/>
+                                <input id="until"type="text" class="form-control" placeholder="Until  YYYY-MM-DD" value=""/>
 <br>
                                <FORM id="rt">
                                 <SELECT name="nom" size="1">
@@ -81,7 +81,7 @@
                             </div>
                         </div>
                     </div>
-<div id="wrapper1">
+<div id="wrapper1" onclick="wrapper()">
 <label for="yes_no_radio">Do you want  <strong>full data</strong>?</label>
 <p>
 <input type="radio" name="yes_no" checked>Yes</input>
@@ -130,8 +130,9 @@
       var lang=document.getElementById("lang").value;
       var len=Number(document.getElementById("len").value);
       var rt=$("#rt").serializeArray()[0].value;
-      var date=$("#date").serializeArray()[0].value;
-      var fields = {'q': q, 'lang': lang, 'result_type': rt,"len":len,"since":date,"type":type};
+      var from=$("#date").serializeArray()[0].value;
+      var to=$("#until").serializeArray()[0].value;
+      var fields = {'q': q, 'lang': lang, 'result_type': rt,"len":len,"since":from,"until":to,"type":type};
       console.log(fields);
       // var fields = {'q': 'covid19', 'lang': 'en', 'result_type': 'popular',"len":2,"output":[['created_at', 'id_str', 'full_text', 'truncated', 'user.id']};
 
@@ -175,8 +176,8 @@
 
   <script type="text/javascript">
     
-    var o=['created_at', 'id_str', 'full_text', 'truncated', 'user.id', 'retweet_count', 'favorite_count', 'lang', 'extended_entities.media.id', 'extended_entities.media.media_url_https', 'extended_entities.media.type', 'entities.media', 'entities.urls'];
-
+    var o=['created_at', 'id_str', 'full_text', 'truncated', 'user.id', 'retweet_count', 'favorite_count'];
+    var on=[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1];
       function bt(name,id){
         return `<button  id="`+id+`" onclick="wanted(`+id+`)" type="button" class="btn btn-outline-secondary ensias">`+name+`</button>`;
       }
@@ -189,6 +190,27 @@
       }
 
       function wanted(n){
+
+        if(on[n])
         $("#"+n).attr("class","btn btn-outline-primary");
+        else
+        $("#"+n).attr("class","btn btn-outline-secondary");
+        on[n]=1-on[n];
       }
+
+      function getlist(){
+        var l=[];
+        for(var i=0;i<o.length;i++){
+          if(!on[i]){
+            l.push(o[i]);
+          }
+        }
+        console.log(l);
+      }
+  </script>
+
+  <script type="text/javascript">
+    function wrapper(){
+      $("#wrapper1").
+    }
   </script>
