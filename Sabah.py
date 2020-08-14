@@ -36,6 +36,6 @@ def downloadImages(fields):
 	        for file in files:
 	            ziph.write(os.path.join(root, file))
 
-	zipf = zipfile.ZipFile('static/Imagesdownl.zip', 'w', zipfile.ZIP_DEFLATED)
+	zipf = zipfile.ZipFile('hello/static/Imagesdownl.zip', 'w', zipfile.ZIP_DEFLATED)
 	zipdir('Imagesdownl/', zipf)
 	zipf.close()

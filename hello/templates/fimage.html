@@ -125,6 +125,7 @@
       // var fields = {'q': q, 'lang': lang, 'result_type': rt,"len":len,"since":from,"until":to,"type":type};
       // console.log(fields);
         $("#bt").text("wait...");
+        $("#bt").attr("onclick","");
         $.ajaxSetup({
               headers: { "X-CSRFToken": get_cookie('csrftoken') }});
         $.ajax({
@@ -136,7 +137,6 @@
             success: function(result) {
                 console.log(result);
                 $("#bt").text("final click ");
-                $("#bt").attr("onclick","");
                 $("#bta").attr("href","/static/downloadImages.zip");
             }
         });
