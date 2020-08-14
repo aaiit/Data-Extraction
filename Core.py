@@ -1,4 +1,7 @@
 import json
+
+from pandas import DataFrame
+
 from Twitter.Keys import *
 from Twitter.TwitterApi import Twitter
 
@@ -20,6 +23,6 @@ t = Twitter(consumer_key, consumer_secret)
 
 def test(fields):
 	# fields = {'q': 'covid19', 'lang': 'en', 'result_type': 'popular'}
-	tweets = t.search_tweets_images(fields["len"], fields, TWEET_IMAGES_KEYS)
+	tweets = t.search_tweets_images(fields.pop('len',10), fields, TWEET_IMAGES_KEYS)
 	return json.dumps(tweets, default=str, indent=4)
 
