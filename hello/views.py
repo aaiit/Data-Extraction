@@ -14,7 +14,7 @@ def form(request):
 	# return HttpResponse('Hello from Python!')
 	if request.method=='POST':
 		fields=json.loads(request.body)
-		#fields = {'q': 'covid19', 'lang': 'en', 'result_type': 'popular'}
+		#fields = {'q': 'covid19', 'lang': 'en', 'result_type': 'popular',"len":2}
 		return HttpResponse(test(fields))
 	return render(request, "form1.html")
 

@@ -23,10 +23,6 @@ t = Twitter(consumer_key, consumer_secret)
 
 def test(fields):
 	# fields = {'q': 'covid19', 'lang': 'en', 'result_type': 'popular'}
-	tweets = t.search_tweets_images(fields['count'], fields, TWEET_IMAGES_KEYS)
-	if fields['type']=='json':
-		return json.dumps(tweets, default=str, indent=4)
-	else:
-		df=DataFrame(tweets)
-		
+	tweets = t.search_tweets_images(fields.pop('len',10), fields, TWEET_IMAGES_KEYS)
+	return json.dumps(tweets, default=str, indent=4)
 

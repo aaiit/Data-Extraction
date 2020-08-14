@@ -57,10 +57,10 @@
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                <input id="len" type="text" class="form-control" placeholder="Count" value="" disabled />
+                                <input id="len" type="text" class="form-control" placeholder="Count" value=""  />
                             </div>
                             <div class="form-group">
-                                <input type="text" class="form-control" placeholder="until YYYY-MM-DD" value="" disabled />
+                                <input type="text" class="form-control" placeholder="until YYYY-MM-DD" value=""  />
                             </div>
                         </div>
 
@@ -119,7 +119,7 @@
       var lang=document.getElementById("lang").value;
       var len=Number(document.getElementById("len").value);
       var rt=$("#rt").serializeArray()[0].value;
-      var fields = {'q': q, 'lang': lang, 'result_type': rt,"count":len};
+      var fields = {'q': q, 'lang': lang, 'result_type': rt,"len":len};
       console.log(fields);
       // var fields = {'q': 'covid19', 'lang': 'en', 'result_type': 'popular'};
 
