@@ -18,11 +18,12 @@ def formText(request):
 		#fields = {'q': 'covid19', 'lang': 'en', 'result_type': 'popular',"len":2}
 		return HttpResponse(test(fields))
 	return render(request, "form1.html")
-
+@csrf_exempt 
 def formImage(request):
 	# return HttpResponse('Hello from Python!')
 	if request.method=='POST':
 		fields=json.loads(request.body)
+		print("dow")
 		downloadImages(fields)
 		zip_file = open(path_to_file, 'r')
 		response = HttpResponse(zip_file, content_type='application/force-download')
