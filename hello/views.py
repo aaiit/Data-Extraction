@@ -16,7 +16,7 @@ def form(request):
 		fields=json.loads(request.body)
 		#fields = {'q': 'covid19', 'lang': 'en', 'result_type': 'popular'}
 		return HttpResponse(test(fields))
-	return render(request, "f.html")
+	return render(request, "form1.html")
 
 
 def standardOperators(request):

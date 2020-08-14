@@ -18,7 +18,7 @@ t = Twitter(consumer_key, consumer_secret)
 # trends=t.get_available_places_with_trends()
 # print(json.dumps(sorted(trends,key=lambda x: x['tweet_volume'] if x['tweet_volume'] else 1,reverse=True),indent=4))
 
-def text(fields):
+def test(fields):
 	# fields = {'q': 'covid19', 'lang': 'en', 'result_type': 'popular'}
 	tweets = t.search_tweets_images(2, fields, TWEET_IMAGES_KEYS)
 	return json.dumps(tweets, default=str, indent=4)
