@@ -1,0 +1,89 @@
+OpenJDK 64-Bit Server VM warning: Option UseConcMarkSweepGC was deprecated in version 9.0 and will likely be removed in a future release.
+2020-08-14 11:08:46,571 [   2694]   WARN - llij.ide.plugins.PluginManager - Resource bundle redefinition for plugin 'com.jetbrains.pycharm.community.customization'. Old value: messages.ActionsBundle, new value: messages.PyBundle 
+2020-08-14 11:08:59,335 [  15458]   WARN - nSystem.impl.ActionManagerImpl - keymap "Visual Studio" not found [Plugin: com.intellij] 
+2020-08-14 11:08:59,341 [  15464]   WARN - nSystem.impl.ActionManagerImpl - keymap "Eclipse" not found [Plugin: com.intellij] 
+2020-08-14 11:08:59,341 [  15464]   WARN - nSystem.impl.ActionManagerImpl - keymap "NetBeans 6.5" not found [Plugin: com.intellij] 
+2020-08-14 11:08:59,342 [  15465]   WARN - nSystem.impl.ActionManagerImpl - keymap "Visual Studio" not found [Plugin: com.intellij] 
+2020-08-14 11:09:04,208 [  20331]   WARN - nSystem.impl.ActionManagerImpl - keymap "Eclipse" not found [Plugin: PythonCore] 
+2020-08-14 11:09:04,208 [  20331]   WARN - nSystem.impl.ActionManagerImpl - keymap "NetBeans 6.5" not found [Plugin: PythonCore] 
+2020-08-14 11:09:10,577 [  26700]   WARN - .diagnostic.PerformanceWatcher - UI was frozen for 9731ms, details saved to /home/ayoub/.cache/JetBrains/PyCharmCE2020.1/log/threadDumps-freeze-20200814-110905-PC-201.8538.36-ZipFile.getEntry-9sec 
+2020-08-14 11:09:19,548 [  35671]   WARN - Container.ComponentManagerImpl - Do not use constructor injection (requestorClass=org.jetbrains.fortran.ide.FortranCodeModificationListener) 
+2020-08-14 11:09:38,655 [  54778]   WARN - .diagnostic.PerformanceWatcher - UI was frozen for 7486ms, details saved to /home/ayoub/.cache/JetBrains/PyCharmCE2020.1/log/threadDumps-freeze-20200814-110936-PC-201.8538.36-RandomAccessFile.readBytes-7sec 
+2020-08-14 11:09:52,405 [  68528]   WARN - a.repo.GitUntrackedFilesHolder - Ignoring untracked file under another root: /home/ayoub/Desktop/gits/Data_Scraper/Twitter/__pycache__/TwitterApi.cpython-38.pyc; root: file:///home/ayoub/Desktop/gits/Data_Scraper; mapped root: null 
+2020-08-14 11:09:52,406 [  68529]   WARN - a.repo.GitUntrackedFilesHolder - Ignoring untracked file under another root: /home/ayoub/Desktop/gits/Data_Scraper/Twitter/__pycache__/HelperFunctions.cpython-38.pyc; root: file:///home/ayoub/Desktop/gits/Data_Scraper; mapped root: null 
+2020-08-14 11:09:52,406 [  68529]   WARN - a.repo.GitUntrackedFilesHolder - Ignoring untracked file under another root: /home/ayoub/Desktop/gits/Data_Scraper/Twitter/__pycache__/__init__.cpython-38.pyc; root: file:///home/ayoub/Desktop/gits/Data_Scraper; mapped root: null 
+2020-08-14 11:09:52,406 [  68529]   WARN - a.repo.GitUntrackedFilesHolder - Ignoring untracked file under another root: /home/ayoub/Desktop/gits/Data_Scraper/Twitter/__pycache__/Keys.cpython-38.pyc; root: file:///home/ayoub/Desktop/gits/Data_Scraper; mapped root: null 
+2020-08-14 11:09:54,544 [  70667]   WARN - openapi.wm.impl.ToolWindowImpl - ToolWindow icons should be 13x13. Please fix ToolWindow (ID:  Problems View) or icon jar:file:/usr/local/Programs/pycharm-community-2020.1.1/lib/icons.jar!/general/warning.svg 
+2020-08-14 11:09:54,740 [  70863]   WARN - .diagnostic.PerformanceWatcher - UI was frozen for 8860ms, details saved to /home/ayoub/.cache/JetBrains/PyCharmCE2020.1/log/threadDumps-freeze-20200814-110950-PC-201.8538.36-RandomAccessFile.readBytes-8sec 
+2020-08-14 11:10:25,814 [ 101937]   WARN - .skeletons.PySkeletonRefresher - Some skeletons failed to generate 
+2020-08-14 11:10:25,815 [ 101938]   WARN - .skeletons.PySkeletonRefresher - matplotlib.backends._tkagg 
+2020-08-14 11:10:25,816 [ 101939]   WARN - .skeletons.PySkeletonRefresher - scipy.optimize._lsap_ 
+2020-08-14 11:10:25,816 [ 101939]   WARN - .skeletons.PySkeletonRefresher - selenium.webdriver.firefox.amd64.x_ignore_nofocus 
+2020-08-14 11:10:25,816 [ 101939]   WARN - .skeletons.PySkeletonRefresher - selenium.webdriver.firefox.x86.x_ignore_nofocus 
+2020-08-14 11:10:25,816 [ 101939]   WARN - .skeletons.PySkeletonRefresher - tensorflow.compiler.tf2xla.ops._xla_ops 
+2020-08-14 11:10:25,816 [ 101939]   WARN - .skeletons.PySkeletonRefresher - tensorflow.core.kernels.libtfkernel_sobol_op 
+2020-08-14 11:10:25,816 [ 101939]   WARN - .skeletons.PySkeletonRefresher - tensorflow.lite.experimental.microfrontend.python.ops._audio_microfrontend_op 
+2020-08-14 11:11:10,095 [ 146218]   WARN - Container.ComponentManagerImpl - Do not use constructor injection (requestorClass=org.jetbrains.fortran.ide.FortranCodeModificationListener) 
+2020-08-14 11:11:10,602 [ 146725]   WARN - openapi.wm.impl.ToolWindowImpl - ToolWindow icons should be 13x13. Please fix ToolWindow (ID:  Problems View) or icon jar:file:/usr/local/Programs/pycharm-community-2020.1.1/lib/icons.jar!/general/warning.svg 
+2020-08-14 11:11:12,346 [ 148469]   WARN - ernallyAddedFilesProcessorImpl - Cannot find project config directory for non-default and non-directory based project Data-Extraction 
+2020-08-14 11:11:12,787 [ 148910]   WARN - ernallyAddedFilesProcessorImpl - Cannot find project config directory for non-default and non-directory based project Data-Extraction 
+2020-08-14 11:11:14,647 [ 150770]   WARN - ernallyAddedFilesProcessorImpl - Cannot find project config directory for non-default and non-directory based project Data-Extraction 
+2020-08-14 11:11:15,466 [ 151589]   WARN - ernallyAddedFilesProcessorImpl - Cannot find project config directory for non-default and non-directory based project Data-Extraction 
+2020-08-14 11:11:16,141 [ 152264]   WARN - .skeletons.PySkeletonRefresher - Some skeletons failed to generate 
+2020-08-14 11:11:16,141 [ 152264]   WARN - .skeletons.PySkeletonRefresher - matplotlib.backends._tkagg 
+2020-08-14 11:11:16,141 [ 152264]   WARN - .skeletons.PySkeletonRefresher - scipy.optimize._lsap_ 
+2020-08-14 11:11:16,141 [ 152264]   WARN - .skeletons.PySkeletonRefresher - selenium.webdriver.firefox.amd64.x_ignore_nofocus 
+2020-08-14 11:11:16,141 [ 152264]   WARN - .skeletons.PySkeletonRefresher - selenium.webdriver.firefox.x86.x_ignore_nofocus 
+2020-08-14 11:11:16,141 [ 152264]   WARN - .skeletons.PySkeletonRefresher - tensorflow.compiler.tf2xla.ops._xla_ops 
+2020-08-14 11:11:16,141 [ 152264]   WARN - .skeletons.PySkeletonRefresher - tensorflow.core.kernels.libtfkernel_sobol_op 
+2020-08-14 11:11:16,141 [ 152264]   WARN - .skeletons.PySkeletonRefresher - tensorflow.lite.experimental.microfrontend.python.ops._audio_microfrontend_op 
+2020-08-14 11:11:16,812 [ 152935]   WARN - om.intellij.util.FieldAccessor - Field not found: javafx.embed.swing.JFXPanel.scaleFactor 
+2020-08-14 11:11:18,637 [ 154760]   WARN - ernallyAddedFilesProcessorImpl - Cannot find project config directory for non-default and non-directory based project Data-Extraction 
+2020-08-14 11:11:18,701 [ 154824]   WARN - .skeletons.PySkeletonRefresher - Some skeletons failed to generate 
+2020-08-14 11:11:18,701 [ 154824]   WARN - .skeletons.PySkeletonRefresher - matplotlib.backends._tkagg 
+2020-08-14 11:11:18,701 [ 154824]   WARN - .skeletons.PySkeletonRefresher - scipy.optimize._lsap_ 
+2020-08-14 11:11:18,701 [ 154824]   WARN - .skeletons.PySkeletonRefresher - selenium.webdriver.firefox.amd64.x_ignore_nofocus 
+2020-08-14 11:11:18,701 [ 154824]   WARN - .skeletons.PySkeletonRefresher - selenium.webdriver.firefox.x86.x_ignore_nofocus 
+2020-08-14 11:11:18,701 [ 154824]   WARN - .skeletons.PySkeletonRefresher - tensorflow.compiler.tf2xla.ops._xla_ops 
+2020-08-14 11:11:18,701 [ 154824]   WARN - .skeletons.PySkeletonRefresher - tensorflow.core.kernels.libtfkernel_sobol_op 
+2020-08-14 11:11:18,701 [ 154824]   WARN - .skeletons.PySkeletonRefresher - tensorflow.lite.experimental.microfrontend.python.ops._audio_microfrontend_op 
+2020-08-14 11:15:03,435 [ 379558]   WARN - .skeletons.PySkeletonRefresher - Some skeletons failed to generate 
+2020-08-14 11:15:03,436 [ 379559]   WARN - .skeletons.PySkeletonRefresher - matplotlib.backends._tkagg 
+2020-08-14 11:15:03,436 [ 379559]   WARN - .skeletons.PySkeletonRefresher - scipy.optimize._lsap_ 
+2020-08-14 11:15:03,436 [ 379559]   WARN - .skeletons.PySkeletonRefresher - selenium.webdriver.firefox.amd64.x_ignore_nofocus 
+2020-08-14 11:15:03,436 [ 379559]   WARN - .skeletons.PySkeletonRefresher - selenium.webdriver.firefox.x86.x_ignore_nofocus 
+2020-08-14 11:15:03,436 [ 379559]   WARN - .skeletons.PySkeletonRefresher - tensorflow.compiler.tf2xla.ops._xla_ops 
+2020-08-14 11:15:03,436 [ 379559]   WARN - .skeletons.PySkeletonRefresher - tensorflow.core.kernels.libtfkernel_sobol_op 
+2020-08-14 11:15:03,436 [ 379559]   WARN - .skeletons.PySkeletonRefresher - tensorflow.lite.experimental.microfrontend.python.ops._audio_microfrontend_op 
+2020-08-14 11:15:10,482 [ 386605]   WARN - .skeletons.PySkeletonRefresher - Some skeletons failed to generate 
+2020-08-14 11:15:10,482 [ 386605]   WARN - .skeletons.PySkeletonRefresher - matplotlib.backends._tkagg 
+2020-08-14 11:15:10,482 [ 386605]   WARN - .skeletons.PySkeletonRefresher - scipy.optimize._lsap_ 
+2020-08-14 11:15:10,482 [ 386605]   WARN - .skeletons.PySkeletonRefresher - selenium.webdriver.firefox.amd64.x_ignore_nofocus 
+2020-08-14 11:15:10,483 [ 386606]   WARN - .skeletons.PySkeletonRefresher - selenium.webdriver.firefox.x86.x_ignore_nofocus 
+2020-08-14 11:15:10,483 [ 386606]   WARN - .skeletons.PySkeletonRefresher - tensorflow.compiler.tf2xla.ops._xla_ops 
+2020-08-14 11:15:10,483 [ 386606]   WARN - .skeletons.PySkeletonRefresher - tensorflow.core.kernels.libtfkernel_sobol_op 
+2020-08-14 11:15:10,483 [ 386606]   WARN - .skeletons.PySkeletonRefresher - tensorflow.lite.experimental.microfrontend.python.ops._audio_microfrontend_op 
+2020-08-14 11:15:13,092 [ 389215]   WARN - .skeletons.PySkeletonRefresher - Some skeletons failed to generate 
+2020-08-14 11:15:13,092 [ 389215]   WARN - .skeletons.PySkeletonRefresher - matplotlib.backends._tkagg 
+2020-08-14 11:15:13,093 [ 389216]   WARN - .skeletons.PySkeletonRefresher - scipy.optimize._lsap_ 
+2020-08-14 11:15:13,093 [ 389216]   WARN - .skeletons.PySkeletonRefresher - selenium.webdriver.firefox.amd64.x_ignore_nofocus 
+2020-08-14 11:15:13,093 [ 389216]   WARN - .skeletons.PySkeletonRefresher - selenium.webdriver.firefox.x86.x_ignore_nofocus 
+2020-08-14 11:15:13,093 [ 389216]   WARN - .skeletons.PySkeletonRefresher - tensorflow.compiler.tf2xla.ops._xla_ops 
+2020-08-14 11:15:13,093 [ 389216]   WARN - .skeletons.PySkeletonRefresher - tensorflow.core.kernels.libtfkernel_sobol_op 
+2020-08-14 11:15:13,093 [ 389216]   WARN - .skeletons.PySkeletonRefresher - tensorflow.lite.experimental.microfrontend.python.ops._audio_microfrontend_op 
+2020-08-14 11:15:37,459 [ 413582]   WARN - .skeletons.PySkeletonRefresher - Some skeletons failed to generate 
+2020-08-14 11:15:37,459 [ 413582]   WARN - .skeletons.PySkeletonRefresher - matplotlib.backends._tkagg 
+2020-08-14 11:15:37,459 [ 413582]   WARN - .skeletons.PySkeletonRefresher - scipy.optimize._lsap_ 
+2020-08-14 11:15:37,459 [ 413582]   WARN - .skeletons.PySkeletonRefresher - selenium.webdriver.firefox.amd64.x_ignore_nofocus 
+2020-08-14 11:15:37,460 [ 413583]   WARN - .skeletons.PySkeletonRefresher - selenium.webdriver.firefox.x86.x_ignore_nofocus 
+2020-08-14 11:15:37,460 [ 413583]   WARN - .skeletons.PySkeletonRefresher - tensorflow.compiler.tf2xla.ops._xla_ops 
+2020-08-14 11:15:37,460 [ 413583]   WARN - .skeletons.PySkeletonRefresher - tensorflow.core.kernels.libtfkernel_sobol_op 
+2020-08-14 11:15:37,460 [ 413583]   WARN - .skeletons.PySkeletonRefresher - tensorflow.lite.experimental.microfrontend.python.ops._audio_microfrontend_op 
+2020-08-14 11:15:40,113 [ 416236]   WARN - .skeletons.PySkeletonRefresher - Some skeletons failed to generate 
+2020-08-14 11:15:40,113 [ 416236]   WARN - .skeletons.PySkeletonRefresher - matplotlib.backends._tkagg 
+2020-08-14 11:15:40,113 [ 416236]   WARN - .skeletons.PySkeletonRefresher - scipy.optimize._lsap_ 
+2020-08-14 11:15:40,113 [ 416236]   WARN - .skeletons.PySkeletonRefresher - selenium.webdriver.firefox.amd64.x_ignore_nofocus 
+2020-08-14 11:15:40,113 [ 416236]   WARN - .skeletons.PySkeletonRefresher - selenium.webdriver.firefox.x86.x_ignore_nofocus 
+2020-08-14 11:15:40,113 [ 416236]   WARN - .skeletons.PySkeletonRefresher - tensorflow.compiler.tf2xla.ops._xla_ops 
+2020-08-14 11:15:40,113 [ 416236]   WARN - .skeletons.PySkeletonRefresher - tensorflow.core.kernels.libtfkernel_sobol_op 
+2020-08-14 11:15:40,113 [ 416236]   WARN - .skeletons.PySkeletonRefresher - tensorflow.lite.experimental.microfrontend.python.ops._audio_microfrontend_op 
