@@ -135,13 +135,13 @@
       $("#"+type).text("wait...");
 
       var id=document.getElementById("uid").value;
-      var lang=document.getElementById("lang").value;
+      // var lang=document.getElementById("lang").value;
       var len=Number(document.getElementById("len").value);
-      var rt=$("#rt").serializeArray()[0].value;
+      // var rt=$("#rt").serializeArray()[0].value;
       var uname=document.getElementById("uname").value;
 
 
-      fields={"id":id,"count":len,"username":uname,"lang":lang,'result_type':rt,"output":getlist(),"type":type};
+      fields={"id":id,"count":len,"username":uname,"output":getlist(),"type":type};
 
         console.log(fields);
 
