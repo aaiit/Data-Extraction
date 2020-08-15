@@ -33,14 +33,12 @@ def get_comments(fields):
 def get_tweets_video(fields):
     # fields = {'q': 'covid19', 'lang': 'en', 'result_type': 'popular'}
     type = fields.pop('type', 'json')
-    keys = fields.pop('output', TWEET_VIDEOS_REDUCED_KEYS)
+    keys = fields.pop('output', TWEET_VIDEOS_VIDEO_KEY)
     videos = t.search_tweets_videos(fields.pop('len', 10), fields, keys)
     vids=[]
     for vid in videos:
-        vv=vid[TWEET_VIDEOS_REDUCED_KEYS[0]]
+        vv=vid[TWEET_VIDEOS_VIDEO_KEY[0]]
         vv=[v for v in vv if 'mp4' in v['content_type']]
         vv=sorted(vv,key=lambda x:x['bitrate'])
-        vids.append(vv[0])
-
-
+        vids.append(vv[0]['url'])
     return '\n'.join(vids)
