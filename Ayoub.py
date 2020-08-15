@@ -3,7 +3,7 @@ import json
 from pandas import DataFrame
 
 from Twitter.Keys import *
-from Twitter.TwitterApi import Twitter
+from Twitter.TwitterApi import Twitter, check_date_format
 
 consumer_key = 'UFkzPnRg6teYYVpopicJlHu2L'
 consumer_secret = 'CNuHKlXlI4nY2YtX1RFFwthZQ0ziebfkLfrxd6T6xZp9FX7w7P'
@@ -29,16 +29,18 @@ def get_comments(fields):
     return json.dumps(replies, default=str, indent=4) if type == 'json' else DataFrame(replies).to_csv(index=False)
 
 
-
 def get_tweets_video(fields):
-    # fields = {'q': 'covid19', 'lang': 'en', 'result_type': 'popular'}
+    if check_date_format(fields['since']):
+        fields.pop('since', '')
+    if check_date_format(fields['until']):
+        fields.pop('until', '')
     type = fields.pop('type', 'json')
     keys = fields.pop('output', TWEET_VIDEOS_VIDEO_KEY)
     videos = t.search_tweets_videos(fields.pop('len', 10), fields, keys)
-    vids=[]
+    vids = []
     for vid in videos:
-        vv=vid[TWEET_VIDEOS_VIDEO_KEY[0]]
-        vv=[v for v in vv if 'mp4' in v['content_type']]
-        vv=sorted(vv,key=lambda x:x['bitrate'])
+        vv = vid[TWEET_VIDEOS_VIDEO_KEY[0]]
+        vv = [v for v in vv if 'mp4' in v['content_type']]
+        vv = sorted(vv, key=lambda x: x['bitrate'])
         vids.append(vv[0]['url'])
     return '\n'.join(vids)

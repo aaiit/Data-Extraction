@@ -1,3 +1,4 @@
+import datetime
 from copy import deepcopy
 
 
@@ -37,3 +38,13 @@ def get_attr(obj, attrs):
         # Raised if the field doesn't exist.
         res = [(False, None)]
     return res
+
+
+
+def check_date_format(date_string):
+    format = "YYYY-MM-DD"
+    try:
+        datetime.datetime.strptime(date_string, format)
+        return True
+    except ValueError:
+        return False
