@@ -34,11 +34,15 @@ def formImage(request):
 		return HttpResponse(getUrlOfZip(path_to_file))
 		
 	return render(request, "fimage.html")
-
+@csrf_exempt 
 def formVideo(request):
+	if request.method=='POST':
+		fields=json.loads(request.body)
+		print(fields)
+		return HttpResponse("ok")
 	return render(request, "fvideo.html")
 
-
+@csrf_exempt 
 def f1(request):
 	if request.method=='POST':
 		fields=json.loads(request.body)
@@ -47,7 +51,7 @@ def f1(request):
 		return HttpResponse("ok")
 	return render(request, "f1.html")
 
-
+@csrf_exempt 
 def f2(request):
 	if request.method=='POST':
 		fields=json.loads(request.body)
@@ -56,7 +60,7 @@ def f2(request):
 		return HttpResponse("ok")
 	return render(request, "f2.html")
 
-
+@csrf_exempt 
 def f3(request):
 	if request.method=='POST':
 		fields=json.loads(request.body)
