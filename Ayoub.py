@@ -39,7 +39,7 @@ def get_tweets_video(fields):
     videos = t.search_tweets_videos(fields.pop('len', 10), fields, keys)
     vids = []
     for vid in videos:
-        vv = vid[TWEET_VIDEOS_VIDEO_KEY[0]]
+        vv = vid[TWEET_VIDEOS_VIDEO_KEY[0]][0]
         print(str(vv))
         vv = [v for v in vv if 'mp4' in v['content_type']]
         print(str(vv))
