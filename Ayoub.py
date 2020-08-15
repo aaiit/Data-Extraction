@@ -44,6 +44,6 @@ def get_tweets_video(fields):
         vv = [v for v in vv if 'mp4' in v['content_type']]
         print(str(vv))
         vv = sorted(vv, key=lambda x: x['bitrate'])
-        print(str(vv))
+        print(3333333333,str(vv))
         vids.append(vv[0]['url'])
     return '\n'.join(vids)
