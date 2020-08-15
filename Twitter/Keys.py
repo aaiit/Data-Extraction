@@ -7,4 +7,3 @@ FRIENDSHIP_KEYS = ['id_str', 'following', 'followed_by']
 TWEET_VIDEOS_KEYS = TWEET_KEYS + ['extended_entities.media.' + t for t in
                                   ['id', 'media_url_https', 'type','video_info.variants.url']]
 TWEET_IMAGES_KEYS = TWEET_VIDEOS_KEYS+ ['entities.media', 'entities.urls']
-TWEET_VIDEOS_VIDEO_KEY=['extended_entities.media.video_info.variants']
