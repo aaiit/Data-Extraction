@@ -33,7 +33,7 @@ class Twitter:
         keys: json keys to return.
         '''
         fields['q'] += ' -filter:retweets -filter:media'
-        results = list(tweepy.Cursor(self.api.search, **fields, trim_user=True, include_entities=True,
+        results = list(tweepy.Cursor(self.api.search, **fields, trim_user=False, include_entities=True,
                                      tweet_mode='extended').items(count))
         if not keys:
             return [tweet._json for tweet in results]
@@ -47,7 +47,7 @@ class Twitter:
         keys: json keys to return.
         '''
         fields['q'] += ' -filter:retweets filter:twimg filter:images'
-        results = list(tweepy.Cursor(self.api.search, **fields, trim_user=True, include_entities=True,
+        results = list(tweepy.Cursor(self.api.search, **fields, trim_user=False, include_entities=True,
                                      tweet_mode='extended').items(count))
         if not keys:
             return [tweet._json for tweet in results]
@@ -60,7 +60,7 @@ class Twitter:
         keys: json keys to return.
         '''
         fields['q'] += ' -filter:retweets filter:native_video -filter:images -filter:twimg'
-        results = list(tweepy.Cursor(self.api.search, **fields, trim_user=True, include_entities=True,
+        results = list(tweepy.Cursor(self.api.search, **fields, trim_user=False, include_entities=True,
                                      tweet_mode='extended').items(count))
         if not keys:
             return [tweet._json for tweet in results]
