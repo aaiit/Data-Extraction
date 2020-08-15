@@ -85,7 +85,7 @@
                         </div>
                     </div>
 <div id="wrapper1" onclick="wrapper()">
-<label for="yes_no_radio">Do you want  <strong>full data</strong>?</label>
+<label for="yes_no_radio">Do you want  <strong>standard data</strong>?</label>
 <p>
 <input type="radio" name="yes_no" id="ah" checked>Yes</input>
 </p>
@@ -139,7 +139,7 @@
       // var uname=document.getElementById("uname").value;
 
 
-      fields={"q":q,"count":len,"lang":lang,'result_type':rt,"output":['created_at', 'id_str', 'full_text', 'truncated', 'user.id'],"type":type};
+      fields={"q":q,"count":len,"lang":lang,'result_type':rt,"output":getlist(),"type":type};
 
         console.log(fields);
 
@@ -206,7 +206,29 @@
         on[n]=1-on[n];
       }
 
-      function getlist(){
+    
+    var full=1;
+    function wrapper(){
+      $("#wrapper1").change(function ()
+      {
+         if(document.getElementById("ah").checked){
+          full=1;
+          $("#wrapper2").hide();
+         }else{
+          full=0;
+          $("#wrapper2").show();
+         }
+      }
+      )
+    }
+
+
+     function getlist(){
+        if(full){
+          console.log("full");
+          console.log(o);
+          return  o;
+        }
         var l=[];
         for(var i=0;i<o.length;i++){
           if(!on[i]){
@@ -214,19 +236,7 @@
           }
         }
         console.log(l);
+        return l;
       }
-  </script>
 
-  <script type="text/javascript">
-    function wrapper(){
-      $("#wrapper1").change(function ()
-      {
-         if(document.getElementById("ah").checked){
-          $("#wrapper2").hide();
-         }else{
-          $("#wrapper2").show();
-         }
-      }
-      )
-    }
   </script>
