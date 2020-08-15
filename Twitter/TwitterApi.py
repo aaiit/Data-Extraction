@@ -7,7 +7,7 @@ class Twitter:
 
     def __init__(self, consumer_key, consumer_secret, timeout=20):
         self.api = tweepy.API(tweepy.OAuthHandler(consumer_key, consumer_secret)
-                              , retry_count=2, retry_delay=10, wait_on_rate_limit=True, timeout=timeout)
+                              , retry_count=2, retry_delay=10, wait_on_rate_limit=False, timeout=timeout)
         if not self.api:
             raise ReferenceError('cannot build the object check your internet or the consumer keys!!')
 
@@ -59,7 +59,7 @@ class Twitter:
         count: how many tweets to return.
         keys: json keys to return.
         '''
-        fields['q'] += ' -filter:retweets filter:native_video'
+        fields['q'] += ' -filter:retweets filter:native_video -filter:images -filter:twimg'
         results = list(tweepy.Cursor(self.api.search, **fields, trim_user=True, include_entities=True,
                                      tweet_mode='extended').items(count))
         if not keys:

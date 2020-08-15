@@ -4,5 +4,6 @@ TWEET_KEYS = ['created_at', 'id_str', 'full_text', 'truncated', 'user.id', 'retw
               'favorite_count', 'lang']
 REPLIES_KEYS = TWEET_KEYS
 FRIENDSHIP_KEYS = ['id_str', 'following', 'followed_by']
-TWEET_VIDEOS_KEYS = TWEET_KEYS + ['extended_entities.media.' + t for t in ['id', 'media_url_https', 'type']]
+TWEET_VIDEOS_KEYS = TWEET_KEYS + ['extended_entities.media.' + t for t in
+                                  ['id', 'media_url_https', 'type','video_info.variants']]
 TWEET_IMAGES_KEYS = TWEET_VIDEOS_KEYS+ ['entities.media', 'entities.urls']
