@@ -59,17 +59,17 @@
                                 <input id="uname" type="text" class="form-control" placeholder="User name" value=""/>
                             </div>
 
-                            <div class="form-group">
+                          <!--   <div class="form-group">
                                 <input id="query" type="text" class="form-control" placeholder="Query" value=""/>
-                            </div>
+                            </div> -->
                         </div>
                         <div class="col-md-6">
                           <div class="form-group">
-                                  <input id="len" type="text" class="form-control" placeholder="Count" value=""  />
+                                 <!--  <input id="len" type="text" class="form-control" placeholder="Count" value=""  /> -->
                               </div>
-                              <div class="form-group">
+                            <!--   <div class="form-group">
                                   <input id="lang" type="text" class="form-control" placeholder="Langage  fr,ar,en,..." value=""/>
-                              </div>
+                              </div> -->
 
                         </div>
 
@@ -77,20 +77,20 @@
                             <div class="form-group">
 
 <br>
-                               <FORM id="rt">
+                              <!--  <FORM id="rt">
                                 <SELECT name="nom" size="1">
                                 <OPTION>recent
                                 <OPTION>popular
                                 <OPTION>mixed
                                 </SELECT>
-                                </FORM>
+                                </FORM> -->
                             </div>
                             <div class="form-group">
                                 <!-- <input type="text" class="form-control" placeholder="until YYYY-MM-DD" value=""/> -->
                             </div>
                         </div>
                     </div>
-<div id="wrapper1" onclick="wrapper()">
+<!-- <div id="wrapper1" onclick="wrapper()">
 <label for="yes_no_radio">Do you want  <strong>standard data</strong>?</label>
 <p>
 <input type="radio" name="yes_no" id="ah" checked>Yes</input>
@@ -101,7 +101,7 @@
 </div>
 <div id="wrapper2" style="display: none;"></div>
 
-
+ -->
 
 <br>
 
@@ -137,15 +137,10 @@
 
     function ook(type){
       $("#"+type).text("wait...");
-
-      var q=document.getElementById("query").value;
       var uname=document.getElementById("uname").value;
       var id=document.getElementById("uid").value;
-      var lang=document.getElementById("lang").value;
-      var len=Number(document.getElementById("len").value);
-      var rt=$("#rt").serializeArray()[0].value;
 
-      var fields = {"username":uname,"id":id,'q': q, 'lang': lang, 'result_type': rt,"len":len,"type":type,"output":getlist()};
+      var fields = {"username":uname,"id":id,"type":type};
       console.log(fields);
         $.ajaxSetup({
               headers: { "X-CSRFToken": get_cookie('csrftoken') }});
@@ -184,65 +179,5 @@
   </script>
 
 
-
-
-  <script type="text/javascript">
-
-    var o=['created_at', 'id_str', 'full_text', 'truncated', 'user.id', 'retweet_count', 'favorite_count'];
-    var on=[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1];
-      function bt(name,id){
-        return `<button  id="`+id+`" onclick="wanted(`+id+`)" type="button" class="btn btn-outline-secondary ensias">`+name+`</button>`;
-      }
-      var i=0;
-      for(var c of o)
-      {
-        $( "#wrapper2" ).append( bt(c,i) );
-        i++;
-
-      }
-
-      function wanted(n){
-
-        if(on[n])
-        $("#"+n).attr("class","btn btn-outline-primary");
-        else
-        $("#"+n).attr("class","btn btn-outline-secondary");
-        on[n]=1-on[n];
-      }
-
-     
-    var full=1;
-    function wrapper(){
-      $("#wrapper1").change(function ()
-      {
-         if(document.getElementById("ah").checked){
-          full=1;
-          $("#wrapper2").hide();
-         }else{
-          full=0;
-          $("#wrapper2").show();
-         }
-      }
-      )
-    }
-
-
-     function getlist(){
-        if(full){
-          console.log("full");
-          console.log(o);
-          return  o;
-        }
-        var l=[];
-        for(var i=0;i<o.length;i++){
-          if(!on[i]){
-            l.push(o[i]);
-          }
-        }
-        console.log(l);
-        return l;
-      }
-
-  </script>
 
 

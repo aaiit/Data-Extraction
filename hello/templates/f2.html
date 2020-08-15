@@ -56,8 +56,8 @@
                                 <input id="query" type="text" class="form-control" placeholder="Query" value=""/>
                             </div>
                             <div class="form-group">
-                                <input id="len" type="text" class="form-control" placeholder="Count" value=""  />
-                            </div>
+                              <input id="date"type="text" class="form-control" placeholder="since YYYY-MM-DD" value=""  />
+                                                           </div>
 
                         </div>
                         <div class="col-md-6">
@@ -70,14 +70,11 @@
                          <div class="col-md-6">
                             <div class="form-group">
 
-<br>
-                               <FORM id="rt">
-                                <SELECT name="nom" size="1">
-                                <OPTION>recent
-                                <OPTION>popular
-                                <OPTION>mixed
-                                </SELECT>
-                                </FORM>
+
+                           <div class="form-group">
+                                 <input id="until"type="text" class="form-control" placeholder="Until  YYYY-MM-DD" value=""/> 
+
+                            </div>
                             </div>
                             <div class="form-group">
                           
@@ -134,12 +131,10 @@
 
       var q=document.getElementById("query").value;
       var lang=document.getElementById("lang").value;
-      var len=Number(document.getElementById("len").value);
-      var rt=$("#rt").serializeArray()[0].value;
-      // var uname=document.getElementById("uname").value;
+      var from=document.getElementById("date").value;
+      var to=document.getElementById("until").value;
 
-
-      fields={"q":q,"count":len,"lang":lang,'result_type':rt,"output":getlist(),"type":type};
+      fields={"q":q,"lang":lang,"output":getlist(),"type":type,"since":from,"until":to};
 
         console.log(fields);
 
