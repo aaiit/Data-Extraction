@@ -19,8 +19,8 @@ api=tweepy.API(auth,timeout=11)
 
 
 def downloadImages(fields):
+	type=fields['type']
 	media_files = set()
-	k=0
 	for status in tweepy.Cursor(api.search,q=fields["q"],count=fields["len"],
 							   lang=fields["lang"],
 							   since="2020-08-14").items():
@@ -28,10 +28,14 @@ def downloadImages(fields):
 		if(len(media) > 0):
 			media_files.add(media[0]['media_url'])
 		# print (status.created_at, status.text)
+	if(type=="txt"):
+		s=""
+		for media_file in media_files:
+			s+=media_file+"\n"
+		return s
+
 	for media_file in media_files:
 		wget.download(media_file,out="Imagesdownl")
-		k+=1
-		print(k)
 
 	def zipdir(path, ziph):
 		for root, dirs, files in os.walk(path):

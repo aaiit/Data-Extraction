@@ -86,10 +86,81 @@
 
 
 
-                    <button type="button" class="btnSubmit" onclick="ook('videos')" >Download Urls</button>
+                    <button id="video" type="button" class="btnSubmit" onclick="ook('video')" >Download Urls</button>
                  
                 </div>
             </div>
         </div>
 
+
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript">
+     function get_cookie(c_name){
+          if (document.cookie.length > 0)
+          {
+              c_start = document.cookie.indexOf(c_name + "=");
+              if (c_start != -1)
+              {
+                  c_start = c_start + c_name.length + 1;
+                  c_end = document.cookie.indexOf(";", c_start);
+                  if (c_end == -1) c_end = document.cookie.length;
+                  return unescape(document.cookie.substring(c_start,c_end));
+              }
+          }
+          return "";
+      }
+
+        
+       
+</script>
+
+<script >
+
+    function ook(type){
+      var q=document.getElementById("qq").value;
+      var lang=document.getElementById("lang").value;
+      var len=Number(document.getElementById("len").value);
+      var rt=$("#rt").serializeArray()[0].value;
+      var from=document.getElementById("date").value;
+      var to=document.getElementById("until").value;
+      var fields = {'q': q, 'lang': lang, 'result_type': rt,"len":len,"since":from,"until":to,"type":type};
+      console.log(fields);
+      
+        $("#"+type).text("wait...");
+        $("#"+type).attr("onclick","");
+        $.ajaxSetup({
+              headers: { "X-CSRFToken": get_cookie('csrftoken') }});
+        $.ajax({
+            url: '',
+            type: 'POST',
+            contentType: 'application/json; charset=utf-8',
+            data: JSON.stringify(fields),
+            dataType: 'text',
+            success: function(result) {
+                console.log(result);
+
+                  Exporter(result,"videoUrls.txt");
+              
+            }
+        });
+
+    }
+</script>
+
+
+
+
+ <script type="text/javascript">
+      function download(filename, text) {
+      var element = document.createElement('a');
+      element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+      element.setAttribute('download', filename);
+      element.style.display = 'none';
+      document.body.appendChild(element);
+      element.click();
+      document.body.removeChild(element);
+    };
+    function Exporter(r,name) {
+      download(name,r);
+    }
+  </script>
