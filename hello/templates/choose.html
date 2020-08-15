@@ -1,8 +1,14 @@
 <title>Twitter Scrapping</title>
 
+
 <style type="text/css">
-    
-    .note
+
+      body {
+    background-image:url("/static/Twitter.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.note
 {
     text-align: center;
     height: 80px;
@@ -37,12 +43,12 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 
-
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <!------ Include the above in your HEAD tag ---------->
-
+<body >
+<br><br>
 <div class="container register-form">
             <div class="form">
                 <div class="note">
@@ -63,20 +69,24 @@
                                
 
     <br class="ensias">
-                        <a href="/form"> <button  type="button" class="btn btn-outline-secondary ensias">Texte</button>
+                        <a href="/form1"> <button  type="button" class="btn btn-outline-secondary ensias">Texte</button>
                         </a>
-                        <button type="button" class="btn btn-outline-primary ensias" disabled>Photo</button>
-                        <button type="button" class="btn btn-outline-success ensias" disabled>  Video </button>
+                        <a href="/form2"> 
+                        <button type="button" class="btn btn-outline-primary ensias" >Photo</button></a>
+                        <a href="/form3"><button type="button" class="btn btn-outline-success ensias" >  Video </button></a>
 
     <br class="ensias">
                             </div>
 
-                        <button type="button" class="btn btn-primary btn-lg btn-block" disabled>Extraire les commentaires d'un tweets</button>
-
-                        <button type="button" class="btn btn-primary btn-lg btn-block" disabled>Extraire le tweet le plus liké</button>
-
-                        <button type="button" class="btn btn-primary btn-lg btn-block" disabled>Extraire le commentaire le plus liké d'un tweet</button>
+                        <a href="/f1"><button type="button" class="btn btn-primary btn-lg btn-block" >Extraire les commentaires d'un tweets</button>
+</a><br>
+                        <a href="/f2"><button type="button" class="btn btn-primary btn-lg btn-block" >Extraire le tweet le plus liké</button></a>
+<br>
+                        <a href="/f3"><button type="button" class="btn btn-primary btn-lg btn-block" >Extraire le commentaire le plus liké d'un tweet</button></a>
                         </div>
+                     
+
+
                     </div>
                     
                 </div>
@@ -98,4 +108,7 @@
         }
         on=1-on;
     }
+    
 </script>
+
+
