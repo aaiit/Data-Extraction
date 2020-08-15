@@ -5,7 +5,7 @@ from .models import Greeting
 from django.views.decorators.csrf import csrf_exempt
 import zipfile
 
-from Ayoub import gettweetstext
+from Ayoub import get_tweets_text, get_comments
 from Sabah import downloadImages
 from fire import getUrlOfZip
 
@@ -17,7 +17,7 @@ def formText(request):
 	if request.method=='POST':
 		fields=json.loads(request.body)
 		#fields = {'q': 'covid19', 'lang': 'en', 'result_type': 'popular',"len":2}
-		return HttpResponse(gettweetstext(fields))
+		return HttpResponse(get_tweets_text(fields))
 	return render(request, "form1.html")
 
 
@@ -27,7 +27,7 @@ def formImage(request):
 		fields=json.loads(request.body)
 		type=fields["type"]
 		print(fields)
-		path_to_file="hello/static/Imagesdownl.zip"
+		path_to_file="hello/static/ImagesDownload.zip"
 		if type=="txt":
 			return HttpResponse(downloadImages(fields))
 		downloadImages(fields)
@@ -48,7 +48,7 @@ def f1(request):
 		fields=json.loads(request.body)
 		type=fields["type"]
 		print(fields)
-		return HttpResponse("ok")
+		return HttpResponse(get_comments(fields))
 	return render(request, "f1.html")
 
 @csrf_exempt 
