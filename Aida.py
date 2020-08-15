@@ -27,15 +27,15 @@ def comments(fieds):
 	                break
 	mx= max(l[0] for l in list)
 	if int(mx) == 0 :
-	    print(" y a r1")
+	    return "{}"
 	else:
-	    
 	    final_list=[]
 	    for t in list:
 	        if int(mx)==int(t[0]):
 	            final_list.append((t[0],t[5]))
 	    df = pd.DataFrame(final_list) 
 	    df.to_csv('commentmostlikes.csv', index=False)
+	    return open("filename.csv").read()
 
 def likes(fieds):
 	for tweet in tweepy.Cursor(api.search,q="aida",
@@ -45,5 +45,5 @@ def likes(fieds):
 	list.sort(key = lambda x: x[1]) 
 	df = pd.DataFrame(list) 
 	df.to_csv('filename.csv', index=False)
-
+	return open("filename.csv").read()
 

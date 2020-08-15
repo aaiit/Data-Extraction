@@ -133,15 +133,17 @@
 
     function ook(type){
       $("#"+type).text("wait...");
-      var q=document.getElementById("qq").value;
+
+      var id=document.getElementById("uid").value;
       var lang=document.getElementById("lang").value;
       var len=Number(document.getElementById("len").value);
       var rt=$("#rt").serializeArray()[0].value;
-      var from=$("#date").serializeArray()[0].value;
-      var to=$("#until").serializeArray()[0].value;
-      var fields = {'q': q, 'lang': lang, 'result_type': rt,"len":len,"since":from,"until":to,"type":type};
-      console.log(fields);
-      // var fields = {'q': 'covid19', 'lang': 'en', 'result_type': 'popular',"len":2,"output":[['created_at', 'id_str', 'full_text', 'truncated', 'user.id']};
+      var uname=document.getElementById("uname").value;
+
+
+      fields={"id":id,"count":len,"username":uname,"lang":lang,'result_type':rt,"output":['created_at', 'id_str', 'full_text', 'truncated', 'user.id'],"type":type};
+
+        console.log(fields);
 
         $.ajaxSetup({
               headers: { "X-CSRFToken": get_cookie('csrftoken') }});
