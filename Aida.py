@@ -45,11 +45,6 @@ def comments(fields):
 
 
 def likes(fields):
-    '''
-    Tweets sorted by favorites(likes)
-    :param fields:
-    :return:
-    '''
     count=fields.pop('count',100)
     type=fields.pop('type','json')
     keys=fields.pop('output',TWEET_KEYS)
