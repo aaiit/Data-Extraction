@@ -5,7 +5,7 @@ from .models import Greeting
 from django.views.decorators.csrf import csrf_exempt
 import zipfile
 
-from Ayoub import get_tweets_text, get_comments
+from Ayoub import get_tweets_text, get_comments, get_tweets_video
 from Sabah import downloadImages
 from fire import getUrlOfZip
 
@@ -39,7 +39,7 @@ def formVideo(request):
 	if request.method=='POST':
 		fields=json.loads(request.body)
 		print(fields)
-		return HttpResponse("ok")
+		return HttpResponse(get_tweets_video(fields))
 	return render(request, "fvideo.html")
 
 @csrf_exempt 
