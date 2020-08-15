@@ -10,7 +10,7 @@ Make sure you have Python 3.7 [installed locally](http://install.python-guide.or
 
 ```sh
 $ git clone https://github.com/aaiit/Data-Extraction.git
-$ cd pData-Extraction
+$ cd Data-Extraction
 
 $ python3 -m venv getting-started
 $ pip install -r requirements.txt
