@@ -12,7 +12,7 @@ api=tweepy.API(auth,timeout=11)
 
 
 count =100
-def comments(fieds):
+def comments(fields):
 	list=[]
 	name = 'calvinklein'
 	tweet_id = '1293259670531039232'
@@ -37,7 +37,7 @@ def comments(fieds):
 	    df.to_csv('commentmostlikes.csv', index=False)
 	    return open("filename.csv").read()
 
-def likes(fieds):
+def likes(fields):
 	for tweet in tweepy.Cursor(api.search,q="aida",
 	                           lang="en",result_type='popular').items(count):
 	    list.append( (tweet.id, tweet.favorite_count,tweet.user.name,tweet.created_at,tweet.lang,tweet.retweet_count, tweet.source,
