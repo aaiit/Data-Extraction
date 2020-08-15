@@ -5,6 +5,7 @@ import pandas as pd
 import tweepy
 
 # Constants
+from Twitter.HelperFunctions import check_date_format
 from Twitter.Keys import TWEET_KEYS
 
 consumer_key = 'UFkzPnRg6teYYVpopicJlHu2L'
@@ -18,14 +19,15 @@ count = 100
 
 def comments(fields):
     list = []
-    name = 'calvinklein'
-    tweet_id = '1293259670531039232'
+
+    type = fields.pop('type', 'csv')
+    name = fields.pop('username', 'calvinklein')
+    tweet_id = fields.pop('id', '222222222222222')
     replies = []
     for tweet in tweepy.Cursor(api.search, q='to:' + name, since_id=tweet_id, result_type='mixed',
                                timeout=999999).items(100):
         if hasattr(tweet, 'in_reply_to_status_id_str'):
-            if (tweet.in_reply_to_status_id_str == tweet_id) and tweet.in_reply_to_status_id == int(
-                    tweet_id):
+            if tweet.in_reply_to_status_id_str == str(tweet_id):
                 list.append(
                     (tweet.favorite_count, tweet.id, tweet.in_reply_to_status_id_str, tweet.user.name, tweet.user.id,
                      tweet.text))
@@ -39,21 +41,25 @@ def comments(fields):
         for t in list:
             if int(mx) == int(t[0]):
                 final_list.append((t[0], t[5]))
-        df = pd.DataFrame(final_list)
-        df.to_csv('commentmostlikes.csv', index=False)
-        return open("filename.csv").read()
+        return pd.DataFrame(final_list).to_csv('MostLikedComments.csv', index=False)
 
 
 def likes(fields):
-    count=fields.pop('count',100)
-    type=fields.pop('type','json')
-    keys=fields.pop('output',TWEET_KEYS)
-    for tweet in tweepy.Cursor(api.search, q="aida",
-                               lang="en", result_type='popular').items(count):
+    count = fields.pop('count', 100)
+    q = fields.pop('q', 'aida')
+    lang = fields.pop('lang', 'en')
+    result_type = fields('result_type', 'popular')
+    type = fields.pop('type', 'csv')
+    keys = fields.pop('output', TWEET_KEYS)
+    if not check_date_format(fields['since']):
+        fields.pop('since', '')
+    if not check_date_format(fields['until']):
+        fields.pop('until', '')
+
+    for tweet in tweepy.Cursor(api.search, q=q, **fields,
+                               lang=lang, result_type=result_type).items(count):
         list.append((tweet.id, tweet.favorite_count, tweet.user.name, tweet.created_at, tweet.lang, tweet.retweet_count,
                      tweet.source,
                      tweet.truncated, str(tweet.text)))
     list.sort(key=lambda x: x[1])
-    df = pd.DataFrame(list)
-    df.to_csv('filename.csv', index=False)
-    return open("filename.csv").read()
+    return pd.DataFrame(list).to_csv(index=False)

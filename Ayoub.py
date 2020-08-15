@@ -10,7 +10,6 @@ consumer_secret = 'CNuHKlXlI4nY2YtX1RFFwthZQ0ziebfkLfrxd6T6xZp9FX7w7P'
 
 t = Twitter(consumer_key, consumer_secret)
 
-
 def get_tweets_text(fields):
     # fields = {'q': 'covid19', 'lang': 'en', 'result_type': 'popular'}
     type = fields.pop('type', 'json')
@@ -30,9 +29,9 @@ def get_comments(fields):
 
 
 def get_tweets_video(fields):
-    if check_date_format(fields['since']):
+    if not check_date_format(fields['since']):
         fields.pop('since', '')
-    if check_date_format(fields['until']):
+    if not check_date_format(fields['until']):
         fields.pop('until', '')
     type = fields.pop('type', 'json')
     keys = fields.pop('output', TWEET_VIDEOS_VIDEO_KEY)

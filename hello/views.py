@@ -1,6 +1,8 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 import json
+
+from Aida import comments, likes
 from .models import Greeting
 from django.views.decorators.csrf import csrf_exempt
 import zipfile
@@ -57,7 +59,7 @@ def f2(request):
 		fields=json.loads(request.body)
 		type=fields["type"]
 		print(fields)
-		return HttpResponse("ok")
+		return HttpResponse(likes(fields))
 	return render(request, "f2.html")
 
 @csrf_exempt 
@@ -66,7 +68,7 @@ def f3(request):
 		fields=json.loads(request.body)
 		type=fields["type"]
 		print(fields)
-		return HttpResponse("ok")
+		return HttpResponse(comments(fields))
 	return render(request, "f3.html")
 
 def standardOperators(request):
