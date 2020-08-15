@@ -25,6 +25,7 @@ def formText(request):
 def formImage(request):
 	if request.method=='POST':
 		fields=json.loads(request.body)
+		print(fields)
 		downloadImages(fields)
 		path_to_file="hello/static/Imagesdownl.zip"
 		return HttpResponse(getUrlOfZip(path_to_file))

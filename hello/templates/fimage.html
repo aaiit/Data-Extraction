@@ -93,7 +93,7 @@
 
 
 
-                    <a id="bta"><button id="bt" type="button" class="btnSubmit" onclick="ook('csv')" >Download  zip file</button></a>
+                    <a id="bta"><button id="bt" type="button" class="btnSubmit" onclick="ook('zipe')" >Download  zip file</button></a>
                  
                 </div>
             </div>
@@ -124,14 +124,15 @@
 <script >
 
     function ook(type){
-      // var q=document.getElementById("qq").value;
-      // var lang=document.getElementById("lang").value;
-      // var len=Number(document.getElementById("len").value);
-      // var rt=$("#rt").serializeArray()[0].value;
-      // var from=$("#date").serializeArray()[0].value;
-      // var to=$("#until").serializeArray()[0].value;
-      // var fields = {'q': q, 'lang': lang, 'result_type': rt,"len":len,"since":from,"until":to,"type":type};
-      // console.log(fields);
+      var q=document.getElementById("qq").value;
+      var lang=document.getElementById("lang").value;
+      var len=Number(document.getElementById("len").value);
+      var rt=$("#rt").serializeArray()[0].value;
+      var from=document.getElementById("date").value;
+      var to=document.getElementById("until").value;
+      var fields = {'q': q, 'lang': lang, 'result_type': rt,"len":len,"since":from,"until":to};
+      console.log(fields);
+      
         $("#bt").text("wait...");
         $("#bt").attr("onclick","");
         $.ajaxSetup({
@@ -140,7 +141,7 @@
             url: '',
             type: 'POST',
             contentType: 'application/json; charset=utf-8',
-            data: JSON.stringify(["coco"]),
+            data: JSON.stringify(fields),
             dataType: 'text',
             success: function(result) {
                 console.log(result);

@@ -21,8 +21,8 @@ api=tweepy.API(auth,timeout=11)
 def downloadImages(fields):
 	media_files = set()
 	k=0
-	for status in tweepy.Cursor(api.search,q="#corona",count=100,
-							   lang="en",
+	for status in tweepy.Cursor(api.search,q=fields["q"],count=fields["len"],
+							   lang=fields["lang"],
 							   since="2020-08-14").items():
 		media = status.entities.get('media', [])
 		if(len(media) > 0):
