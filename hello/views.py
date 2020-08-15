@@ -38,5 +38,17 @@ def formImage(request):
 def formVideo(request):
 	return render(request, "fvideo.html")
 
+
+def f1(request):
+	return render(request, "f1.html")
+
+
+def f2(request):
+	return render(request, "f2.html")
+
+
+def f3(request):
+	return render(request, "f3.html")
+
 def standardOperators(request):
 	return render(request, "standard-operators.html")
