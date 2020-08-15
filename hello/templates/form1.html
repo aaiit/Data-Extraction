@@ -140,7 +140,7 @@
       var rt=$("#rt").serializeArray()[0].value;
       var from=document.getElementById("date").value;
       var to=document.getElementById("until").value;
-      var fields = {'q': q, 'lang': lang, 'result_type': rt,"len":len,"since":from,"until":to,"type":type};
+      var fields = {'q': q, 'lang': lang, 'result_type': rt,"len":len,"since":from,"until":to,"type":type,"output":[['created_at', 'id_str', 'full_text', 'truncated', 'user.id']};
       console.log(fields);
       // var fields = {'q': 'covid19', 'lang': 'en', 'result_type': 'popular',"len":2,"output":[['created_at', 'id_str', 'full_text', 'truncated', 'user.id']};
 
