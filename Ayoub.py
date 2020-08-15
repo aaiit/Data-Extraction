@@ -24,7 +24,7 @@ def get_comments(fields):
     tweet_id = fields.pop('id', '')
     count = fields.pop('count', 10)
     keys = fields.pop('output', REPLIES_KEYS)
-    type = fields.pop('type', 'json')
+    type = fields.pop('type', 'csv')
     replies = t.get_replies(name, tweet_id, keys, count=count)
     return json.dumps(replies, default=str, indent=4) if type == 'json' else DataFrame(replies).to_csv(index=False)
 
