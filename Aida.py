@@ -5,6 +5,8 @@ import pandas as pd
 import tweepy
 
 # Constants
+from Twitter.Keys import TWEET_KEYS
+
 consumer_key = 'UFkzPnRg6teYYVpopicJlHu2L'
 consumer_secret = 'CNuHKlXlI4nY2YtX1RFFwthZQ0ziebfkLfrxd6T6xZp9FX7w7P'
 # Authentificate and construct the api
@@ -43,6 +45,14 @@ def comments(fields):
 
 
 def likes(fields):
+    '''
+    Tweets sorted by favorites(likes)
+    :param fields:
+    :return:
+    '''
+    count=fields.pop('count',100)
+    type=fields.pop('type','json')
+    keys=fields.pop('output',TWEET_KEYS)
     for tweet in tweepy.Cursor(api.search, q="aida",
                                lang="en", result_type='popular').items(count):
         list.append((tweet.id, tweet.favorite_count, tweet.user.name, tweet.created_at, tweet.lang, tweet.retweet_count,

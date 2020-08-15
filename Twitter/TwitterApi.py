@@ -66,14 +66,14 @@ class Twitter:
             return [tweet._json for tweet in results]
         return [{k: res[1] for k in keys for res in get_attr(tweet, k) if res[0]} for tweet in results]
 
-    def get_replies(self, user_screen_name, tweet_id, keys=None, query='', count=10, max_explored=100):
+    def get_replies(self, user_screen_name, tweet_id, keys=None, query='', count=10):
         '''
         replies == comments.
         user_screen_name: username of the one who published that tweet.
         '''
         replies = []
         for reply in tweepy.Cursor(self.api.search, q=f'to:{user_screen_name} -filter:retweets', since_id=tweet_id,
-                                   trim_user=True, tweet_mode='extended', result_type='recent').items(max_explored):
+                                   trim_user=True, tweet_mode='extended', result_type='recent').items():
             # check if this tweet is a reply     and     it's a reply to 'tweet_id'      and       it's related to the 'query'.
             if hasattr(reply,
                        'in_reply_to_status_id') and reply.in_reply_to_status_id == int(
