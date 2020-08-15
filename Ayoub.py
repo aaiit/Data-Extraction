@@ -14,5 +14,6 @@ t = Twitter(consumer_key, consumer_secret)
 def gettweetstext(fields):
     # fields = {'q': 'covid19', 'lang': 'en', 'result_type': 'popular'}
     type = fields.pop('type', 'json')
-    tweets = t.search_tweets_images(fields.pop('len', 10), fields, TWEET_KEYS)
-    return json.dumps(tweets, default=str, indent=4) if type == 'json' else DataFrame(tweets).to_csv()
+    keys = fields.pop('output', TWEET_KEYS)
+    tweets = t.search_tweets_images(fields.pop('len', 10), fields, keys)
+    return json.dumps(tweets, default=str, indent=4) if type == 'json' else DataFrame(tweets).to_csv(index=False)

@@ -27,7 +27,7 @@ def formImage(request):
 		fields=json.loads(request.body)
 		type=fields["type"]
 		print(fields)
-		path_to_file="hello/static/Imagesdownl.zip"
+		path_to_file="hello/static/ImagesDownload.zip"
 		if type=="txt":
 			return HttpResponse(downloadImages(fields))
 		downloadImages(fields)
