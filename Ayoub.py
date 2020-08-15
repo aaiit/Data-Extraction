@@ -34,7 +34,7 @@ def get_tweets_video(fields):
     if not check_date_format(fields['until']):
         fields.pop('until', '')
     type = fields.pop('type', 'json')
-    keys = fields.pop('output', TWEET_VIDEOS_VIDEO_KEY)
+    keys = fields.pop('output', TWEET_VIDEOS_KEYS)
     videos = t.search_tweets_videos(fields.pop('len', 10), fields, keys)
     vids = []
     for vid in videos:
