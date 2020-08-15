@@ -36,10 +36,4 @@ def get_tweets_video(fields):
     type = fields.pop('type', 'json')
     keys = fields.pop('output', TWEET_VIDEOS_KEYS)
     videos = t.search_tweets_videos(fields.pop('len', 10), fields, keys)
-    vids = []
-    for vid in videos:
-        vv = vid[TWEET_VIDEOS_VIDEO_KEY[0]][0]
-        vv = [v for v in vv if 'mp4' in v['content_type']]
-        vv = sorted(vv, key=lambda x: x['bitrate'])
-        vids.append(vv[0]['url'])
-    return '\n'.join(vids)
+    return videos if type=='json' else DataFrame(videos).to_csv(index=False)
