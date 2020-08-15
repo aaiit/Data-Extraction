@@ -1,11 +1,7 @@
 
 <title>Extraire des tweets</title>
 <style type="text/css">
-      body {
-    background-image:url("/static/Twitter.jpg");
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-}
+
   .note
 {
     text-align: center;
@@ -94,7 +90,9 @@
 <input type="radio" name="yes_no" id="la">No</input>
 </p>
 </div>
-<div id="wrapper2" style="display: none;"></div>
+<div id="wrapper2" style="display: none;">
+  <label for="yes_no_radio">Choose desired names</label><br>
+</div>
 
 
 
@@ -136,8 +134,8 @@
       var lang=document.getElementById("lang").value;
       var len=Number(document.getElementById("len").value);
       var rt=$("#rt").serializeArray()[0].value;
-      var from=$("#date").serializeArray()[0].value;
-      var to=$("#until").serializeArray()[0].value;
+      var from=document.getElementById("date").value;
+      var to=document.getElementById("until").value;
       var fields = {'q': q, 'lang': lang, 'result_type': rt,"len":len,"since":from,"until":to,"type":type};
       console.log(fields);
       // var fields = {'q': 'covid19', 'lang': 'en', 'result_type': 'popular',"len":2,"output":[['created_at', 'id_str', 'full_text', 'truncated', 'user.id']};

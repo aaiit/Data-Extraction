@@ -6,11 +6,7 @@
   
 <style type="text/css">
   
-    body {
-    background-image:url("/static/Twitter.jpg");
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-}
+
   .note
 {
     text-align: center;
@@ -149,7 +145,7 @@
             success: function(result) {
                 console.log(result);
                 $("#bt").text("final click ");
-                $("#bta").attr("href","/static/downloadImages.zip");
+                $("#bta").attr("href",result);
             }
         });
 
