@@ -1,1 +1,237 @@
-todo par aida
+
+<title>Extraire des tweets</title>
+<style type="text/css">
+      body {
+    background-image:url("/static/Twitter.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+  .note
+{
+    text-align: center;
+    height: 80px;
+    background: -webkit-linear-gradient(left, #0072ff, #8811c5);
+    color: #fff;
+    font-weight: bold;
+    line-height: 80px;
+}
+.form-content
+{
+    padding: 5%;
+    border: 1px solid #ced4da;
+    margin-bottom: 2%;
+}
+.form-control{
+    border-radius:1.5rem;
+}
+.btnSubmit
+{
+    border:none;
+    border-radius:1.5rem;
+    padding: 1%;
+    width: 20%;
+    cursor: pointer;
+    background: #0062cc;
+    color: #fff;
+}
+
+</style>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+<body><br><br>
+<div class="container register-form">
+            <div class="form">
+                <div class="note">
+                    <p> Extraire les commentaires d'un tweet </p>
+                </div>
+
+                <div class="form-content">
+                    <div class="row">
+                        <div class="col-md-6">
+                          <div class="form-group">
+                                <input id="uid" type="text" class="form-control" placeholder="User id" value=""/>
+                            </div>
+                            <div class="form-group">
+                                <input id="uname" type="text" class="form-control" placeholder="User name" value=""/>
+                            </div>
+
+                            <div class="form-group">
+                                <input id="query" type="text" class="form-control" placeholder="Query" value=""/>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-group">
+                                  <input id="len" type="text" class="form-control" placeholder="Count" value=""  />
+                              </div>
+                              <div class="form-group">
+                                  <input id="lang" type="text" class="form-control" placeholder="Langage  fr,ar,en,..." value=""/>
+                              </div>
+
+                        </div>
+
+                         <div class="col-md-6">
+                            <div class="form-group">
+
+<br>
+                               <FORM id="rt">
+                                <SELECT name="nom" size="1">
+                                <OPTION>recent
+                                <OPTION>popular
+                                <OPTION>mixed
+                                </SELECT>
+                                </FORM>
+                            </div>
+                            <div class="form-group">
+                                <!-- <input type="text" class="form-control" placeholder="until YYYY-MM-DD" value=""/> -->
+                            </div>
+                        </div>
+                    </div>
+<div id="wrapper1" onclick="wrapper()">
+<label for="yes_no_radio">Do you want  <strong>full data</strong>?</label>
+<p>
+<input type="radio" name="yes_no" id="ah" checked>Yes</input>
+</p>
+<p>
+<input type="radio" name="yes_no" id="la">No</input>
+</p>
+</div>
+<div id="wrapper2" style="display: none;"></div>
+
+
+
+<br>
+
+
+                    <button id="csv" type="button" class="btnSubmit" onclick="ook('csv')" >Download Csv</button>
+                    <button id="json" type="button" class="btnSubmit" onclick="ook('json')">Download Json</button>
+                </div>
+            </div>
+        </div>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript">
+     function get_cookie(c_name){
+          if (document.cookie.length > 0)
+          {
+              c_start = document.cookie.indexOf(c_name + "=");
+              if (c_start != -1)
+              {
+                  c_start = c_start + c_name.length + 1;
+                  c_end = document.cookie.indexOf(";", c_start);
+                  if (c_end == -1) c_end = document.cookie.length;
+                  return unescape(document.cookie.substring(c_start,c_end));
+              }
+          }
+          return "";
+      }
+
+
+
+</script>
+
+<script >
+
+    function ook(type){
+      $("#"+type).text("wait...");
+      var q=document.getElementById("qq").value;
+      var lang=document.getElementById("lang").value;
+      var len=Number(document.getElementById("len").value);
+      var rt=$("#rt").serializeArray()[0].value;
+      var from=$("#date").serializeArray()[0].value;
+      var to=$("#until").serializeArray()[0].value;
+      var fields = {'q': q, 'lang': lang, 'result_type': rt,"len":len,"since":from,"until":to,"type":type};
+      console.log(fields);
+      // var fields = {'q': 'covid19', 'lang': 'en', 'result_type': 'popular',"len":2,"output":[['created_at', 'id_str', 'full_text', 'truncated', 'user.id']};
+
+        $.ajaxSetup({
+              headers: { "X-CSRFToken": get_cookie('csrftoken') }});
+        $.ajax({
+            url: '',
+            type: 'POST',
+            contentType: 'application/json; charset=utf-8',
+            data: JSON.stringify(fields),
+            dataType: 'text',
+            success: function(result) {
+                // console.log(result);
+                Exporter(result,"data."+type);
+                $("#"+type).text(type);
+            }
+        });
+
+    }
+</script>
+
+
+</body>
+
+ <script type="text/javascript">
+      function download(filename, text) {
+      var element = document.createElement('a');
+      element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+      element.setAttribute('download', filename);
+      element.style.display = 'none';
+      document.body.appendChild(element);
+      element.click();
+      document.body.removeChild(element);
+    };
+    function Exporter(r,name) {
+      download(name,r);
+    }
+  </script>
+
+
+
+
+  <script type="text/javascript">
+
+    var o=['created_at', 'id_str', 'full_text', 'truncated', 'user.id', 'retweet_count', 'favorite_count'];
+    var on=[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1];
+      function bt(name,id){
+        return `<button  id="`+id+`" onclick="wanted(`+id+`)" type="button" class="btn btn-outline-secondary ensias">`+name+`</button>`;
+      }
+      var i=0;
+      for(var c of o)
+      {
+        $( "#wrapper2" ).append( bt(c,i) );
+        i++;
+
+      }
+
+      function wanted(n){
+
+        if(on[n])
+        $("#"+n).attr("class","btn btn-outline-primary");
+        else
+        $("#"+n).attr("class","btn btn-outline-secondary");
+        on[n]=1-on[n];
+      }
+
+      function getlist(){
+        var l=[];
+        for(var i=0;i<o.length;i++){
+          if(!on[i]){
+            l.push(o[i]);
+          }
+        }
+        console.log(l);
+      }
+  </script>
+
+  <script type="text/javascript">
+    function wrapper(){
+      $("#wrapper1").change(function ()
+      {
+         if(document.getElementById("ah").checked){
+          $("#wrapper2").hide();
+         }else{
+          $("#wrapper2").show();
+         }
+      }
+      )
+    }
+  </script>
+
