@@ -1,7 +1,11 @@
 
 <title>Extraire des tweets</title>
 <style type="text/css">
-
+      body {
+    background-image:url("/static/Twitter.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
   .note
 {
     text-align: center;
@@ -82,7 +86,7 @@
                         </div>
                     </div>
 <div id="wrapper1" onclick="wrapper()">
-<label for="yes_no_radio">Do you want  <strong>full data</strong>?</label>
+<label for="yes_no_radio">Do you want  <strong>standard data</strong>?</label>
 <p>
 <input type="radio" name="yes_no" id="ah" checked>Yes</input>
 </p>
@@ -136,7 +140,7 @@
       var rt=$("#rt").serializeArray()[0].value;
       var from=document.getElementById("date").value;
       var to=document.getElementById("until").value;
-      var fields = {'q': q, 'lang': lang, 'result_type': rt,"len":len,"since":from,"until":to,"type":type};
+      var fields = {'q': q, 'lang': lang, 'result_type': rt,"len":len,"since":from,"until":to,"type":type,"output":getlist()};
       console.log(fields);
       // var fields = {'q': 'covid19', 'lang': 'en', 'result_type': 'popular',"len":2,"output":[['created_at', 'id_str', 'full_text', 'truncated', 'user.id']};
 
@@ -203,7 +207,29 @@
         on[n]=1-on[n];
       }
 
-      function getlist(){
+     
+    var full=1;
+    function wrapper(){
+      $("#wrapper1").change(function ()
+      {
+         if(document.getElementById("ah").checked){
+          full=1;
+          $("#wrapper2").hide();
+         }else{
+          full=0;
+          $("#wrapper2").show();
+         }
+      }
+      )
+    }
+
+
+     function getlist(){
+        if(full){
+          console.log("full");
+          console.log(o);
+          return  o;
+        }
         var l=[];
         for(var i=0;i<o.length;i++){
           if(!on[i]){
@@ -211,19 +237,7 @@
           }
         }
         console.log(l);
+        return l;
       }
-  </script>
 
-  <script type="text/javascript">
-    function wrapper(){
-      $("#wrapper1").change(function ()
-      {
-         if(document.getElementById("ah").checked){
-          $("#wrapper2").hide();
-         }else{
-          $("#wrapper2").show();
-         }
-      }
-      )
-    }
   </script>
