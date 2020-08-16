@@ -27,10 +27,10 @@ def get_comments(fields):
     return json.dumps(replies, default=str, indent=4) if type == 'json' else DataFrame(replies).to_csv(index=False)
 
 def get_tweets_video(fields):
-    if not check_date_format(fields['since']):
-        fields.pop('since', '')
-    if not check_date_format(fields['until']):
-        fields.pop('until', '')
+    # if not check_date_format(fields['since']):
+    #     fields.pop('since', '')
+    # if not check_date_format(fields['until']):
+    #     fields.pop('until', '')
     type = fields.pop('type', 'json')
     keys = fields.pop('output', TWEET_VIDEOS_KEYS)
     videos = t.search_tweets_videos(fields.pop('len', 10), fields, keys)
