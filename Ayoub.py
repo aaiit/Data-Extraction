@@ -17,7 +17,6 @@ def get_tweets_text(fields):
     tweets = t.search_tweets_text(fields.pop('len', 10), fields, keys)
     return json.dumps(tweets, default=str, indent=4) if type == 'json' else DataFrame(tweets).to_csv(index=False)
 
-
 def get_comments(fields):
     name = fields.pop('username', '')
     tweet_id = fields.pop('id', '')
@@ -26,7 +25,6 @@ def get_comments(fields):
     type = fields.pop('type', 'csv')
     replies = t.get_replies(name, tweet_id, keys, count=count)
     return json.dumps(replies, default=str, indent=4) if type == 'json' else DataFrame(replies).to_csv(index=False)
-
 
 def get_tweets_video(fields):
     if not check_date_format(fields['since']):
