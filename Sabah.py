@@ -17,16 +17,18 @@ api = tweepy.API(auth, timeout=11)
 
 def downloadImages(fields):
     type = fields['type']
-    media_files = set()
+    media_files =[]
     for status in tweepy.Cursor(api.search, q=fields["q"], count=fields["len"],
                                 lang=fields["lang"],
-                                since="2020-08-14").items():
+                                since=fields['since'], until=fields['until']).items():
         media = status.entities.get('media', [])
-        if (len(media) > 0):
-            media_files.add(media[0]['media_url'])
+        if len(media) > 0:
+            media_files.append(media[0]['media_url'])
+            if fields['count'] == len(media_files):
+                break
     # print (status.created_at, status.text)
     # if (type == "txt"):
-    return list(media_files)
+    return media_files
 
     # for media_file in media_files:
     #     wget.download(media_file, out="Imagesdownl")
