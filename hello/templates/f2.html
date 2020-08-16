@@ -150,7 +150,10 @@
                 // console.log(result);
                 Exporter(result,"data."+type);
                 $("#"+type).text(type);
-            }
+            },
+            error: function(XMLHttpRequest, textStatus, errorThrown) {
+             alert("some error");
+              }
         });
 
     }

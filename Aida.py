@@ -57,8 +57,14 @@ def likes(fields):
     # if not check_date_format(fields['until']):
     #     fields.pop('until', '')
     l = []
+<<<<<<< HEAD
+    print(q,lang,result_type)
+    for tweet in tweepy.Cursor(api.search, q=q,
+=======
     for tweet in tweepy.Cursor(api.search, q=q, **fields,
+>>>>>>> 7bd965e65dd66c330f0e4e749a7fcead724d228c
                                lang=lang, result_type=result_type).items(100):
+        print("->>>>>>>>>>>")
         l.append((tweet.id, tweet.favorite_count, tweet.user.name, tweet.created_at, tweet.lang, tweet.retweet_count,
                   tweet.source, tweet.truncated, str(tweet.text)))
     if len(l) == 0:
