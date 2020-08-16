@@ -57,9 +57,11 @@ def likes(fields):
     # if not check_date_format(fields['until']):
     #     fields.pop('until', '')
     l = []
-    for tweet in tweepy.Cursor(api.search, q=q,
+    for tweet in tweepy.Cursor(api.search, q=q, **fields,
                                lang=lang, result_type=result_type).items(100):
         l.append((tweet.id, tweet.favorite_count, tweet.user.name, tweet.created_at, tweet.lang, tweet.retweet_count,
                   tweet.source, tweet.truncated, str(tweet.text)))
+    if len(l):
+        return '[]'
     l = sorted(l, key=lambda x: x[1])
     return pd.DataFrame(l[0]).to_csv(index=False) if type == 'csv' else json.dumps(l[0], indent=3)
