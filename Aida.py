@@ -42,7 +42,7 @@ def comments(fields):
         for t in list:
             if int(mx) == int(t[0]):
                 final_list.append((t[0], t[5]))
-        return pd.DataFrame(final_list).to_csv( index=False)
+        return pd.DataFrame(final_list).to_csv(index=False)
 
 
 def likes(fields):
@@ -61,7 +61,7 @@ def likes(fields):
                                lang=lang, result_type=result_type).items(100):
         l.append((tweet.id, tweet.favorite_count, tweet.user.name, tweet.created_at, tweet.lang, tweet.retweet_count,
                   tweet.source, tweet.truncated, str(tweet.text)))
-    if len(l)==0:
+    if len(l) == 0:
         return '[]'
     l = sorted(l, key=lambda x: x[1])
-    return pd.DataFrame(l[0]).to_csv(index=False) if type == 'csv' else json.dumps(l[0], indent=3)
+    return pd.DataFrame(l[0]).to_csv(index=False) if type == 'csv' else json.dumps(l[0], indent=3,default=str)
