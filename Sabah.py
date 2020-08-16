@@ -23,7 +23,7 @@ def downloadImages(fields):
         media = status.entities.get('media', [])
         if len(media) > 0:
             media_files.append(media[0]['media_url'])
-            if fields['count'] == len(media_files):
+            if count == len(media_files):
                 break
     # print (status.created_at, status.text)
     # if (type == "txt"):
