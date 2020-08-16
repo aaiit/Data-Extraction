@@ -32,7 +32,7 @@ def comments(fields):
                      tweet.text))
                 if len(replies) >= count:
                     break
-    if len(list)==0:
+    if len(list) == 0:
         return '{}'
     mx = max(l[0] for l in list)
     if int(mx) == 0:
@@ -56,11 +56,10 @@ def likes(fields):
     #     fields.pop('since', '')
     # if not check_date_format(fields['until']):
     #     fields.pop('until', '')
-
+    list=[]
     for tweet in tweepy.Cursor(api.search, q=q, **fields,
                                lang=lang, result_type=result_type).items(count):
         list.append((tweet.id, tweet.favorite_count, tweet.user.name, tweet.created_at, tweet.lang, tweet.retweet_count,
-                     tweet.source,
-                     tweet.truncated, str(tweet.text)))
+                     tweet.source, tweet.truncated, str(tweet.text)))
     list.sort(key=lambda x: x[1])
     return pd.DataFrame(list).to_csv(index=False)
