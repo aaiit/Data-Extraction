@@ -19,13 +19,12 @@ count = 100
 
 def comments(fields):
     list = []
-
     type = fields.pop('type', 'csv')
     name = fields.pop('username', 'calvinklein')
     tweet_id = fields.pop('id', '222222222222222')
     replies = []
     for tweet in tweepy.Cursor(api.search, q='to:' + name, since_id=tweet_id, result_type='mixed',
-                               timeout=999999).items(100):
+                               timeout=999999).items(500):
         if hasattr(tweet, 'in_reply_to_status_id_str'):
             if tweet.in_reply_to_status_id_str == str(tweet_id):
                 list.append(
