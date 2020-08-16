@@ -19,7 +19,7 @@ def downloadImages(fields):
     type = fields['type']
     media_files = []
     count=fields.pop('len',20)
-    for status in tweepy.Cursor(api.search, q=fields["q"],**fields).items():
+    for status in tweepy.Cursor(api.search,**fields).items():
         media = status.entities.get('media', [])
         if len(media) > 0:
             media_files.append(media[0]['media_url'])
