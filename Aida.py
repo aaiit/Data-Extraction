@@ -12,23 +12,20 @@ consumer_secret = 'CNuHKlXlI4nY2YtX1RFFwthZQ0ziebfkLfrxd6T6xZp9FX7w7P'
 auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
 api = tweepy.API(auth, timeout=11)
 
-count = 100
-
 
 def comments(fields):
+    count = 100
     list = []
     type = fields.pop('type', 'csv')
-    name = fields.pop('username', 'calvinklein')
-    tweet_id = fields.pop('id', '222222222222222')
-    replies = []
+    name = fields.pop('username', '')
+    tweet_id = fields.pop('id', '')
     for tweet in tweepy.Cursor(api.search, q='to:' + name, since_id=tweet_id, result_type='mixed',
                                timeout=999999).items(500):
         if hasattr(tweet, 'in_reply_to_status_id_str'):
             if tweet.in_reply_to_status_id_str == str(tweet_id):
-                list.append(
-                    (tweet.favorite_count, tweet.id, tweet.in_reply_to_status_id_str, tweet.user.name, tweet.user.id,
-                     tweet.text))
-                if len(replies) >= count:
+                list.append((tweet.favorite_count, tweet.id, tweet.in_reply_to_status_id_str, tweet.user.name,
+                             tweet.user.id, tweet.text))
+                if len(list) >= count:
                     break
     if len(list) == 0:
         return '{}'
@@ -39,8 +36,8 @@ def comments(fields):
         final_list = []
         for t in list:
             if int(mx) == int(t[0]):
-                final_list.append((t[0], t[5]))
-        return pd.DataFrame(final_list).to_csv(index=False)
+                final_list.append((t[0], t[3], t[5]))
+        return pd.DataFrame(final_list, columns=['favorite_count', 'User', 'Comment']).to_csv(index=False)
 
 
 def likes(fields):
