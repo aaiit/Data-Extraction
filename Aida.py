@@ -42,7 +42,7 @@ def comments(fields):
         for t in list:
             if int(mx) == int(t[0]):
                 final_list.append((t[0], t[5]))
-        return pd.DataFrame(final_list).to_csv('MostLikedComments.csv', index=False)
+        return pd.DataFrame(final_list).to_csv( index=False)
 
 
 def likes(fields):
