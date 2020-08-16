@@ -155,7 +155,10 @@
                   }else
                   Exporter(result,"videoUrls."+type);
               
-            }
+            },
+            error: function(XMLHttpRequest, textStatus, errorThrown) {
+             alert("some error");
+              }
         });
 
     }

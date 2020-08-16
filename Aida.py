@@ -57,8 +57,10 @@ def likes(fields):
     # if not check_date_format(fields['until']):
     #     fields.pop('until', '')
     l = []
+    print(q,lang,result_type)
     for tweet in tweepy.Cursor(api.search, q=q,
                                lang=lang, result_type=result_type).items(100):
+        print("->>>>>>>>>>>")
         l.append((tweet.id, tweet.favorite_count, tweet.user.name, tweet.created_at, tweet.lang, tweet.retweet_count,
                   tweet.source, tweet.truncated, str(tweet.text)))
     l = sorted(l, key=lambda x: x[1])
