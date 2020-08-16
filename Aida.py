@@ -50,7 +50,7 @@ def likes(fields):
     result_type = fields.pop('result_type', 'popular')
     type = fields.pop('type', 'json')
     keys = fields.pop('output', TWEET_KEYS)
-    # if not check_date_format(fields['since']):
+    # if not check_date_format(fields['since'] ):
     #     fields.pop('since', '')
     # if not check_date_format(fields['until']):
     #     fields.pop('until', '')
