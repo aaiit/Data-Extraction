@@ -25,20 +25,17 @@ def downloadImages(fields):
         if (len(media) > 0):
             media_files.add(media[0]['media_url'])
     # print (status.created_at, status.text)
-    if (type == "txt"):
-        s = ""
-        for media_file in media_files:
-            s += media_file + "\n"
-        return s
+    # if (type == "txt"):
+    return list(media_files)
 
-    for media_file in media_files:
-        wget.download(media_file, out="Imagesdownl")
+    # for media_file in media_files:
+    #     wget.download(media_file, out="Imagesdownl")
 
-    def zipdir(path, ziph):
-        for root, dirs, files in os.walk(path):
-            for file in files:
-                ziph.write(os.path.join(root, file))
+    # def zipdir(path, ziph):
+    #     for root, dirs, files in os.walk(path):
+    #         for file in files:
+    #             ziph.write(os.path.join(root, file))
 
-    zipf = zipfile.ZipFile('hello/static/Imagesdownl.zip', 'w', zipfile.ZIP_DEFLATED)
-    zipdir('Imagesdownl/', zipf)
-    zipf.close()
+    # zipf = zipfile.ZipFile('hello/static/Imagesdownl.zip', 'w', zipfile.ZIP_DEFLATED)
+    # zipdir('Imagesdownl/', zipf)
+    # zipf.close()
