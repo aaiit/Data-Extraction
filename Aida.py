@@ -62,4 +62,4 @@ def likes(fields):
         l.append((tweet.id, tweet.favorite_count, tweet.user.name, tweet.created_at, tweet.lang, tweet.retweet_count,
                   tweet.source, tweet.truncated, str(tweet.text)))
     l = sorted(l, key=lambda x: x[1])
-    return pd.DataFrame(list).to_csv(index=False) if type == 'csv' else json.dumps(l, indent=3)
+    return pd.DataFrame(l).to_csv(index=False) if type == 'csv' else json.dumps(l, indent=3)
