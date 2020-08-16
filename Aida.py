@@ -33,6 +33,8 @@ def comments(fields):
                      tweet.text))
                 if len(replies) >= count:
                     break
+    if len(list)==0:
+        return '{}'
     mx = max(l[0] for l in list)
     if int(mx) == 0:
         return "{}"
