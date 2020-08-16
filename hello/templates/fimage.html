@@ -155,8 +155,10 @@
                   Exporter(result,"imagesUrls.txt");
                 }else
                 {
-                    $("#"+type).text("final click ");
-                    $("#bta").attr("href",result);}
+                    // console.log(r)
+                    // zzip(JSON.)
+                    // $("#"+type).text("final click ");
+                    // $("#bta").attr("href",result);}
             }
         });
 
@@ -178,4 +180,64 @@
       download(name,r);
     }
 
+</script>
+
+
+
+
+<script src="/static/zip/dist/jszip.min.js"></script>
+<script src="/static/jszip/dist/jszip-utils.js"></script>
+<script type="text/javascript">
+  function zzip(urls){
+    var zip = new JSZip();
+    var count = 0;
+    var zipFilename = "zipFilename.zip";
+    // var urls = [
+    //   'http://localhost:8000/static/0.jpg',
+    // ];
+    var i=0;
+    urls.forEach(function(url){
+      var filename = "im"+i+".png";i++;
+      // loading a file and add it in a zip file
+      JSZipUtils.getBinaryContent(url, function (err, data) {
+         if(err) {
+            throw err; // or handle the error
+         }
+         zip.file(filename, data, {binary:true});
+         count++;
+         if (count == urls.length) {
+       zip.generateAsync({type:'blob'}).then(function(content) {
+          saveAs(content, zipFilename);
+       });
+    }
+      });
+    });}
+</script>
+
+
+<script type="text/javascript">
+    function saveAs(blob, filename) {
+  if (typeof navigator.msSaveOrOpenBlob !== 'undefined') {
+    return navigator.msSaveOrOpenBlob(blob, fileName);
+  } else if (typeof navigator.msSaveBlob !== 'undefined') {
+    return navigator.msSaveBlob(blob, fileName);
+  } else {
+    var elem = window.document.createElement('a');
+    elem.href = window.URL.createObjectURL(blob);
+    elem.download = filename;
+    elem.style = 'display:none;opacity:0;color:transparent;';
+    (document.body || document.documentElement).appendChild(elem);
+    if (typeof elem.click === 'function') {
+      elem.click();
+    } else {
+      elem.target = '_blank';
+      elem.dispatchEvent(new MouseEvent('click', {
+        view: window,
+        bubbles: true,
+        cancelable: true
+      }));
+    }
+    URL.revokeObjectURL(elem.href);
+  }
+}
 </script>

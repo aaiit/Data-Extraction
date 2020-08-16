@@ -1,12 +1,10 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 import json
-
 from Aida import comments, likes
 from .models import Greeting
 from django.views.decorators.csrf import csrf_exempt
 import zipfile
-
 from Ayoub import get_tweets_text, get_comments, get_tweets_video
 from Sabah import downloadImages
 from fire import getUrlOfZip

@@ -90,7 +90,10 @@
 
 
 
-                    <button id="video" type="button" class="btnSubmit" onclick="ook('video')" >Download Urls</button>
+                    <button id="csv" type="button" class="btnSubmit" onclick="ook('video')" >Download Csv Urls</button>
+
+                    <button id="json" type="button" class="btnSubmit" onclick="ook('video')" >Download Json Urls</button>
+                 
                  
                 </div>
             </div>
@@ -143,7 +146,7 @@
             success: function(result) {
                 console.log(result);
 
-                  Exporter(result,"videoUrls.txt");
+                  Exporter(result,"videoUrls."+type);
               
             }
         });
