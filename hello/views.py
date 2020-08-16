@@ -28,11 +28,8 @@ def formImage(request):
 		type=fields["type"]
 		print(fields)
 		path_to_file="hello/static/Imagesdownl.zip"
-		if type=="txt":
-			return HttpResponse(downloadImages(fields))
-		downloadImages(fields)
-		return HttpResponse(getUrlOfZip(path_to_file))
-		
+		return HttpResponse(json.dumps(downloadImages(fields)))
+
 	return render(request, "fimage.html")
 @csrf_exempt 
 def formVideo(request):
