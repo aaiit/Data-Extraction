@@ -49,13 +49,13 @@ def likes(fields):
     count = fields.pop('count', 100)
     q = fields.pop('q', 'aida')
     lang = fields.pop('lang', 'en')
-    result_type = fields('result_type', 'popular')
+    result_type = fields.pop('result_type', 'popular')
     type = fields.pop('type', 'csv')
     keys = fields.pop('output', TWEET_KEYS)
-    if not check_date_format(fields['since']):
-        fields.pop('since', '')
-    if not check_date_format(fields['until']):
-        fields.pop('until', '')
+    # if not check_date_format(fields['since']):
+    #     fields.pop('since', '')
+    # if not check_date_format(fields['until']):
+    #     fields.pop('until', '')
 
     for tweet in tweepy.Cursor(api.search, q=q, **fields,
                                lang=lang, result_type=result_type).items(count):
