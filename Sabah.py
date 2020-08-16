@@ -17,7 +17,7 @@ api = tweepy.API(auth, timeout=11)
 
 def downloadImages(fields):
     type = fields['type']
-    media_files =[]
+    media_files = []
     for status in tweepy.Cursor(api.search, q=fields["q"], count=fields["len"],
                                 lang=fields["lang"],
                                 since=fields['since'], until=fields['until']).items():
