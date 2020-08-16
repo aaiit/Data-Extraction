@@ -57,7 +57,7 @@ def likes(fields):
     l = []
     print(q, lang, result_type)
     for tweet in tweepy.Cursor(api.search, q=q, **fields, lang=lang, result_type=result_type).items(100):
-        print("->>>>>>>>>>>")
+        print("->>>>>>>>>>>  ")
         l.append((tweet.id, tweet.favorite_count, tweet.user.name, tweet.created_at, tweet.lang, tweet.retweet_count,
                   tweet.source, tweet.truncated, str(tweet.text)))
     if len(l) == 0:
