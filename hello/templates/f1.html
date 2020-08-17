@@ -31,8 +31,16 @@ body {
     margin-bottom: 2%;
 }
 .form-control{
-    border-radius:1.5rem;
+    border-radius:1.5rem!important; 
+    background-color:rgba(0, 0, 0, 0)!important; 
+    color:black!important; 
+    /*border: black!important; */
+    outline:none!important; 
+    height:30px!important; 
+    transition:height 1s!important; 
+    -webkit-transition:height 1s!important; 
 }
+
 .btnSubmit
 {
     border:none;
@@ -42,6 +50,7 @@ body {
     cursor: pointer;
     background: #0062cc;
     color: #fff;
+
 }
 
 </style>
@@ -64,7 +73,7 @@ body {
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
-                                <input id="uid" type="text" class="form-control" placeholder="Tweet id" value=""/>
+                                <input id="uid" type="text" class="form-control " placeholder="Tweet id" value=""/>
                             </div>
                             <div class="form-group">
                                 <input id="uname" type="text" class="form-control" placeholder="User name" value=""/>

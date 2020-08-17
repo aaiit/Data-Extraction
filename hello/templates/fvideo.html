@@ -30,8 +30,16 @@ body {
     margin-bottom: 2%;
 }
 .form-control{
-    border-radius:1.5rem;
+    border-radius:1.5rem!important; 
+    background-color:rgba(0, 0, 0, 0)!important; 
+    color:black!important; 
+    /*border: black!important; */
+    outline:none!important; 
+    height:30px!important; 
+    transition:height 1s!important; 
+    -webkit-transition:height 1s!important; 
 }
+
 .btnSubmit
 {
     border:none;
@@ -50,7 +58,7 @@ body {
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <!------ Include the above in your HEAD tag ---------->
-<body><canvas id="canvas">
+<body><canvas id="canvas"></canvas><br><br>
 <div class="container register-form">
             <div class="form">
                 <div class="note">
