@@ -4,10 +4,9 @@ import json
 from Aida import comments, likes
 from .models import Greeting
 from django.views.decorators.csrf import csrf_exempt
-import zipfile
+
 from Ayoub import get_tweets_text, get_comments, get_tweets_video
 from Sabah import downloadImages
-from fire import getUrlOfZip
 
 def index(request):
 	return render(request, "choose.html")
@@ -16,7 +15,6 @@ def index(request):
 def formText(request):
 	if request.method=='POST':
 		fields=json.loads(request.body)
-		#fields = {'q': 'covid19', 'lang': 'en', 'result_type': 'popular',"len":2}
 		return HttpResponse(get_tweets_text(fields))
 	return render(request, "form1.html")
 

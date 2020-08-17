@@ -1,20 +1,28 @@
 <style type="text/css">
 	
-      body {
-    background-image:url("/static/0.jpg");
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
+body {
+    background: #222;
+    margin: 0rem;
+    min-height: 100vh;
+    font-family: Futura, sans-serif;
+}
+#canvas {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    z-index: -1;
 }
 </style>
 
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>Standard search operators</title>
 </head>
 <body>
 
-
+<canvas id="canvas">
 <h3>Standard search operators</h3>
 <p>The query can have operators that modify its behavior. the available operators are:</p>
 <table border="1">
@@ -73,3 +81,6 @@
 
 </body>
 </html>
+
+
+<script src="/static/bg.js"></script>

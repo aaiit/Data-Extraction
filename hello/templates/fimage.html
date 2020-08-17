@@ -6,10 +6,18 @@
   
 <style type="text/css">
   
-      body {
-    background-image:url("/static/Twitter.jpg");
-    /*background-repeat: no-repeat;*/
-    background-size: 100% 100%;
+body {
+    background: #222;
+    margin: 0rem;
+    min-height: 100vh;
+    font-family: Futura, sans-serif;
+}
+#canvas {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    z-index: -1;
 }
   .note
 {
@@ -48,6 +56,7 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <!------ Include the above in your HEAD tag ---------->
 </head>
+<body><canvas id="canvas"></canvas>
 <br><br>
 
 <div class="container register-form" >
@@ -105,8 +114,8 @@
                 </div>
             </div>
         </div>
-
-
+</div></div></div>
+</body>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script type="text/javascript">
      function get_cookie(c_name){
@@ -244,3 +253,5 @@
   }
 }
 </script>
+
+<script src="/static/bg.js"></script>

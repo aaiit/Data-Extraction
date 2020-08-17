@@ -25,18 +25,5 @@ def downloadImages(fields):
             media_files.append(media[0]['media_url'])
             if count == len(media_files):
                 break
-    # print (status.created_at, status.text)
-    # if (type == "txt"):
     return media_files
 
-    # for media_file in media_files:
-    #     wget.download(media_file, out="Imagesdownl")
-
-    # def zipdir(path, ziph):
-    #     for root, dirs, files in os.walk(path):
-    #         for file in files:
-    #             ziph.write(os.path.join(root, file))
-
-    # zipf = zipfile.ZipFile('hello/static/Imagesdownl.zip', 'w', zipfile.ZIP_DEFLATED)
-    # zipdir('Imagesdownl/', zipf)
-    # zipf.close()
