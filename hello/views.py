@@ -9,14 +9,14 @@ from Ayoub import get_tweets_text, get_comments, get_tweets_video
 from Sabah import downloadImages
 
 def index(request):
-	return render(request, "choose.html")
+	return render(request, "index.html")
 
 @csrf_exempt 
 def formText(request):
 	if request.method=='POST':
 		fields=json.loads(request.body)
 		return HttpResponse(get_tweets_text(fields))
-	return render(request, "form1.html")
+	return render(request, "f0.html")
 
 
 @csrf_exempt 

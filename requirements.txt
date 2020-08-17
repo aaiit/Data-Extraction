@@ -4,4 +4,3 @@ django-heroku
 tweepy
 wget
 pandas
-pyrebase
