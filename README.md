@@ -1,4 +1,6 @@
 # Python: Twitter Scrapping Django app
+![alt text](index.png)
+![alt text](form.png)
 
 A barebones Django app, which can easily be deployed to Heroku.
 
