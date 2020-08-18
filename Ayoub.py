@@ -40,6 +40,6 @@ def get_tweets_video(fields):
     if type == 'json':
         return videos
     elif type == 'zip':
-        return [tt['extended_entities.media.video_info.variants.url'][0] for tt in videos]
+        return json.dumps([tt['extended_entities.media.video_info.variants.url'][0] for tt in videos])
     else:
         return DataFrame(videos).to_csv(index=False)
