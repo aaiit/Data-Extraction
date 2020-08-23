@@ -1,0 +1,235 @@
+
+<title>search videos</title>
+<link rel="stylesheet" media="screen" href="/static/style.css"/>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="f0-bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+<body><canvas id="canvas"></canvas><br><br>
+<div class="container register-form">
+            <div class="form">
+                <div class="note">
+                    <p>search videos</p>
+                </div>
+
+                <div class="form-content">
+              
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input id="f0-qq" type="text" class="form-control" placeholder="Query" value=""/>
+                            </div>
+                            <div class="form-group">
+                                <input id="f0-lang" type="text" class="form-control" placeholder="by channel" value=""/>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input id="f0-len" type="text" class="form-control" placeholder="Count" value=""  />
+                            </div>
+                            <div class="form-group">
+                                <input id="f0-date"type="text" class="form-control" placeholder="before_time yyyy-dd-mmThh:mm:ssZ" value=""  />
+                            </div>
+                        </div>
+
+                         <div class="col-md-6">
+                            <div class="form-group">
+                                <input id="f0-until"type="text" class="form-control" placeholder="after_time  yyyy-dd-mmThh:mm:ssZ" value=""/>
+
+                            </div>
+
+                            <div class="form-group">
+                                <input id="f0-until"type="text" class="form-control" placeholder="Related to" value=""/>
+
+                          </div>
+
+                          <div class="form-group">
+                                <input id="f0-until"type="text" class="form-control" placeholder="Region" value=""/>
+
+                          </div>
+
+                         <label>Location</label>
+                                <input id="f0-until"type="text" class="form-control" placeholder="lat" value=""/>
+
+                                <input id="f0-until"type="text" class="form-control" placeholder=" long" value=""/>
+
+                                <input id="f0-until"type="text" class="form-control" placeholder="radius" value=""/>
+
+                        
+                           
+                    
+                  <label>Order by</label>
+             <FORM id="f0-rt">
+              <SELECT name="nom" size="1">
+              <OPTION>date</OPTION>
+              <OPTION>rating</OPTION>
+              <OPTION>relevance</OPTION>
+              <OPTION>viewCount</OPTION>
+              </SELECT>
+              </FORM>
+
+                        </div>
+   <!--  <div id="f0-wrapper1" onclick="wrapper()">
+    <label for="yes_no_radio">Do you want  <strong>standard data</strong>?</label>
+    <p>
+    <input type="radio" name="yes_no" id="f0-ah" checked>Yes</input>
+    </p>
+    <p>
+    <input type="radio" name="yes_no" id="f0-la">No</input>
+    </p>
+    </div>
+    <div id="f0-wrapper2" style="display: none;">
+      <label for="yes_no_radio">Choose desired names</label><br>
+    </div> -->
+
+
+
+    <br>
+
+
+                        <button id="f0-csv" type="button" class="btnSubmit" onclick="ook('csv')" >Download Csv</button>
+                        <button id="f0-json" type="button" class="btnSubmit" onclick="ook('json')">Download Json</button>
+                        <!-- <a href="/" class="btn btn-xs btn-warning">Back</a> -->
+                    </div>
+                </div>
+            </div>
+          </div></div></div></div>
+        </div></div>
+</body>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript">
+     function get_cookie(c_name){
+          if (document.cookie.length > 0)
+          {
+              c_start = document.cookie.indexOf(c_name + "=");
+              if (c_start != -1)
+              {
+                  c_start = c_start + c_name.length + 1;
+                  c_end = document.cookie.indexOf(";", c_start);
+                  if (c_end == -1) c_end = document.cookie.length;
+                  return unescape(document.cookie.substring(c_start,c_end));
+              }
+          }
+          return "";
+      }
+
+        
+       
+</script>
+
+<script >
+
+    function ook(type){
+      $("#f0-"+type).text("wait...");
+      var q=document.getElementById("f0-qq").value;
+      var lang=document.getElementById("f0-lang").value;
+      var len=Number(document.getElementById("f0-len").value);
+      var rt=$("#f0-rt").serializeArray()[0].value;
+      var from=document.getElementById("f0-date").value;
+      var to=document.getElementById("f0-until").value;
+      var fields = {'q': q, 'lang': lang, 'result_type': rt,"len":len,"since":from,"until":to,"type":type,"output":getlist()};
+
+        $.ajaxSetup({
+              headers: { "X-CSRFToken": get_cookie('csrftoken') }});
+        $.ajax({
+            url: '',
+            type: 'POST',
+            contentType: 'application/json; charset=utf-8',
+            data: JSON.stringify(fields),
+            dataType: 'text',
+            success: function(result) {
+                Exporter(result,"data."+type);
+                $("#f0-"+type).text(type);
+            },
+            error: function(XMLHttpRequest, textStatus, errorThrown) {
+             alert("some error");
+              }
+        });
+
+    }
+</script>
+
+
+</body>
+
+ <script type="text/javascript">
+      function download(filename, text) {
+      var element = document.createElement('a');
+      element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+      element.setAttribute('download', filename);
+      element.style.display = 'none';
+      document.body.appendChild(element);
+      element.click();
+      document.body.removeChild(element);
+    };
+    function Exporter(r,name) {
+      download(name,r);
+    }
+  </script>
+
+
+
+
+  <script type="text/javascript">
+    
+    var o=['created_at', 'id_str', 'full_text', 'truncated', 'user.id', 'retweet_count', 'favorite_count'];
+    var on=[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1];
+      function bt(name,id){
+        return `<button  id="f0-`+id+`" onclick="wanted(`+id+`)" type="button" class="btn btn-outline-secondary ensias">`+name+`</button>`;
+      }
+      var i=0;
+      for(var c of o)
+      {
+        $( "#f0-wrapper2" ).append( bt(c,i) );
+        i++;
+
+      }
+
+      function wanted(n){
+
+        if(on[n])
+        $("#f0-"+n).attr("class","btn btn-outline-primary");
+        else
+        $("#f0-"+n).attr("class","btn btn-outline-secondary");
+        on[n]=1-on[n];
+      }
+
+     
+    var full=1;
+    function wrapper(){
+      $("#f0-wrapper1").change(function ()
+      {
+         if(document.getElementById("f0-ah").checked){
+          full=1;
+          $("#f0-wrapper2").hide();
+         }else{
+          full=0;
+          $("#f0-wrapper2").show();
+         }
+      }
+      )
+    }
+
+
+     function getlist(){
+        if(full){
+          console.log("full");
+          console.log(o);
+          return  o;
+        }
+        var l=[];
+        for(var i=0;i<o.length;i++){
+          if(!on[i]){
+            l.push(o[i]);
+          }
+        }
+        console.log(l);
+        return l;
+      }
+
+  </script>
+
+
+<script src="/static/bg.js"></script>

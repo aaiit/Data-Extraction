@@ -8,7 +8,14 @@ from Ayoub import get_tweets_text, get_comments, get_tweets_video
 from Sabah import downloadImages
 
 def table(request):
-	return render(request, "base.html")
+	a=request.GET.get("a")
+	print(a)
+	data= open("data.csv").read()
+	data=data.split("\n")
+	for i in range(len(data)):
+		data[i]=data[i].split(",")
+	print(data)
+	return render(request, "table.html",{"C":data[0],"data":data[1:]})
 
 
 def index(request):
