@@ -2,9 +2,9 @@ import json
 
 import pandas
 
-from Youtube.YoutubeSearchByKeywords import SearchRequest
-from Youtube.YoutubeVideoComments import VideoComments
-from Youtube.YoutubeVideoInformations import VideoContent
+from youtubeApp.YoutubeSearchByKeywords import SearchRequest
+from youtubeApp.YoutubeVideoComments import VideoComments
+from youtubeApp.YoutubeVideoInformations import VideoContent
 
 api = 'AIzaSyCPYehigrYNp7TkN12zTmwu3cDRt2CM4ZE'
 
