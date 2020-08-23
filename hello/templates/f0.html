@@ -1,61 +1,9 @@
 
 <title>Extraire des tweets</title>
-<style type="text/css">
-
-body {
-    background: #222;
-    margin: 0rem;
-    min-height: 100vh;
-    font-family: Futura, sans-serif;
-}
-#canvas {
-    position: absolute;
-    display: block;
-    top: 0;
-    left: 0;
-    z-index: -1;
-}
-  .note
-{
-    text-align: center;
-    height: 80px;
-    background: -webkit-linear-gradient(left, #0072ff, #8811c5);
-    color: #fff;
-    font-weight: bold;
-    line-height: 80px;
-}
-.form-content
-{
-    padding: 5%;
-    border: 1px solid #ced4da;
-    margin-bottom: 2%;
-}
-.form-control{
-    border-radius:1.5rem!important; 
-    background-color:rgba(0, 0, 0, 0)!important; 
-    color:black!important; 
-    /*border: black!important; */
-    outline:none!important; 
-    height:30px!important; 
-    transition:height 1s!important; 
-    -webkit-transition:height 1s!important; 
-}
-
-.btnSubmit
-{
-    border:none;
-    border-radius:1.5rem;
-    padding: 1%;
-    width: 20%;
-    cursor: pointer;
-    background: #0062cc;
-    color: #fff;
-}
-
-</style>
+<link rel="stylesheet" media="screen" href="/static/style.css"/>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="f0-bootstrap-css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <!------ Include the above in your HEAD tag ---------->
@@ -70,63 +18,65 @@ body {
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
-                                <input id="qq" type="text" class="form-control" placeholder="Query" value=""/>
+                                <input id="f0-qq" type="text" class="form-control" placeholder="Query" value=""/>
                             </div>
                             <div class="form-group">
-                                <input id="lang" type="text" class="form-control" placeholder="Langage  fr,ar,en,..." value=""/>
+                                <input id="f0-lang" type="text" class="form-control" placeholder="Langage  fr,ar,en,..." value=""/>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                <input id="len" type="text" class="form-control" placeholder="Count" value=""  />
+                                <input id="f0-len" type="text" class="form-control" placeholder="Count" value=""  />
                             </div>
                             <div class="form-group">
-                                <input id="date"type="text" class="form-control" placeholder="since YYYY-MM-DD" value=""  />
+                                <input id="f0-date"type="text" class="form-control" placeholder="since YYYY-MM-DD" value=""  />
                             </div>
                         </div>
 
                          <div class="col-md-6">
                             <div class="form-group">
-                                <input id="until"type="text" class="form-control" placeholder="Until  YYYY-MM-DD" value=""/>
+                                <input id="f0-until"type="text" class="form-control" placeholder="Until  YYYY-MM-DD" value=""/>
 <br>
-                               <FORM id="rt">
+                               <FORM id="f0-rt">
                                 <SELECT name="nom" size="1">
-                                <OPTION>recent
-                                <OPTION>popular
-                                <OPTION>mixed
+                                <OPTION>recent</OPTION>
+                                <OPTION>popular</OPTION>
+                                <OPTION>mixed</OPTION>
                                 </SELECT>
                                 </FORM>
                             </div>
-                            <div class="form-group">
-                                <!-- <input type="text" class="form-control" placeholder="until YYYY-MM-DD" value=""/> -->
-                            </div>
+                           
                         </div>
                     </div>
-<div id="wrapper1" onclick="wrapper()">
-<label for="yes_no_radio">Do you want  <strong>standard data</strong>?</label>
-<p>
-<input type="radio" name="yes_no" id="ah" checked>Yes</input>
-</p>
-<p>
-<input type="radio" name="yes_no" id="la">No</input>
-</p>
-</div>
-<div id="wrapper2" style="display: none;">
-  <label for="yes_no_radio">Choose desired names</label><br>
-</div>
+
+    <div id="f0-wrapper1" onclick="wrapper()">
+    <label for="yes_no_radio">Do you want  <strong>standard data</strong>?</label>
+    <p>
+    <input type="radio" name="yes_no" id="f0-ah" checked>Yes</input>
+    </p>
+    <p>
+    <input type="radio" name="yes_no" id="f0-la">No</input>
+    </p>
+    </div>
+    <div id="f0-wrapper2" style="display: none;">
+      <label for="yes_no_radio">Choose desired names</label><br>
+    </div>
 
 
 
-<br>
+    <br>
 
 
-                    <button id="csv" type="button" class="btnSubmit" onclick="ook('csv')" >Download Csv</button>
-                    <button id="json" type="button" class="btnSubmit" onclick="ook('json')">Download Json</button>
-                    <a href="/" class="btn btn-xs btn-warning">Back</a>
+                        <button id="f0-csv" type="button" class="btnSubmit" onclick="ook('csv')" >Download Csv</button>
+                        <button id="f0-json" type="button" class="btnSubmit" onclick="ook('json')">Download Json</button>
+                        <a href="/" class="btn btn-xs btn-warning">Back</a>
+                    </div>
                 </div>
             </div>
-        </div>
+          </div></div></div></div>
+        </div></div>
 </body>
+
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script type="text/javascript">
      function get_cookie(c_name){
@@ -151,16 +101,14 @@ body {
 <script >
 
     function ook(type){
-      $("#"+type).text("wait...");
-      var q=document.getElementById("qq").value;
-      var lang=document.getElementById("lang").value;
-      var len=Number(document.getElementById("len").value);
-      var rt=$("#rt").serializeArray()[0].value;
-      var from=document.getElementById("date").value;
-      var to=document.getElementById("until").value;
+      $("#f0-"+type).text("wait...");
+      var q=document.getElementById("f0-qq").value;
+      var lang=document.getElementById("f0-lang").value;
+      var len=Number(document.getElementById("f0-len").value);
+      var rt=$("#f0-rt").serializeArray()[0].value;
+      var from=document.getElementById("f0-date").value;
+      var to=document.getElementById("f0-until").value;
       var fields = {'q': q, 'lang': lang, 'result_type': rt,"len":len,"since":from,"until":to,"type":type,"output":getlist()};
-      console.log(fields);
-      // var fields = {'q': 'covid19', 'lang': 'en', 'result_type': 'popular',"len":2,"output":[['created_at', 'id_str', 'full_text', 'truncated', 'user.id']};
 
         $.ajaxSetup({
               headers: { "X-CSRFToken": get_cookie('csrftoken') }});
@@ -171,9 +119,8 @@ body {
             data: JSON.stringify(fields),
             dataType: 'text',
             success: function(result) {
-                // console.log(result);
                 Exporter(result,"data."+type);
-                $("#"+type).text(type);
+                $("#f0-"+type).text(type);
             },
             error: function(XMLHttpRequest, textStatus, errorThrown) {
              alert("some error");
@@ -209,12 +156,12 @@ body {
     var o=['created_at', 'id_str', 'full_text', 'truncated', 'user.id', 'retweet_count', 'favorite_count'];
     var on=[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1];
       function bt(name,id){
-        return `<button  id="`+id+`" onclick="wanted(`+id+`)" type="button" class="btn btn-outline-secondary ensias">`+name+`</button>`;
+        return `<button  id="f0-`+id+`" onclick="wanted(`+id+`)" type="button" class="btn btn-outline-secondary ensias">`+name+`</button>`;
       }
       var i=0;
       for(var c of o)
       {
-        $( "#wrapper2" ).append( bt(c,i) );
+        $( "#f0-wrapper2" ).append( bt(c,i) );
         i++;
 
       }
@@ -222,23 +169,23 @@ body {
       function wanted(n){
 
         if(on[n])
-        $("#"+n).attr("class","btn btn-outline-primary");
+        $("#f0-"+n).attr("class","btn btn-outline-primary");
         else
-        $("#"+n).attr("class","btn btn-outline-secondary");
+        $("#f0-"+n).attr("class","btn btn-outline-secondary");
         on[n]=1-on[n];
       }
 
      
     var full=1;
     function wrapper(){
-      $("#wrapper1").change(function ()
+      $("#f0-wrapper1").change(function ()
       {
-         if(document.getElementById("ah").checked){
+         if(document.getElementById("f0-ah").checked){
           full=1;
-          $("#wrapper2").hide();
+          $("#f0-wrapper2").hide();
          }else{
           full=0;
-          $("#wrapper2").show();
+          $("#f0-wrapper2").show();
          }
       }
       )

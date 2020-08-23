@@ -1,15 +1,21 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 import json
-from Aida import comments, likes
 from .models import Greeting
 from django.views.decorators.csrf import csrf_exempt
 
+from Aida import comments, likes
 from Ayoub import get_tweets_text, get_comments, get_tweets_video
 from Sabah import downloadImages
 
+def table(request):
+	return render(request, "base.html")
+
+
 def index(request):
 	return render(request, "index.html")
+
+
 
 @csrf_exempt 
 def formText(request):

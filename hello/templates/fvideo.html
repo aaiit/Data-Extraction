@@ -1,60 +1,9 @@
 
 <title>Extraire des tweets</title>
-<style type="text/css">
-body {
-    background: #222;
-    margin: 0rem;
-    min-height: 100vh;
-    font-family: Futura, sans-serif;
-}
-#canvas {
-    position: absolute;
-    display: block;
-    top: 0;
-    left: 0;
-    z-index: -1;
-}
-  .note
-{
-    text-align: center;
-    height: 80px;
-    background: -webkit-linear-gradient(left, #0072ff, #8811c5);
-    color: #fff;
-    font-weight: bold;
-    line-height: 80px;
-}
-.form-content
-{
-    padding: 5%;
-    border: 1px solid #ced4da;
-    margin-bottom: 2%;
-}
-.form-control{
-    border-radius:1.5rem!important; 
-    background-color:rgba(0, 0, 0, 0)!important; 
-    color:black!important; 
-    /*border: black!important; */
-    outline:none!important; 
-    height:30px!important; 
-    transition:height 1s!important; 
-    -webkit-transition:height 1s!important; 
-}
-
-.btnSubmit
-{
-    border:none;
-    border-radius:1.5rem;
-    padding: 1%;
-    width: 20%;
-    cursor: pointer;
-    background: #0062cc;
-    color: #fff;
-}
-
-</style>
+<link rel="stylesheet" media="screen" href="/static/style.css"/>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="fvideo-bootstrap-css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <!------ Include the above in your HEAD tag ---------->
@@ -69,26 +18,26 @@ body {
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
-                                <input id="qq" type="text" class="form-control" placeholder="Query" value=""/>
+                                <input id="fvideo-qq" type="text" class="form-control" placeholder="Query" value=""/>
                             </div>
                             <div class="form-group">
-                                <input id="lang" type="text" class="form-control" placeholder="Langage  fr,ar,en,..." value=""/>
+                                <input id="fvideo-lang" type="text" class="form-control" placeholder="Langage  fr,ar,en,..." value=""/>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                <input id="len" type="text" class="form-control" placeholder="Count" value=""  />
+                                <input id="fvideo-len" type="text" class="form-control" placeholder="Count" value=""  />
                             </div>
                             <div class="form-group">
-                                <input id="date"type="text" class="form-control" placeholder="since YYYY-MM-DD" value=""  />
+                                <input id="fvideo-date"type="text" class="form-control" placeholder="since YYYY-MM-DD" value=""  />
                             </div>
                         </div>
 
                          <div class="col-md-6">
                             <div class="form-group">
-                                <input id="until"type="text" class="form-control" placeholder="Until  YYYY-MM-DD" value=""/>
+                                <input id="fvideo-until"type="text" class="form-control" placeholder="Until  YYYY-MM-DD" value=""/>
 <br>
-                               <FORM id="rt">
+                               <FORM id="fvideo-rt">
                                 <SELECT name="nom" size="1">
                                 <OPTION>recent
                                 <OPTION>popular
@@ -106,11 +55,11 @@ body {
 
 
 
-                    <button id="csv" type="button" class="btnSubmit" onclick="ook('csv')" >Download Csv Urls</button>
+                    <button id="fvideo-csv" type="button" class="btnSubmit" onclick="ook('csv')" >Download Csv Urls</button>
 
-                    <button id="json" type="button" class="btnSubmit" onclick="ook('json')" >Download Json Urls</button>
+                    <button id="fvideo-json" type="button" class="btnSubmit" onclick="ook('json')" >Download Json Urls</button>
                  
-                     <button id="zip" type="button" class="btnSubmit" onclick="ook('zip')" >Download Zip</button>
+                     <button id="fvideo-zip" type="button" class="btnSubmit" onclick="ook('zip')" >Download Zip</button>
                      <a href="/" class="btn btn-xs btn-warning">Back</a>
                  
                 </div>
@@ -142,20 +91,20 @@ body {
 <script >
 
     function ook(type){
-      var q=document.getElementById("qq").value;
-      var lang=document.getElementById("lang").value;
-      var len=Number(document.getElementById("len").value);
-      var rt=$("#rt").serializeArray()[0].value;
-      var from=document.getElementById("date").value;
-      var to=document.getElementById("until").value;
+      var q=document.getElementById("fvideo-qq").value;
+      var lang=document.getElementById("fvideo-lang").value;
+      var len=Number(document.getElementById("fvideo-len").value);
+      var rt=$("#fvideo-rt").serializeArray()[0].value;
+      var from=document.getElementById("fvideo-date").value;
+      var to=document.getElementById("fvideo-until").value;
 
 
       var fields = {'q': q, 'lang': lang, 'result_type': rt,"len":len,"since":from,"until":to,"type":type};
 
       console.log(fields);
       
-        $("#"+type).text("wait...");
-        $("#"+type).attr("onclick","");
+        $("#fvideo-"+type).text("wait...");
+        $("#fvideo-"+type).attr("onclick","");
         $.ajaxSetup({
               headers: { "X-CSRFToken": get_cookie('csrftoken') }});
         $.ajax({
@@ -212,7 +161,7 @@ body {
     var i=0;
     urls.forEach(function(url){
       var filename = "im"+i+".mp4";i++;
-       $("#zip").text(i);
+       $("#fvideo-zip").text(i);
 
 
       // loading a file and add it in a zip file
@@ -225,7 +174,7 @@ body {
          if (count == urls.length) {
        zip.generateAsync({type:'blob'}).then(function(content) {
           saveAs(content, zipFilename);
-          // $("#zip").hide();
+          // $("#fvideo-zip").hide();
        });
     }
       });

@@ -1,5 +1,4 @@
 import json
-
 from Twitter.Keys import *
 from Twitter.TwitterApi import Twitter
 
