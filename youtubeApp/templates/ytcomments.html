@@ -95,13 +95,14 @@
 
     function ook(type){
       $("#f0-"+type).text("wait...");
-      var q=document.getElementById("f0-qq").value;
-      var lang=document.getElementById("f0-lang").value;
-      var len=Number(document.getElementById("f0-len").value);
-      var rt=$("#f0-rt").serializeArray()[0].value;
-      var from=document.getElementById("f0-date").value;
-      var to=document.getElementById("f0-until").value;
-      var fields = {'q': q, 'lang': lang, 'result_type': rt,"len":len,"since":from,"until":to,"type":type,"output":getlist()};
+      // var q=document.getElementById("f0-qq").value;
+      // var lang=document.getElementById("f0-lang").value;
+      // var len=Number(document.getElementById("f0-len").value);
+      // var rt=$("#f0-rt").serializeArray()[0].value;
+      // var from=document.getElementById("f0-date").value;
+      // var to=document.getElementById("f0-until").value;
+
+      var fields = {'sort':'relevance','count':'30','format':1,'video_id':'32161321613','keywords':'great vaccine','type':type};
 
         $.ajaxSetup({
               headers: { "X-CSRFToken": get_cookie('csrftoken') }});

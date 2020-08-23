@@ -70,19 +70,6 @@
               </FORM>
 
                         </div>
-   <!--  <div id="f0-wrapper1" onclick="wrapper()">
-    <label for="yes_no_radio">Do you want  <strong>standard data</strong>?</label>
-    <p>
-    <input type="radio" name="yes_no" id="f0-ah" checked>Yes</input>
-    </p>
-    <p>
-    <input type="radio" name="yes_no" id="f0-la">No</input>
-    </p>
-    </div>
-    <div id="f0-wrapper2" style="display: none;">
-      <label for="yes_no_radio">Choose desired names</label><br>
-    </div> -->
-
 
 
     <br>
@@ -90,7 +77,7 @@
 
                         <button id="f0-csv" type="button" class="btnSubmit" onclick="ook('csv')" >Download Csv</button>
                         <button id="f0-json" type="button" class="btnSubmit" onclick="ook('json')">Download Json</button>
-                        <!-- <a href="/" class="btn btn-xs btn-warning">Back</a> -->
+                 
                     </div>
                 </div>
             </div>
@@ -123,13 +110,15 @@
 
     function ook(type){
       $("#f0-"+type).text("wait...");
-      var q=document.getElementById("f0-qq").value;
-      var lang=document.getElementById("f0-lang").value;
-      var len=Number(document.getElementById("f0-len").value);
-      var rt=$("#f0-rt").serializeArray()[0].value;
-      var from=document.getElementById("f0-date").value;
-      var to=document.getElementById("f0-until").value;
-      var fields = {'q': q, 'lang': lang, 'result_type': rt,"len":len,"since":from,"until":to,"type":type,"output":getlist()};
+      // var q=document.getElementById("f0-qq").value;
+      // var lang=document.getElementById("f0-lang").value;
+      // var len=Number(document.getElementById("f0-len").value);
+      // var rt=$("#f0-rt").serializeArray()[0].value;
+      // var from=document.getElementById("f0-date").value;
+      // var to=document.getElementById("f0-until").value;
+
+      var fields =  {'q': 'vaccine corona', 'max_results': 20, 'by_channel': '', 'order_by': 'relevance', 'related_to': '',
+'before_time': '2020-30-07T00:00:00Z','after_time':'2020-22-08T00:00:00Z','type':type};
 
         $.ajaxSetup({
               headers: { "X-CSRFToken": get_cookie('csrftoken') }});
@@ -172,64 +161,7 @@
 
 
 
-  <script type="text/javascript">
-    
-    var o=['created_at', 'id_str', 'full_text', 'truncated', 'user.id', 'retweet_count', 'favorite_count'];
-    var on=[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1];
-      function bt(name,id){
-        return `<button  id="f0-`+id+`" onclick="wanted(`+id+`)" type="button" class="btn btn-outline-secondary ensias">`+name+`</button>`;
-      }
-      var i=0;
-      for(var c of o)
-      {
-        $( "#f0-wrapper2" ).append( bt(c,i) );
-        i++;
 
-      }
-
-      function wanted(n){
-
-        if(on[n])
-        $("#f0-"+n).attr("class","btn btn-outline-primary");
-        else
-        $("#f0-"+n).attr("class","btn btn-outline-secondary");
-        on[n]=1-on[n];
-      }
-
-     
-    var full=1;
-    function wrapper(){
-      $("#f0-wrapper1").change(function ()
-      {
-         if(document.getElementById("f0-ah").checked){
-          full=1;
-          $("#f0-wrapper2").hide();
-         }else{
-          full=0;
-          $("#f0-wrapper2").show();
-         }
-      }
-      )
-    }
-
-
-     function getlist(){
-        if(full){
-          console.log("full");
-          console.log(o);
-          return  o;
-        }
-        var l=[];
-        for(var i=0;i<o.length;i++){
-          if(!on[i]){
-            l.push(o[i]);
-          }
-        }
-        console.log(l);
-        return l;
-      }
-
-  </script>
 
 
 <script src="/static/bg.js"></script>
