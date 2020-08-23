@@ -5,17 +5,23 @@ import twitterApp.views
 import youtubeApp.views
 import linkedinApp.views
 
+from django.shortcuts import render
+def index(request):
+	return render(request,"home.html")
 
 urlpatterns = [
-    path("", twitterApp.views.index),
-    path("form1/", twitterApp.views.formText),
-    path("form2/", twitterApp.views.formImage),
-    path("form3/", twitterApp.views.formVideo),
-    path("standard-operators/", twitterApp.views.standardOperators),
-    path("f1/", twitterApp.views.f1),
-    path("f2/", twitterApp.views.f2),
-    path("f3/", twitterApp.views.f3),
-    path("t/", twitterApp.views.table, ),
-    path("lnkdn/",linkedinApp.views.index),
-    path("yt/",youtubeApp.views.index),
+	path("", index),
+
+    path("twitter/", twitterApp.views.index),
+    path("twitter/form1/", twitterApp.views.formText),
+    path("twitter/form2/", twitterApp.views.formImage),
+    path("twitter/form3/", twitterApp.views.formVideo),
+    path("twitter/standard-operators/", twitterApp.views.standardOperators),
+    path("twitter/f1/", twitterApp.views.f1),
+    path("twitter/f2/", twitterApp.views.f2),
+    path("twitter/f3/", twitterApp.views.f3),
+    path("twitter/t/", twitterApp.views.table, ),
+
+    path("linkedin/",linkedinApp.views.index),
+    path("youtube/",youtubeApp.views.index),
 ]
