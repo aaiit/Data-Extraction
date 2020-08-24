@@ -1,10 +1,6 @@
 import json
-from time import sleep
 
 import requests as req
-
-from youtubeApp.YoutubeVideoInformations import VideoContent
-
 
 
 class SearchRequest:
@@ -40,7 +36,7 @@ class SearchRequest:
         if lat is None:
             self.fields.pop('&location=', None)
         else:
-            self.fields['&location='] = lat + '%2C' + long + '&locationRadius=' + radius + 'mi'
+            self.fields['&location='] = str(lat) + '%2C' + str(long) + '&locationRadius=' + str(radius) + 'mi'
         return self
 
     def query(self, q=''):
