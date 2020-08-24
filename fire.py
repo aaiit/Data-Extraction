@@ -1,3 +1,4 @@
+#test
 import pyrebase
 
 config = {
@@ -14,6 +15,6 @@ config = {
 
 firebase = pyrebase.initialize_app(config)
 
-db=firebase.database()
-data = open("data.csv").read()
-db.child("data/2020").set(data)
+database=firebase.database()
+# data = open("data.json").read()
+# db.child("data/json/2020").set(data)

@@ -6,16 +6,27 @@ from django.views.decorators.csrf import csrf_exempt
 from Aida import comments, likes
 from Ayoub import get_tweets_text, get_comments, get_tweets_video
 from Sabah import downloadImages
-
+from fire import database
 def table(request):
 	a=request.GET.get("a")
 	print(a)
-	data= open("data.csv").read()
-	data=data.split("\n")
-	for i in range(len(data)):
-		data[i]=data[i].split(",")
-	print(data)
-	return render(request, "table.html",{"C":data[0],"data":data[1:]})
+	js=database.child("data/json/"+a).get().val()
+	if js==None:
+		return HttpResponse("data not found")
+	js=json.loads(js)
+	print(js)
+	# js= [{'sort': 'relevance', 'count': '30', 'format': 1, 'video_id': '32161321613', 'keywords': 'great vaccine', 'type': 'json'}]
+	keys=list(js[0].keys())
+	def e(l):
+		Q=[]
+		for i in l:
+			Q.append(l[i])
+		return Q
+	lignes=[]
+	for j in js:
+		lignes.append(list(e(j)))
+	# print(lignes)
+	return render(request, "table.html",{"C":keys,"data":lignes})
 
 
 def index(request):
