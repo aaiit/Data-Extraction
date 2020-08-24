@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 import json
-from youtubeApp.Youtube import *
+from youtubeApp.Youtube.Youtube import *
 from django.views.decorators.csrf import csrf_exempt
 
 def index(request):
