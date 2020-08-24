@@ -16,20 +16,20 @@ def get_tweets_text(fields):
     keys = fields.pop('output', TWEET_KEYS)
     tweets = t.search_tweets_text(fields.pop('len', 10), fields, keys)
 
-    jsondata=json.dumps(tweets, default=str, indent=4)
-    if(type=="url"):return  upload(jsondata)
+    jsondata = json.dumps(tweets, default=str, indent=4)
+    if (type == "url"): return upload(jsondata)
     return jsondata if type == 'json' else DataFrame(tweets).to_csv(index=False)
 
 
 def get_comments(fields):
     name = fields.pop('username', '')
     tweet_id = fields.pop('id', '')
-    count = fields.pop('count', 10)
+    count = int(fields.pop('count', 1))
     keys = fields.pop('output', REPLIES_KEYS)
-    type = fields.pop('type', 'csv')
-    replies = t.get_replies(name, tweet_id, keys, count=count)
-    jsondata=json.dumps(replies, default=str, indent=4)
-    if(type=="url"):return  upload(jsondata)
+    type = fields.pop('type', 'json')
+    replies = t.get_replies(user_screen_name=name, tweet_id=tweet_id, keys=keys, count=count)
+    jsondata = json.dumps(replies, default=str, indent=4)
+    if (type == "url"): return upload(jsondata)
     return jsondata if type == 'json' else DataFrame(replies).to_csv(index=False)
 
 
@@ -47,3 +47,7 @@ def get_tweets_video(fields):
         return json.dumps([tt['extended_entities.media.video_info.variants.url'][0] for tt in videos])
     else:
         return DataFrame(videos).to_csv(index=False)
+
+
+with open('comments.j   son', 'w')as f:
+    f.write(get_comments({'username': 'HenryMakow', 'id': '1297883200291844096', 'count': '5'}))
