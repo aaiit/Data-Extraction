@@ -3,13 +3,12 @@
 
 {% block content %}
 <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
-<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
 
 <div class="btn-toolbar">
-    <!-- <button class="btn btn-primary">New User</button> -->
     <button onclick="Exporter()"class="btn" >Import Json</button>
-    <button onclick="downloadcsv()" class="btn" >Import CSV</button>
+    <button onclick="csvfile()" class="btn" >Import CSV</button>
+    <button onclick="coperUrl()" class="btn" >Copy url</button>
 </div>
 <div class="well">
     <table class="table">
@@ -31,29 +30,12 @@
           {%for dd in d%}
           <td>{{dd}}</td>
           {% endfor %}
-        <!--   <td>1</td>
-          <td>Mark</td>
-          <td>Tompson</td>
-          <td>the_mark7</td> -->
-         <!--  <td>
-              <a href="user.html"><i class="icon-pencil"></i></a>
-              <a href="#myModal" role="button" data-toggle="modal"><i class="icon-remove"></i></a>
-          </td> -->
         </tr>
         {% endfor %}
       </tbody>
     </table>
 </div>
-<!-- <div class="pagination">
-    <ul>
-        <li><a href="#">Prev</a></li>
-        <li><a href="#">1</a></li>
-        <li><a href="#">2</a></li>
-        <li><a href="#">3</a></li>
-        <li><a href="#">4</a></li>
-        <li><a href="#">Next</a></li>
-    </ul>
-</div> -->
+
 <div class="modal small hide fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
@@ -77,6 +59,9 @@
     function getjson(){
       return JSON.stringify(data);
     }
+    function getdata(){
+      return data;
+    }
 </script>
 
 
@@ -98,101 +83,45 @@
   </script>
 
 <script type="text/javascript">
-  function convertToCSV(objArray) {
-    var array = typeof objArray != 'object' ? JSON.parse(objArray) : objArray;
-    var str = '';
+// JSON to CSV Converter
+        function ConvertToCSV(objArray) {
+            var array = typeof objArray != 'object' ? JSON.parse(objArray) : objArray;
+            var str = '';
 
-    for (var i = 0; i < array.length; i++) {
-        var line = '';
-        for (var index in array[i]) {
-            if (line != '') line += ','
+            for (var i = 0; i < array.length; i++) {
+                var line = '';
+                for (var index in array[i]) {
+                    if (line != '') line += ','
 
-            line += array[i][index];
+                    line += array[i][index];
+                }
+
+                str += line + '\r\n';
+            }
+
+            return str;
         }
 
-        str += line + '\r\n';
-    }
+        // Convert Object to JSON
+        var jsonObject = JSON.stringify(getdata());
 
-    return str;
-}
 
-function exportCSVFile(headers, items, fileTitle) {
-    if (headers) {
-        items.unshift(headers);
-    }
+        // Convert JSON to CSV & Display CSV
+        function csvfile(){
+          download('{{id}}.csv',ConvertToCSV(jsonObject));
+        };
+      
+</script>
 
-    // Convert Object to JSON
-    var jsonObject = JSON.stringify(items);
 
-    var csv = this.convertToCSV(jsonObject);
-
-    var exportedFilenmae = fileTitle + '.csv' || 'export.csv';
-
-    var blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
-    if (navigator.msSaveBlob) { // IE 10+
-        navigator.msSaveBlob(blob, exportedFilenmae);
-    } else {
-        var link = document.createElement("a");
-        if (link.download !== undefined) { // feature detection
-            // Browsers that support HTML5 download attribute
-            var url = URL.createObjectURL(blob);
-            link.setAttribute("href", url);
-            link.setAttribute("download", exportedFilenmae);
-            link.style.visibility = 'hidden';
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
-        }
-    }
-}
-
-function downloadcsv(){
-  var headers = {
-      model: 'Phone Model'.replace(/,/g, ''), // remove commas to avoid errors
-      chargers: "Chargers",
-      cases: "Cases",
-      earphones: "Earphones"
-  };
-
-  itemsNotFormatted = [
-      {
-          model: 'Samsung S7',
-          chargers: '55',
-          cases: '56',
-          earphones: '57',
-          scratched: '2'
-      },
-      {
-          model: 'Pixel XL',
-          chargers: '77',
-          cases: '78',
-          earphones: '79',
-          scratched: '4'
-      },
-      {
-          model: 'iPhone 7',
-          chargers: '88',
-          cases: '89',
-          earphones: '90',
-          scratched: '6'
-      }
-  ];
-
-  var itemsFormatted = [];
-
-  // format the data
-  itemsNotFormatted.forEach((item) => {
-      itemsFormatted.push({
-          model: item.model.replace(/,/g, ''), // remove commas to avoid errors,
-          chargers: item.chargers,
-          cases: item.cases,
-          earphones: item.earphones
-      });
-  });
-
-  var fileTitle = 'orders'; // or 'my-unique-title'
-
-  exportCSVFile(headers, itemsFormatted, fileTitle); // call the exportCSVFile() function to process the JSON and trigger the download
+<script type="text/javascript">
+  function coperUrl() {
+  const el = document.createElement('textarea');
+  el.value = "https://dextraction.herokuapp.com/table?a={{id}}";
+  document.body.appendChild(el);
+  el.select();
+  document.execCommand('copy');
+  document.body.removeChild(el);
 }
 </script>
 {% endblock %}
