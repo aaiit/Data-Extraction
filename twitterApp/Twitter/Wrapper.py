@@ -211,4 +211,4 @@ twitter_wrapper = Wrapper(consumer_key, consumer_secret)
 
 def search_for_tweets(fields):
     twitter_wrapper.search_tweets(int(fields.pop('count', 10)), fields)
-    twitter_wrapper.return_all_data()
+    return twitter_wrapper.return_all_data()
