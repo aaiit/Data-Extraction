@@ -12,17 +12,19 @@ search = SearchRequest(api)
 video_infos = VideoContent(api).filter()
 comments = VideoComments(api).filter()
 
+fields_search = {'q': 'vaccine corona', 'max_results': '60', 'by_channel': '', 'order_by': 'relevance',
+                 'related_to': '',
+                 'before_time': '2020-08-23T00:00:00Z', 'after_time': '2020-08-22T00:00:00Z'}
 
-fields_search = {'q': 'vaccine corona', 'max_results': '20', 'by_channel': '', 'order_by': 'relevance', 'related_to': '',
-          'before_time': '2020-08-23T00:00:00Z', 'after_time': '2020-08-22T00:00:00Z'}
 
-# fields_comments = {'sort': 'relevance', 'count': '30', 'format': True, 'video_id': '32161321613',
-#           'keywords': 'great vaccine'}
+fields_comments = {'sort': 'relevance', 'count': '30', 'format': True, 'video_id': 'gAiDp0_525U',
+          'keywords': ''}
 
 
 def search_videos(fields):
     count = int(fields.pop('max_results', 50))
     search.type('video') \
+        .query(fields.pop('q', '')) \
         .location(fields.pop('lat', ''), fields.pop('long', ''), fields.pop('radius', '')) \
         .max_results(count if count <= 50 else 50) \
         .by_channel(fields.pop('by_channel', '')) \
@@ -36,7 +38,7 @@ def search_videos(fields):
     while count > 50 and search.nextPage:
         count -= 50
         search.max_results(count if count <= 50 else 50)
-        search.nextPage()
+        search.next_page()
         videos.extend(search.request())
     if not videos:
         return []
@@ -60,7 +62,7 @@ def search_videos(fields):
 
 
 def search_comments(fields):
-    count = fields.pop('count', 50)
+    count = int(fields.pop('count', 50))
     comments.max_comments(count if count <= 50 else 50) \
         .format(fields.pop('format', True)) \
         .sort(fields.pop('sort', '')) \
@@ -70,7 +72,7 @@ def search_comments(fields):
     while count > 50 and comments.nextPage:
         count -= 50
         comments.max_comments(count if count <= 50 else 50)
-        comments.nextPage()
+        comments.next_page()
         results.extend(comments.request())
     return json.dumps(results, indent=3, default=str) if fields.pop('type', 'json') else pandas.DataFrame(
         results).to_csv(index=False)
@@ -83,5 +85,6 @@ def add_video_newInfos(old, new):
     old['statistics'] = new['statistics'] if 'statistics' in new else {}
     old['topicCategories'] = new['topicCategories'] if 'topicCategories' in new else {}
 
-# with open('result.json','w') as f:
-#     f.write(search_videos(fields_search))
+
+with open('result2.json', 'w') as f:
+    f.write(search_comments(fields_comments))
