@@ -119,17 +119,17 @@ class SearchRequest:
             self.fields['&pageToken='] = self.prevPage
         return self
 
-    def after_time(self, date=None):
-        # date variable should be like this: yyyy-dd-mmThh:mm:ssZ
-        if date is None:
+    def after_time(self, date=''):
+        # date variable should be like this: yyyy-mm-ddThh:mm:ssZ
+        if date =='':
             self.fields.pop('&publishedAfter=', None)
         else:
             self.fields['&publishedAfter='] = str(date)
         return self
 
-    def before_time(self, date=None):
-        # date variable should be like this: yyyy-dd-mmThh:mm:ssZ
-        if date is None:
+    def before_time(self, date=''):
+        # date variable should be like this: yyyy-mm-ddThh:mm:ssZ
+        if date=='':
             self.fields.pop('&publishedBefore=', None)
         else:
             self.fields['&publishedBefore='] = str(date)
