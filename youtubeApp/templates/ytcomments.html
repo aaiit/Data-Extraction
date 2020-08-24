@@ -18,16 +18,16 @@
               
                         <div class="col-md-6">
                             <div class="form-group">
-                                <input id="f0-qq" type="text" class="form-control" placeholder="Video id" value=""/>
+                                <input id="vid" type="text" class="form-control" placeholder="Video id" value=""/>
                             </div>
 
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                <input id="f0-len" type="text" class="form-control" placeholder="Count" value=""  />
+                                <input id="len" type="text" class="form-control" placeholder="Count" value=""  />
                             </div>
                             <div class="form-group">
-                                <input id="f0-date"type="text" class="form-control" placeholder="keywords" value=""  />
+                                <input id="kwrd"type="text" class="form-control" placeholder="keywords" value=""  />
                             </div>
                         
                            
@@ -43,7 +43,7 @@
 
 
                   <label>Order by</label>
-             <FORM id="f0-rt">
+             <FORM id="ob">
               <SELECT name="nom" size="1">
               <OPTION>relevance</OPTION>
               <OPTION>time</OPTION>
@@ -95,14 +95,12 @@
 
     function ook(type){
       $("#f0-"+type).text("wait...");
-      // var q=document.getElementById("f0-qq").value;
-      // var lang=document.getElementById("f0-lang").value;
-      // var len=Number(document.getElementById("f0-len").value);
-      // var rt=$("#f0-rt").serializeArray()[0].value;
-      // var from=document.getElementById("f0-date").value;
-      // var to=document.getElementById("f0-until").value;
+      var vid=document.getElementById("vid").value;
+      var kwrd=document.getElementById("kwrd").value;
+      var len=Number(document.getElementById("len").value);
+      var sort=$("#ob").serializeArray()[0].value;
 
-      var fields = {'sort':'relevance','count':'30','format':1,'video_id':'32161321613','keywords':'great vaccine','type':type};
+      var fields = {'sort':sort,'count':len,'format':getformat(),'video_id':vid,'keywords':kwrd,'type':type};
 
         $.ajaxSetup({
               headers: { "X-CSRFToken": get_cookie('csrftoken') }});
@@ -147,21 +145,20 @@
 
   <script type="text/javascript">
   
-    
-     
+      var f=1;
 
-    function wrapper(){
       $("#f0-wrapper1").change(function ()
       {
          if(document.getElementById("f0-ah").checked){
-      
+            f=1;
          }else{
-         
+            f=0;
          }
+            // alert(f);
       }
       )
-    }
 
+      function getformat(){return f;}
 
 
 

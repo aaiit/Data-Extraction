@@ -3,7 +3,7 @@ from time import sleep
 
 import requests as req
 
-from Youtube.YoutubeVideoInformations import VideoContent
+from youtubeApp.YoutubeVideoInformations import VideoContent
 
 
 
