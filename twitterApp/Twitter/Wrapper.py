@@ -1,12 +1,25 @@
 from copy import deepcopy
 
+from fire import uploadimage
 from twitterApp.Twitter.DataStructures.GraphBase import GraphBase
 from twitterApp.Twitter.DataStructures.TableBase import TableBase
 from twitterApp.Twitter.TwitterApi.TwitterApi import Twitter
 from twitterApp.Twitter.TwitterApi.Keys import *
+from twitterApp.Twitter.Plot import plot_unweighted_graph as pug
 
 
 class Wrapper(Twitter):
+    # TWEET_TABLE='tweet_table.csv'
+    # USER_TABLE='user_table.csv'
+    QUERIES_TWEETS = 'queries_tweets'
+    TWEETS_HASTHTAGS = 'tweets_hashtags'
+    TWEETS_RETWEETERS = 'tweets_retweeters'
+    TWEETS_MENTIONED_USERS = 'tweets_mentionned_users'
+    TWEETS_LINKS = 'tweets_links'
+    TWEETS_RESPONDENTS = 'tweets_respondents'
+    USER_USER = 'user_user'
+    USERS_FAVORITES = 'users_favorites'
+
     def __init__(self, consumer_key, consumer_secret, timeout=20):
         super(Wrapper, self).__init__(consumer_key, consumer_secret, timeout)
         self.graph = GraphBase()
@@ -157,3 +170,26 @@ class Wrapper(Twitter):
     def load_data(self):
         self.graph.load_graph()
         self.table.load_table()
+
+    def return_all_data(self):
+        results = {'table1': self.table.users.table, 'table2': self.table.tweets.table}
+        self.construct_friendships()
+        pug(self.graph.user_user.graph, self.USER_USER)
+        pug(self.graph.user_favorite.graph, self.USERS_FAVORITES)
+        pug(self.graph.query_tweet.graph, self.QUERIES_TWEETS)
+        pug(self.graph.tweet_hashtag.graph, self.TWEETS_HASTHTAGS)
+        pug(self.graph.tweet_retweeter.graph, self.TWEETS_RETWEETERS)
+        pug(self.graph.tweet_link.graph, self.TWEETS_LINKS)
+        pug(self.graph.tweet_mentioned.graph, self.TWEETS_MENTIONED_USERS)
+        pug(self.graph.tweet_respondent.graph, self.TWEETS_RESPONDENTS)
+        results['graph'] = [uploadimage(self.USER_USER + '.gv.png'),
+                            uploadimage(self.USERS_FAVORITES + '.gv.png'),
+                            uploadimage(self.QUERIES_TWEETS + '.gv.png'),
+                            uploadimage(self.TWEETS_HASTHTAGS + '.gv.png'),
+                            uploadimage(self.TWEETS_RETWEETERS + '.gv.png'),
+                            uploadimage(self.TWEETS_LINKS + '.gv.png'),
+                            uploadimage(self.TWEETS_MENTIONED_USERS + '.gv.png'),
+                            uploadimage(self.TWEETS_RESPONDENTS + '.gv.png')]
+        return results
+
+twitter_wrapper=Wrapper()
