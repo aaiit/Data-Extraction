@@ -28,5 +28,4 @@ urlpatterns = [
     
     path("linkedin/",linkedinApp.views.index),
 
-    path("google", twitterApp.views.google),
 ]
