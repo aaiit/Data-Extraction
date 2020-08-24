@@ -24,4 +24,6 @@ def upload(jsondatastring):
 def uploadimage(imagename):
     a=str(random.randint(1,19999))
     storage.child("images/%s.jpg"%(a)).put(imagename)
-    return storage.child("images/example.jpg").get_url("hhh")
+    return storage.child("images/%s.jpg"%(a)).get_url("hhh")
+
+print(uploadimage("form.png"))
