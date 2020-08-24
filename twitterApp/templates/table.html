@@ -4,7 +4,7 @@
 
 <div class="btn-toolbar">
     <!-- <button class="btn btn-primary">New User</button> -->
-    <button class="btn" disabled>Import Json</button>
+    <button onclick="Exporter()"class="btn" >Import Json</button>
     <button class="btn" disabled>Import CSV</button>
 </div>
 <div class="well">
@@ -63,3 +63,32 @@
         <button class="btn btn-danger" data-dismiss="modal">Delete</button>
     </div>
 </div>
+
+
+
+
+
+<script type="text/javascript">
+    var data={{ JSON|safe }};
+    function getjson(){
+      return JSON.stringify(data);
+    }
+</script>
+
+
+ <script type="text/javascript">
+      function download(filename, text) {
+      var element = document.createElement('a');
+      element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+      element.setAttribute('download', filename);
+      element.style.display = 'none';
+      document.body.appendChild(element);
+      element.click();
+      document.body.removeChild(element);
+    };
+
+    function Exporter(){
+      download('{{id}}.json',getjson());
+    }
+
+  </script>

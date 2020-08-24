@@ -12,7 +12,8 @@ from fire import database
 def table(request):
 	a=request.GET.get("a")
 	print(a)
-	js=database.child("data/json/"+a).get().val()
+	st=database.child("data/json/"+a).get().val()
+	js=st
 	if js==None :
 		return redirect('/')
 	js=json.loads(js)
@@ -27,7 +28,7 @@ def table(request):
 	lignes=[]
 	for j in js:
 		lignes.append(list(e(j)))
-	return render(request, "table.html",{"C":keys,"data":lignes})
+	return render(request, "table.html",{"C":keys,"data":lignes,"JSON":st,"id":a})
 
 
 def index(request):
