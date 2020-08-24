@@ -62,6 +62,7 @@
 
                         <a id="btnSubmit"><button  type="button" class="btnSubmit" onclick="ook('url')" >Submit</button></a>
 
+                        <a ><button  type="button" class="btnSubmit" onclick="ook('graphe')" >Graphe btn</button></a>
                        <!--  <button id="f0-csv" type="button" class="btnSubmit" onclick="ook('csv')" >Download Csv</button>
                         <button id="f0-json" type="button" class="btnSubmit" onclick="ook('json')">Download Json</button> -->
                                           </div>
@@ -112,6 +113,10 @@
             data: JSON.stringify(fields),
             dataType: 'text',
             success: function(result) {
+                if(type=="graphe"){
+                  alert(result);
+                  return;
+                }
                 if(type=="url"){
                   // alert(result);
                   window.location.href = "/table?a="+result;

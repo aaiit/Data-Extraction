@@ -14,8 +14,14 @@ config = {
 
 firebase = pyrebase.initialize_app(config)
 database=firebase.database()
+storage = firebase.storage()
 
 def upload(jsondatastring):
 	a=str(random.randint(1,19999))
 	database.child("data/json/"+a).set(jsondatastring)
 	return a
+
+def uploadimage(imagename):
+    a=str(random.randint(1,19999))
+    storage.child("images/%s.jpg"%(a)).put(imagename)
+    return storage.child("images/example.jpg").get_url("hhh")

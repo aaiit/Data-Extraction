@@ -41,6 +41,9 @@ def formText(request):
 	if request.method=='POST':
 		fields=json.loads(request.body)
 		print(fields)
+		type=fields["type"]
+		if type=="graphe":
+			return HttpResponse(json.dumps({"todo":"todo"}))
 		return HttpResponse(get_tweets_text(fields))
 	return render(request, "f0.html")
 
