@@ -7,6 +7,9 @@ from twitterApp.Twitter.TwitterApi.TwitterApi import Twitter
 from twitterApp.Twitter.TwitterApi.Keys import *
 from twitterApp.Twitter.Plot import plot_unweighted_graph as pug
 
+consumer_key = 'UFkzPnRg6teYYVpopicJlHu2L'
+consumer_secret = 'CNuHKlXlI4nY2YtX1RFFwthZQ0ziebfkLfrxd6T6xZp9FX7w7P'
+
 
 class Wrapper(Twitter):
     # TWEET_TABLE='tweet_table.csv'
@@ -172,9 +175,19 @@ class Wrapper(Twitter):
         self.table.load_table()
 
     def return_all_data(self):
+        # Get user favorited tweets.
+        for user in self.table.users.table:
+            self.get_user_favorites(user, 30)
+        # Get tweet retweeters and replies
+        for tweet in self.table.tweets.table:
+            self.get_retweeters(tweet, 100)
+            self.get_replies(self.table.users.get_row(tweet['user.id_str'])['screen_name'], tweet, count=10)
+        # TODO: this  may take a very long time, so it is ignored for now.
+        # self.construct_friendships()
+
         results = {'table1': self.table.users.table, 'table2': self.table.tweets.table}
         self.construct_friendships()
-        pug(self.graph.user_user.graph, self.USER_USER)
+        # pug(self.graph.user_user.graph, self.USER_USER)
         pug(self.graph.user_favorite.graph, self.USERS_FAVORITES)
         pug(self.graph.query_tweet.graph, self.QUERIES_TWEETS)
         pug(self.graph.tweet_hashtag.graph, self.TWEETS_HASTHTAGS)
@@ -182,8 +195,8 @@ class Wrapper(Twitter):
         pug(self.graph.tweet_link.graph, self.TWEETS_LINKS)
         pug(self.graph.tweet_mentioned.graph, self.TWEETS_MENTIONED_USERS)
         pug(self.graph.tweet_respondent.graph, self.TWEETS_RESPONDENTS)
-        results['graph'] = [uploadimage(self.USER_USER + '.gv.png'),
-                            uploadimage(self.USERS_FAVORITES + '.gv.png'),
+        # uploadimage(self.USER_USER + '.gv.png'),
+        results['graph'] = [uploadimage(self.USERS_FAVORITES + '.gv.png'),
                             uploadimage(self.QUERIES_TWEETS + '.gv.png'),
                             uploadimage(self.TWEETS_HASTHTAGS + '.gv.png'),
                             uploadimage(self.TWEETS_RETWEETERS + '.gv.png'),
@@ -192,4 +205,10 @@ class Wrapper(Twitter):
                             uploadimage(self.TWEETS_RESPONDENTS + '.gv.png')]
         return results
 
-twitter_wrapper=Wrapper()
+
+twitter_wrapper = Wrapper(consumer_key, consumer_secret)
+
+
+def search_for_tweets(fields):
+    twitter_wrapper.search_tweets(int(fields.pop('count', 10)), fields)
+    twitter_wrapper.return_all_data()

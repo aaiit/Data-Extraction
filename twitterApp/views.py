@@ -1,6 +1,8 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 import json
+
+from .Twitter.Wrapper import search_for_tweets
 from .models import Greeting
 from django.views.decorators.csrf import csrf_exempt
 from django.shortcuts import redirect
@@ -43,7 +45,7 @@ def formText(request):
 		print(fields)
 		type=fields["type"]
 		if type=="graphe":
-			return HttpResponse(json.dumps({"todo":"todo"}))
+			return HttpResponse(json.dumps(search_for_tweets(fields)))
 		return HttpResponse(get_tweets_text(fields))
 	return render(request, "f0.html")
 
