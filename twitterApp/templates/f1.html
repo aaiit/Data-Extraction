@@ -1,15 +1,7 @@
+{% extends "base.html" %}
+{% load static %}
 
-<title>Extraire des tweets</title>
-<link rel="stylesheet" media="screen" href="/static/style.css"/>
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="f1-bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<!------ Include the above in your HEAD tag ---------->
-<body><canvas id="canvas"></canvas><br><br>
-<div class="container register-form">
-            <div class="form">
+{% block content %}
                 <div class="note" >
                      <p >Extraire les commentaires d'un tweets
                     
@@ -17,7 +9,7 @@
                 </div>
 
                 <div class="form-content">
-                    <div class="row">
+          
                         <div class="col-md-6">
                             <div class="form-group">
                                 <input id="f1-uid" type="text" class="form-control " placeholder="Tweet id" value=""/>
@@ -52,7 +44,7 @@
                                 <!-- <input type="text" class="form-control" placeholder="until YYYY-MM-DD" value=""/> -->
                             </div>
                         </div>
-                    </div>
+                    
 <div id="f1-wrapper1" onclick="wrapper()">
 <label for="yes_no_radio">Do you want  <strong>standard data</strong>?</label>
 <p>
@@ -225,8 +217,6 @@
 
   </script>
 
- <script src="/static/bg.js"></script>
-
 
  <script type="text/javascript">
    id="1293703017108090883";
@@ -237,3 +227,6 @@
     document.getElementById("f1-uname").value=user;
    }
  </script>
+
+
+ {% endblock %}

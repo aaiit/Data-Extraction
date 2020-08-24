@@ -1,15 +1,7 @@
+{% extends "base.html" %}
+{% load static %}
 
-<title>Extraire des tweets</title>
-<<link rel="stylesheet" media="screen" href="/static/style.css"/>
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="f2-bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<!------ Include the above in your HEAD tag ---------->
-<body><canvas id="canvas"></canvas><br><br>
-<div class="container register-form">
-            <div class="form">
+{% block content %}
                 <div class="note">
                     <p>Extraire le tweet le plus liké</p>
                 </div>
@@ -203,4 +195,5 @@
       }
 
   </script>
-<script src="/static/bg.js"></script>
+
+{% endblock %}

@@ -1,21 +1,13 @@
+{% extends "base.html" %}
+{% load static %}
 
-<title>Extraire des tweets</title>
-<link rel="stylesheet" media="screen" href="/static/style.css"/>
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="fvideo-bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<!------ Include the above in your HEAD tag ---------->
-<body><canvas id="canvas"></canvas><br><br>
-<div class="container register-form">
-            <div class="form">
+{% block content %}
                 <div class="note">
                     <p>Extraire des tweets se format Video</p>
                 </div>
 
                 <div class="form-content">
-                    <div class="row">
+                  
                         <div class="col-md-6">
                             <div class="form-group">
                                 <input id="fvideo-qq" type="text" class="form-control" placeholder="Query" value=""/>
@@ -49,7 +41,7 @@
                     
                             </div>
                         </div>
-                    </div>
+                    
 
 
 
@@ -60,7 +52,7 @@
                     <button id="fvideo-json" type="button" class="btnSubmit" onclick="ook('json')" >Download Json Urls</button>
                  
                      <button id="fvideo-zip" type="button" class="btnSubmit" onclick="ook('zip')" >Download Zip</button>
-                     <a href="/" class="btn btn-xs btn-warning">Back</a>
+                     
                  
                 </div>
             </div>
@@ -210,4 +202,4 @@
 </script>
 
 
-<script src="/static/bg.js"></script>
+{% endblock %}
