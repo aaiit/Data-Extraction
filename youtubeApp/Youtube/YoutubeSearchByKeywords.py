@@ -26,15 +26,15 @@ class SearchRequest:
             self.fields.pop('&type=', None)
         return self
 
-    def location(self, lat=None, long=None, radius=None):
+    def location(self, lat='', long=None, radius=None):
         '''
         :param lat: 10.3333
         :param long: -12.0004
         :param radius: cannot exceed 1000 km. You can adjust the unit: mi,km,ft,m. (e.g: 0.5mi)
                 ----> radius Is mandatory.
         '''
-        if lat is None:
-            self.fields.pop('&location=', None)
+        if lat =='':
+            self.fields.pop('&location=', '')
         else:
             self.fields['&location='] = str(lat) + '%2C' + str(long) + '&locationRadius=' + str(radius) + 'mi'
         return self
