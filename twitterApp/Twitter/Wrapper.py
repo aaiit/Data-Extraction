@@ -174,7 +174,7 @@ class Wrapper(Twitter):
         self.graph.load_graph()
         self.table.load_table()
 
-    def return_all_data(self ):
+    def return_all_data(self):
         # Get user favorited tweets.
         for user in list(self.table.users.table):
             self.get_user_favorites(user, 30)
