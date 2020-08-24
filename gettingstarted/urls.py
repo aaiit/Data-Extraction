@@ -3,7 +3,6 @@ from django.contrib import admin
 admin.autodiscover()
 import twitterApp.views
 import youtubeApp.views
-import linkedinApp.views
 
 from django.shortcuts import render
 def index(request):
@@ -26,6 +25,5 @@ urlpatterns = [
     path("youtube/searchv",youtubeApp.views.searchv),
     path("youtube/ytcomments",youtubeApp.views.ytcomments),
     
-    path("linkedin/",linkedinApp.views.index),
 
 ]
