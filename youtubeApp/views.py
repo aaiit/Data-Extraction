@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 import json
+from Youtube import *
 from django.views.decorators.csrf import csrf_exempt
 
 def index(request):
@@ -11,7 +12,7 @@ def searchv(request):
 	if request.method=='POST':
 		fields=json.loads(request.body)
 		print(fields)
-		return HttpResponse("todo")
+		return HttpResponse(search_videos(fields))
 	return render(request,"searchv.html")
 
 
@@ -21,5 +22,5 @@ def ytcomments(request):
 	if request.method=='POST':
 		fields=json.loads(request.body)
 		print(fields)
-		return HttpResponse("todo")
+		return HttpResponse(search_comments(fields))
 	return render(request,"ytcomments.html")
