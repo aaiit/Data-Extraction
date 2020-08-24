@@ -158,6 +158,7 @@ class SearchRequest:
         """
         link = self.link + self.api + ''.join([key + val for key, val in self.fields.items()])
         res = req.get(link)
+        print(link)
         print('Videos Retrieval: ', res)
         if res.status_code != 200:
             raise ValueError("The request wasn't done: ", res.status_code)

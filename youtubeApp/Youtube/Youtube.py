@@ -13,17 +13,17 @@ video_infos = VideoContent(api).filter()
 comments = VideoComments(api).filter()
 
 
-# fields_search = {'q': 'vaccine corona', 'max_results': '20', 'by_channel': '', 'order_by': 'relevance', 'related_to': '',
-#           'before_time': '2020-30-07T00:00:00Z', 'after_time': '2020-22-08T00:00:00Z'}
+fields_search = {'q': 'vaccine corona', 'max_results': '20', 'by_channel': '', 'order_by': 'relevance', 'related_to': '',
+          'before_time': '2020-08-23T00:00:00Z', 'after_time': '2020-08-22T00:00:00Z'}
 
 # fields_comments = {'sort': 'relevance', 'count': '30', 'format': True, 'video_id': '32161321613',
 #           'keywords': 'great vaccine'}
 
 
 def search_videos(fields):
-    count = fields.pop('max_results', 50)
+    count = int(fields.pop('max_results', 50))
     search.type('video') \
-        .location(fields.pop('lat', None), fields.pop('long', None), fields.pop('radius', None)) \
+        .location(fields.pop('lat', ''), fields.pop('long', ''), fields.pop('radius', '')) \
         .max_results(count if count <= 50 else 50) \
         .by_channel(fields.pop('by_channel', '')) \
         .order_by(fields.pop('order_by', '')) \
@@ -31,7 +31,7 @@ def search_videos(fields):
         .before_time(fields.pop('before_time', None)) \
         .after_time(fields.pop('after_time', None)) \
         .filter_snippet(fields.pop('filter_snippet', True)) \
-        .region(fields.pop('region', 'MA'))
+        .region(fields.pop('region', ''))
     videos = search.request()
     while count > 50 and search.nextPage:
         count -= 50
@@ -82,3 +82,6 @@ def add_video_newInfos(old, new):
     old['snippet'].update(new['snippet'] if 'snippet' in new else {})
     old['statistics'] = new['statistics'] if 'statistics' in new else {}
     old['topicCategories'] = new['topicCategories'] if 'topicCategories' in new else {}
+
+# with open('result.json','w') as f:
+#     f.write(search_videos(fields_search))
