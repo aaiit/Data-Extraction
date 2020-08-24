@@ -13,10 +13,11 @@ def table(request):
 	a=request.GET.get("a")
 	print(a)
 	js=database.child("data/json/"+a).get().val()
-	if js==None:
-		return HttpResponse("data not found")
+	if js==None :
+		return redirect('/')
 	js=json.loads(js)
-	print(js)
+	print("js>>",js)
+	if(js==[]):return HttpResponse("empty data")
 	keys=list(js[0].keys())
 	def e(l):
 		Q=[]
@@ -92,5 +93,3 @@ def standardOperators(request):
 
 
 
-def google(request):
-	return redirect('https://google.com')

@@ -28,7 +28,9 @@ def get_comments(fields):
     keys = fields.pop('output', REPLIES_KEYS)
     type = fields.pop('type', 'csv')
     replies = t.get_replies(name, tweet_id, keys, count=count)
-    return json.dumps(replies, default=str, indent=4) if type == 'json' else DataFrame(replies).to_csv(index=False)
+    jsondata=json.dumps(replies, default=str, indent=4)
+    if(type=="url"):return  upload(jsondata)
+    return jsondata if type == 'json' else DataFrame(replies).to_csv(index=False)
 
 
 def get_tweets_video(fields):
