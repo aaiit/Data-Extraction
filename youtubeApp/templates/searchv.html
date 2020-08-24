@@ -18,24 +18,24 @@
               
                         <div class="col-md-6">
                             <div class="form-group">
-                                <input id="f0-qq" type="text" class="form-control" placeholder="Query" value=""/>
+                                <input id="qq" type="text" class="form-control" placeholder="Query" value=""/>
                             </div>
                             <div class="form-group">
-                                <input id="f0-lang" type="text" class="form-control" placeholder="by channel" value=""/>
+                                <input id="bc" type="text" class="form-control" placeholder="by channel" value=""/>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                <input id="f0-len" type="text" class="form-control" placeholder="Count" value=""  />
+                                <input id="len" type="text" class="form-control" placeholder="Count" value=""  />
                             </div>
                             <div class="form-group">
-                                <input id="f0-date"type="text" class="form-control" placeholder="before_time yyyy-dd-mmThh:mm:ssZ" value=""  />
+                                <input id="bf"type="text" class="form-control" placeholder="before_time yyyy-dd-mmThh:mm:ssZ" value=""  />
                             </div>
                         </div>
 
                          <div class="col-md-6">
                             <div class="form-group">
-                                <input id="f0-until"type="text" class="form-control" placeholder="after_time  yyyy-dd-mmThh:mm:ssZ" value=""/>
+                                <input id="af"type="text" class="form-control" placeholder="after_time  yyyy-dd-mmThh:mm:ssZ" value=""/>
 
                             </div>
 
@@ -50,17 +50,17 @@
                           </div>
 
                          <label>Location</label>
-                                <input id="f0-until"type="text" class="form-control" placeholder="lat" value=""/>
+                                <input id="lat"type="text" class="form-control" placeholder="lat" value=""/>
 
-                                <input id="f0-until"type="text" class="form-control" placeholder=" long" value=""/>
+                                <input id="long" type="text" class="form-control" placeholder=" long" value=""/>
 
-                                <input id="f0-until"type="text" class="form-control" placeholder="radius" value=""/>
+                                <input id="radius" type="text" class="form-control" placeholder="radius" value=""/>
 
                         
                            
                     
                   <label>Order by</label>
-             <FORM id="f0-rt">
+             <FORM id="ob">
               <SELECT name="nom" size="1">
               <OPTION>date</OPTION>
               <OPTION>rating</OPTION>
@@ -110,15 +110,19 @@
 
     function ook(type){
       $("#f0-"+type).text("wait...");
-      // var q=document.getElementById("f0-qq").value;
-      // var lang=document.getElementById("f0-lang").value;
-      // var len=Number(document.getElementById("f0-len").value);
-      // var rt=$("#f0-rt").serializeArray()[0].value;
-      // var from=document.getElementById("f0-date").value;
-      // var to=document.getElementById("f0-until").value;
+      var q=document.getElementById("qq").value;
+      var len=Number(document.getElementById("len").value);
+      var bc=document.getElementById("bc").value;
+      var ob=$("#ob").serializeArray()[0].value;
+      var bf=document.getElementById("bf").value;
+      var af=document.getElementById("af").value;
 
-      var fields =  {'q': 'vaccine corona', 'max_results': 20, 'by_channel': '', 'order_by': 'relevance', 'related_to': '',
-'before_time': '2020-30-07T00:00:00Z','after_time':'2020-22-08T00:00:00Z','type':type};
+      var lat=document.getElementById("lat").value;
+      var long=document.getElementById("long").value;
+      var radius=document.getElementById("radius").value;
+
+      var fields =  {'q': q, 'max_results': len, 'by_channel': bc, 'order_by': ob, 'related_to': '',
+'before_time': bf,'after_time':af,'type':type,"location":{"lat":lat,"long":long,"radius":radius}};
 
         $.ajaxSetup({
               headers: { "X-CSRFToken": get_cookie('csrftoken') }});
