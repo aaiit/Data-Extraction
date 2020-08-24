@@ -1,8 +1,5 @@
 import os
-import zipfile
-
 import tweepy
-import wget
 
 consumer_key = "UFkzPnRg6teYYVpopicJlHu2L"
 consumer_secret = "CNuHKlXlI4nY2YtX1RFFwthZQ0ziebfkLfrxd6T6xZp9FX7w7P"

@@ -3,10 +3,12 @@ from django.http import HttpResponse
 import json
 from .models import Greeting
 from django.views.decorators.csrf import csrf_exempt
-from Aida import comments, likes
-from Ayoub import get_tweets_text, get_comments, get_tweets_video
-from Sabah import downloadImages
+
+from commentsandlikes import comments, likes
+from get_tweets import get_tweets_text, get_comments, get_tweets_video
+from downloadImages import downloadImages
 from fire import database
+
 def table(request):
 	a=request.GET.get("a")
 	print(a)
@@ -15,7 +17,6 @@ def table(request):
 		return HttpResponse("data not found")
 	js=json.loads(js)
 	print(js)
-	# js= [{'sort': 'relevance', 'count': '30', 'format': 1, 'video_id': '32161321613', 'keywords': 'great vaccine', 'type': 'json'}]
 	keys=list(js[0].keys())
 	def e(l):
 		Q=[]
@@ -25,7 +26,6 @@ def table(request):
 	lignes=[]
 	for j in js:
 		lignes.append(list(e(j)))
-	# print(lignes)
 	return render(request, "table.html",{"C":keys,"data":lignes})
 
 
@@ -48,7 +48,6 @@ def formImage(request):
 		fields=json.loads(request.body)
 		type=fields["type"]
 		print(fields)
-		path_to_file="hello/static/Imagesdownl.zip"
 		return HttpResponse(json.dumps(downloadImages(fields)))
 
 	return render(request, "fimage.html")
