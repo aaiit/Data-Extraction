@@ -1,4 +1,4 @@
-#test
+import random
 import pyrebase
 
 config = {
@@ -12,9 +12,10 @@ config = {
     "measurementId": "G-4LZS8CR2TY"}
 
 
-
 firebase = pyrebase.initialize_app(config)
-
 database=firebase.database()
-# data = open("data.json").read()
-# db.child("data/json/2020").set(data)
+
+def upload(jsondatastring):
+	a=str(random.randint(1,19999))
+	database.child("data/json/"+a).set(jsondatastring)
+	return a

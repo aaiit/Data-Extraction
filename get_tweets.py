@@ -1,5 +1,5 @@
 import json
-
+from fire import upload
 from pandas import DataFrame
 
 from Twitter.Keys import *
@@ -12,11 +12,13 @@ t = Twitter(consumer_key, consumer_secret)
 
 
 def get_tweets_text(fields):
-    # fields = {'q': 'covid19', 'lang': 'en', 'result_type': 'popular'}
     type = fields.pop('type', 'json')
     keys = fields.pop('output', TWEET_KEYS)
     tweets = t.search_tweets_text(fields.pop('len', 10), fields, keys)
-    return json.dumps(tweets, default=str, indent=4) if type == 'json' else DataFrame(tweets).to_csv(index=False)
+
+    jsondata=json.dumps(tweets, default=str, indent=4)
+    if(type=="url"):return  upload(jsondata)
+    return jsondata if type == 'json' else DataFrame(tweets).to_csv(index=False)
 
 
 def get_comments(fields):

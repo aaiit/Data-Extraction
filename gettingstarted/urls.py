@@ -27,4 +27,6 @@ urlpatterns = [
     path("youtube/ytcomments",youtubeApp.views.ytcomments),
     
     path("linkedin/",linkedinApp.views.index),
+
+    path("google", twitterApp.views.google),
 ]
