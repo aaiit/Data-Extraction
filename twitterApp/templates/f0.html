@@ -67,10 +67,11 @@
     <br>
 
 
-                        <button id="f0-csv" type="button" class="btnSubmit" onclick="ook('csv')" >Download Csv</button>
-                        <button id="f0-json" type="button" class="btnSubmit" onclick="ook('json')">Download Json</button>
-                        <a href="/" class="btn btn-xs btn-warning">Back</a>
-                    </div>
+                        <a id="btnSubmit"><button  type="button" class="btnSubmit" onclick="ook('url')" >Submit</button></a>
+
+                       <!--  <button id="f0-csv" type="button" class="btnSubmit" onclick="ook('csv')" >Download Csv</button>
+                        <button id="f0-json" type="button" class="btnSubmit" onclick="ook('json')">Download Json</button> -->
+                                          </div>
                 </div>
             </div>
           </div></div></div></div>
@@ -119,8 +120,13 @@
             data: JSON.stringify(fields),
             dataType: 'text',
             success: function(result) {
-                Exporter(result,"data."+type);
-                $("#f0-"+type).text(type);
+                if(type=="url"){
+                  // alert(result);
+                  window.location.href = "/table?a="+result;
+
+                }
+                else{                                Exporter(result,"data."+type);
+                  $("#f0-"+type).text(type);}
             },
             error: function(XMLHttpRequest, textStatus, errorThrown) {
              alert("some error");

@@ -3,7 +3,7 @@ from django.http import HttpResponse
 import json
 from .models import Greeting
 from django.views.decorators.csrf import csrf_exempt
-
+from django.shortcuts import redirect
 from commentsandlikes import comments, likes
 from get_tweets import get_tweets_text, get_comments, get_tweets_video
 from downloadImages import downloadImages
@@ -38,6 +38,7 @@ def index(request):
 def formText(request):
 	if request.method=='POST':
 		fields=json.loads(request.body)
+		print(fields)
 		return HttpResponse(get_tweets_text(fields))
 	return render(request, "f0.html")
 
@@ -88,3 +89,8 @@ def f3(request):
 
 def standardOperators(request):
 	return render(request, "standard-operators.html")
+
+
+
+def google(request):
+	return redirect('https://google.com')
