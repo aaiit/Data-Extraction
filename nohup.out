@@ -1,0 +1,51 @@
+2020-08-24 16:26:50,778 [  18473]   WARN - com.intellij.ide.ui.LafManager - List.rowHeight = 0 in Darcula; it may lead to performance degradation 
+2020-08-24 16:26:50,778 [  18473]   WARN - com.intellij.ide.ui.LafManager - Table.rowHeight = 0 in Darcula; it may lead to performance degradation 
+2020-08-24 16:26:50,778 [  18473]   WARN - com.intellij.ide.ui.LafManager - Tree.rowHeight = 0 in Darcula; it may lead to performance degradation 
+2020-08-24 16:26:54,526 [  22221]   WARN - nSystem.impl.ActionManagerImpl - keymap "ReSharper" not found [Plugin: com.android.tools.ndk] 
+2020-08-24 16:27:06,788 [  34483]   WARN - .diagnostic.PerformanceWatcher - UI freezed for 20391ms, details saved to /home/ayoub/.AndroidStudio4.0/system/log/threadDumps-freeze-20200824-162646-AI-193.6911.18.40.6626763-BaseComponentAdapter.getInstanceUncached-20sec 
+2020-08-24 16:27:35,655 [  63350]   WARN -            #com.android.ddmlib - * daemon not running; starting now at tcp:5037 
+2020-08-24 16:27:36,107 [  63802]   WARN -            #com.android.ddmlib - * daemon started successfully 
+2020-08-24 16:27:42,071 [  69766]   WARN - ugins.textmate.TextMateService - Missing builtin bundles, checked: 
+/home/ayoub/.AndroidStudio4.0/config/plugins/textmate/lib/bundles
+/usr/local/Programs/android-studio/plugins/textmate/lib/bundles 
+2020-08-24 16:27:44,134 [  71829]   WARN - com.intellij.util.xmlb.Binding - no accessors for class org.jetbrains.kotlin.idea.highlighter.KotlinDefaultHighlightingSettingsProvider 
+2020-08-24 16:28:00,142 [  87837]   WARN - ssistant.WhatsNewBundleCreator - developer.android.com 
+java.net.UnknownHostException: developer.android.com
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:184)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:607)
+	at sun.security.ssl.SSLSocketImpl.connect(SSLSocketImpl.java:666)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558)
+	at sun.net.www.protocol.https.HttpsClient.<init>(HttpsClient.java:264)
+	at sun.net.www.protocol.https.HttpsClient.New(HttpsClient.java:367)
+	at sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.getNewHttpClient(AbstractDelegateHttpsURLConnection.java:191)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1205)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1056)
+	at sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.connect(AbstractDelegateHttpsURLConnection.java:177)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1570)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1498)
+	at sun.net.www.protocol.https.HttpsURLConnectionImpl.getInputStream(HttpsURLConnectionImpl.java:268)
+	at com.android.tools.idea.whatsnew.assistant.WhatsNewBundleCreator.downloadConfig(WhatsNewBundleCreator.java:250)
+	at com.android.tools.idea.whatsnew.assistant.WhatsNewBundleCreator.updateConfig(WhatsNewBundleCreator.java:238)
+	at com.android.tools.idea.whatsnew.assistant.WhatsNewBundleCreator.isNewConfigVersion(WhatsNewBundleCreator.java:161)
+	at com.android.tools.idea.whatsnew.assistant.WhatsNewCheckVersionTask.run(WhatsNewCheckVersionTask.kt:34)
+	at com.intellij.openapi.progress.impl.CoreProgressManager$TaskRunnable.run(CoreProgressManager.java:888)
+	at com.intellij.openapi.progress.impl.CoreProgressManager.lambda$runProcess$2(CoreProgressManager.java:163)
+	at com.intellij.openapi.progress.impl.CoreProgressManager.registerIndicatorAndRun(CoreProgressManager.java:585)
+	at com.intellij.openapi.progress.impl.CoreProgressManager.executeProcessUnderProgress(CoreProgressManager.java:531)
+	at com.intellij.openapi.progress.impl.ProgressManagerImpl.executeProcessUnderProgress(ProgressManagerImpl.java:59)
+	at com.intellij.openapi.progress.impl.CoreProgressManager.runProcess(CoreProgressManager.java:150)
+	at com.intellij.openapi.progress.impl.CoreProgressManager$4.lambda$run$0(CoreProgressManager.java:402)
+	at com.intellij.util.ConcurrencyUtil.runUnderThreadName(ConcurrencyUtil.java:221)
+	at com.intellij.openapi.progress.impl.CoreProgressManager$4.run(CoreProgressManager.java:402)
+	at com.intellij.openapi.application.impl.ApplicationImpl$1.run(ApplicationImpl.java:238)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2020-08-24 16:28:05,522 [  93217]   WARN - dvertisement.PluginsAdvertiser - Host name could not be resolved: plugins.jetbrains.com 
+2020-08-24 16:28:07,643 [  95338]   WARN - com.intellij.util.xmlb.Binding - no accessors for class org.jetbrains.kotlin.idea.scripting.gradle.GradleScriptInputsWatcher$Storage 
+2020-08-24 16:28:07,660 [  95355]   WARN - com.intellij.util.xmlb.Binding - no accessors for class org.jetbrains.kotlin.idea.core.script.configuration.utils.ScriptClassRootsStorage 
