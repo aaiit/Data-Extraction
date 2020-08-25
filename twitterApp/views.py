@@ -1,7 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 import json
-
 from .Twitter.Wrapper import search_for_tweets
 from .models import Greeting
 from django.views.decorators.csrf import csrf_exempt
@@ -9,8 +8,44 @@ from django.shortcuts import redirect
 from commentsandlikes import comments, likes
 from get_tweets import get_tweets_text, get_comments, get_tweets_video
 from downloadImages import downloadImages
-from fire import database
+from fire import database,upload
+def graph(request):
+	a=request.GET.get("a")
+	print(a)
+	st=database.child("data/graph/"+a).get().val()
+	js=st
+	if js==None :
+		return redirect('/')
+	results=json.loads(js)
+	images=results["graph"]
 
+	js=results["table1"]
+	keys=list(js[0].keys())
+	def e(l):
+		Q=[]
+		for i in l:
+			Q.append(l[i])
+		return Q
+	lignes=[]
+	for j in js:
+		lignes.append(list(e(j)))
+	keys1,lignes1=keys,lignes
+
+	js=results["table2"]
+	keys=list(js[0].keys())
+	def e(l):
+		Q=[]
+		for i in l:
+			Q.append(l[i])
+		return Q
+	lignes=[]
+	for j in js:
+		lignes.append(list(e(j)))
+	keys2,lignes2=keys,lignes
+
+	para={"C1":["a","b","c"],"C2":["a","b","c"],"data1":[],"data2":[],"graph":["https//.png","https//.png","https//.png","https//.png"]}
+	para={"C1":keys1,"data1":lignes1,"C2":keys2,"data2":lignes2,"images":images}
+	return render(request,"graph.html",para)
 def table(request):
 	a=request.GET.get("a")
 	print(a)
@@ -45,7 +80,9 @@ def formText(request):
 		print(fields)
 		type=fields["type"]
 		if type=="graphe":
-			return HttpResponse(json.dumps(search_for_tweets(fields)))
+			r=json.dumps(search_for_tweets(fields))
+			id=upload(r)
+			return HttpResponse(id)
 		return HttpResponse(get_tweets_text(fields))
 	return render(request, "f0.html")
 

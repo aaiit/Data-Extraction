@@ -1,5 +1,4 @@
 from copy import deepcopy
-
 from fire import uploadimage
 from twitterApp.Twitter.DataStructures.GraphBase import GraphBase
 from twitterApp.Twitter.DataStructures.TableBase import TableBase
@@ -84,7 +83,6 @@ class Wrapper(Twitter):
         keys = REPLY_KEYS
         replies = super(Wrapper, self).get_replies(user_screen_name, tweet_id, keys=keys, query=query, count=count,
                                                    max_explored=max_explored, fields=fields)
-
         self.save_tweets(replies, tweet_id_reply=tweet_id)
         return replies
 

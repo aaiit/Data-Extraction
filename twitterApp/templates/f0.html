@@ -114,7 +114,8 @@
             dataType: 'text',
             success: function(result) {
                 if(type=="graphe"){
-                  alert(result);
+
+                  window.location.href = "/graph?a="+result;
                   return;
                 }
                 if(type=="url"){

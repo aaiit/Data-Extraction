@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet" id="bootstrap-css">
+
+
+<div class="btn-toolbar">
+
+</div>
+<div class="well">
+    <h1> Table 1 </h1>
+    <table class="table">
+      <thead>
+        <tr>
+          {% for c in C1%}
+          <th> {{c}}</th>
+          {% endfor %}
+          <th style="width: 36px;"></th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for d in data1%}
+        <tr>
+          {%for dd in d%}
+          <td>{{dd}}</td>
+          {% endfor %}
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    </div>
+<div class="well">
+    <h1> Table 2 </h1>
+    <table class="table">
+      <thead>
+        <tr>
+          {% for c in C2%}
+          <th> {{c}}</th>
+          {% endfor %}
+          <th style="width: 36px;"></th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for d in data2%}
+        <tr>
+          {%for dd in d%}
+          <td>{{dd}}</td>
+          {% endfor %}
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+</div>
+
+<div class="well">
+    <h1>Images</h1>
+    {% for url in images%}
+    <h6> {{url}}</h6>
+    {% endfor %}
+</div>
+
+
+
+
+
+{% endblock %}

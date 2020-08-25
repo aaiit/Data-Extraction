@@ -16,9 +16,9 @@ firebase = pyrebase.initialize_app(config)
 database=firebase.database()
 storage = firebase.storage()
 
-def upload(jsondatastring):
+def upload(jsondatastring,type="json"):
 	a=str(random.randint(1,19999))
-	database.child("data/json/"+a).set(jsondatastring)
+	database.child("data/%s/"%(type)+a).set(jsondatastring)
 	return a
 
 def uploadimage(imagename):
