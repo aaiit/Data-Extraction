@@ -3,9 +3,55 @@
       "snippet": {
          "topLevelComment": {
             "snippet": {
+               "textDisplay": "\"Wildfires burn among Pandemic\"\nYou mean to tell me disasters can happen simultaneously!!",
+               "authorDisplayName": "Jordan Gustafson",
+               "likeCount": 56,
+               "publishedAt": "2020-08-22T05:35:54Z",
+               "updatedAt": "2020-08-22T05:35:54Z"
+            }
+         },
+         "canReply": true,
+         "totalReplyCount": 3
+      },
+      "replies": {
+         "comments": [
+            {
+               "snippet": {
+                  "textDisplay": "Justin Case they\u2019ll make landfall as tropical storms luckily",
+                  "authorDisplayName": "Mac _Censored",
+                  "likeCount": 2,
+                  "publishedAt": "2020-08-22T23:33:03Z",
+                  "updatedAt": "2020-08-22T23:33:03Z"
+               }
+            },
+            {
+               "snippet": {
+                  "textDisplay": "The devil:Yes",
+                  "authorDisplayName": "Franz",
+                  "likeCount": 5,
+                  "publishedAt": "2020-08-22T20:19:53Z",
+                  "updatedAt": "2020-08-22T20:19:53Z"
+               }
+            },
+            {
+               "snippet": {
+                  "textDisplay": "Now there's 2 hurricanes in the Gulf .",
+                  "authorDisplayName": "Justin Case",
+                  "likeCount": 6,
+                  "publishedAt": "2020-08-22T09:41:59Z",
+                  "updatedAt": "2020-08-22T17:34:29Z"
+               }
+            }
+         ]
+      }
+   },
+   {
+      "snippet": {
+         "topLevelComment": {
+            "snippet": {
                "textDisplay": "So basically if you don\u2019t leave your home, with a fire near you die from the fire. But if you leave you might get COVID",
                "authorDisplayName": "Brooke Swanson",
-               "likeCount": 406,
+               "likeCount": 407,
                "publishedAt": "2020-08-22T05:55:19Z",
                "updatedAt": "2020-08-22T05:55:19Z"
             }
@@ -67,52 +113,6 @@
       "snippet": {
          "topLevelComment": {
             "snippet": {
-               "textDisplay": "\"Wildfires burn among Pandemic\"\nYou mean to tell me disasters can happen simultaneously!!",
-               "authorDisplayName": "Jordan Gustafson",
-               "likeCount": 56,
-               "publishedAt": "2020-08-22T05:35:54Z",
-               "updatedAt": "2020-08-22T05:35:54Z"
-            }
-         },
-         "canReply": true,
-         "totalReplyCount": 3
-      },
-      "replies": {
-         "comments": [
-            {
-               "snippet": {
-                  "textDisplay": "Justin Case they\u2019ll make landfall as tropical storms luckily",
-                  "authorDisplayName": "Mac _Censored",
-                  "likeCount": 2,
-                  "publishedAt": "2020-08-22T23:33:03Z",
-                  "updatedAt": "2020-08-22T23:33:03Z"
-               }
-            },
-            {
-               "snippet": {
-                  "textDisplay": "The devil:Yes",
-                  "authorDisplayName": "Franz",
-                  "likeCount": 5,
-                  "publishedAt": "2020-08-22T20:19:53Z",
-                  "updatedAt": "2020-08-22T20:19:53Z"
-               }
-            },
-            {
-               "snippet": {
-                  "textDisplay": "Now there's 2 hurricanes in the Gulf .",
-                  "authorDisplayName": "Justin Case",
-                  "likeCount": 6,
-                  "publishedAt": "2020-08-22T09:41:59Z",
-                  "updatedAt": "2020-08-22T17:34:29Z"
-               }
-            }
-         ]
-      }
-   },
-   {
-      "snippet": {
-         "topLevelComment": {
-            "snippet": {
                "textDisplay": "It looks like Mars out here in the valley.   Never seen it like this.  More dry lightning tomorrow through Tuesday.   Not looking good.",
                "authorDisplayName": "Kong 76",
                "likeCount": 32,
@@ -144,85 +144,6 @@
                }
             }
          ]
-      }
-   },
-   {
-      "snippet": {
-         "topLevelComment": {
-            "snippet": {
-               "textDisplay": "Maybe we can get the virus and the fires to fight each other.",
-               "authorDisplayName": "Emperor Picard",
-               "likeCount": 98,
-               "publishedAt": "2020-08-22T07:58:49Z",
-               "updatedAt": "2020-08-22T07:58:49Z"
-            }
-         },
-         "canReply": true,
-         "totalReplyCount": 8
-      },
-      "replies": {
-         "comments": [
-            {
-               "snippet": {
-                  "textDisplay": "0 virus\nMillions AWAKE",
-                  "authorDisplayName": "They're Distorting Your Rhthym 102",
-                  "likeCount": 1,
-                  "publishedAt": "2020-08-23T02:01:06Z",
-                  "updatedAt": "2020-08-23T02:01:06Z"
-               }
-            },
-            {
-               "snippet": {
-                  "textDisplay": "@Hobbes Goblin Dr. Serizawa?",
-                  "authorDisplayName": "Ines Angel",
-                  "likeCount": 0,
-                  "publishedAt": "2020-08-23T01:46:53Z",
-                  "updatedAt": "2020-08-23T01:46:53Z"
-               }
-            },
-            {
-               "snippet": {
-                  "textDisplay": "Fires start burning through CA:\n\ncorona: finally a worthy opponent, our battle will be legendary!",
-                  "authorDisplayName": "Thomas Barnes",
-                  "likeCount": 1,
-                  "publishedAt": "2020-08-23T01:03:19Z",
-                  "updatedAt": "2020-08-23T01:03:19Z"
-               }
-            },
-            {
-               "snippet": {
-                  "textDisplay": "Hey, it's 2020.",
-                  "authorDisplayName": "Abigail Beatty",
-                  "likeCount": 0,
-                  "publishedAt": "2020-08-23T00:37:24Z",
-                  "updatedAt": "2020-08-23T00:37:24Z"
-               }
-            },
-            {
-               "snippet": {
-                  "textDisplay": "@Hobbes Goblin lmao",
-                  "authorDisplayName": "Baby Yoda",
-                  "likeCount": 0,
-                  "publishedAt": "2020-08-22T23:50:54Z",
-                  "updatedAt": "2020-08-22T23:50:54Z"
-               }
-            }
-         ]
-      }
-   },
-   {
-      "snippet": {
-         "topLevelComment": {
-            "snippet": {
-               "textDisplay": "Right now the smoke is killing me. I hope everyone who was in or near the fires is safe",
-               "authorDisplayName": "leny polo",
-               "likeCount": 5,
-               "publishedAt": "2020-08-23T00:15:31Z",
-               "updatedAt": "2020-08-23T00:15:31Z"
-            }
-         },
-         "canReply": true,
-         "totalReplyCount": 0
       }
    },
    {
@@ -339,98 +260,61 @@
       "snippet": {
          "topLevelComment": {
             "snippet": {
-               "textDisplay": "My cousin dog is in California he moved cuz he was bad I miss him his a dog he\u2019s German Shepherd :((\ud83d\ude2d",
-               "authorDisplayName": "Roblox Gameplay",
-               "likeCount": 5,
-               "publishedAt": "2020-08-22T22:31:03Z",
-               "updatedAt": "2020-08-22T22:31:03Z"
+               "textDisplay": "Maybe we can get the virus and the fires to fight each other.",
+               "authorDisplayName": "Emperor Picard",
+               "likeCount": 98,
+               "publishedAt": "2020-08-22T07:58:49Z",
+               "updatedAt": "2020-08-22T07:58:49Z"
             }
          },
          "canReply": true,
-         "totalReplyCount": 2
+         "totalReplyCount": 8
       },
       "replies": {
          "comments": [
             {
                "snippet": {
-                  "textDisplay": "Sym Equine yea",
-                  "authorDisplayName": "Roblox Gameplay",
-                  "likeCount": 0,
-                  "publishedAt": "2020-08-23T02:49:46Z",
-                  "updatedAt": "2020-08-23T02:49:46Z"
-               }
-            },
-            {
-               "snippet": {
-                  "textDisplay": "Oh no! I hope that he stays safe.",
-                  "authorDisplayName": "Sym Equine",
+                  "textDisplay": "0 virus\nMillions AWAKE",
+                  "authorDisplayName": "They're Distorting Your Rhthym 102",
                   "likeCount": 1,
-                  "publishedAt": "2020-08-23T01:27:38Z",
-                  "updatedAt": "2020-08-23T01:27:38Z"
-               }
-            }
-         ]
-      }
-   },
-   {
-      "snippet": {
-         "topLevelComment": {
-            "snippet": {
-               "textDisplay": "Can't wait for this years YT Rewind! Anyone else wanna see what will be in?",
-               "authorDisplayName": "ducc",
-               "likeCount": 251,
-               "publishedAt": "2020-08-22T03:51:12Z",
-               "updatedAt": "2020-08-22T03:51:12Z"
-            }
-         },
-         "canReply": true,
-         "totalReplyCount": 25
-      },
-      "replies": {
-         "comments": [
-            {
-               "snippet": {
-                  "textDisplay": "A whole bunch of goodies I bet!",
-                  "authorDisplayName": "Eric Cortez",
-                  "likeCount": 0,
-                  "publishedAt": "2020-08-23T01:06:50Z",
-                  "updatedAt": "2020-08-23T01:06:50Z"
+                  "publishedAt": "2020-08-23T02:01:06Z",
+                  "updatedAt": "2020-08-23T02:01:06Z"
                }
             },
             {
                "snippet": {
-                  "textDisplay": "@Edgeworthless 420 ht",
-                  "authorDisplayName": "Sujon Gazi",
+                  "textDisplay": "@Hobbes Goblin Dr. Serizawa?",
+                  "authorDisplayName": "Ines Angel",
                   "likeCount": 0,
-                  "publishedAt": "2020-08-23T01:00:35Z",
-                  "updatedAt": "2020-08-23T01:00:35Z"
+                  "publishedAt": "2020-08-23T01:46:53Z",
+                  "updatedAt": "2020-08-23T01:46:53Z"
                }
             },
             {
                "snippet": {
-                  "textDisplay": "@ma ta K, but did he help stop covid-19?",
-                  "authorDisplayName": "Kangawaffle",
-                  "likeCount": 0,
-                  "publishedAt": "2020-08-23T00:53:54Z",
-                  "updatedAt": "2020-08-23T00:53:54Z"
+                  "textDisplay": "Fires start burning through CA:\n\ncorona: finally a worthy opponent, our battle will be legendary!",
+                  "authorDisplayName": "Thomas Barnes",
+                  "likeCount": 1,
+                  "publishedAt": "2020-08-23T01:03:19Z",
+                  "updatedAt": "2020-08-23T01:03:19Z"
                }
             },
             {
                "snippet": {
-                  "textDisplay": "*ducc*",
-                  "authorDisplayName": "Loreley \u039b\u03bf\u03c1\u03b5\u03bb\u03b5\u03c8",
+                  "textDisplay": "Hey, it's 2020.",
+                  "authorDisplayName": "Abigail Beatty",
                   "likeCount": 0,
-                  "publishedAt": "2020-08-23T00:45:45Z",
-                  "updatedAt": "2020-08-23T00:45:45Z"
+                  "publishedAt": "2020-08-23T00:37:24Z",
+                  "updatedAt": "2020-08-23T00:37:24Z"
                }
             },
             {
                "snippet": {
-                  "textDisplay": "yes please",
-                  "authorDisplayName": "Cherry On Trends",
+                  "textDisplay": "@Hobbes Goblin lmao",
+                  "authorDisplayName": "Baby Yoda",
                   "likeCount": 0,
-                  "publishedAt": "2020-08-23T00:38:13Z",
-                  "updatedAt": "2020-08-23T00:38:13Z"
+                  "publishedAt": "2020-08-22T23:50:54Z",
+                  "updatedAt": "2020-08-22T23:50:54Z"
                }
             }
          ]
@@ -568,6 +452,85 @@
       "snippet": {
          "topLevelComment": {
             "snippet": {
+               "textDisplay": "Can't wait for this years YT Rewind! Anyone else wanna see what will be in?",
+               "authorDisplayName": "ducc",
+               "likeCount": 251,
+               "publishedAt": "2020-08-22T03:51:12Z",
+               "updatedAt": "2020-08-22T03:51:12Z"
+            }
+         },
+         "canReply": true,
+         "totalReplyCount": 25
+      },
+      "replies": {
+         "comments": [
+            {
+               "snippet": {
+                  "textDisplay": "A whole bunch of goodies I bet!",
+                  "authorDisplayName": "Eric Cortez",
+                  "likeCount": 0,
+                  "publishedAt": "2020-08-23T01:06:50Z",
+                  "updatedAt": "2020-08-23T01:06:50Z"
+               }
+            },
+            {
+               "snippet": {
+                  "textDisplay": "@Edgeworthless 420 ht",
+                  "authorDisplayName": "Sujon Gazi",
+                  "likeCount": 0,
+                  "publishedAt": "2020-08-23T01:00:35Z",
+                  "updatedAt": "2020-08-23T01:00:35Z"
+               }
+            },
+            {
+               "snippet": {
+                  "textDisplay": "@ma ta K, but did he help stop covid-19?",
+                  "authorDisplayName": "Kangawaffle",
+                  "likeCount": 0,
+                  "publishedAt": "2020-08-23T00:53:54Z",
+                  "updatedAt": "2020-08-23T00:53:54Z"
+               }
+            },
+            {
+               "snippet": {
+                  "textDisplay": "*ducc*",
+                  "authorDisplayName": "Loreley \u039b\u03bf\u03c1\u03b5\u03bb\u03b5\u03c8",
+                  "likeCount": 0,
+                  "publishedAt": "2020-08-23T00:45:45Z",
+                  "updatedAt": "2020-08-23T00:45:45Z"
+               }
+            },
+            {
+               "snippet": {
+                  "textDisplay": "yes please",
+                  "authorDisplayName": "Cherry On Trends",
+                  "likeCount": 0,
+                  "publishedAt": "2020-08-23T00:38:13Z",
+                  "updatedAt": "2020-08-23T00:38:13Z"
+               }
+            }
+         ]
+      }
+   },
+   {
+      "snippet": {
+         "topLevelComment": {
+            "snippet": {
+               "textDisplay": "Man July was subtle with its disaster \n\nAugust is just pumping out the disasters",
+               "authorDisplayName": "Mark Frank",
+               "likeCount": 6,
+               "publishedAt": "2020-08-22T05:12:47Z",
+               "updatedAt": "2020-08-22T05:12:47Z"
+            }
+         },
+         "canReply": true,
+         "totalReplyCount": 0
+      }
+   },
+   {
+      "snippet": {
+         "topLevelComment": {
+            "snippet": {
                "textDisplay": "call me when the fires stop",
                "authorDisplayName": "evelyn garcia",
                "likeCount": 162,
@@ -632,64 +595,15 @@
       "snippet": {
          "topLevelComment": {
             "snippet": {
-               "textDisplay": "2020: time for another disaster\n\nme: yes honey",
-               "authorDisplayName": "oninja 1129",
-               "likeCount": 162,
-               "publishedAt": "2020-08-22T04:18:37Z",
-               "updatedAt": "2020-08-22T04:18:37Z"
+               "textDisplay": "11:59:59 2019: \n: Happy New Year, Hope this year will be a new decade and bring more happiness... Oh so jolly!\n2020: Ha, you wish.",
+               "authorDisplayName": "Rieka C.",
+               "likeCount": 5,
+               "publishedAt": "2020-08-22T20:29:44Z",
+               "updatedAt": "2020-08-22T20:29:44Z"
             }
          },
          "canReply": true,
-         "totalReplyCount": 13
-      },
-      "replies": {
-         "comments": [
-            {
-               "snippet": {
-                  "textDisplay": "@twigx omg chill",
-                  "authorDisplayName": "Cherry On Trends",
-                  "likeCount": 0,
-                  "publishedAt": "2020-08-23T00:38:46Z",
-                  "updatedAt": "2020-08-23T00:38:46Z"
-               }
-            },
-            {
-               "snippet": {
-                  "textDisplay": "DEMOCRATIC PARTY = \nDEMAGOGIC",
-                  "authorDisplayName": "Hoa Le",
-                  "likeCount": 0,
-                  "publishedAt": "2020-08-23T00:32:20Z",
-                  "updatedAt": "2020-08-23T00:32:20Z"
-               }
-            },
-            {
-               "snippet": {
-                  "textDisplay": "Shouldn't it be the other way around man",
-                  "authorDisplayName": "MrBigEnchilada",
-                  "likeCount": 0,
-                  "publishedAt": "2020-08-22T21:52:45Z",
-                  "updatedAt": "2020-08-22T21:52:45Z"
-               }
-            },
-            {
-               "snippet": {
-                  "textDisplay": "It will be if Biden  wins  DJ xmailman",
-                  "authorDisplayName": "Merri Jordan",
-                  "likeCount": 0,
-                  "publishedAt": "2020-08-22T21:09:11Z",
-                  "updatedAt": "2020-08-22T21:09:11Z"
-               }
-            },
-            {
-               "snippet": {
-                  "textDisplay": "Another one for the apocalypse bingo \n\n\n\nOk but seriously, this is terrible, heavy condolences to those impacted by this.",
-                  "authorDisplayName": "Teddy T\u00e9p\u00e9s",
-                  "likeCount": 0,
-                  "publishedAt": "2020-08-22T20:17:01Z",
-                  "updatedAt": "2020-08-22T20:17:01Z"
-               }
-            }
-         ]
+         "totalReplyCount": 0
       }
    },
    {
@@ -701,51 +615,6 @@
                "likeCount": 1,
                "publishedAt": "2020-08-23T00:57:31Z",
                "updatedAt": "2020-08-23T00:57:31Z"
-            }
-         },
-         "canReply": true,
-         "totalReplyCount": 0
-      }
-   },
-   {
-      "snippet": {
-         "topLevelComment": {
-            "snippet": {
-               "textDisplay": "Man July was subtle with its disaster \n\nAugust is just pumping out the disasters",
-               "authorDisplayName": "Mark Frank",
-               "likeCount": 6,
-               "publishedAt": "2020-08-22T05:12:47Z",
-               "updatedAt": "2020-08-22T05:12:47Z"
-            }
-         },
-         "canReply": true,
-         "totalReplyCount": 0
-      }
-   },
-   {
-      "snippet": {
-         "topLevelComment": {
-            "snippet": {
-               "textDisplay": "CA is fine. it's just really hot.",
-               "authorDisplayName": "Savi Waves",
-               "likeCount": 2,
-               "publishedAt": "2020-08-22T11:45:52Z",
-               "updatedAt": "2020-08-22T11:45:52Z"
-            }
-         },
-         "canReply": true,
-         "totalReplyCount": 0
-      }
-   },
-   {
-      "snippet": {
-         "topLevelComment": {
-            "snippet": {
-               "textDisplay": "as what Joe Exotic said:\n*I will never financially recover from this*",
-               "authorDisplayName": "kim taehyung's handsome face",
-               "likeCount": 5,
-               "publishedAt": "2020-08-22T08:10:38Z",
-               "updatedAt": "2020-08-22T08:10:38Z"
             }
          },
          "canReply": true,
@@ -820,66 +689,6 @@
       "snippet": {
          "topLevelComment": {
             "snippet": {
-               "textDisplay": "This just highlights the stupidity of liberals.",
-               "authorDisplayName": "David Smith",
-               "likeCount": 1,
-               "publishedAt": "2020-08-23T01:31:26Z",
-               "updatedAt": "2020-08-23T01:31:26Z"
-            }
-         },
-         "canReply": true,
-         "totalReplyCount": 0
-      }
-   },
-   {
-      "snippet": {
-         "topLevelComment": {
-            "snippet": {
-               "textDisplay": "11:59:59 2019: \n: Happy New Year, Hope this year will be a new decade and bring more happiness... Oh so jolly!\n2020: Ha, you wish.",
-               "authorDisplayName": "Rieka C.",
-               "likeCount": 5,
-               "publishedAt": "2020-08-22T20:29:44Z",
-               "updatedAt": "2020-08-22T20:29:44Z"
-            }
-         },
-         "canReply": true,
-         "totalReplyCount": 0
-      }
-   },
-   {
-      "snippet": {
-         "topLevelComment": {
-            "snippet": {
-               "textDisplay": "Lets not forget the Astroid with a possibility of hitting hearth.",
-               "authorDisplayName": "Celevision",
-               "likeCount": 0,
-               "publishedAt": "2020-08-23T00:48:53Z",
-               "updatedAt": "2020-08-23T00:48:53Z"
-            }
-         },
-         "canReply": true,
-         "totalReplyCount": 0
-      }
-   },
-   {
-      "snippet": {
-         "topLevelComment": {
-            "snippet": {
-               "textDisplay": "They forgot to add \"Newsom\" to the list of natural disasters. He has done more to destroy the state than all the rest combined. This LA Native, and every friend I grew up with here has already left or is leaving. Just sayin'!",
-               "authorDisplayName": "Jamie Paolinetti Writer/Director",
-               "likeCount": 2,
-               "publishedAt": "2020-08-22T20:08:52Z",
-               "updatedAt": "2020-08-22T20:08:52Z"
-            }
-         },
-         "canReply": true,
-         "totalReplyCount": 0
-      }
-   },
-   {
-      "snippet": {
-         "topLevelComment": {
-            "snippet": {
                "textDisplay": "Dang Mother Nature isn\u2019t here to play this year, honestly I\u2019m not surprised, it\u2019s 2020 can\u2019t expect much anymore \ud83e\udd37\ud83c\udffb",
                "authorDisplayName": "BTS_Army",
                "likeCount": 249,
@@ -944,52 +753,61 @@
       "snippet": {
          "topLevelComment": {
             "snippet": {
-               "textDisplay": "Add to that the governor not taking his promised 10% pay cut like all of us state employees!",
-               "authorDisplayName": "Euux-jtgy",
-               "likeCount": 84,
-               "publishedAt": "2020-08-22T04:33:15Z",
-               "updatedAt": "2020-08-22T04:33:15Z"
+               "textDisplay": "2020: time for another disaster\n\nme: yes honey",
+               "authorDisplayName": "oninja 1129",
+               "likeCount": 162,
+               "publishedAt": "2020-08-22T04:18:37Z",
+               "updatedAt": "2020-08-22T04:18:37Z"
             }
          },
          "canReply": true,
-         "totalReplyCount": 4
+         "totalReplyCount": 13
       },
       "replies": {
          "comments": [
             {
                "snippet": {
-                  "textDisplay": "yall always blame the goverment figure it out yall self like if your depressed just be happy\ud83d\ude44",
-                  "authorDisplayName": "CALIYAH GISSENDANNER",
+                  "textDisplay": "@twigx omg chill",
+                  "authorDisplayName": "Cherry On Trends",
                   "likeCount": 0,
-                  "publishedAt": "2020-08-22T21:32:43Z",
-                  "updatedAt": "2020-08-22T21:32:43Z"
+                  "publishedAt": "2020-08-23T00:38:46Z",
+                  "updatedAt": "2020-08-23T00:38:46Z"
                }
             },
             {
                "snippet": {
-                  "textDisplay": "Euux-jtgy ...wow, that\u2019s disgraceful.   And after bad mouthing Trump he\u2019ll be crawling on the ground asking tor Federal funds as usual.    SMH\nWe are praying that CA revives quickly and please stay safe.",
-                  "authorDisplayName": "et al",
-                  "likeCount": 1,
-                  "publishedAt": "2020-08-22T09:35:43Z",
-                  "updatedAt": "2020-08-23T10:46:25Z"
+                  "textDisplay": "DEMOCRATIC PARTY = \nDEMAGOGIC",
+                  "authorDisplayName": "Hoa Le",
+                  "likeCount": 0,
+                  "publishedAt": "2020-08-23T00:32:20Z",
+                  "updatedAt": "2020-08-23T00:32:20Z"
                }
             },
             {
                "snippet": {
-                  "textDisplay": "Yup Gavin is a real class act. Remember to sign those recall petitions",
-                  "authorDisplayName": "LocaliLLocano",
-                  "likeCount": 5,
-                  "publishedAt": "2020-08-22T06:53:58Z",
-                  "updatedAt": "2020-08-22T06:53:58Z"
+                  "textDisplay": "Shouldn't it be the other way around man",
+                  "authorDisplayName": "MrBigEnchilada",
+                  "likeCount": 0,
+                  "publishedAt": "2020-08-22T21:52:45Z",
+                  "updatedAt": "2020-08-22T21:52:45Z"
                }
             },
             {
                "snippet": {
-                  "textDisplay": "I remember he publicly said he was already taking a pay cut like 2 or more months ago",
-                  "authorDisplayName": "HentaiAnimeArt",
-                  "likeCount": 6,
-                  "publishedAt": "2020-08-22T06:32:43Z",
-                  "updatedAt": "2020-08-22T06:33:17Z"
+                  "textDisplay": "It will be if Biden  wins  DJ xmailman",
+                  "authorDisplayName": "Merri Jordan",
+                  "likeCount": 0,
+                  "publishedAt": "2020-08-22T21:09:11Z",
+                  "updatedAt": "2020-08-22T21:09:11Z"
+               }
+            },
+            {
+               "snippet": {
+                  "textDisplay": "Another one for the apocalypse bingo \n\n\n\nOk but seriously, this is terrible, heavy condolences to those impacted by this.",
+                  "authorDisplayName": "Teddy T\u00e9p\u00e9s",
+                  "likeCount": 0,
+                  "publishedAt": "2020-08-22T20:17:01Z",
+                  "updatedAt": "2020-08-22T20:17:01Z"
                }
             }
          ]
@@ -999,11 +817,11 @@
       "snippet": {
          "topLevelComment": {
             "snippet": {
-               "textDisplay": "I think god put the 2020 difficulty on hardcore by accident",
-               "authorDisplayName": "Angel -_-",
-               "likeCount": 3,
-               "publishedAt": "2020-08-22T23:20:51Z",
-               "updatedAt": "2020-08-22T23:20:51Z"
+               "textDisplay": "This just highlights the stupidity of liberals.",
+               "authorDisplayName": "David Smith",
+               "likeCount": 1,
+               "publishedAt": "2020-08-23T01:31:26Z",
+               "updatedAt": "2020-08-23T01:31:26Z"
             }
          },
          "canReply": true,
@@ -1014,39 +832,26 @@
       "snippet": {
          "topLevelComment": {
             "snippet": {
-               "textDisplay": "But they called their draconian prophesies \"holy\" when they were used to pillage and plunder the earth...",
-               "authorDisplayName": "ONYx2",
-               "likeCount": 1,
-               "publishedAt": "2020-08-22T17:56:16Z",
-               "updatedAt": "2020-08-22T17:56:16Z"
+               "textDisplay": "Right now the smoke is killing me. I hope everyone who was in or near the fires is safe",
+               "authorDisplayName": "leny polo",
+               "likeCount": 5,
+               "publishedAt": "2020-08-23T00:15:31Z",
+               "updatedAt": "2020-08-23T00:15:31Z"
             }
          },
          "canReply": true,
-         "totalReplyCount": 1
-      },
-      "replies": {
-         "comments": [
-            {
-               "snippet": {
-                  "textDisplay": "...wat?",
-                  "authorDisplayName": "upinarms79",
-                  "likeCount": 2,
-                  "publishedAt": "2020-08-22T19:55:27Z",
-                  "updatedAt": "2020-08-22T19:55:27Z"
-               }
-            }
-         ]
+         "totalReplyCount": 0
       }
    },
    {
       "snippet": {
          "topLevelComment": {
             "snippet": {
-               "textDisplay": "California: The new Babylon and Exodus.",
-               "authorDisplayName": "mark newman",
-               "likeCount": 1,
-               "publishedAt": "2020-08-23T00:12:28Z",
-               "updatedAt": "2020-08-23T00:12:28Z"
+               "textDisplay": "They forgot to add \"Newsom\" to the list of natural disasters. He has done more to destroy the state than all the rest combined. This LA Native, and every friend I grew up with here has already left or is leaving. Just sayin'!",
+               "authorDisplayName": "Jamie Paolinetti Writer/Director",
+               "likeCount": 2,
+               "publishedAt": "2020-08-22T20:08:52Z",
+               "updatedAt": "2020-08-22T20:08:52Z"
             }
          },
          "canReply": true,
@@ -1121,6 +926,177 @@
       "snippet": {
          "topLevelComment": {
             "snippet": {
+               "textDisplay": "Lets not forget the Astroid with a possibility of hitting hearth.",
+               "authorDisplayName": "Celevision",
+               "likeCount": 0,
+               "publishedAt": "2020-08-23T00:48:53Z",
+               "updatedAt": "2020-08-23T00:48:53Z"
+            }
+         },
+         "canReply": true,
+         "totalReplyCount": 0
+      }
+   },
+   {
+      "snippet": {
+         "topLevelComment": {
+            "snippet": {
+               "textDisplay": "Add to that the governor not taking his promised 10% pay cut like all of us state employees!",
+               "authorDisplayName": "Euux-jtgy",
+               "likeCount": 84,
+               "publishedAt": "2020-08-22T04:33:15Z",
+               "updatedAt": "2020-08-22T04:33:15Z"
+            }
+         },
+         "canReply": true,
+         "totalReplyCount": 4
+      },
+      "replies": {
+         "comments": [
+            {
+               "snippet": {
+                  "textDisplay": "yall always blame the goverment figure it out yall self like if your depressed just be happy\ud83d\ude44",
+                  "authorDisplayName": "CALIYAH GISSENDANNER",
+                  "likeCount": 0,
+                  "publishedAt": "2020-08-22T21:32:43Z",
+                  "updatedAt": "2020-08-22T21:32:43Z"
+               }
+            },
+            {
+               "snippet": {
+                  "textDisplay": "Euux-jtgy ...wow, that\u2019s disgraceful.   And after bad mouthing Trump he\u2019ll be crawling on the ground asking tor Federal funds as usual.    SMH\nWe are praying that CA revives quickly and please stay safe.",
+                  "authorDisplayName": "et al",
+                  "likeCount": 1,
+                  "publishedAt": "2020-08-22T09:35:43Z",
+                  "updatedAt": "2020-08-23T10:46:25Z"
+               }
+            },
+            {
+               "snippet": {
+                  "textDisplay": "Yup Gavin is a real class act. Remember to sign those recall petitions",
+                  "authorDisplayName": "LocaliLLocano",
+                  "likeCount": 5,
+                  "publishedAt": "2020-08-22T06:53:58Z",
+                  "updatedAt": "2020-08-22T06:53:58Z"
+               }
+            },
+            {
+               "snippet": {
+                  "textDisplay": "I remember he publicly said he was already taking a pay cut like 2 or more months ago",
+                  "authorDisplayName": "HentaiAnimeArt",
+                  "likeCount": 6,
+                  "publishedAt": "2020-08-22T06:32:43Z",
+                  "updatedAt": "2020-08-22T06:33:17Z"
+               }
+            }
+         ]
+      }
+   },
+   {
+      "snippet": {
+         "topLevelComment": {
+            "snippet": {
+               "textDisplay": "CA is fine. it's just really hot.",
+               "authorDisplayName": "Savi Waves",
+               "likeCount": 2,
+               "publishedAt": "2020-08-22T11:45:52Z",
+               "updatedAt": "2020-08-22T11:45:52Z"
+            }
+         },
+         "canReply": true,
+         "totalReplyCount": 0
+      }
+   },
+   {
+      "snippet": {
+         "topLevelComment": {
+            "snippet": {
+               "textDisplay": "I think god put the 2020 difficulty on hardcore by accident",
+               "authorDisplayName": "Angel -_-",
+               "likeCount": 3,
+               "publishedAt": "2020-08-22T23:20:51Z",
+               "updatedAt": "2020-08-22T23:20:51Z"
+            }
+         },
+         "canReply": true,
+         "totalReplyCount": 0
+      }
+   },
+   {
+      "snippet": {
+         "topLevelComment": {
+            "snippet": {
+               "textDisplay": "California: The new Babylon and Exodus.",
+               "authorDisplayName": "mark newman",
+               "likeCount": 1,
+               "publishedAt": "2020-08-23T00:12:28Z",
+               "updatedAt": "2020-08-23T00:12:28Z"
+            }
+         },
+         "canReply": true,
+         "totalReplyCount": 0
+      }
+   },
+   {
+      "snippet": {
+         "topLevelComment": {
+            "snippet": {
+               "textDisplay": "Hope there all safe \u2665\ufe0f wear a mask everyone remember to sanitize or use hot water for getting rid of germs ! \ud83e\udda0 and stay home god bless you all",
+               "authorDisplayName": "Leila Castillo",
+               "likeCount": 5,
+               "publishedAt": "2020-08-22T18:42:33Z",
+               "updatedAt": "2020-08-22T18:42:33Z"
+            }
+         },
+         "canReply": true,
+         "totalReplyCount": 1
+      },
+      "replies": {
+         "comments": [
+            {
+               "snippet": {
+                  "textDisplay": "God Bless you too and stay safe also\u2764\ufe0f",
+                  "authorDisplayName": "ChillVibes7",
+                  "likeCount": 0,
+                  "publishedAt": "2020-08-22T19:37:56Z",
+                  "updatedAt": "2020-08-22T19:37:56Z"
+               }
+            }
+         ]
+      }
+   },
+   {
+      "snippet": {
+         "topLevelComment": {
+            "snippet": {
+               "textDisplay": "But they called their draconian prophesies \"holy\" when they were used to pillage and plunder the earth...",
+               "authorDisplayName": "ONYx2",
+               "likeCount": 1,
+               "publishedAt": "2020-08-22T17:56:16Z",
+               "updatedAt": "2020-08-22T17:56:16Z"
+            }
+         },
+         "canReply": true,
+         "totalReplyCount": 1
+      },
+      "replies": {
+         "comments": [
+            {
+               "snippet": {
+                  "textDisplay": "...wat?",
+                  "authorDisplayName": "upinarms79",
+                  "likeCount": 2,
+                  "publishedAt": "2020-08-22T19:55:27Z",
+                  "updatedAt": "2020-08-22T19:55:27Z"
+               }
+            }
+         ]
+      }
+   },
+   {
+      "snippet": {
+         "topLevelComment": {
+            "snippet": {
                "textDisplay": "Not just that were expecting another lightning storm here in cali \ud83d\ude2b its already hard to breath bring rain with you please clouds",
                "authorDisplayName": "Lil's Playz",
                "likeCount": 2,
@@ -1145,6 +1121,43 @@
          },
          "canReply": true,
          "totalReplyCount": 0
+      }
+   },
+   {
+      "snippet": {
+         "topLevelComment": {
+            "snippet": {
+               "textDisplay": "I\u2019m leaving the globe now and living with the aliens see ya",
+               "authorDisplayName": "500 subscribers without any videos",
+               "likeCount": 4,
+               "publishedAt": "2020-08-22T19:45:01Z",
+               "updatedAt": "2020-08-22T19:45:01Z"
+            }
+         },
+         "canReply": true,
+         "totalReplyCount": 2
+      },
+      "replies": {
+         "comments": [
+            {
+               "snippet": {
+                  "textDisplay": "count me in please",
+                  "authorDisplayName": "Cherry On Trends",
+                  "likeCount": 0,
+                  "publishedAt": "2020-08-23T00:38:58Z",
+                  "updatedAt": "2020-08-23T00:38:58Z"
+               }
+            },
+            {
+               "snippet": {
+                  "textDisplay": "cool dude in town that puts on the free wed dinner says he's not from this earth and where he comes from food doesn't cost anything \ud83d\udc7d",
+                  "authorDisplayName": "Cardinal Stars",
+                  "likeCount": 0,
+                  "publishedAt": "2020-08-22T22:34:27Z",
+                  "updatedAt": "2020-08-22T22:34:27Z"
+               }
+            }
+         ]
       }
    }
 ]
