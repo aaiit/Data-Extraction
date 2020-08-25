@@ -9,6 +9,7 @@ from commentsandlikes import comments, likes
 from get_tweets import get_tweets_text, get_comments, get_tweets_video
 from downloadImages import downloadImages
 from fire import database,upload
+
 def graph(request):
 	a=request.GET.get("a")
 	print(a)
@@ -16,10 +17,13 @@ def graph(request):
 	js=st
 	if js==None :
 		return redirect('/')
+
 	results=json.loads(js)
+
 	images=results["graph"]
 
 	js=results["table1"]
+
 	keys=list(js[0].keys())
 	def e(l):
 		Q=[]
@@ -33,17 +37,11 @@ def graph(request):
 
 	js=results["table2"]
 	keys=list(js[0].keys())
-	def e(l):
-		Q=[]
-		for i in l:
-			Q.append(l[i])
-		return Q
 	lignes=[]
 	for j in js:
 		lignes.append(list(e(j)))
 	keys2,lignes2=keys,lignes
 
-	para={"C1":["a","b","c"],"C2":["a","b","c"],"data1":[],"data2":[],"graph":["https//.png","https//.png","https//.png","https//.png"]}
 	para={"C1":keys1,"data1":lignes1,"C2":keys2,"data2":lignes2,"images":images}
 	return render(request,"graph.html",para)
 def table(request):
@@ -82,6 +80,7 @@ def formText(request):
 		if type=="graphe":
 			r=json.dumps(search_for_tweets(fields))
 			id=upload(r)
+			print(">>>>"+r[:100]+"...")
 			return HttpResponse(id)
 		return HttpResponse(get_tweets_text(fields))
 	return render(request, "f0.html")
