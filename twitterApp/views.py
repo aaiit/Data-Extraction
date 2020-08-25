@@ -8,7 +8,7 @@ from django.shortcuts import redirect
 from commentsandlikes import comments, likes
 from get_tweets import get_tweets_text, get_comments, get_tweets_video
 from downloadImages import downloadImages
-from fire import database,upload
+from fire import database,upload,uploadfilds
 
 def history(request):
 	return HttpResponse(request.session['coco'])
@@ -42,15 +42,15 @@ def graph(request):
 
 	para={"C1":keys1,"data1":lignes1,"C2":keys2,"data2":lignes2,"images":images}
 	return render(request,"graph.html",para)
-def table(request):
-	a=request.GET.get("a")
-	print(a)
+def table(request,id=0):
+	print("-----",id)
+	# a=request.GET.get("a")
+	a=str(id)
 	st=database.child("data/json/"+a).get().val()
 	js=st
 	if js==None :
 		return redirect('/')
 	js=json.loads(js)
-	print("js>>",js)
 	if(js==[]):return HttpResponse("empty data")
 	keys=list(js[0].keys())
 	def e(l):
@@ -73,7 +73,9 @@ def index(request):
 def formText(request):
 	if request.method=='POST':
 		fields=json.loads(request.body)
-		print(fields)
+
+		f=fields
+
 		type=fields["type"]
 		request.session['coco']=json.dumps(fields)
 		if type=="graphe":
@@ -81,7 +83,11 @@ def formText(request):
 			id=upload(r)
 			print(">>>>"+r[:100]+"...")
 			return HttpResponse(id)
-		return HttpResponse(get_tweets_text(fields))
+		id=get_tweets_text(fields)
+
+		uploadfilds(json.dumps([f]),"f"+id)
+
+		return HttpResponse(id)
 	return render(request, "f0.html")
 
 
@@ -106,9 +112,12 @@ def formVideo(request):
 def f1(request):
 	if request.method=='POST':
 		fields=json.loads(request.body)
+		f=fields
 		type=fields["type"]
 		print(fields)
-		return HttpResponse(get_comments(fields))
+		id=get_comments(fields)
+		uploadfilds(json.dumps([f]),"f"+id)
+		return HttpResponse(id)
 	return render(request, "f1.html")
 
 @csrf_exempt 

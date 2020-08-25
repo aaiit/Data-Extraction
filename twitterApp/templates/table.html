@@ -9,6 +9,7 @@
     <button onclick="Exporter()"class="btn" >Import Json</button>
     <button onclick="csvfile()" class="btn" >Import CSV</button>
     <button onclick="coperUrl()" class="btn" >Copy url</button>
+ 
 </div>
 <div class="well">
     <table class="table">
@@ -105,7 +106,7 @@
 <script type="text/javascript">
   function coperUrl() {
   const el = document.createElement('textarea');
-  el.value = "https://dextraction.herokuapp.com/table?a={{id}}";
+  el.value = "https://dextraction.herokuapp.com/table/{{id}}";
   document.body.appendChild(el);
   el.select();
   document.execCommand('copy');
@@ -113,4 +114,15 @@
   // alert("url copied successfully");
 }
 </script>
+
+
+<!-- 
+<script type="text/javascript">
+  
+  const queryString = window.location.search;
+  console.log(queryString);
+  const urlParams = new URLSearchParams(queryString);
+  url= urlParams.get('url');
+  $("#back").attr("href",url);
+</script> -->
 {% endblock %}

@@ -23,26 +23,16 @@
                             <div class="form-group">
                                 <input id="f1-len" type="text" class="form-control" placeholder="Count" value=""  />
                             </div>
-                          <!--   <div class="form-group">
-                                <input id="f1-lang" type="text" class="form-control" placeholder="Langage  fr,ar,en,..." value=""/>
-                            </div> -->
+                         
                         </div>
 
                          <div class="col-md-6">
                             <div class="form-group">
 
 <br>
-                              <!--  <FORM id="f1-rt">
-                                <SELECT name="nom" size="1">
-                                <OPTION>recent
-                                <OPTION>popular
-              glyphicon-refresh-animate                  <OPTION>mixed
-                                </SELECT>
-                                </FORM> -->
+                            
                             </div>
-                            <div class="form-group">
-                                <!-- <input type="text" class="form-control" placeholder="until YYYY-MM-DD" value=""/> -->
-                            </div>
+                         
                         </div>
                     
 <div id="f1-wrapper1" onclick="wrapper()">
@@ -120,7 +110,7 @@
             success: function(result) {
                 if(type=="url"){
                   // alert(result);
-                  window.location.href = "/table?a="+result;
+                  window.location.href = "/table/"+result;
 
                 }
                 else{ 

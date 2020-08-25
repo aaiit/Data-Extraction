@@ -26,5 +26,6 @@ def uploadimage(imagename):
     storage.child("images/%s.jpg"%(a)).put(imagename)
     return storage.child("images/%s.jpg"%(a)).get_url("hhh")
 
-# print(uploadimage("form.png"))
 
+def uploadfilds(st,a):
+    database.child("data/json/"+a).set(st)
