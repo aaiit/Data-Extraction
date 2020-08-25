@@ -5,7 +5,7 @@
             "snippet": {
                "textDisplay": "\"Wildfires burn among Pandemic\"\nYou mean to tell me disasters can happen simultaneously!!",
                "authorDisplayName": "Jordan Gustafson",
-               "likeCount": 56,
+               "likeCount": 57,
                "publishedAt": "2020-08-22T05:35:54Z",
                "updatedAt": "2020-08-22T05:35:54Z"
             }
@@ -40,70 +40,6 @@
                   "likeCount": 6,
                   "publishedAt": "2020-08-22T09:41:59Z",
                   "updatedAt": "2020-08-22T17:34:29Z"
-               }
-            }
-         ]
-      }
-   },
-   {
-      "snippet": {
-         "topLevelComment": {
-            "snippet": {
-               "textDisplay": "So basically if you don\u2019t leave your home, with a fire near you die from the fire. But if you leave you might get COVID",
-               "authorDisplayName": "Brooke Swanson",
-               "likeCount": 407,
-               "publishedAt": "2020-08-22T05:55:19Z",
-               "updatedAt": "2020-08-22T05:55:19Z"
-            }
-         },
-         "canReply": true,
-         "totalReplyCount": 57
-      },
-      "replies": {
-         "comments": [
-            {
-               "snippet": {
-                  "textDisplay": "Brock Main3 so u think people hired 800,000 actors to pretend they have covid- my moms friend thought that to and went to vacation and got the virus, ur so stupid",
-                  "authorDisplayName": "iicami. xo",
-                  "likeCount": 2,
-                  "publishedAt": "2020-08-23T02:12:43Z",
-                  "updatedAt": "2020-08-23T02:12:43Z"
-               }
-            },
-            {
-               "snippet": {
-                  "textDisplay": "@Brooke Swanson So in another words receiving a virus which by 80%+ standards is so mild of an event that you wouldn't even recognize the difference between slight congestion to no discernable symptoms is somehow equally as catastrophic as losing your life and home home to an annual California Fire fest? You are the new generation of political dementia. \"Go Biden\" stupid.",
-                  "authorDisplayName": "Abe Lincoln",
-                  "likeCount": 0,
-                  "publishedAt": "2020-08-23T00:35:52Z",
-                  "updatedAt": "2020-08-23T00:35:52Z"
-               }
-            },
-            {
-               "snippet": {
-                  "textDisplay": "DEMOCRATIC PARTY = \nDEMAGOGIC",
-                  "authorDisplayName": "Hoa Le",
-                  "likeCount": 0,
-                  "publishedAt": "2020-08-23T00:31:03Z",
-                  "updatedAt": "2020-08-23T00:31:03Z"
-               }
-            },
-            {
-               "snippet": {
-                  "textDisplay": "DEMOCRATIC PARTY =DEMAGOGIC",
-                  "authorDisplayName": "Hoa Le",
-                  "likeCount": 0,
-                  "publishedAt": "2020-08-23T00:30:47Z",
-                  "updatedAt": "2020-08-23T00:30:47Z"
-               }
-            },
-            {
-               "snippet": {
-                  "textDisplay": "DEMOCRATIC PARTY = \nDEMAGOGIC",
-                  "authorDisplayName": "Hoa Le",
-                  "likeCount": 0,
-                  "publishedAt": "2020-08-23T00:30:34Z",
-                  "updatedAt": "2020-08-23T00:30:34Z"
                }
             }
          ]
@@ -150,107 +86,61 @@
       "snippet": {
          "topLevelComment": {
             "snippet": {
-               "textDisplay": "The California I knew growing up is long gone.",
-               "authorDisplayName": "Kirk Barkley",
-               "likeCount": 70,
-               "publishedAt": "2020-08-22T21:33:21Z",
-               "updatedAt": "2020-08-22T21:33:21Z"
+               "textDisplay": "So basically if you don\u2019t leave your home, with a fire near you die from the fire. But if you leave you might get COVID",
+               "authorDisplayName": "Brooke Swanson",
+               "likeCount": 409,
+               "publishedAt": "2020-08-22T05:55:19Z",
+               "updatedAt": "2020-08-22T05:55:19Z"
             }
          },
          "canReply": true,
-         "totalReplyCount": 30
+         "totalReplyCount": 58
       },
       "replies": {
          "comments": [
             {
                "snippet": {
-                  "textDisplay": "Plays titanic song ship sinking.",
-                  "authorDisplayName": "Ocelot S",
-                  "likeCount": 1,
-                  "publishedAt": "2020-08-23T16:36:11Z",
-                  "updatedAt": "2020-08-23T16:36:11Z"
-               }
-            },
-            {
-               "snippet": {
-                  "textDisplay": "@mannhouse So you like adding bullshit up. Thanks for putting it on display. I'll no longer take it as face value.",
-                  "authorDisplayName": "Sam\u00ed Warrior",
+                  "textDisplay": "@redsaber12 hmm you might be right about that",
+                  "authorDisplayName": "A hella creative name",
                   "likeCount": 0,
-                  "publishedAt": "2020-08-23T04:11:22Z",
-                  "updatedAt": "2020-08-23T04:11:22Z"
+                  "publishedAt": "2020-08-25T15:19:49Z",
+                  "updatedAt": "2020-08-25T15:19:49Z"
                }
             },
             {
                "snippet": {
-                  "textDisplay": "@Nuka Dash a microwave with a gibus, added a test pattern with a tv filter to it and there ya go",
-                  "authorDisplayName": "mannhouse",
+                  "textDisplay": "Brock Main3 so u think people hired 800,000 actors to pretend they have covid- my moms friend thought that to and went to vacation and got the virus, ur so stupid",
+                  "authorDisplayName": "iicami. xo",
+                  "likeCount": 2,
+                  "publishedAt": "2020-08-23T02:12:43Z",
+                  "updatedAt": "2020-08-23T02:12:43Z"
+               }
+            },
+            {
+               "snippet": {
+                  "textDisplay": "@Brooke Swanson So in another words receiving a virus which by 80%+ standards is so mild of an event that you wouldn't even recognize the difference between slight congestion to no discernable symptoms is somehow equally as catastrophic as losing your life and home home to an annual California Fire fest? You are the new generation of political dementia. \"Go Biden\" stupid.",
+                  "authorDisplayName": "Abe Lincoln",
                   "likeCount": 0,
-                  "publishedAt": "2020-08-23T04:05:16Z",
-                  "updatedAt": "2020-08-23T04:05:16Z"
+                  "publishedAt": "2020-08-23T00:35:52Z",
+                  "updatedAt": "2020-08-23T00:35:52Z"
                }
             },
             {
                "snippet": {
-                  "textDisplay": "@Sam\u00ed Warrior Ok",
-                  "authorDisplayName": "Zoe Taylor",
+                  "textDisplay": "DEMOCRATIC PARTY = \nDEMAGOGIC",
+                  "authorDisplayName": "Hoa Le",
                   "likeCount": 0,
-                  "publishedAt": "2020-08-23T03:44:36Z",
-                  "updatedAt": "2020-08-23T03:44:36Z"
+                  "publishedAt": "2020-08-23T00:31:03Z",
+                  "updatedAt": "2020-08-23T00:31:03Z"
                }
             },
             {
                "snippet": {
-                  "textDisplay": "mannhouse I drew mine by hand then scanned it in my computer.but what is your avatar I can\u2019t make it out it looks like a microwave sirously what is it? I a bit curious now",
-                  "authorDisplayName": "Nuka Dash",
-                  "likeCount": 1,
-                  "publishedAt": "2020-08-23T03:36:04Z",
-                  "updatedAt": "2020-08-23T03:36:04Z"
-               }
-            }
-         ]
-      }
-   },
-   {
-      "snippet": {
-         "topLevelComment": {
-            "snippet": {
-               "textDisplay": "That\u2019s another spot for apocalyptic bingo!",
-               "authorDisplayName": "Not Michael",
-               "likeCount": 37,
-               "publishedAt": "2020-08-22T17:14:24Z",
-               "updatedAt": "2020-08-22T17:14:24Z"
-            }
-         },
-         "canReply": true,
-         "totalReplyCount": 3
-      },
-      "replies": {
-         "comments": [
-            {
-               "snippet": {
-                  "textDisplay": "@Jason Rackawack to be fair the Pentagon released footage of what they admit to be UFOs so we're not far from an alien invasion lmaoo",
-                  "authorDisplayName": "Andrew",
-                  "likeCount": 1,
-                  "publishedAt": "2020-08-23T02:35:19Z",
-                  "updatedAt": "2020-08-23T02:35:19Z"
-               }
-            },
-            {
-               "snippet": {
-                  "textDisplay": "Jason Rackawack lol Godzilla attack",
-                  "authorDisplayName": "Gold Gaming",
-                  "likeCount": 1,
-                  "publishedAt": "2020-08-23T02:11:26Z",
-                  "updatedAt": "2020-08-23T02:11:26Z"
-               }
-            },
-            {
-               "snippet": {
-                  "textDisplay": "Its a cover all game this year, Im only missing the UFO invasion and Godzilla Attack to finish my board.",
-                  "authorDisplayName": "Jason Rackawack",
-                  "likeCount": 1,
-                  "publishedAt": "2020-08-23T01:36:43Z",
-                  "updatedAt": "2020-08-23T01:36:43Z"
+                  "textDisplay": "DEMOCRATIC PARTY =DEMAGOGIC",
+                  "authorDisplayName": "Hoa Le",
+                  "likeCount": 0,
+                  "publishedAt": "2020-08-23T00:30:47Z",
+                  "updatedAt": "2020-08-23T00:30:47Z"
                }
             }
          ]
@@ -262,7 +152,7 @@
             "snippet": {
                "textDisplay": "Maybe we can get the virus and the fires to fight each other.",
                "authorDisplayName": "Emperor Picard",
-               "likeCount": 98,
+               "likeCount": 99,
                "publishedAt": "2020-08-22T07:58:49Z",
                "updatedAt": "2020-08-22T07:58:49Z"
             }
@@ -315,134 +205,6 @@
                   "likeCount": 0,
                   "publishedAt": "2020-08-22T23:50:54Z",
                   "updatedAt": "2020-08-22T23:50:54Z"
-               }
-            }
-         ]
-      }
-   },
-   {
-      "snippet": {
-         "topLevelComment": {
-            "snippet": {
-               "textDisplay": "Prayers up for Cali.",
-               "authorDisplayName": "Wealthbuilderz TV",
-               "likeCount": 42,
-               "publishedAt": "2020-08-22T04:48:35Z",
-               "updatedAt": "2020-08-22T04:48:35Z"
-            }
-         },
-         "canReply": true,
-         "totalReplyCount": 22
-      },
-      "replies": {
-         "comments": [
-            {
-               "snippet": {
-                  "textDisplay": "@wellwater   Another misguided disciple who likely chooses to throw their life away serving a fictional god.",
-                  "authorDisplayName": "Flight of the Agitator",
-                  "likeCount": 0,
-                  "publishedAt": "2020-08-23T01:24:51Z",
-                  "updatedAt": "2020-08-23T01:24:51Z"
-               }
-            },
-            {
-               "snippet": {
-                  "textDisplay": "@billfinger    Ironic you call someone twelve when you and others here still believe in a silly Christian fairytale.",
-                  "authorDisplayName": "Flight of the Agitator",
-                  "likeCount": 0,
-                  "publishedAt": "2020-08-23T01:23:09Z",
-                  "updatedAt": "2020-08-23T01:23:09Z"
-               }
-            },
-            {
-               "snippet": {
-                  "textDisplay": "@billfinger Im 12 because I dont support a cult that makes up places of torture in order to get people to believe in the flying man in the clouds, and respect the real people risking their lives to save lives and homes? Sounds like you got things backwards.",
-                  "authorDisplayName": "Brandon Eubanks",
-                  "likeCount": 0,
-                  "publishedAt": "2020-08-23T01:17:43Z",
-                  "updatedAt": "2020-08-23T01:19:30Z"
-               }
-            },
-            {
-               "snippet": {
-                  "textDisplay": "@Flight of the Agitator *Nods intensely*",
-                  "authorDisplayName": "Brandon Eubanks",
-                  "likeCount": 0,
-                  "publishedAt": "2020-08-23T01:15:58Z",
-                  "updatedAt": "2020-08-23T01:15:58Z"
-               }
-            },
-            {
-               "snippet": {
-                  "textDisplay": "Hardly. It\u2019s very pathetic and disconcerting that many still believes a fictional deity is real and in control of anything. One would have that humanity would have left that relic in the past where it belongs. The fact that this belief system has survived as long as it has is not a testament to the power of god or even belief itself. Instead, it just highlights how naive  and insecure a number of people are to place their faith in a god that they can\u2019t even prove exists. A god doesn\u2019t determine anyone\u2019s fate. That\u2019s just a narrative Christians like to push constantly. Their bible is nothing more than a book of fairytales and poorly written fiction.",
-                  "authorDisplayName": "Flight of the Agitator",
-                  "likeCount": 1,
-                  "publishedAt": "2020-08-23T01:12:16Z",
-                  "updatedAt": "2020-08-23T01:12:16Z"
-               }
-            }
-         ]
-      }
-   },
-   {
-      "snippet": {
-         "topLevelComment": {
-            "snippet": {
-               "textDisplay": "2020: Covid 19 Pandemic\nAlso 2020: WILDFIRES in California \nMe in California;  \ud83d\udc41\ufe0f\ud83d\udc44 \ud83d\udc41\ufe0f Oh wow the smoke got more worse haha.. Here's hoping I don't have to evacuate.",
-               "authorDisplayName": "The MoonFoxx",
-               "likeCount": 24,
-               "publishedAt": "2020-08-22T06:57:20Z",
-               "updatedAt": "2020-08-22T06:58:04Z"
-            }
-         },
-         "canReply": true,
-         "totalReplyCount": 17
-      },
-      "replies": {
-         "comments": [
-            {
-               "snippet": {
-                  "textDisplay": "@Sym Equine thank you, and best wishes for you as well",
-                  "authorDisplayName": "Jeremy Mell",
-                  "likeCount": 1,
-                  "publishedAt": "2020-08-23T16:45:31Z",
-                  "updatedAt": "2020-08-23T16:45:31Z"
-               }
-            },
-            {
-               "snippet": {
-                  "textDisplay": "Jeremy Mell oh my god, that\u2019s awful. At least you\u2019re safe. I can\u2019t even imagine how hard this must be for you, I really hope that you have a home to go back to. Best wishes.",
-                  "authorDisplayName": "Sym Equine",
-                  "likeCount": 0,
-                  "publishedAt": "2020-08-23T11:03:21Z",
-                  "updatedAt": "2020-08-23T11:03:21Z"
-               }
-            },
-            {
-               "snippet": {
-                  "textDisplay": "@Sym Equine thank you man, i legit had to drive south for 8 hours to stay with my cousins. idk if ill have a house to go back to, but at least the sky's not yellow and the sun's not red and i can actually breathe lmao. also not having everything covered in ash is a plus as well",
-                  "authorDisplayName": "Jeremy Mell",
-                  "likeCount": 2,
-                  "publishedAt": "2020-08-23T05:47:20Z",
-                  "updatedAt": "2020-08-23T05:47:20Z"
-               }
-            },
-            {
-               "snippet": {
-                  "textDisplay": "Jeremy Mell stay safe, I\u2019m very sorry.",
-                  "authorDisplayName": "Sym Equine",
-                  "likeCount": 0,
-                  "publishedAt": "2020-08-23T01:29:00Z",
-                  "updatedAt": "2020-08-23T01:29:00Z"
-               }
-            },
-            {
-               "snippet": {
-                  "textDisplay": "DEMOCRATIC PARTY = \nDEMAGOGIC",
-                  "authorDisplayName": "Hoa Le",
-                  "likeCount": 0,
-                  "publishedAt": "2020-08-23T00:32:34Z",
-                  "updatedAt": "2020-08-23T00:32:34Z"
                }
             }
          ]
@@ -516,85 +278,6 @@
       "snippet": {
          "topLevelComment": {
             "snippet": {
-               "textDisplay": "Man July was subtle with its disaster \n\nAugust is just pumping out the disasters",
-               "authorDisplayName": "Mark Frank",
-               "likeCount": 6,
-               "publishedAt": "2020-08-22T05:12:47Z",
-               "updatedAt": "2020-08-22T05:12:47Z"
-            }
-         },
-         "canReply": true,
-         "totalReplyCount": 0
-      }
-   },
-   {
-      "snippet": {
-         "topLevelComment": {
-            "snippet": {
-               "textDisplay": "call me when the fires stop",
-               "authorDisplayName": "evelyn garcia",
-               "likeCount": 162,
-               "publishedAt": "2020-08-22T03:33:06Z",
-               "updatedAt": "2020-08-22T03:33:06Z"
-            }
-         },
-         "canReply": true,
-         "totalReplyCount": 10
-      },
-      "replies": {
-         "comments": [
-            {
-               "snippet": {
-                  "textDisplay": "DEMOCRATIC PARTY = \nDEMAGOGIC",
-                  "authorDisplayName": "Hoa Le",
-                  "likeCount": 0,
-                  "publishedAt": "2020-08-23T00:31:20Z",
-                  "updatedAt": "2020-08-23T00:31:20Z"
-               }
-            },
-            {
-               "snippet": {
-                  "textDisplay": "k see you in 2000 years",
-                  "authorDisplayName": "\u30c3\u0106h\u0151\u0107\u0151\u013a\u00e1t\u00e9 \u1e82\u0151\u013af",
-                  "likeCount": 0,
-                  "publishedAt": "2020-08-22T23:44:50Z",
-                  "updatedAt": "2020-08-22T23:44:50Z"
-               }
-            },
-            {
-               "snippet": {
-                  "textDisplay": "So when there's ashes.",
-                  "authorDisplayName": "L Mahome",
-                  "likeCount": 0,
-                  "publishedAt": "2020-08-22T22:30:12Z",
-                  "updatedAt": "2020-08-22T22:30:12Z"
-               }
-            },
-            {
-               "snippet": {
-                  "textDisplay": "Alright, just make sure your phone is on",
-                  "authorDisplayName": "Brandon Cho",
-                  "likeCount": 2,
-                  "publishedAt": "2020-08-22T21:54:03Z",
-                  "updatedAt": "2020-08-22T21:54:03Z"
-               }
-            },
-            {
-               "snippet": {
-                  "textDisplay": "Ok",
-                  "authorDisplayName": "June",
-                  "likeCount": 0,
-                  "publishedAt": "2020-08-22T17:48:18Z",
-                  "updatedAt": "2020-08-22T17:48:18Z"
-               }
-            }
-         ]
-      }
-   },
-   {
-      "snippet": {
-         "topLevelComment": {
-            "snippet": {
                "textDisplay": "11:59:59 2019: \n: Happy New Year, Hope this year will be a new decade and bring more happiness... Oh so jolly!\n2020: Ha, you wish.",
                "authorDisplayName": "Rieka C.",
                "likeCount": 5,
@@ -610,15 +293,64 @@
       "snippet": {
          "topLevelComment": {
             "snippet": {
-               "textDisplay": "The annoying thing is that they are raising taxes AGAINNNN",
-               "authorDisplayName": "10,000 subs Without any videos challenge",
-               "likeCount": 1,
-               "publishedAt": "2020-08-23T00:57:31Z",
-               "updatedAt": "2020-08-23T00:57:31Z"
+               "textDisplay": "The California I knew growing up is long gone.",
+               "authorDisplayName": "Kirk Barkley",
+               "likeCount": 71,
+               "publishedAt": "2020-08-22T21:33:21Z",
+               "updatedAt": "2020-08-22T21:33:21Z"
             }
          },
          "canReply": true,
-         "totalReplyCount": 0
+         "totalReplyCount": 30
+      },
+      "replies": {
+         "comments": [
+            {
+               "snippet": {
+                  "textDisplay": "Plays titanic song ship sinking.",
+                  "authorDisplayName": "Ocelot S",
+                  "likeCount": 1,
+                  "publishedAt": "2020-08-23T16:36:11Z",
+                  "updatedAt": "2020-08-23T16:36:11Z"
+               }
+            },
+            {
+               "snippet": {
+                  "textDisplay": "@mannhouse So you like adding bullshit up. Thanks for putting it on display. I'll no longer take it as face value.",
+                  "authorDisplayName": "Sam\u00ed Warrior",
+                  "likeCount": 0,
+                  "publishedAt": "2020-08-23T04:11:22Z",
+                  "updatedAt": "2020-08-23T04:11:22Z"
+               }
+            },
+            {
+               "snippet": {
+                  "textDisplay": "@Nuka Dash a microwave with a gibus, added a test pattern with a tv filter to it and there ya go",
+                  "authorDisplayName": "mannhouse",
+                  "likeCount": 0,
+                  "publishedAt": "2020-08-23T04:05:16Z",
+                  "updatedAt": "2020-08-23T04:05:16Z"
+               }
+            },
+            {
+               "snippet": {
+                  "textDisplay": "@Sam\u00ed Warrior Ok",
+                  "authorDisplayName": "Zoe Taylor",
+                  "likeCount": 0,
+                  "publishedAt": "2020-08-23T03:44:36Z",
+                  "updatedAt": "2020-08-23T03:44:36Z"
+               }
+            },
+            {
+               "snippet": {
+                  "textDisplay": "mannhouse I drew mine by hand then scanned it in my computer.but what is your avatar I can\u2019t make it out it looks like a microwave sirously what is it? I a bit curious now",
+                  "authorDisplayName": "Nuka Dash",
+                  "likeCount": 1,
+                  "publishedAt": "2020-08-23T03:36:04Z",
+                  "updatedAt": "2020-08-23T03:36:04Z"
+               }
+            }
+         ]
       }
    },
    {
@@ -689,61 +421,61 @@
       "snippet": {
          "topLevelComment": {
             "snippet": {
-               "textDisplay": "Dang Mother Nature isn\u2019t here to play this year, honestly I\u2019m not surprised, it\u2019s 2020 can\u2019t expect much anymore \ud83e\udd37\ud83c\udffb",
-               "authorDisplayName": "BTS_Army",
-               "likeCount": 249,
-               "publishedAt": "2020-08-22T04:28:04Z",
-               "updatedAt": "2020-08-22T04:28:04Z"
+               "textDisplay": "call me when the fires stop",
+               "authorDisplayName": "evelyn garcia",
+               "likeCount": 162,
+               "publishedAt": "2020-08-22T03:33:06Z",
+               "updatedAt": "2020-08-22T03:33:06Z"
             }
          },
          "canReply": true,
-         "totalReplyCount": 72
+         "totalReplyCount": 10
       },
       "replies": {
          "comments": [
             {
                "snippet": {
-                  "textDisplay": "Awesome! This thread has become the hot topic of this video. 73 comments... That should help this video show up on the top of search queries and get more publicity and views.\nCome on folks, let's help out the channel operator and keep posting. The more we post, the better the chance this video pops up in recommended play list and search queries.",
-                  "authorDisplayName": "Rexlaninetales Bobby Carbon",
+                  "textDisplay": "DEMOCRATIC PARTY = \nDEMAGOGIC",
+                  "authorDisplayName": "Hoa Le",
                   "likeCount": 0,
-                  "publishedAt": "2020-08-24T03:05:04Z",
-                  "updatedAt": "2020-08-24T03:05:04Z"
+                  "publishedAt": "2020-08-23T00:31:20Z",
+                  "updatedAt": "2020-08-23T00:31:20Z"
                }
             },
             {
                "snippet": {
-                  "textDisplay": "Nuka Dash - Rainbow Dash! You better start listening to me. Princess Luna put me in charge of Ponyville.., actually I am a nine tailed Kitsun\u00e9 and we Vulpine hath powers of mind control, hypnosis, and shape shifting.  I kind of took over Ponyville! Turns out, equine are no match for me, \"Byako'l\u00e9'tenko'd\u00e9'kitsun\u00e9'rokonokyukon\" Thou art gazing upon the new Empress of Equestria. Howbeit shall they resist the powers of a Nine Tailed Vixen? Queen Chrysalis was a genius, taking the shape of Princess Cadence, tricking her people of the Crystal Empire. Tirek on the other hand; I don't like him. He can keep his taurian brute self in the confinement of Tartarus. I shant have him fouling up my plans.\nVerily Verily I say onto thee, I am neither good nor evil for I am Chaos!\nBehold, I am neither the alpha; nor the omega: For I am Infinite!\nHere me now ponies; thou shalt submit thy selves to your new Vixen Goddess. I am Rexlaninetales I AM, THAT I AM! And no pony shall compare to the glory and power of a Nine Tailed Kitsun\u00e9. Ye all shall be my loyal servants: This commandment is non-negotiable. If anypony dare to undermine thou my authority, there shall be serious consequences!",
-                  "authorDisplayName": "Rexlaninetales Bobby Carbon",
+                  "textDisplay": "k see you in 2000 years",
+                  "authorDisplayName": "\u30c3\u0106h\u0151\u0107\u0151\u013a\u00e1t\u00e9 \u1e82\u0151\u013af",
                   "likeCount": 0,
-                  "publishedAt": "2020-08-24T02:27:03Z",
-                  "updatedAt": "2020-08-24T02:32:25Z"
+                  "publishedAt": "2020-08-22T23:44:50Z",
+                  "updatedAt": "2020-08-22T23:44:50Z"
                }
             },
             {
                "snippet": {
-                  "textDisplay": "Nuka Dash - Regarding your response that is a puzzle: I do one better than you... God cannot lie. It is impossible for him to lie. And my theory is that if God starts telling lies, he will likely destroy everything that he set out to create.\nRainbow Dash! Grr! Get back on my shelf with the rest of the Mane 6 plushies. You have a spot between Princess Twilight Sparkle and Fluttershy. And stop talking all that nonsense. You keep it up ya' hear and I'll pay Discord to drive you to insanity with Chaos. You do not hold a candle to the Lord of Chaos.",
-                  "authorDisplayName": "Rexlaninetales Bobby Carbon",
+                  "textDisplay": "So when there's ashes.",
+                  "authorDisplayName": "L Mahome",
                   "likeCount": 0,
-                  "publishedAt": "2020-08-24T01:55:24Z",
-                  "updatedAt": "2020-08-24T02:07:13Z"
+                  "publishedAt": "2020-08-22T22:30:12Z",
+                  "updatedAt": "2020-08-22T22:30:12Z"
                }
             },
             {
                "snippet": {
-                  "textDisplay": "Nuka Dash - I am part of the New Independent Fundamental Baptist (NIFB) movement. We despise the Catholic priests and pope. And yes, Jesus is God. So is God the Father. And the Holy Ghost is also God.\nThe Bible says that Jesus thought it not robbery to consider himself equal to God. \nThe Catholics aren't the only one's whom believe in the Trinity. Pentecostals also believe in the Trinity; as do the Trinitarian Bible society.\nCatholics are guilty of idolatry because they worship statues of the saints; and they believe that Mary is equal to God. Us Baptist want no part of the Great harlot called catholicism.\nIf you want, I will post some quoted scripture of the King James Bibles to show that Jesus is part of the God head. We are King James Only (1611 version) so we take no part in these modern corrupted Bibles that twist the Word of God into a lie. \n\nIf you're impatiently waiting for my response, download a Bible Ap called Tecarta Bible (Google Playatore). It has a keyword search function that will definitely assist you in finding the answer to these questions. I read through the entire Bible Ap and it matches up with my 1611 King James Bible. Stay away from those modern Bibles that go by the label, NIV, ESV, New Living Translation, etc. The King James Bible is the true word of God. Not these modern books that delete verses and change them to lift up false doctrines such Zionism, Pretribulation Rapture, Work's based salvation, Lordship Salvation, Dispensationism, Ecumenicalism, and dozens of other damnable heresies.\nWe Baptist believe that once we're saved, we're always saved. We can NEVER lose our eternal salvation. Nay, not even if we wanted to. We are sealed onto the day of redemption.",
-                  "authorDisplayName": "Rexlaninetales Bobby Carbon",
-                  "likeCount": 0,
-                  "publishedAt": "2020-08-24T01:35:08Z",
-                  "updatedAt": "2020-08-24T01:37:27Z"
+                  "textDisplay": "Alright, just make sure your phone is on",
+                  "authorDisplayName": "Brandon Cho",
+                  "likeCount": 2,
+                  "publishedAt": "2020-08-22T21:54:03Z",
+                  "updatedAt": "2020-08-22T21:54:03Z"
                }
             },
             {
                "snippet": {
-                  "textDisplay": "Rexlaninetales Bobby Carbon wait wait wait don\u2019t tell your one of those ppl who think that Jesus is god if so go back read your bible it clearly says Jesus was god\u2019s son that holy trinity crap is catholic propaganda",
-                  "authorDisplayName": "Nuka Dash",
+                  "textDisplay": "Ok",
+                  "authorDisplayName": "June",
                   "likeCount": 0,
-                  "publishedAt": "2020-08-23T15:29:37Z",
-                  "updatedAt": "2020-08-23T15:30:57Z"
+                  "publishedAt": "2020-08-22T17:48:18Z",
+                  "updatedAt": "2020-08-22T17:48:18Z"
                }
             }
          ]
@@ -817,45 +549,64 @@
       "snippet": {
          "topLevelComment": {
             "snippet": {
-               "textDisplay": "This just highlights the stupidity of liberals.",
-               "authorDisplayName": "David Smith",
-               "likeCount": 1,
-               "publishedAt": "2020-08-23T01:31:26Z",
-               "updatedAt": "2020-08-23T01:31:26Z"
+               "textDisplay": "Dang Mother Nature isn\u2019t here to play this year, honestly I\u2019m not surprised, it\u2019s 2020 can\u2019t expect much anymore \ud83e\udd37\ud83c\udffb",
+               "authorDisplayName": "BTS_Army",
+               "likeCount": 249,
+               "publishedAt": "2020-08-22T04:28:04Z",
+               "updatedAt": "2020-08-22T04:28:04Z"
             }
          },
          "canReply": true,
-         "totalReplyCount": 0
-      }
-   },
-   {
-      "snippet": {
-         "topLevelComment": {
-            "snippet": {
-               "textDisplay": "Right now the smoke is killing me. I hope everyone who was in or near the fires is safe",
-               "authorDisplayName": "leny polo",
-               "likeCount": 5,
-               "publishedAt": "2020-08-23T00:15:31Z",
-               "updatedAt": "2020-08-23T00:15:31Z"
+         "totalReplyCount": 72
+      },
+      "replies": {
+         "comments": [
+            {
+               "snippet": {
+                  "textDisplay": "Awesome! This thread has become the hot topic of this video. 73 comments... That should help this video show up on the top of search queries and get more publicity and views.\nCome on folks, let's help out the channel operator and keep posting. The more we post, the better the chance this video pops up in recommended play list and search queries.",
+                  "authorDisplayName": "Rexlaninetales Bobby Carbon",
+                  "likeCount": 0,
+                  "publishedAt": "2020-08-24T03:05:04Z",
+                  "updatedAt": "2020-08-24T03:05:04Z"
+               }
+            },
+            {
+               "snippet": {
+                  "textDisplay": "Nuka Dash - Rainbow Dash! You better start listening to me. Princess Luna put me in charge of Ponyville.., actually I am a nine tailed Kitsun\u00e9 and we Vulpine hath powers of mind control, hypnosis, and shape shifting.  I kind of took over Ponyville! Turns out, equine are no match for me, \"Byako'l\u00e9'tenko'd\u00e9'kitsun\u00e9'rokonokyukon\" Thou art gazing upon the new Empress of Equestria. Howbeit shall they resist the powers of a Nine Tailed Vixen? Queen Chrysalis was a genius, taking the shape of Princess Cadence, tricking her people of the Crystal Empire. Tirek on the other hand; I don't like him. He can keep his taurian brute self in the confinement of Tartarus. I shant have him fouling up my plans.\nVerily Verily I say onto thee, I am neither good nor evil for I am Chaos!\nBehold, I am neither the alpha; nor the omega: For I am Infinite!\nHere me now ponies; thou shalt submit thy selves to your new Vixen Goddess. I am Rexlaninetales I AM, THAT I AM! And no pony shall compare to the glory and power of a Nine Tailed Kitsun\u00e9. Ye all shall be my loyal servants: This commandment is non-negotiable. If anypony dare to undermine thou my authority, there shall be serious consequences!",
+                  "authorDisplayName": "Rexlaninetales Bobby Carbon",
+                  "likeCount": 0,
+                  "publishedAt": "2020-08-24T02:27:03Z",
+                  "updatedAt": "2020-08-24T02:32:25Z"
+               }
+            },
+            {
+               "snippet": {
+                  "textDisplay": "Nuka Dash - Regarding your response that is a puzzle: I do one better than you... God cannot lie. It is impossible for him to lie. And my theory is that if God starts telling lies, he will likely destroy everything that he set out to create.\nRainbow Dash! Grr! Get back on my shelf with the rest of the Mane 6 plushies. You have a spot between Princess Twilight Sparkle and Fluttershy. And stop talking all that nonsense. You keep it up ya' hear and I'll pay Discord to drive you to insanity with Chaos. You do not hold a candle to the Lord of Chaos.",
+                  "authorDisplayName": "Rexlaninetales Bobby Carbon",
+                  "likeCount": 0,
+                  "publishedAt": "2020-08-24T01:55:24Z",
+                  "updatedAt": "2020-08-24T02:07:13Z"
+               }
+            },
+            {
+               "snippet": {
+                  "textDisplay": "Nuka Dash - I am part of the New Independent Fundamental Baptist (NIFB) movement. We despise the Catholic priests and pope. And yes, Jesus is God. So is God the Father. And the Holy Ghost is also God.\nThe Bible says that Jesus thought it not robbery to consider himself equal to God. \nThe Catholics aren't the only one's whom believe in the Trinity. Pentecostals also believe in the Trinity; as do the Trinitarian Bible society.\nCatholics are guilty of idolatry because they worship statues of the saints; and they believe that Mary is equal to God. Us Baptist want no part of the Great harlot called catholicism.\nIf you want, I will post some quoted scripture of the King James Bibles to show that Jesus is part of the God head. We are King James Only (1611 version) so we take no part in these modern corrupted Bibles that twist the Word of God into a lie. \n\nIf you're impatiently waiting for my response, download a Bible Ap called Tecarta Bible (Google Playatore). It has a keyword search function that will definitely assist you in finding the answer to these questions. I read through the entire Bible Ap and it matches up with my 1611 King James Bible. Stay away from those modern Bibles that go by the label, NIV, ESV, New Living Translation, etc. The King James Bible is the true word of God. Not these modern books that delete verses and change them to lift up false doctrines such Zionism, Pretribulation Rapture, Work's based salvation, Lordship Salvation, Dispensationism, Ecumenicalism, and dozens of other damnable heresies.\nWe Baptist believe that once we're saved, we're always saved. We can NEVER lose our eternal salvation. Nay, not even if we wanted to. We are sealed onto the day of redemption.",
+                  "authorDisplayName": "Rexlaninetales Bobby Carbon",
+                  "likeCount": 0,
+                  "publishedAt": "2020-08-24T01:35:08Z",
+                  "updatedAt": "2020-08-24T01:37:27Z"
+               }
+            },
+            {
+               "snippet": {
+                  "textDisplay": "Rexlaninetales Bobby Carbon wait wait wait don\u2019t tell your one of those ppl who think that Jesus is god if so go back read your bible it clearly says Jesus was god\u2019s son that holy trinity crap is catholic propaganda",
+                  "authorDisplayName": "Nuka Dash",
+                  "likeCount": 0,
+                  "publishedAt": "2020-08-23T15:29:37Z",
+                  "updatedAt": "2020-08-23T15:30:57Z"
+               }
             }
-         },
-         "canReply": true,
-         "totalReplyCount": 0
-      }
-   },
-   {
-      "snippet": {
-         "topLevelComment": {
-            "snippet": {
-               "textDisplay": "They forgot to add \"Newsom\" to the list of natural disasters. He has done more to destroy the state than all the rest combined. This LA Native, and every friend I grew up with here has already left or is leaving. Just sayin'!",
-               "authorDisplayName": "Jamie Paolinetti Writer/Director",
-               "likeCount": 2,
-               "publishedAt": "2020-08-22T20:08:52Z",
-               "updatedAt": "2020-08-22T20:08:52Z"
-            }
-         },
-         "canReply": true,
-         "totalReplyCount": 0
+         ]
       }
    },
    {
@@ -864,7 +615,7 @@
             "snippet": {
                "textDisplay": "All Americans should get a trophy for surviving 2020",
                "authorDisplayName": "Mike D",
-               "likeCount": 104,
+               "likeCount": 105,
                "publishedAt": "2020-08-22T04:12:09Z",
                "updatedAt": "2020-08-22T04:12:09Z"
             }
@@ -926,21 +677,6 @@
       "snippet": {
          "topLevelComment": {
             "snippet": {
-               "textDisplay": "Lets not forget the Astroid with a possibility of hitting hearth.",
-               "authorDisplayName": "Celevision",
-               "likeCount": 0,
-               "publishedAt": "2020-08-23T00:48:53Z",
-               "updatedAt": "2020-08-23T00:48:53Z"
-            }
-         },
-         "canReply": true,
-         "totalReplyCount": 0
-      }
-   },
-   {
-      "snippet": {
-         "topLevelComment": {
-            "snippet": {
                "textDisplay": "Add to that the governor not taking his promised 10% pay cut like all of us state employees!",
                "authorDisplayName": "Euux-jtgy",
                "likeCount": 84,
@@ -996,51 +732,6 @@
       "snippet": {
          "topLevelComment": {
             "snippet": {
-               "textDisplay": "CA is fine. it's just really hot.",
-               "authorDisplayName": "Savi Waves",
-               "likeCount": 2,
-               "publishedAt": "2020-08-22T11:45:52Z",
-               "updatedAt": "2020-08-22T11:45:52Z"
-            }
-         },
-         "canReply": true,
-         "totalReplyCount": 0
-      }
-   },
-   {
-      "snippet": {
-         "topLevelComment": {
-            "snippet": {
-               "textDisplay": "I think god put the 2020 difficulty on hardcore by accident",
-               "authorDisplayName": "Angel -_-",
-               "likeCount": 3,
-               "publishedAt": "2020-08-22T23:20:51Z",
-               "updatedAt": "2020-08-22T23:20:51Z"
-            }
-         },
-         "canReply": true,
-         "totalReplyCount": 0
-      }
-   },
-   {
-      "snippet": {
-         "topLevelComment": {
-            "snippet": {
-               "textDisplay": "California: The new Babylon and Exodus.",
-               "authorDisplayName": "mark newman",
-               "likeCount": 1,
-               "publishedAt": "2020-08-23T00:12:28Z",
-               "updatedAt": "2020-08-23T00:12:28Z"
-            }
-         },
-         "canReply": true,
-         "totalReplyCount": 0
-      }
-   },
-   {
-      "snippet": {
-         "topLevelComment": {
-            "snippet": {
                "textDisplay": "Hope there all safe \u2665\ufe0f wear a mask everyone remember to sanitize or use hot water for getting rid of germs ! \ud83e\udda0 and stay home god bless you all",
                "authorDisplayName": "Leila Castillo",
                "likeCount": 5,
@@ -1069,25 +760,61 @@
       "snippet": {
          "topLevelComment": {
             "snippet": {
-               "textDisplay": "But they called their draconian prophesies \"holy\" when they were used to pillage and plunder the earth...",
-               "authorDisplayName": "ONYx2",
-               "likeCount": 1,
-               "publishedAt": "2020-08-22T17:56:16Z",
-               "updatedAt": "2020-08-22T17:56:16Z"
+               "textDisplay": "Prayers up for Cali.",
+               "authorDisplayName": "Wealthbuilderz TV",
+               "likeCount": 42,
+               "publishedAt": "2020-08-22T04:48:35Z",
+               "updatedAt": "2020-08-22T04:48:35Z"
             }
          },
          "canReply": true,
-         "totalReplyCount": 1
+         "totalReplyCount": 22
       },
       "replies": {
          "comments": [
             {
                "snippet": {
-                  "textDisplay": "...wat?",
-                  "authorDisplayName": "upinarms79",
-                  "likeCount": 2,
-                  "publishedAt": "2020-08-22T19:55:27Z",
-                  "updatedAt": "2020-08-22T19:55:27Z"
+                  "textDisplay": "@wellwater   Another misguided disciple who likely chooses to throw their life away serving a fictional god.",
+                  "authorDisplayName": "Flight of the Agitator",
+                  "likeCount": 0,
+                  "publishedAt": "2020-08-23T01:24:51Z",
+                  "updatedAt": "2020-08-23T01:24:51Z"
+               }
+            },
+            {
+               "snippet": {
+                  "textDisplay": "@billfinger    Ironic you call someone twelve when you and others here still believe in a silly Christian fairytale.",
+                  "authorDisplayName": "Flight of the Agitator",
+                  "likeCount": 0,
+                  "publishedAt": "2020-08-23T01:23:09Z",
+                  "updatedAt": "2020-08-23T01:23:09Z"
+               }
+            },
+            {
+               "snippet": {
+                  "textDisplay": "@billfinger Im 12 because I dont support a cult that makes up places of torture in order to get people to believe in the flying man in the clouds, and respect the real people risking their lives to save lives and homes? Sounds like you got things backwards.",
+                  "authorDisplayName": "Brandon Eubanks",
+                  "likeCount": 0,
+                  "publishedAt": "2020-08-23T01:17:43Z",
+                  "updatedAt": "2020-08-23T01:19:30Z"
+               }
+            },
+            {
+               "snippet": {
+                  "textDisplay": "@Flight of the Agitator *Nods intensely*",
+                  "authorDisplayName": "Brandon Eubanks",
+                  "likeCount": 0,
+                  "publishedAt": "2020-08-23T01:15:58Z",
+                  "updatedAt": "2020-08-23T01:15:58Z"
+               }
+            },
+            {
+               "snippet": {
+                  "textDisplay": "Hardly. It\u2019s very pathetic and disconcerting that many still believes a fictional deity is real and in control of anything. One would have that humanity would have left that relic in the past where it belongs. The fact that this belief system has survived as long as it has is not a testament to the power of god or even belief itself. Instead, it just highlights how naive  and insecure a number of people are to place their faith in a god that they can\u2019t even prove exists. A god doesn\u2019t determine anyone\u2019s fate. That\u2019s just a narrative Christians like to push constantly. Their bible is nothing more than a book of fairytales and poorly written fiction.",
+                  "authorDisplayName": "Flight of the Agitator",
+                  "likeCount": 1,
+                  "publishedAt": "2020-08-23T01:12:16Z",
+                  "updatedAt": "2020-08-23T01:12:16Z"
                }
             }
          ]
@@ -1097,11 +824,11 @@
       "snippet": {
          "topLevelComment": {
             "snippet": {
-               "textDisplay": "Not just that were expecting another lightning storm here in cali \ud83d\ude2b its already hard to breath bring rain with you please clouds",
-               "authorDisplayName": "Lil's Playz",
-               "likeCount": 2,
-               "publishedAt": "2020-08-22T21:55:04Z",
-               "updatedAt": "2020-08-22T21:55:04Z"
+               "textDisplay": "Right now the smoke is killing me. I hope everyone who was in or near the fires is safe",
+               "authorDisplayName": "leny polo",
+               "likeCount": 5,
+               "publishedAt": "2020-08-23T00:15:31Z",
+               "updatedAt": "2020-08-23T00:15:31Z"
             }
          },
          "canReply": true,
@@ -1112,11 +839,102 @@
       "snippet": {
          "topLevelComment": {
             "snippet": {
-               "textDisplay": "Joe said it best, \"\"IF SOME SCIENCE GEEK TELLS ME TO SHUT IT ALL DOWN THEN BY-DOD ITS SHUTDOWN!\"\"...",
-               "authorDisplayName": "Josue Hudblons",
-               "likeCount": 0,
-               "publishedAt": "2020-08-22T19:38:16Z",
-               "updatedAt": "2020-08-22T19:38:16Z"
+               "textDisplay": "That\u2019s another spot for apocalyptic bingo!",
+               "authorDisplayName": "Not Michael",
+               "likeCount": 37,
+               "publishedAt": "2020-08-22T17:14:24Z",
+               "updatedAt": "2020-08-22T17:14:24Z"
+            }
+         },
+         "canReply": true,
+         "totalReplyCount": 3
+      },
+      "replies": {
+         "comments": [
+            {
+               "snippet": {
+                  "textDisplay": "@Jason Rackawack to be fair the Pentagon released footage of what they admit to be UFOs so we're not far from an alien invasion lmaoo",
+                  "authorDisplayName": "Andrew",
+                  "likeCount": 1,
+                  "publishedAt": "2020-08-23T02:35:19Z",
+                  "updatedAt": "2020-08-23T02:35:19Z"
+               }
+            },
+            {
+               "snippet": {
+                  "textDisplay": "Jason Rackawack lol Godzilla attack",
+                  "authorDisplayName": "Gold Gaming",
+                  "likeCount": 1,
+                  "publishedAt": "2020-08-23T02:11:26Z",
+                  "updatedAt": "2020-08-23T02:11:26Z"
+               }
+            },
+            {
+               "snippet": {
+                  "textDisplay": "Its a cover all game this year, Im only missing the UFO invasion and Godzilla Attack to finish my board.",
+                  "authorDisplayName": "Jason Rackawack",
+                  "likeCount": 1,
+                  "publishedAt": "2020-08-23T01:36:43Z",
+                  "updatedAt": "2020-08-23T01:36:43Z"
+               }
+            }
+         ]
+      }
+   },
+   {
+      "snippet": {
+         "topLevelComment": {
+            "snippet": {
+               "textDisplay": "The annoying thing is that they are raising taxes AGAINNNN",
+               "authorDisplayName": "10,000 subs Without any videos challenge",
+               "likeCount": 1,
+               "publishedAt": "2020-08-23T00:57:31Z",
+               "updatedAt": "2020-08-23T00:57:31Z"
+            }
+         },
+         "canReply": true,
+         "totalReplyCount": 0
+      }
+   },
+   {
+      "snippet": {
+         "topLevelComment": {
+            "snippet": {
+               "textDisplay": "They forgot to add \"Newsom\" to the list of natural disasters. He has done more to destroy the state than all the rest combined. This LA Native, and every friend I grew up with here has already left or is leaving. Just sayin'!",
+               "authorDisplayName": "Jamie Paolinetti Writer/Director",
+               "likeCount": 2,
+               "publishedAt": "2020-08-22T20:08:52Z",
+               "updatedAt": "2020-08-22T20:08:52Z"
+            }
+         },
+         "canReply": true,
+         "totalReplyCount": 0
+      }
+   },
+   {
+      "snippet": {
+         "topLevelComment": {
+            "snippet": {
+               "textDisplay": "Fires + virus = plays titanic song ship sinking.",
+               "authorDisplayName": "Ocelot S",
+               "likeCount": 1,
+               "publishedAt": "2020-08-23T16:34:31Z",
+               "updatedAt": "2020-08-23T16:39:32Z"
+            }
+         },
+         "canReply": true,
+         "totalReplyCount": 0
+      }
+   },
+   {
+      "snippet": {
+         "topLevelComment": {
+            "snippet": {
+               "textDisplay": "I think god put the 2020 difficulty on hardcore by accident",
+               "authorDisplayName": "Angel -_-",
+               "likeCount": 3,
+               "publishedAt": "2020-08-22T23:20:51Z",
+               "updatedAt": "2020-08-22T23:20:51Z"
             }
          },
          "canReply": true,
@@ -1155,6 +973,188 @@
                   "likeCount": 0,
                   "publishedAt": "2020-08-22T22:34:27Z",
                   "updatedAt": "2020-08-22T22:34:27Z"
+               }
+            }
+         ]
+      }
+   },
+   {
+      "snippet": {
+         "topLevelComment": {
+            "snippet": {
+               "textDisplay": "It\u2019s time to repent, forgive & give our entire life to Jesus! Many blessings to you all. \u2764\ufe0f\ud83d\udd4a",
+               "authorDisplayName": "Gaby Morketchup",
+               "likeCount": 14,
+               "publishedAt": "2020-08-22T21:41:59Z",
+               "updatedAt": "2020-08-22T21:47:25Z"
+            }
+         },
+         "canReply": true,
+         "totalReplyCount": 1
+      },
+      "replies": {
+         "comments": [
+            {
+               "snippet": {
+                  "textDisplay": "Your life is already being held by this simulation.",
+                  "authorDisplayName": "Elevator Music",
+                  "likeCount": 2,
+                  "publishedAt": "2020-08-22T23:34:05Z",
+                  "updatedAt": "2020-08-22T23:34:05Z"
+               }
+            }
+         ]
+      }
+   },
+   {
+      "snippet": {
+         "topLevelComment": {
+            "snippet": {
+               "textDisplay": "Lets not forget the Astroid with a possibility of hitting hearth.",
+               "authorDisplayName": "Celevision",
+               "likeCount": 0,
+               "publishedAt": "2020-08-23T00:48:53Z",
+               "updatedAt": "2020-08-23T00:48:53Z"
+            }
+         },
+         "canReply": true,
+         "totalReplyCount": 0
+      }
+   },
+   {
+      "snippet": {
+         "topLevelComment": {
+            "snippet": {
+               "textDisplay": "California: The new Babylon and Exodus.",
+               "authorDisplayName": "mark newman",
+               "likeCount": 1,
+               "publishedAt": "2020-08-23T00:12:28Z",
+               "updatedAt": "2020-08-23T00:12:28Z"
+            }
+         },
+         "canReply": true,
+         "totalReplyCount": 0
+      }
+   },
+   {
+      "snippet": {
+         "topLevelComment": {
+            "snippet": {
+               "textDisplay": "This just highlights the stupidity of liberals.",
+               "authorDisplayName": "David Smith",
+               "likeCount": 1,
+               "publishedAt": "2020-08-23T01:31:26Z",
+               "updatedAt": "2020-08-23T01:31:26Z"
+            }
+         },
+         "canReply": true,
+         "totalReplyCount": 0
+      }
+   },
+   {
+      "snippet": {
+         "topLevelComment": {
+            "snippet": {
+               "textDisplay": "Not just that were expecting another lightning storm here in cali \ud83d\ude2b its already hard to breath bring rain with you please clouds",
+               "authorDisplayName": "Lil's Playz",
+               "likeCount": 2,
+               "publishedAt": "2020-08-22T21:55:04Z",
+               "updatedAt": "2020-08-22T21:55:04Z"
+            }
+         },
+         "canReply": true,
+         "totalReplyCount": 0
+      }
+   },
+   {
+      "snippet": {
+         "topLevelComment": {
+            "snippet": {
+               "textDisplay": "please be safe everyone.",
+               "authorDisplayName": "Jamie Cee49",
+               "likeCount": 65,
+               "publishedAt": "2020-08-22T03:48:53Z",
+               "updatedAt": "2020-08-22T03:48:53Z"
+            }
+         },
+         "canReply": true,
+         "totalReplyCount": 0
+      }
+   },
+   {
+      "snippet": {
+         "topLevelComment": {
+            "snippet": {
+               "textDisplay": "Joe said it best, \"\"IF SOME SCIENCE GEEK TELLS ME TO SHUT IT ALL DOWN THEN BY-DOD ITS SHUTDOWN!\"\"...",
+               "authorDisplayName": "Josue Hudblons",
+               "likeCount": 0,
+               "publishedAt": "2020-08-22T19:38:16Z",
+               "updatedAt": "2020-08-22T19:38:16Z"
+            }
+         },
+         "canReply": true,
+         "totalReplyCount": 0
+      }
+   },
+   {
+      "snippet": {
+         "topLevelComment": {
+            "snippet": {
+               "textDisplay": "So is 2020 trying to be the worst year in history?",
+               "authorDisplayName": "Angel Rose Bouquet",
+               "likeCount": 58,
+               "publishedAt": "2020-08-22T04:02:04Z",
+               "updatedAt": "2020-08-22T04:02:04Z"
+            }
+         },
+         "canReply": true,
+         "totalReplyCount": 16
+      },
+      "replies": {
+         "comments": [
+            {
+               "snippet": {
+                  "textDisplay": "Elevator Music that\u2019s tuff bud",
+                  "authorDisplayName": "adubmccain \u2014",
+                  "likeCount": 0,
+                  "publishedAt": "2020-08-23T05:31:48Z",
+                  "updatedAt": "2020-08-23T05:31:48Z"
+               }
+            },
+            {
+               "snippet": {
+                  "textDisplay": "@Ruthline Felix Repent for what?  From being forced into a predetermined existence to realize someones god complex?",
+                  "authorDisplayName": "Elevator Music",
+                  "likeCount": 0,
+                  "publishedAt": "2020-08-22T23:45:25Z",
+                  "updatedAt": "2020-08-22T23:45:25Z"
+               }
+            },
+            {
+               "snippet": {
+                  "textDisplay": "S a r e n h s thank you, same to you",
+                  "authorDisplayName": "Ruthline Felix",
+                  "likeCount": 0,
+                  "publishedAt": "2020-08-22T23:38:48Z",
+                  "updatedAt": "2020-08-22T23:38:48Z"
+               }
+            },
+            {
+               "snippet": {
+                  "textDisplay": "Ruthline Felix good luck with that",
+                  "authorDisplayName": "S a r e n h s",
+                  "likeCount": 0,
+                  "publishedAt": "2020-08-22T21:40:58Z",
+                  "updatedAt": "2020-08-22T21:40:58Z"
+               }
+            },
+            {
+               "snippet": {
+                  "textDisplay": "why is you pic so ugly",
+                  "authorDisplayName": "Chris1234567890 Chris",
+                  "likeCount": 0,
+                  "publishedAt": "2020-08-22T18:07:16Z",
+                  "updatedAt": "2020-08-22T18:07:16Z"
                }
             }
          ]

@@ -10,18 +10,16 @@ from get_tweets import get_tweets_text, get_comments, get_tweets_video
 from downloadImages import downloadImages
 from fire import database,upload
 
+def history(request):
+	return HttpResponse(request.session['coco'])
 def graph(request):
 	a=request.GET.get("a")
-	print(a)
 	st=database.child("data/graph/"+a).get().val()
 	js=st
 	if js==None :
 		return redirect('/')
-
 	results=json.loads(js)
-
 	images=results["graph"]
-
 	js=results["table1"]
 
 	keys=list(js[0].keys())
@@ -77,6 +75,7 @@ def formText(request):
 		fields=json.loads(request.body)
 		print(fields)
 		type=fields["type"]
+		request.session['coco']=json.dumps(fields)
 		if type=="graphe":
 			r=json.dumps(search_for_tweets(fields))
 			id=upload(r)

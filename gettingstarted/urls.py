@@ -27,4 +27,6 @@ urlpatterns = [
     path("table/", twitterApp.views.table, ),
     path("graph/", twitterApp.views.graph, ),
 
+    path("lastFields/", twitterApp.views.history, ),
+
 ]
