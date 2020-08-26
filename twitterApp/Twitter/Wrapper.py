@@ -203,9 +203,11 @@ class Wrapper(Twitter):
         return results
 
 
-twitter_wrapper = Wrapper(consumer_key, consumer_secret)
 
 
 def search_for_tweets(fields):
+    twitter_wrapper = Wrapper(consumer_key, consumer_secret)
+    # load from session twitter_wrapper
     twitter_wrapper.search_tweets(int(fields.pop('count', 10)), fields)
+    # save in session twitter_wrapper
     return twitter_wrapper.return_all_data()

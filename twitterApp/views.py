@@ -16,7 +16,9 @@ def history(request):
 	return HttpResponse(request.session['coco'])
 	
 def graph(request,id=""):
+
 	a=id#request.GET.get("a")
+	# st=json.dumps({'table1': [{'a':'A','a2':'A','a3':'A'}], 'table2': [{'a':'A','a2':'A','a3':'A'}],"graph":['/static/youtube.png','/static/youtube.png','/static/youtube.png']})
 	st=database.child("data/graph/"+a).get().val()
 	js=st
 	if js==None :
@@ -75,7 +77,7 @@ def index(request):
 def formText(request):
 	if request.method=='POST':
 		fields=json.loads(request.body)
-
+		print(fields)
 		f=fields
 
 		type=fields["type"]
@@ -83,7 +85,7 @@ def formText(request):
 		if type=="graphe":
 			r=json.dumps(search_for_tweets(fields))
 			id=upload(r)
-			print(">>>>"+r[:100]+"...")
+			# print(">>>>"+r[:100]+"...")
 			return HttpResponse(id)
 		id=get_tweets_text(fields)
 

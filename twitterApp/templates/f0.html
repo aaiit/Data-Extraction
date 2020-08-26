@@ -95,7 +95,7 @@
 <script >
 
     function ook(type){
-      $("#f0-"+type).text("wait...");
+
       var q=document.getElementById("f0-qq").value;
       var lang=document.getElementById("f0-lang").value;
       var len=Number(document.getElementById("f0-len").value);
@@ -103,7 +103,7 @@
       var from=document.getElementById("f0-date").value;
       var to=document.getElementById("f0-until").value;
       var fields = {'q': q, 'lang': lang, 'result_type': rt,"len":len,"since":from,"until":to,"type":type,"output":getlist()};
-
+      console.log(fields);
         $.ajaxSetup({
               headers: { "X-CSRFToken": get_cookie('csrftoken') }});
         $.ajax({
@@ -198,8 +198,8 @@
 
      function getlist(){
         if(full){
-          console.log("full");
-          console.log(o);
+          // console.log("full");
+          // console.log(o);
           return  o;
         }
         var l=[];
@@ -208,7 +208,7 @@
             l.push(o[i]);
           }
         }
-        console.log(l);
+        // console.log(l);
         return l;
       }
 
