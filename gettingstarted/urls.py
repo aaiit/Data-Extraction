@@ -24,8 +24,8 @@ urlpatterns = [
     path("youtube/searchv",youtubeApp.views.searchv),
     path("youtube/ytcomments",youtubeApp.views.ytcomments),
     
-    path("data/<int:id>", twitterApp.views.table, ),
-    path("graph/", twitterApp.views.graph, ),
+    path("data/<str:id>", twitterApp.views.table, ),
+    path("graph/<str:id>", twitterApp.views.graph, ),
 
     path("lastFields/", twitterApp.views.history, ),
 

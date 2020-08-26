@@ -16,13 +16,24 @@ firebase = pyrebase.initialize_app(config)
 database=firebase.database()
 storage = firebase.storage()
 
+def getrandomid():
+    A="AZERTYUIOPQSDFGHJKLMWXCVBNazertyuiopqsdfghjklmwxcvbn0123456789"
+    m=len(A)
+    n=4
+    s=""
+    for i in range(n):
+        r=random.randint(0,m-1)
+        s+=A[r]
+    return s
+    
 def upload(jsondatastring,type="json"):
-	a=str(random.randint(1,19999))
+	a=getrandomid()#str(random.randint(1,19999))
 	database.child("data/%s/"%(type)+a).set(jsondatastring)
 	return a
 
+
 def uploadimage(imagename):
-    a=str(random.randint(1,19999))
+    a=getrandomid()#str(random.randint(1,19999))
     storage.child("images/%s.jpg"%(a)).put(imagename)
     return storage.child("images/%s.jpg"%(a)).get_url("hhh")
 

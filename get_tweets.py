@@ -49,5 +49,5 @@ def get_tweets_video(fields):
         return DataFrame(videos).to_csv(index=False)
 
 
-with open('comments.j   son', 'w')as f:
-    f.write(get_comments({'username': 'HenryMakow', 'id': '1297883200291844096', 'count': '5'}))
+# with open('comments.json', 'w')as f:
+#     f.write(get_comments({'username': 'HenryMakow', 'id': '1297883200291844096', 'count': '5'}))

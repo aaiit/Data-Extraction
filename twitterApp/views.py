@@ -12,8 +12,9 @@ from fire import database,upload,uploadfilds
 
 def history(request):
 	return HttpResponse(request.session['coco'])
-def graph(request):
-	a=request.GET.get("a")
+	
+def graph(request,id=""):
+	a=id#request.GET.get("a")
 	st=database.child("data/graph/"+a).get().val()
 	js=st
 	if js==None :
@@ -42,10 +43,9 @@ def graph(request):
 
 	para={"C1":keys1,"data1":lignes1,"C2":keys2,"data2":lignes2,"images":images}
 	return render(request,"graph.html",para)
-def table(request,id=0):
-	print("-----",id)
-	# a=request.GET.get("a")
-	a=str(id)
+
+def table(request,id=""):
+	a=id #request.GET.get("a")
 	st=database.child("data/json/"+a).get().val()
 	js=st
 	if js==None :
