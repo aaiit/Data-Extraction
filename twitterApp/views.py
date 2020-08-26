@@ -5,9 +5,11 @@ from .Twitter.Wrapper import search_for_tweets
 from .models import Greeting
 from django.views.decorators.csrf import csrf_exempt
 from django.shortcuts import redirect
-from commentsandlikes import comments, likes
-from get_tweets import get_tweets_text, get_comments, get_tweets_video
-from downloadImages import downloadImages
+
+from twitterApp.commentsandlikes import comments, likes
+from twitterApp.get_tweets import get_tweets_text, get_comments, get_tweets_video
+from twitterApp.downloadImages import downloadImages
+
 from fire import database,upload,uploadfilds
 
 def history(request):
@@ -85,7 +87,7 @@ def formText(request):
 			return HttpResponse(id)
 		id=get_tweets_text(fields)
 
-		uploadfilds(json.dumps([f]),"f"+id)
+		uploadfilds(json.dumps([f]),"_"+id)
 
 		return HttpResponse(id)
 	return render(request, "f0.html")
@@ -116,7 +118,7 @@ def f1(request):
 		type=fields["type"]
 		print(fields)
 		id=get_comments(fields)
-		uploadfilds(json.dumps([f]),"f"+id)
+		uploadfilds(json.dumps([f]),"_"+id)
 		return HttpResponse(id)
 	return render(request, "f1.html")
 
