@@ -16,7 +16,7 @@ def history(request):
 
 
 def graph(request, id=""):
-    a = id  # request.GET.get("a")
+    a = id  
     st = database.child("data/graph/" + a).get().val()
     js = st
     if js == None:
@@ -82,15 +82,7 @@ def formText(request):
         print(fields)
         f = fields
 
-<<<<<<< HEAD
-		type=fields["type"]
-		request.session['coco']=json.dumps(fields)
-		if type=="graphe":
-			r=json.dumps(search_for_tweets(fields))
-			id=upload(r)
-			return HttpResponse(id)
-		id=get_tweets_text(fields)
-=======
+
         type = fields["type"]
         # request.session['coco']=json.dumps(fields)
         if type == "graphe":
@@ -98,7 +90,6 @@ def formText(request):
             id = upload(r)
             return HttpResponse(id)
         id = get_tweets_text(fields)
->>>>>>> 0b66bb17293beda0a03670c1d94591524af3a1ba
 
         uploadfilds(json.dumps([f]), "_" + id)
 
