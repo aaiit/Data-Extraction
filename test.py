@@ -1,13 +1,28 @@
 import json
-from Twitter.Keys import *
-from Twitter.TwitterApi import Twitter
+import jsonpickle
+from json import JSONEncoder
 
-consumer_key = 'UFkzPnRg6teYYVpopicJlHu2L'
-consumer_secret = 'CNuHKlXlI4nY2YtX1RFFwthZQ0ziebfkLfrxd6T6xZp9FX7w7P'
+class Employee(object):
+    def __init__(self, name, salary, address):
+        self.name = name
+        self.salary = salary
+        self.address = address
+    def save(self):
+    	return jsonpickle.encode(self, unpicklable=False)
+    def load(self,s):
+    	print(jsonpickle.decode(s))
+    	self = jsonpickle.decode(s)
+class Address(object):
+    def __init__(self, city, street, pin):
+        self.city = city
+        self.street = street
+        self.pin = pin
 
-t = Twitter(consumer_key, consumer_secret)
-fields = {'q': 'covid19', 'lang': 'en', 'result_type': 'popular'}
+address = Address("Alpharetta", "7258 Spring Street", "30004")
+employee = Employee("John", 9000, address)
 
-tweets = t.search_tweets_videos(2, fields, TWEET_VIDEOS_KEYS)
-print(json.dumps(tweets, indent=4, default=str))
-print(len(tweets))
+r = employee.save()
+
+Z=Employee("++", "7258 ll ll", "5555")
+Z.load(r)
+print(Z.save())

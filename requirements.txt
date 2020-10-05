@@ -6,3 +6,4 @@ wget
 pandas
 pyrebase
 graphviz
+jsonpickle

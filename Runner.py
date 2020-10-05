@@ -1,8 +1,8 @@
 from termcolor import cprint
 
-'''
-TODO: Put static code here.
-'''
+import pickle
+
+
 from twitterApp.Twitter.Wrapper import Wrapper
 import pandas as pd
 import json
@@ -14,8 +14,6 @@ consumer_secret='CNuHKlXlI4nY2YtX1RFFwthZQ0ziebfkLfrxd6T6xZp9FX7w7P'
 twitter=Wrapper(consumer_key,consumer_secret)
 
 
-#
-i=0
 while True:
     fields={'q':input("q:"),'result_type':'popular','lang':'en'}
     tweets=twitter.search_tweets(20,fields)
@@ -28,4 +26,7 @@ while True:
     print(len(reters))
     plot(twitter.graph.tweet_hashtag.graph,'tweets_hashtags')
 
+    pickle.dump(twitter, open("cocooooo.best","wb"))
+    twitter = pickle.load(open("cocooooo.best","rb"))
 
+   

@@ -77,7 +77,7 @@ def formText(request):
 		f=fields
 
 		type=fields["type"]
-		# request.session['coco']=json.dumps(fields)
+		request.session['coco']=json.dumps(fields)
 		if type=="graphe":
 			r=json.dumps(search_for_tweets(fields))
 			id=upload(r)
