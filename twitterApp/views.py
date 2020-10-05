@@ -5,20 +5,16 @@ from .Twitter.Wrapper import search_for_tweets
 from .models import Greeting
 from django.views.decorators.csrf import csrf_exempt
 from django.shortcuts import redirect
-
 from twitterApp.commentsandlikes import comments, likes
 from twitterApp.get_tweets import get_tweets_text, get_comments, get_tweets_video
 from twitterApp.downloadImages import downloadImages
-
 from fire import database,upload,uploadfilds
 
 def history(request):
 	return HttpResponse(request.session['coco'])
 	
 def graph(request,id=""):
-
 	a=id#request.GET.get("a")
-	# st=json.dumps({'table1': [{'a':'A','a2':'A','a3':'A'}], 'table2': [{'a':'A','a2':'A','a3':'A'}],"graph":['/static/youtube.png','/static/youtube.png','/static/youtube.png']})
 	st=database.child("data/graph/"+a).get().val()
 	js=st
 	if js==None :
@@ -81,11 +77,10 @@ def formText(request):
 		f=fields
 
 		type=fields["type"]
-		request.session['coco']=json.dumps(fields)
+		# request.session['coco']=json.dumps(fields)
 		if type=="graphe":
 			r=json.dumps(search_for_tweets(fields))
 			id=upload(r)
-			# print(">>>>"+r[:100]+"...")
 			return HttpResponse(id)
 		id=get_tweets_text(fields)
 

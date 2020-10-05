@@ -1021,21 +1021,6 @@
       "snippet": {
          "topLevelComment": {
             "snippet": {
-               "textDisplay": "They forgot to add \"Newsom\" to the list of natural disasters. He has done more to destroy the state than all the rest combined. This LA Native, and every friend I grew up with here has already left or is leaving. Just sayin'!",
-               "authorDisplayName": "Jamie Paolinetti Writer/Director",
-               "likeCount": 2,
-               "publishedAt": "2020-08-22T20:08:52Z",
-               "updatedAt": "2020-08-22T20:08:52Z"
-            }
-         },
-         "canReply": true,
-         "totalReplyCount": 0
-      }
-   },
-   {
-      "snippet": {
-         "topLevelComment": {
-            "snippet": {
                "textDisplay": "COD: Zombies Tranzit is becoming real, boys! Let's go!! \ud83d\ude02\ud83d\udc4c",
                "authorDisplayName": "TheMc SlenderMan",
                "likeCount": 38,
@@ -1085,6 +1070,21 @@
                }
             }
          ]
+      }
+   },
+   {
+      "snippet": {
+         "topLevelComment": {
+            "snippet": {
+               "textDisplay": "They forgot to add \"Newsom\" to the list of natural disasters. He has done more to destroy the state than all the rest combined. This LA Native, and every friend I grew up with here has already left or is leaving. Just sayin'!",
+               "authorDisplayName": "Jamie Paolinetti Writer/Director",
+               "likeCount": 2,
+               "publishedAt": "2020-08-22T20:08:52Z",
+               "updatedAt": "2020-08-22T20:08:52Z"
+            }
+         },
+         "canReply": true,
+         "totalReplyCount": 0
       }
    },
    {
