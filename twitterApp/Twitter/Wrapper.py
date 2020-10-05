@@ -22,7 +22,7 @@ class Wrapper(Twitter):
     USER_USER = 'user_user'
     USERS_FAVORITES = 'users_favorites'
 
-    def __init__(self, consumer_key, consumer_secret, timeout=20):
+    def __init__(self, consumer_key, consumer_secret, timeout=60):
         super(Wrapper, self).__init__(consumer_key, consumer_secret, timeout)
         self.graph = GraphBase()
         self.table = TableBase()
