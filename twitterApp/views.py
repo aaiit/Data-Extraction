@@ -46,8 +46,8 @@ def graph(request, id=""):
     for j in js:
         lignes.append(list(e(j)))
     keys2, lignes2 = keys, lignes
-    images=[string.encode(encoding='UTF-8',errors='strict') for string in images]
-    print(images)
+    # images=[string.encode(encoding='UTF-8',errors='strict') for string in images]
+    # print(images)
     para = {"C1": keys1, "data1": lignes1, "C2": keys2, "data2": lignes2, "images": images}
     return render(request, "graph.html", para)
 
