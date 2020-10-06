@@ -208,6 +208,7 @@ class Wrapper(Twitter):
 
 
 def search_for_tweets(fields):
+    global twitter_wrapper
     # Get fileName from session TODO
     fileName = "namefile"
     try:

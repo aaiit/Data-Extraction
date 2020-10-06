@@ -20,10 +20,9 @@ def loadfile(filename):
     storage.child("cocooooo/"+filename).download(filename)
 def savefile(filename):
     storage.child("cocooooo/"+filename).put(filename)
-def getrandomid():
+def getrandomid(n=4):
     A="AZERTYUIOPQSDFGHJKLMWXCVBNazertyuiopqsdfghjklmwxcvbn0123456789"
     m=len(A)
-    n=4
     s=""
     for i in range(n):
         r=random.randint(0,m-1)
