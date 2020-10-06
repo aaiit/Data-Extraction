@@ -8,8 +8,19 @@
 <div class="btn-toolbar">
 
 </div>
+
+<div class="well">
+    <h1>Graphs</h1>
+    {% for url in images%}
+    <br><br>
+    <img src="{{url}}" alt="Italian Trulli">
+    {% endfor %}
+</div>
+
+
 <div class="well">
     <h1> Users table </h1>
+
     <table class="table">
       <thead>
         <tr>
@@ -53,13 +64,6 @@
     </table>
 </div>
 
-<div class="well">
-    <h1>Graphs</h1>
-    {% for url in images%}
-    <br><br>
-    <img src="{{url}}" alt="Italian Trulli">
-    {% endfor %}
-</div>
 
 
 

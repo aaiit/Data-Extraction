@@ -18,13 +18,11 @@ def history(request):
 def graph(request, id=""):
     a = id  
     st = database.child("data/json/" + a).get().val()
-
-    return HttpResponse(st)    
     js = st
     if js == None:
         return redirect('/')
     results = json.loads(js)
-    
+
     images = results["graph"]
     js = list(results["table1"].values() )
 
