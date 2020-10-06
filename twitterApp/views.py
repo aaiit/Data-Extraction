@@ -9,7 +9,7 @@ from twitterApp.commentsandlikes import comments, likes
 from twitterApp.get_tweets import get_tweets_text, get_comments, get_tweets_video
 from twitterApp.downloadImages import downloadImages
 from fire import database, upload, uploadfilds ,getrandomid
-
+import pandas as pd
 
 def history(request):
     if "myname" not in request.session:
@@ -63,6 +63,8 @@ def table(request, id=""):
         return redirect('/')
     js = json.loads(js)
 
+
+
     if (js == []): return HttpResponse("empty data")
     keys = list(js[0].keys())
 
@@ -75,7 +77,7 @@ def table(request, id=""):
     lignes = []
     for j in js:
         lignes.append(list(e(j)))
-    return render(request, "table.html", {"C": keys, "data": lignes, "JSON": st, "id": a})
+    return render(request, "table.html", {"CSV":pd.DataFrame(js).to_csv(index=False),"C": keys, "data": lignes, "JSON": st, "id": a})
 
 
 def index(request):

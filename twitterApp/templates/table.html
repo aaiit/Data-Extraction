@@ -7,7 +7,7 @@
 
 <div class="btn-toolbar">
     <button onclick="Exporter()"class="btn" >Import Json</button>
-    <button onclick="csvfile()" class="btn" >Import CSV</button>
+    <button onclick="ExporterCSV()" class="btn" >Import CSV</button>
     <button onclick="coperUrl()" class="btn" >Copy url</button>
  
 </div>
@@ -55,6 +55,7 @@
 
 
  <script type="text/javascript">
+  
       function download(filename, text) {
       var element = document.createElement('a');
       element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
@@ -69,38 +70,13 @@
       download('{{id}}.json',getjson());
     }
 
+    function ExporterCSV(){
+      download('{{id}}.csv',`{{CSV | safe}}`);
+    }
+
   </script>
 
-<script type="text/javascript">
-// JSON to CSV Converter
-        function ConvertToCSV(objArray) {
-            var array = typeof objArray != 'object' ? JSON.parse(objArray) : objArray;
-            var str = '';
 
-            for (var i = 0; i < array.length; i++) {
-                var line = '';
-                for (var index in array[i]) {
-                    if (line != '') line += ','
-
-                    line += array[i][index];
-                }
-
-                str += line + '\r\n';
-            }
-
-            return str;
-        }
-
-        // Convert Object to JSON
-        var jsonObject = JSON.stringify(getdata());
-
-
-        // Convert JSON to CSV & Display CSV
-        function csvfile(){
-          download('{{id}}.csv',ConvertToCSV(jsonObject));
-        };
-      
-</script>
 
 
 <script type="text/javascript">
@@ -116,13 +92,5 @@
 </script>
 
 
-<!-- 
-<script type="text/javascript">
-  
-  const queryString = window.location.search;
-  console.log(queryString);
-  const urlParams = new URLSearchParams(queryString);
-  url= urlParams.get('url');
-  $("#back").attr("href",url);
-</script> -->
+
 {% endblock %}
