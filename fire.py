@@ -20,7 +20,7 @@ def loadfile(filename):
     storage.child("cocooooo/"+filename).download(filename)
 def savefile(filename):
     storage.child("cocooooo/"+filename).put(filename)
-def getrandomid(n=4):
+def getrandomid(n=8):
     A="AZERTYUIOPQSDFGHJKLMWXCVBNazertyuiopqsdfghjklmwxcvbn0123456789"
     m=len(A)
     s=""

@@ -95,11 +95,11 @@ def formText(request):
         if type == "graphe":
             r = json.dumps(search_for_tweets(fields,request),default=str)
             id = upload(r)
-            print("id"+id)
+            print("id is "+id)
             return HttpResponse(id)
         id = get_tweets_text(fields)
 
-        uploadfilds(json.dumps([f]), "_" + id)
+        # uploadfilds(json.dumps([f]), "_" + id)
 
         return HttpResponse(id)
     return render(request, "f0.html")
