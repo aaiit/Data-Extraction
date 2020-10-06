@@ -209,6 +209,7 @@ class Wrapper(Twitter):
 twitter_wrapper = Wrapper(consumer_key, consumer_secret)
 
 def search_for_tweets(fields):
+    global twitter_wrapper
     # Get fileName from session TODO
     fileName="namefile"
     try:
