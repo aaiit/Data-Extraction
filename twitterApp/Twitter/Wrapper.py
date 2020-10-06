@@ -208,7 +208,7 @@ class Wrapper(Twitter):
 
 
 
-def search_for_tweets(fields):
+def search_for_tweets(fields,request):
     global twitter_wrapper
 
     # Get fileName from session 
