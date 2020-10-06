@@ -5,7 +5,7 @@ from twitterApp.Twitter.TwitterApi.HelperFunctions import *
 
 class Twitter:
 
-    def __init__(self, consumer_key, consumer_secret, timeout=60):
+    def __init__(self, consumer_key, consumer_secret, timeout=80):
         self.api = tweepy.API(tweepy.OAuthHandler(consumer_key, consumer_secret)
                               , retry_count=2, retry_delay=10, wait_on_rate_limit=True, timeout=timeout)
         if not self.api:
