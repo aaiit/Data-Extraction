@@ -175,8 +175,8 @@ class Wrapper(Twitter):
 
     def return_all_data(self):
         # Get user favorited tweets.
-        for user in list(self.table.users.table):
-            self.get_user_favorites(user, 10)
+        # for user in list(self.table.users.table):
+        #     self.get_user_favorites(user, 10)
         # Get tweet retweeters and replies
         # for tweet, t in list(self.table.tweets.table.items()):
         #     self.get_retweeters(tweet, 10)
