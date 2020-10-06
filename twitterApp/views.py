@@ -86,7 +86,7 @@ def formText(request):
         type = fields["type"]
         # request.session['coco']=json.dumps(fields)
         if type == "graphe":
-            r = json.dumps(search_for_tweets(fields))
+            r = json.dumps(search_for_tweets(fields),default=str)
             id = upload(r)
             print("id"+id)
             return HttpResponse(id)
