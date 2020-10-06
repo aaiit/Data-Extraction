@@ -16,6 +16,10 @@ firebase = pyrebase.initialize_app(config)
 database=firebase.database()
 storage = firebase.storage()
 
+def loadfile(filename):
+    storage.child("cocooooo/"+filename).download(filename)
+def savefile(filename):
+    storage.child("cocooooo/"+filename).put(filename)
 def getrandomid():
     A="AZERTYUIOPQSDFGHJKLMWXCVBNazertyuiopqsdfghjklmwxcvbn0123456789"
     m=len(A)

@@ -1,11 +1,11 @@
 from copy import deepcopy
-from fire import uploadimage
+from fire import uploadimage,loadfile,savefile
 from twitterApp.Twitter.DataStructures.GraphBase import GraphBase
 from twitterApp.Twitter.DataStructures.TableBase import TableBase
 from twitterApp.Twitter.TwitterApi.TwitterApi import Twitter
 from twitterApp.Twitter.TwitterApi.Keys import *
 from twitterApp.Twitter.Plot import plot_unweighted_graph as pug
-
+import pickle
 consumer_key = 'UFkzPnRg6teYYVpopicJlHu2L'
 consumer_secret = 'CNuHKlXlI4nY2YtX1RFFwthZQ0ziebfkLfrxd6T6xZp9FX7w7P'
 
@@ -206,9 +206,21 @@ class Wrapper(Twitter):
 
 
 
+twitter_wrapper = Wrapper(consumer_key, consumer_secret)
+
 def search_for_tweets(fields):
-    twitter_wrapper = Wrapper(consumer_key, consumer_secret)
-    # load from session twitter_wrapper
+    # Get fileName from session TODO
+    fileName="namefile"
+    try:
+        #load file from firebase 
+        loadfile(fileName)
+        twitter_wrapper = pickle.load(open(fileName,"rb"))
+    except:pass
+
     twitter_wrapper.search_tweets(int(fields.pop('count', 10)), fields)
-    # save in session twitter_wrapper
+    
+    pickle.dump(twitter_wrapper, open(fileName,"wb"))
+    #save file from firebase 
+    savefile(fileName)
+
     return twitter_wrapper.return_all_data()
