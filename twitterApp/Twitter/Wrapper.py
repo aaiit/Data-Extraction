@@ -207,20 +207,18 @@ class Wrapper(Twitter):
 
 
 
-twitter_wrapper = Wrapper(consumer_key, consumer_secret)
 
 def search_for_tweets(fields,request):
-    global twitter_wrapper
-
     # Get fileName from session 
     if "myname" not in request.session:
         request.session["myname"]=getrandomid(10)
+        twitter_wrapper = Wrapper(consumer_key, consumer_secret)
+        fileName=request.session["myname"]
     else:
         fileName=request.session["myname"]
         loadfile(fileName)
         twitter_wrapper = pickle.load(open(fileName, "rb"))
-        
-    fileName=request.session["myname"]
+
 
     twitter_wrapper.search_tweets(int(fields.pop('count', 10)), fields)
 
