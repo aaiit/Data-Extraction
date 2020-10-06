@@ -1,11 +1,12 @@
 from copy import deepcopy
-from fire import uploadimage,loadfile,savefile
+from fire import uploadimage, loadfile, savefile
 from twitterApp.Twitter.DataStructures.GraphBase import GraphBase
 from twitterApp.Twitter.DataStructures.TableBase import TableBase
 from twitterApp.Twitter.TwitterApi.TwitterApi import Twitter
 from twitterApp.Twitter.TwitterApi.Keys import *
 from twitterApp.Twitter.Plot import plot_unweighted_graph as pug
 import pickle
+
 consumer_key = 'UFkzPnRg6teYYVpopicJlHu2L'
 consumer_secret = 'CNuHKlXlI4nY2YtX1RFFwthZQ0ziebfkLfrxd6T6xZp9FX7w7P'
 
@@ -22,7 +23,7 @@ class Wrapper(Twitter):
     USER_USER = 'user_user'
     USERS_FAVORITES = 'users_favorites'
 
-    def __init__(self, consumer_key, consumer_secret, timeout=60):
+    def __init__(self, consumer_key, consumer_secret, timeout=80):
         super(Wrapper, self).__init__(consumer_key, consumer_secret, timeout)
         self.graph = GraphBase()
         self.table = TableBase()
@@ -174,16 +175,17 @@ class Wrapper(Twitter):
 
     def return_all_data(self):
         # Get user favorited tweets.
-        # for user in list( self.table.users.table):
+        # for user in list(self.table.users.table):
         #     self.get_user_favorites(user, 5)
         # Get tweet retweeters and replies
-        # for tweet in list(self.table.tweets.table.keys()):
+        # for tweet, t in list(self.table.tweets.table.items()):
         #     self.get_retweeters(tweet, 5)
-        #     self.get_replies(self.table.users.get_row(tweet['user.id_str'])['screen_name'], tweet, count=5)
+        #     self.get_replies(self.table.users.get_row(t['user.id_str'])['screen_name'], tweet, count=5)
         # TODO: this  may take a very long time, so it is ignored for now.
         # self.construct_friendships()
 
         results = {'table1': self.table.users.table, 'table2': self.table.tweets.table}
+
         # pug(self.graph.user_user.graph, self.USER_USER)
         pug(self.graph.user_favorite.graph, self.USERS_FAVORITES)
         pug(self.graph.query_tweet.graph, self.QUERIES_TWEETS)
@@ -206,18 +208,22 @@ class Wrapper(Twitter):
 
 
 
-twitter_wrapper = Wrapper(consumer_key, consumer_secret)
-
 def search_for_tweets(fields):
     global twitter_wrapper
+<<<<<<< HEAD
     # Get fileName from session 
     if "myname" not in request.session:
         request.session["myname"]=getrandomid(10)
         
     fileName=request.session["myname"]
+=======
+    # Get fileName from session TODO
+    fileName = "namefile"
+>>>>>>> 60b7a6e8fb08ac205ae0ffdaffcde0cd99b3d101
     try:
-        #load file from firebase 
+        # load file from firebase
         loadfile(fileName)
+<<<<<<< HEAD
         twitter_wrapper = pickle.load(open(fileName,"rb"))
     except:pass 
 
@@ -225,6 +231,16 @@ def search_for_tweets(fields):
     
     pickle.dump(twitter_wrapper, open(fileName,"wb"))
     #save file to firebase 
+=======
+        twitter_wrapper = pickle.load(open(fileName, "rb"))
+    except:
+        twitter_wrapper = Wrapper(consumer_key, consumer_secret)
+
+    twitter_wrapper.search_tweets(int(fields.pop('count', 10)), fields)
+
+    pickle.dump(twitter_wrapper, open(fileName, "wb"))
+    # save file from firebase
+>>>>>>> 60b7a6e8fb08ac205ae0ffdaffcde0cd99b3d101
     savefile(fileName)
 
     return twitter_wrapper.return_all_data()
