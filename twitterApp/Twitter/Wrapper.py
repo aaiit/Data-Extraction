@@ -185,6 +185,7 @@ class Wrapper(Twitter):
         # self.construct_friendships()
 
         results = {'table1': self.table.users.table, 'table2': self.table.tweets.table}
+
         # pug(self.graph.user_user.graph, self.USER_USER)
         pug(self.graph.user_favorite.graph, self.USERS_FAVORITES)
         pug(self.graph.query_tweet.graph, self.QUERIES_TWEETS)
