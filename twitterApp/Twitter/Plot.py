@@ -12,4 +12,4 @@ def plot_unweighted_graph(graph, filename):
             g.attr('node', color='blue', shape='egg')
             g.node(end, label=end)
             g.edge(start, end, constraint='false')
-    g.render(filename=filename + '.gv', view=True)
+    g.render(filename=filename + '.gv', view=False)
