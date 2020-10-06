@@ -215,10 +215,11 @@ def search_for_tweets(fields,request):
     # Get fileName from session 
     if "myname" not in request.session:
         request.session["myname"]=getrandomid(10)
+    else:
         fileName=request.session["myname"]
         loadfile(fileName)
         twitter_wrapper = pickle.load(open(fileName, "rb"))
-
+        
     fileName=request.session["myname"]
 
     twitter_wrapper.search_tweets(int(fields.pop('count', 10)), fields)
