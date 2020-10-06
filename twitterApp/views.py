@@ -17,7 +17,7 @@ def history(request):
 
 def graph(request, id=""):
     a = id  
-    st = database.child("data/graph/" + a).get().val()
+    st = database.child("data/" + a).get().val()
     js = st
     if js == None:
         return redirect('/')
@@ -88,6 +88,7 @@ def formText(request):
         if type == "graphe":
             r = json.dumps(search_for_tweets(fields))
             id = upload(r)
+            print("id"+id)
             return HttpResponse(id)
         id = get_tweets_text(fields)
 
