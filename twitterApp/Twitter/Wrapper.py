@@ -210,28 +210,17 @@ class Wrapper(Twitter):
 
 def search_for_tweets(fields):
     global twitter_wrapper
-<<<<<<< HEAD
+
     # Get fileName from session 
     if "myname" not in request.session:
         request.session["myname"]=getrandomid(10)
         
     fileName=request.session["myname"]
-=======
-    # Get fileName from session TODO
-    fileName = "namefile"
->>>>>>> 60b7a6e8fb08ac205ae0ffdaffcde0cd99b3d101
+
     try:
         # load file from firebase
         loadfile(fileName)
-<<<<<<< HEAD
-        twitter_wrapper = pickle.load(open(fileName,"rb"))
-    except:pass 
 
-    twitter_wrapper.search_tweets(int(fields.pop('count', 10)), fields)
-    
-    pickle.dump(twitter_wrapper, open(fileName,"wb"))
-    #save file to firebase 
-=======
         twitter_wrapper = pickle.load(open(fileName, "rb"))
     except:
         twitter_wrapper = Wrapper(consumer_key, consumer_secret)
@@ -240,7 +229,6 @@ def search_for_tweets(fields):
 
     pickle.dump(twitter_wrapper, open(fileName, "wb"))
     # save file from firebase
->>>>>>> 60b7a6e8fb08ac205ae0ffdaffcde0cd99b3d101
     savefile(fileName)
 
     return twitter_wrapper.return_all_data()
