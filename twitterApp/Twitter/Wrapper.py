@@ -219,7 +219,6 @@ def search_for_tweets(fields,request):
         loadfile(fileName)
         twitter_wrapper = pickle.load(open(fileName, "rb"))
 
-
     twitter_wrapper.search_tweets(int(fields.pop('count', 10)), fields)
 
     pickle.dump(twitter_wrapper, open(fileName, "wb"))
