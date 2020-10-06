@@ -182,8 +182,6 @@ class Wrapper(Twitter):
         #     self.get_replies(self.table.users.get_row(tweet['user.id_str'])['screen_name'], tweet, count=10)
         # TODO: this  may take a very long time, so it is ignored for now.
         # self.construct_friendships()
-        import os
-        os.environ["PATH"] += os.pathsep + '/app/.heroku-buildpack-graphviz/usr/bin'
 
         results = {'table1': self.table.users.table, 'table2': self.table.tweets.table}
         # pug(self.graph.user_user.graph, self.USER_USER)
