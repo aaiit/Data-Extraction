@@ -101,7 +101,7 @@
 <script >
 
     function ook(type){
-      $("#btnSubmit").hide();
+      // $("#btnSubmit").hide();
       $("#circle").attr("class","");
       var q=document.getElementById("qq").value;
       var len=Number(document.getElementById("len").value);
@@ -127,7 +127,9 @@
             dataType: 'text',
             success: function(result) {
               if(type=="url"){
-                  window.location.href = "/data/"+result;
+                  // window.location.href = "/data/"+result;
+                  window.open("/data/"+result);
+
 
                 }
                 else{ 

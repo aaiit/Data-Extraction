@@ -86,7 +86,7 @@
 <script >
 
     function ook(type){
-      $("#btnSubmit").hide();
+      // $("#btnSubmit").hide();
       var vid=document.getElementById("vid").value;
       var kwrd=document.getElementById("kwrd").value;
       var len=Number(document.getElementById("len").value);
@@ -105,8 +105,8 @@
             success: function(result) {
               if(type=="url"){
                   // alert(result);
-                  window.location.href = "/data/"+result;
-
+                  // window.location.href = "/data/"+result;
+                  window.open("/data/"+result);
                 }
                 else{ 
                 Exporter(result,"data."+type);

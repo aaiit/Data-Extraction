@@ -115,12 +115,14 @@
             success: function(result) {
                 if(type=="graphe"){
 
-                  window.location.href = "/graph/"+result;
+                  // window.location.href = "/graph/"+result;
+                  window.open("/graph/"+result);
                   return;
                 }
                 if(type=="url"){
                   // alert(result);
-                  window.location.href = "/data/"+result;
+                  // window.location.href = "/data/"+result;
+                  window.open("/data/"+result);
 
                 }
                 else{                                Exporter(result,"data."+type);
