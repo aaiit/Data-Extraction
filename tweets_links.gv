@@ -1,0 +1,17 @@
+graph {
+	node [color=red shape=rarrow]
+	1313416961280274432 [label=1313416961280274432]
+	node [color=blue shape=egg]
+	"https://www.kommune21.de/meldung_34835_Threema+für+die+Schulen.html" [label="https://www.kommune21.de/meldung_34835_Threema+für+die+Schulen.html"]
+	1313416961280274432 -- https:"//www.kommune21.de/meldung_34835_Threema+für+die+Schulen.html" [constraint=false]
+	node [color=red shape=rarrow]
+	1313416944868093952 [label=1313416944868093952]
+	node [color=blue shape=egg]
+	"https://rp-online.de/panorama/coronavirus/corona-donald-trump-praesident-zurueck-im-weissen-haus-verharmlost-virus_aid-53874309?utm_source=twitter&utm_medium=referral&utm_campaign=share" [label="https://rp-online.de/panorama/coronavirus/corona-donald-trump-praesident-zurueck-im-weissen-haus-verharmlost-virus_aid-53874309?utm_source=twitter&utm_medium=referral&utm_campaign=share"]
+	1313416944868093952 -- https:"//rp-online.de/panorama/coronavirus/corona-donald-trump-praesident-zurueck-im-weissen-haus-verharmlost-virus_aid-53874309?utm_source=twitter&utm_medium=referral&utm_campaign=share" [constraint=false]
+	node [color=red shape=rarrow]
+	1313416929781018624 [label=1313416929781018624]
+	node [color=blue shape=egg]
+	"https://www.nepalipatra.com/news/lalitpur-corona/57102" [label="https://www.nepalipatra.com/news/lalitpur-corona/57102"]
+	1313416929781018624 -- https:"//www.nepalipatra.com/news/lalitpur-corona/57102" [constraint=false]
+}
