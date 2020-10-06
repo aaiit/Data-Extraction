@@ -46,15 +46,10 @@ def graph(request, id=""):
     for j in js:
         lignes.append(list(e(j)))
     keys2, lignes2 = keys, lignes
-<<<<<<< HEAD
-    images=[string.encode(encoding='UTF-8',errors='strict') for string in images]
-    print(images)
-    para = {"JSON":st,"C1": keys1, "data1": lignes1, "C2": keys2, "data2": lignes2, "images": images}
-=======
+
     # images=[string.encode(encoding='UTF-8',errors='strict') for string in images]
     # print(images)
-    para = {"C1": keys1, "data1": lignes1, "C2": keys2, "data2": lignes2, "images": images}
->>>>>>> a085cbc75d0282c10fc331c641157d11a7076048
+    para = {"JSON":st,"C1": keys1, "data1": lignes1, "C2": keys2, "data2": lignes2, "images": images}
     return render(request, "graph.html", para)
 
 
