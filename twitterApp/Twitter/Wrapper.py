@@ -195,11 +195,12 @@ class Wrapper(Twitter):
         pug(self.graph.tweet_mentioned.graph, self.TWEETS_MENTIONED_USERS)
         # pug(self.graph.tweet_respondent.graph, self.TWEETS_RESPONDENTS)
         # uploadimage(self.USER_USER + '.gv.png'),
-        results['graph'] = {self.QUERIES_TWEETS: uploadimage(self.QUERIES_TWEETS),
-        self.TWEETS_HASTHTAGS: uploadimage(self.TWEETS_HASTHTAGS),
-        self.TWEETS_LINKS: uploadimage(self.TWEETS_LINKS),
-        self.TWEETS_MENTIONED_USERS: uploadimage(self.TWEETS_MENTIONED_USERS)
-        }
+        results['graph'] = [
+        {"title":self.QUERIES_TWEETS[:-4],"url": uploadimage(self.QUERIES_TWEETS)},
+        {"title":self.TWEETS_HASTHTAGS[:-4],"url": uploadimage(self.TWEETS_HASTHTAGS)},
+        {"title":self.TWEETS_LINKS[:-4],"url": uploadimage(self.TWEETS_LINKS)},
+        {"title":self.TWEETS_MENTIONED_USERS[:-4],"url": uploadimage(self.TWEETS_MENTIONED_USERS)}
+        ]
         return results
 
 
@@ -210,10 +211,11 @@ def search_for_tweets(fields, request):
         twitter_wrapper = Wrapper(consumer_key, consumer_secret)
         fileName = request.session["myname"]
     else:
-        fileName = request.session["myname"]
-        loadfile(fileName)
-        twitter_wrapper = pickle.load(open(fileName, "rb"))
-
+        try:
+            fileName = request.session["myname"]
+            loadfile(fileName)
+            twitter_wrapper = pickle.load(open(fileName, "rb"))
+        except:twitter_wrapper = Wrapper(consumer_key, consumer_secret)
     twitter_wrapper.search_tweets(int(fields.pop('count', 10)), fields)
 
     pickle.dump(twitter_wrapper, open(fileName, "wb"))
