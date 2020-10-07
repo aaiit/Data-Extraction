@@ -37,8 +37,8 @@ def upload(jsondatastring,type="json"):
 
 def uploadimage(imagename):
     a=getrandomid()#str(random.randint(1,19999))
-    storage.child("images/%s.jpg"%(a)).put(imagename)
-    return storage.child("images/%s.jpg"%(a)).get_url("hhh")
+    storage.child("images/%s"%(a)).put(imagename)
+    return storage.child("images/%s"%(a)).get_url("hhh")
 
 
 def uploadfilds(st,a):
