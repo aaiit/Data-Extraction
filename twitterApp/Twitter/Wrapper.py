@@ -14,14 +14,14 @@ consumer_secret = 'CNuHKlXlI4nY2YtX1RFFwthZQ0ziebfkLfrxd6T6xZp9FX7w7P'
 class Wrapper(Twitter):
     # TWEET_TABLE='tweet_table.csv'
     # USER_TABLE='user_table.csv'
-    QUERIES_TWEETS = 'queries_tweets'
-    TWEETS_HASTHTAGS = 'tweets_hashtags'
-    TWEETS_RETWEETERS = 'tweets_retweeters'
-    TWEETS_MENTIONED_USERS = 'tweets_mentionned_users'
-    TWEETS_LINKS = 'tweets_links'
-    TWEETS_RESPONDENTS = 'tweets_respondents'
-    USER_USER = 'user_user'
-    USERS_FAVORITES = 'users_favorites'
+    QUERIES_TWEETS = 'queries_tweets.svg'
+    TWEETS_HASTHTAGS = 'tweets_hashtags.svg'
+    TWEETS_RETWEETERS = 'tweets_retweeters.svg'
+    TWEETS_MENTIONED_USERS = 'tweets_mentionned_users.svg'
+    TWEETS_LINKS = 'tweets_links.svg'
+    TWEETS_RESPONDENTS = 'tweets_respondents.svg'
+    USER_USER = 'user_user.svg'
+    USERS_FAVORITES = 'users_favorites.svg'
 
     def __init__(self, consumer_key, consumer_secret, timeout=80):
         super(Wrapper, self).__init__(consumer_key, consumer_secret, timeout)
@@ -187,35 +187,34 @@ class Wrapper(Twitter):
         results = {'table1': self.table.users.table, 'table2': self.table.tweets.table}
 
         # pug(self.graph.user_user.graph, self.USER_USER)
-        pug(self.graph.user_favorite.graph, self.USERS_FAVORITES)
+        # pug(self.graph.user_favorite.graph, self.USERS_FAVORITES)
         pug(self.graph.query_tweet.graph, self.QUERIES_TWEETS)
         pug(self.graph.tweet_hashtag.graph, self.TWEETS_HASTHTAGS)
-        pug(self.graph.tweet_retweeter.graph, self.TWEETS_RETWEETERS)
+        # pug(self.graph.tweet_retweeter.graph, self.TWEETS_RETWEETERS)
         pug(self.graph.tweet_link.graph, self.TWEETS_LINKS)
         pug(self.graph.tweet_mentioned.graph, self.TWEETS_MENTIONED_USERS)
         # pug(self.graph.tweet_respondent.graph, self.TWEETS_RESPONDENTS)
         # uploadimage(self.USER_USER + '.gv.png'),
-        results['graph'] = [uploadimage(self.USERS_FAVORITES + '.gv.png'),
-                            uploadimage(self.QUERIES_TWEETS + '.gv.png'),
-                            uploadimage(self.TWEETS_HASTHTAGS + '.gv.png'),
-                            uploadimage(self.TWEETS_RETWEETERS + '.gv.png'),
-                            uploadimage(self.TWEETS_LINKS + '.gv.png'),
-                            uploadimage(self.TWEETS_MENTIONED_USERS + '.gv.png'),
-                            # uploadimage(self.TWEETS_RESPONDENTS + '.gv.png')
-                            ]
+        results['graph'] = [
+            # uploadimage(self.USERS_FAVORITES + '.gv.png'),
+            uploadimage(self.QUERIES_TWEETS ),
+            uploadimage(self.TWEETS_HASTHTAGS ),
+            # uploadimage(self.TWEETS_RETWEETERS + '.gv.png'),
+            uploadimage(self.TWEETS_LINKS ),
+            uploadimage(self.TWEETS_MENTIONED_USERS),
+            # uploadimage(self.TWEETS_RESPONDENTS + '.gv.png')
+        ]
         return results
 
 
-
-
-def search_for_tweets(fields,request):
+def search_for_tweets(fields, request):
     # Get fileName from session 
     if "myname" not in request.session:
-        request.session["myname"]=getrandomid(10)
+        request.session["myname"] = getrandomid(10)
         twitter_wrapper = Wrapper(consumer_key, consumer_secret)
-        fileName=request.session["myname"]
+        fileName = request.session["myname"]
     else:
-        fileName=request.session["myname"]
+        fileName = request.session["myname"]
         loadfile(fileName)
         twitter_wrapper = pickle.load(open(fileName, "rb"))
 

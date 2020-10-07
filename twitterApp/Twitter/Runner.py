@@ -12,11 +12,11 @@ from twitterApp.Twitter.Plot import plot_unweighted_graph as plot
 consumer_key='UFkzPnRg6teYYVpopicJlHu2L'
 consumer_secret='CNuHKlXlI4nY2YtX1RFFwthZQ0ziebfkLfrxd6T6xZp9FX7w7P'
 twitter=Wrapper(consumer_key,consumer_secret)
-fields={'q':'russian vaccine','result_type':'popular','lang':'en'}
-search_for_tweets(fields)
+fields={'q':'trump biden','result_type':'recent','lang':'en'}
+# search_for_tweets(fields)
 
 
-tweets=twitter.search_tweets(10,fields)
+tweets=twitter.search_tweets(20,fields)
 print(len(tweets))
 favs=twitter.get_user_favorites('1155475035123081217',10)
 print(len(favs))
@@ -24,11 +24,13 @@ print(len(favs))
 # print(len(reps))
 reters=twitter.get_retweeters('1295061069870829575',10)
 print(len(reters))
-plot(twitter.graph.tweet_hashtag.graph,'tweets_hashtags')
+
+
+plot(twitter.graph.tweet_hashtag.graph, 'tweets_hashtags.svg')
 
 #
 i=0
-while True:
+while i>0:
     i+=1
     '''
     TODO: Put dynamic code here.
