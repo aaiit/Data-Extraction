@@ -28,6 +28,8 @@ def history(request):
 
     try:
         h=json.loads(request.session["history20"])
+        for i in range(len(h)):
+            h[i]["i"]=i+1
     except:
         h=[]
     return   render(request, "h.html",{"myname":request.session["myname"],
