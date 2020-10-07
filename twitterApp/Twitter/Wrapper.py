@@ -195,15 +195,11 @@ class Wrapper(Twitter):
         pug(self.graph.tweet_mentioned.graph, self.TWEETS_MENTIONED_USERS)
         # pug(self.graph.tweet_respondent.graph, self.TWEETS_RESPONDENTS)
         # uploadimage(self.USER_USER + '.gv.png'),
-        results['graph'] = [
-            # uploadimage(self.USERS_FAVORITES + '.gv.png'),
-            uploadimage(self.QUERIES_TWEETS ),
-            uploadimage(self.TWEETS_HASTHTAGS ),
-            # uploadimage(self.TWEETS_RETWEETERS + '.gv.png'),
-            uploadimage(self.TWEETS_LINKS ),
-            uploadimage(self.TWEETS_MENTIONED_USERS),
-            # uploadimage(self.TWEETS_RESPONDENTS + '.gv.png')
-        ]
+        results['graph'] = {self.QUERIES_TWEETS: uploadimage(self.QUERIES_TWEETS),
+        self.TWEETS_HASTHTAGS: uploadimage(self.TWEETS_HASTHTAGS),
+        self.TWEETS_LINKS: uploadimage(self.TWEETS_LINKS),
+        self.TWEETS_MENTIONED_USERS: uploadimage(self.TWEETS_MENTIONED_USERS)
+        }
         return results
 
 

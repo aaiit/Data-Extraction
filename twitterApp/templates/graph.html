@@ -13,9 +13,9 @@
 
 <div class="well">
     <h1>Graphs</h1>
-    {% for url in images%}
-    <br><br><strong>{{url.title}}</strong>
-    <img src="{{url.url}}" alt="Italian Trulli">
+    {% for title,url in images.items()%}
+    <br><br><strong>{{title}}</strong>
+    <img src="{{url}}" alt="Italian Trulli">
     {% endfor %}
 </div>
 
