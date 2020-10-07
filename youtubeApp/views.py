@@ -4,6 +4,17 @@ import json
 from youtubeApp.Youtube.Youtube import *
 from django.views.decorators.csrf import csrf_exempt
 from fire import upload,uploadfilds
+from datetime import datetime
+
+
+def savetohistory(request,h):
+    try:    
+        H=json.loads(request.session["history20"])+[h]
+    except:
+        H=[h]
+    request.session["history20"]=json.dumps(H)
+    print(">>>",request.session["history20"])
+
 def index(request):
 	return render(request,"ytindex.html")
 
@@ -17,6 +28,10 @@ def searchv(request):
 		data=search_videos(fields)
 		id=upload(data)
 		uploadfilds(json.dumps([f]),"_"+id)
+
+
+		h={"time":datetime.now().strftime("%H:%M:%S"),"fields":fields,"id":id,"type":"data"}
+
 		return HttpResponse(id)
 	return render(request,"searchv.html")
 
@@ -32,5 +47,7 @@ def ytcomments(request):
 		data=search_comments(fields)
 		id=upload(data)
 		uploadfilds(json.dumps([f]),"_"+id)
+		h={"time":datetime.now().strftime("%H:%M:%S"),"fields":fields,"id":id,"type":"data"}
+
 		return HttpResponse(id)
 	return render(request,"ytcomments.html")

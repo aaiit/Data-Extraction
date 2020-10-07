@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet" id="bootstrap-css">
+
+
+<h1>Hello {{myname}}</h1>
+<div class="well">
+    <table class="table">
+      <thead>
+        <tr>
+          <th> time</th>
+          <th> fields</th>
+          <th> id</th>
+
+          <th style="width: 36px;"></th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for f in historys%}
+        <tr>
+          <td>{{f.time}}</td>
+          <td>{{f.fields}}</td>
+         
+          <td><a href="http://dextraction.herokuapp.com/{{f.type}}/{{f.id}}">{{f.id}}</a></td>
+          
+          {% endfor%}
+        
+      </tbody>
+    </table>
+</div>
+
+
+
+
+
+
+
+
+
+{% endblock %}

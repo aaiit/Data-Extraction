@@ -11,13 +11,32 @@ from twitterApp.downloadImages import downloadImages
 from fire import database, upload, uploadfilds ,getrandomid
 import pandas as pd
 
+
+from datetime import datetime
+
+
+def savetohistory(request,h):
+    try:    
+        H=json.loads(request.session["history20"])+[h]
+    except:
+        H=[h]
+    request.session["history20"]=json.dumps(H)
+    print(">>>",request.session["history20"])
 def history(request):
     if "myname" not in request.session:
         request.session["myname"]=getrandomid(10)
-    return HttpResponse(request.session['myname'])
+
+    try:
+        h=json.loads(request.session["history20"])
+    except:
+        h=[]
+    return   render(request, "h.html",{"myname":request.session["myname"],
+        "historys":h})
 
 
 def graph(request, id=""):
+    if "myname" not in request.session:
+        request.session["myname"] = getrandomid(10)
     a = id  
     st = database.child("data/json/" + a).get().val()
     js = st
@@ -56,6 +75,8 @@ def graph(request, id=""):
 
 
 def table(request, id=""):
+    if "myname" not in request.session:
+        request.session["myname"] = getrandomid(10)
     a = id  # request.GET.get("a")
     st = database.child("data/json/" + a).get().val()
     js = st
@@ -81,6 +102,8 @@ def table(request, id=""):
 
 
 def index(request):
+    if "myname" not in request.session:
+        request.session["myname"] = getrandomid(10)
     return render(request, "index.html")
 
 
@@ -97,12 +120,13 @@ def formText(request):
         if type == "graphe":
             r = json.dumps(search_for_tweets(fields,request),default=str)
             id = upload(r)
-            print("id is "+id)
-            return HttpResponse(id)
-        id = get_tweets_text(fields)
-
-        # uploadfilds(json.dumps([f]), "_" + id)
-
+            type="graph"
+        else:
+            id = get_tweets_text(fields)
+            type="data"
+        print("id is "+id)
+        h={"time":datetime.now().strftime("%H:%M:%S"),"fields":fields,"id":id,"type":type}
+        savetohistory(request,h)
         return HttpResponse(id)
     return render(request, "f0.html")
 

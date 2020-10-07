@@ -207,6 +207,7 @@ class Wrapper(Twitter):
 def search_for_tweets(fields, request):
     # Get fileName from session 
     if "myname" not in request.session:
+        request.session["h"]=[]
         request.session["myname"] = getrandomid(10)
         twitter_wrapper = Wrapper(consumer_key, consumer_secret)
         fileName = request.session["myname"]
