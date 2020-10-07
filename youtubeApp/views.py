@@ -31,7 +31,7 @@ def searchv(request):
 
 
 		h={"time":datetime.now().strftime("%H:%M:%S"),"fields":fields,"id":id,"type":"data"}
-
+		savetohistory(request,h)
 		return HttpResponse(id)
 	return render(request,"searchv.html")
 
@@ -48,6 +48,7 @@ def ytcomments(request):
 		id=upload(data)
 		uploadfilds(json.dumps([f]),"_"+id)
 		h={"time":datetime.now().strftime("%H:%M:%S"),"fields":fields,"id":id,"type":"data"}
-
+		savetohistory(request,h)
+		
 		return HttpResponse(id)
 	return render(request,"ytcomments.html")
