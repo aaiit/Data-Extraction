@@ -13,6 +13,6 @@ def plot_unweighted_graph(graph, filename):
             g.add_edge(start.lower(),end)
             g.add_node(end)
     plt.figure(1, figsize=(g.number_of_nodes()/2+1, g.number_of_nodes()/2+1))
-    nx.draw_spring(g,with_labels=True,node_size=500,font_size=2)
+    nx.draw_spring(g,with_labels=True,node_size=500,font_size=2,node_color=['red' if t in graph else 'blue' for t in g.nodes()])
     plt.savefig(filename,format='svg')
     plt.close()
