@@ -32,7 +32,7 @@ def searchv(request):
 
 		id=upload(data)
 		uploadfilds(json.dumps([f]),"_"+id)
-		h={"time":datetime.now().strftime("%H:%M:%S"),"fields":fields,"id":id,"type":"data"}
+		h={"time":datetime.now().strftime("%H:%M:%S"),"fields":f,"id":id,"type":"data"}
 		savetohistory(request,h)
 		return HttpResponse(id)
 	return render(request,"searchv.html")
@@ -49,7 +49,7 @@ def ytcomments(request):
 		data=search_comments(fields)
 		id=upload(data)
 		uploadfilds(json.dumps([f]),"_"+id)
-		h={"time":datetime.now().strftime("%H:%M:%S"),"fields":fields,"id":id,"type":"data"}
+		h={"time":datetime.now().strftime("%H:%M:%S"),"fields":f,"id":id,"type":"data"}
 		savetohistory(request,h)
 		
 		return HttpResponse(id)
