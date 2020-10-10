@@ -26,10 +26,12 @@ def searchv(request):
 		print(fields)
 		fields["type"]="json"
 		data=search_videos(fields)
+
+
+		
+
 		id=upload(data)
 		uploadfilds(json.dumps([f]),"_"+id)
-
-
 		h={"time":datetime.now().strftime("%H:%M:%S"),"fields":fields,"id":id,"type":"data"}
 		savetohistory(request,h)
 		return HttpResponse(id)

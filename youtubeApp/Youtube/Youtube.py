@@ -57,8 +57,21 @@ def search_videos(fields):
                 continue
             add_video_newInfos(vid, video)
         i += 1
-    return json.dumps(videos, indent=3, default=str) if fields.pop('type', 'json') else pandas.DataFrame(videos).to_csv(
-        index=False)
+
+
+    BN=[]
+    for d in videos:
+        N={}
+        print(type(d))
+        for bk in d:
+            if type(d[bk]) is dict:
+                for k in d[bk]:
+                    N[k]=d[bk][k]
+            else:
+                N[bk]=d[bk]
+        BN.append(N)
+        
+    return json.dumps(BN, indent=3, default=str) 
 
 
 def search_comments(fields):
@@ -74,8 +87,18 @@ def search_comments(fields):
         comments.max_comments(count if count <= 50 else 50)
         comments.next_page()
         results.extend(comments.request())
-    return json.dumps(results, indent=3, default=str) if fields.pop('type', 'json') else pandas.DataFrame(
-        results).to_csv(index=False)
+    BN=[]
+    for d in results:
+        N={}
+        print(type(d))
+        for bk in d:
+            if type(d[bk]) is dict:
+                for k in d[bk]:
+                    N[k]=d[bk][k]
+            else:
+                N[bk]=d[bk]
+        BN.append(N)
+    return json.dumps(BN, indent=3, default=str) 
 
 
 ##################################################################  HELPER FUNCTION
