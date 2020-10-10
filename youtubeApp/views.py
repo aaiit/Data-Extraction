@@ -22,7 +22,7 @@ def index(request):
 def searchv(request):
 	if request.method=='POST':
 		fields=json.loads(request.body)
-		f=fields
+		f=dict(fields)
 		print(fields)
 		fields["type"]="json"
 		data=search_videos(fields)
@@ -43,7 +43,7 @@ def searchv(request):
 def ytcomments(request):
 	if request.method=='POST':
 		fields=json.loads(request.body)
-		f=fields
+		f=dict(fields)
 		print(fields)
 		fields["type"]="json"
 		data=search_comments(fields)
