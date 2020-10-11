@@ -5,7 +5,11 @@ from youtubeApp.Youtube.Youtube import *
 from django.views.decorators.csrf import csrf_exempt
 from fire import upload,uploadfilds
 from datetime import datetime
+from corona import corona
 
+def Corona(request):
+	return HttpResponse(corona())
+	return render(request,"ytindex.html")
 
 def savetohistory(request,h):
     try:    

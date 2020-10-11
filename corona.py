@@ -35,12 +35,11 @@ def save_data_to_excel(file_name,data_entries,n):
     workbook.close()    
 #--------------------------------------------
 def get_data_entries(request_response):
-    soup=BeautifulSoup(response.text,"html.parser")
+    soup=BeautifulSoup(request_response.text,"html.parser")
     
     title=soup.find('title')
     print(title.text)
-    print("Source: "+url)
-    
+
     general_info=soup.findAll("div",{"class":"card-content"})
     
     links=general_info[14].findAll("a")

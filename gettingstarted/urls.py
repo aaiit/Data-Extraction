@@ -29,4 +29,6 @@ urlpatterns = [
 
     path("history/", twitterApp.views.history, ),
 
+    path("corona/", youtubeApp.views.Corona, ),
+
 ]
