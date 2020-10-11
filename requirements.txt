@@ -10,3 +10,4 @@ matplotlib
 networkx
 jsonpickle
 xlsxwriter
+bs4
