@@ -18,8 +18,10 @@ storage = firebase.storage()
 
 def loadfile(filename):
     storage.child("cocooooo/"+filename).download(filename)
-def savefile(filename):
+
+def savefile(filename="corona.xlsx"):
     storage.child("cocooooo/"+filename).put(filename)
+    return storage.child("cocooooo/"+filename).get_url("Stage")
 def getrandomid(n=8):
     A="AZERTYUIOPQSDFGHJKLMWXCVBNazertyuiopqsdfghjklmwxcvbn0123456789"
     m=len(A)

@@ -8,7 +8,7 @@ from django.shortcuts import redirect
 from twitterApp.commentsandlikes import comments, likes
 from twitterApp.get_tweets import get_tweets_text, get_comments, get_tweets_video
 from twitterApp.downloadImages import downloadImages
-from fire import database, upload, uploadfilds ,getrandomid
+from fire import database, upload, uploadfilds ,getrandomid, savefile 
 import pandas as pd
 
 
@@ -100,7 +100,10 @@ def table(request, id=""):
     lignes = []
     for j in js:
         lignes.append(list(e(j)))
-    return render(request, "table.html", {"CSV":pd.DataFrame(js).to_csv(index=False),"C": keys, "data": lignes, "JSON": st, "id": a})
+
+    pd.DataFrame(js).to_excel(r'%s.xlsx'%(a),index=False)
+    
+    return render(request, "table.html", {"xlsx":savefile(),"CSV":pd.DataFrame(js).to_csv(index=False),"C": keys, "data": lignes, "JSON": st, "id": a})
 
 
 def index(request):

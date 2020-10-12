@@ -5,9 +5,11 @@
 <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet" id="bootstrap-css">
 
 
+
 <div class="btn-toolbar">
     <button onclick="Exporter()"class="btn" >Import Json</button>
     <button onclick="ExporterCSV()" class="btn" >Import CSV</button>
+    <a href="{{xlsx}}"><button  class="btn" >Import Xlsx</button></a>
     <button onclick="coperUrl()" class="btn" >Copy url</button>
  
 </div>
@@ -72,6 +74,9 @@
 
     function ExporterCSV(){
       download('{{id}}.csv',`{{CSV | safe}}`);
+    }
+    function ExporterXlsx(){
+        download('{{id}}.xlsx',`{{xlsx | safe}}`);
     }
 
   </script>

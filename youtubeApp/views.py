@@ -3,7 +3,7 @@ from django.http import HttpResponse
 import json
 from youtubeApp.Youtube.Youtube import *
 from django.views.decorators.csrf import csrf_exempt
-from fire import upload,uploadfilds
+from fire import upload,uploadfilds,savefile
 from datetime import datetime
 from corona import corona
 import pandas as pd
@@ -24,8 +24,10 @@ def Corona(request):
 	lignes = []
 	for j in js:
 		lignes.append(list(e(j)))
-	return render(request, "table.html", {"CSV":pd.DataFrame(js).to_csv(index=False),"C": keys, "data": lignes, "JSON": st, "id": "corona"})
-	
+
+	pd.DataFrame(js).to_excel(r'corona.xlsx',index=False)
+	return render(request, "table.html", {"xlsx":savefile(),"CSV":pd.DataFrame(js).to_csv(index=False),"C": keys, "data": lignes, "JSON": st, "id": "corona"})
+
 def savetohistory(request,h):
 	try:	
 		H=json.loads(request.session["history20"])+[h]
