@@ -103,7 +103,7 @@ def table(request, id=""):
 
     pd.DataFrame(js).to_excel(r'%s.xlsx'%(a),index=False)
     
-    return render(request, "table.html", {"xlsx":savefile(),"CSV":pd.DataFrame(js).to_csv(index=False),"C": keys, "data": lignes, "JSON": st, "id": a})
+    return render(request, "table.html", {"xlsx":savefile('%s.xlsx'%(a)),"CSV":pd.DataFrame(js).to_csv(index=False),"C": keys, "data": lignes, "JSON": st, "id": a})
 
 
 def index(request):
