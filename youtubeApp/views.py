@@ -9,16 +9,8 @@ from corona import corona
 import pandas as pd
 
 def Corona(request):
-	if "myname" not in request.session:
-		request.session["myname"] = getrandomid(10)
-	# a = id  # request.GET.get("a")
-	# st = database.child("data/json/" + a).get().val()
-	# js = st
-	# if js == None:
-		# return redirect('/')
-	js = corona()#json.loads(js)
+	js = corona()
 	st=json.dumps(js)
-
 
 	if (js == []): return HttpResponse("empty data")
 	keys = list(js[0].keys())
@@ -33,10 +25,7 @@ def Corona(request):
 	for j in js:
 		lignes.append(list(e(j)))
 	return render(request, "table.html", {"CSV":pd.DataFrame(js).to_csv(index=False),"C": keys, "data": lignes, "JSON": st, "id": "corona"})
-
-	# return HttpResponse(corona())
-	# return render(request,"ytindex.html")
-
+	
 def savetohistory(request,h):
 	try:	
 		H=json.loads(request.session["history20"])+[h]
