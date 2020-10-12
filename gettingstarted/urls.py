@@ -3,13 +3,10 @@ from django.contrib import admin
 admin.autodiscover()
 import twitterApp.views
 import youtubeApp.views
-
 from django.shortcuts import render
-def index(request):
-	return render(request,"home.html")
 
 urlpatterns = [
-	path("", index),
+	path("", twitterApp.views.home),
 
     path("twitter/", twitterApp.views.index),
     path("twitter/form1/", twitterApp.views.formText),

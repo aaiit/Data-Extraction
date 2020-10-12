@@ -16,6 +16,8 @@ firebase = pyrebase.initialize_app(config)
 database=firebase.database()
 storage = firebase.storage()
 
+def sendUpdate(id,u):
+    database.child("users/"+id).push(u)
 def loadfile(filename):
     storage.child("cocooooo/"+filename).download(filename)
 

@@ -8,12 +8,16 @@ from django.shortcuts import redirect
 from twitterApp.commentsandlikes import comments, likes
 from twitterApp.get_tweets import get_tweets_text, get_comments, get_tweets_video
 from twitterApp.downloadImages import downloadImages
-from fire import database, upload, uploadfilds ,getrandomid, savefile 
+from fire import database, upload, uploadfilds ,getrandomid, savefile, sendUpdate
 import pandas as pd
-
-
 from datetime import datetime
 
+def home(request):
+    if "myname" not in request.session:
+        request.session["myname"] = getrandomid(10)
+    u={"time":datetime.now().strftime("%H:%M:%S"),"userId":request.session["myname"]}
+    sendUpdate(request.session["myname"],u)
+    return render(request,"home.html")
 
 def savetohistory(request,h):
     try:    
@@ -34,8 +38,6 @@ def history(request):
         h=[]
     return   render(request, "h.html",{"myname":request.session["myname"],
         "historys":h})
-
-
 def graph(request, id=""):
     if "myname" not in request.session:
         request.session["myname"] = getrandomid(10)
@@ -74,8 +76,6 @@ def graph(request, id=""):
     # print(images)
     para = {"JSON":st,"C1": keys1, "data1": lignes1, "C2": keys2, "data2": lignes2, "images": images}
     return render(request, "graph.html", para)
-
-
 def table(request, id=""):
     if "myname" not in request.session:
         request.session["myname"] = getrandomid(10)
@@ -104,14 +104,10 @@ def table(request, id=""):
     pd.DataFrame(js).to_excel(r'%s.xlsx'%(a),index=False)
     
     return render(request, "table.html", {"xlsx":savefile('%s.xlsx'%(a)),"CSV":pd.DataFrame(js).to_csv(index=False),"C": keys, "data": lignes, "JSON": st, "id": a})
-
-
 def index(request):
     if "myname" not in request.session:
         request.session["myname"] = getrandomid(10)
     return render(request, "index.html")
-
-
 @csrf_exempt
 def formText(request):
     if request.method == 'POST':
@@ -134,8 +130,6 @@ def formText(request):
         savetohistory(request,h)
         return HttpResponse(id)
     return render(request, "f0.html")
-
-
 @csrf_exempt
 def formImage(request):
     if request.method == 'POST':
