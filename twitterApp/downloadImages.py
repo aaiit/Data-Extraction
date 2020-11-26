@@ -5,11 +5,11 @@ consumer_key = "UFkzPnRg6teYYVpopicJlHu2L"
 consumer_secret = "CNuHKlXlI4nY2YtX1RFFwthZQ0ziebfkLfrxd6T6xZp9FX7w7P"
 
 callback_url = 'oob'
-auth = tweepy.OAuthHandler(consumer_key, consumer_secret, callback_url)
-redirect_url = auth.get_authorization_url()
+authen = tweepy.OAuthHandler(consumer_key, consumer_secret, callback_url)
+redirect_url = authen.get_authorization_url()
 
-auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
-api = tweepy.API(auth, timeout=11)
+authen = tweepy.OAuthHandler(consumer_key, consumer_secret)
+api = tweepy.API(authen, timeout=11)
 
 
 def downloadImages(fields):
