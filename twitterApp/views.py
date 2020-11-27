@@ -13,34 +13,8 @@ import pandas as pd
 from datetime import datetime
 
 def home(request):
-    if "myname" not in request.session:
-        request.session["myname"] = getrandomid(10)
-    u={"time":datetime.now().strftime("%H:%M:%S"),"userId":request.session["myname"]}
-    sendUpdate(request.session["myname"],u)
     return render(request,"home.html")
-
-def savetohistory(request,h):
-    try:    
-        H=json.loads(request.session["history20"])+[h]
-    except:
-        H=[h]
-    request.session["history20"]=json.dumps(H)
-    print(">>>",request.session["history20"])
-def history(request):
-    if "myname" not in request.session:
-        request.session["myname"]=getrandomid(10)
-
-    try:
-        h=json.loads(request.session["history20"])
-        for i in range(len(h)):
-            h[i]["i"]=i+1
-    except:
-        h=[]
-    return   render(request, "h.html",{"myname":request.session["myname"],
-        "historys":h})
 def graph(request, id=""):
-    if "myname" not in request.session:
-        request.session["myname"] = getrandomid(10)
     a = id  
     st = database.child("data/json/" + a).get().val()
     js = st
@@ -77,8 +51,6 @@ def graph(request, id=""):
     para = {"JSON":st,"C1": keys1, "data1": lignes1, "C2": keys2, "data2": lignes2, "images": images}
     return render(request, "graph.html", para)
 def table(request, id=""):
-    if "myname" not in request.session:
-        request.session["myname"] = getrandomid(10)
     a = id  # request.GET.get("a")
     st = database.child("data/json/" + a).get().val()
     js = st
@@ -105,8 +77,6 @@ def table(request, id=""):
     
     return render(request, "table.html", {"xlsx":savefile('%s.xlsx'%(a)),"CSV":pd.DataFrame(js).to_csv(index=False),"C": keys, "data": lignes, "JSON": st, "id": a})
 def index(request):
-    if "myname" not in request.session:
-        request.session["myname"] = getrandomid(10)
     return render(request, "index.html")
 @csrf_exempt
 def formText(request):
@@ -114,10 +84,7 @@ def formText(request):
         fields = json.loads(request.body)
         print(fields)
         f = fields
-
-
         type = fields["type"]
-        # request.session['coco']=json.dumps(fields)
         if type == "graphe":
             r = json.dumps(search_for_tweets(fields,request),default=str)
             id = upload(r)

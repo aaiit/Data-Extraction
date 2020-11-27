@@ -28,13 +28,6 @@ def Corona(request):
 	pd.DataFrame(js).to_excel(r'corona.xlsx',index=False)
 	return render(request, "table.html", {"xlsx":savefile(),"CSV":pd.DataFrame(js).to_csv(index=False),"C": keys, "data": lignes, "JSON": st, "id": "corona"})
 
-def savetohistory(request,h):
-	try:	
-		H=json.loads(request.session["history20"])+[h]
-	except:
-		H=[h]
-	request.session["history20"]=json.dumps(H)
-	print(">>>",request.session["history20"])
 
 def index(request):
 	return render(request,"ytindex.html")
@@ -47,14 +40,7 @@ def searchv(request):
 		print(fields)
 		fields["type"]="json"
 		data=search_videos(fields)
-
-
-		
-
 		id=upload(data)
-		uploadfilds(json.dumps([f]),"_"+id)
-		h={"time":datetime.now().strftime("%H:%M:%S"),"fields":f,"id":id,"type":"data"}
-		savetohistory(request,h)
 		return HttpResponse(id)
 	return render(request,"searchv.html")
 
@@ -69,9 +55,5 @@ def ytcomments(request):
 		fields["type"]="json"
 		data=search_comments(fields)
 		id=upload(data)
-		uploadfilds(json.dumps([f]),"_"+id)
-		h={"time":datetime.now().strftime("%H:%M:%S"),"fields":f,"id":id,"type":"data"}
-		savetohistory(request,h)
-		
 		return HttpResponse(id)
 	return render(request,"ytcomments.html")
