@@ -51,3 +51,98 @@ java.net.UnknownHostException: developer.android.com
 2020-08-24 16:28:07,660 [  95355]   WARN - com.intellij.util.xmlb.Binding - no accessors for class org.jetbrains.kotlin.idea.core.script.configuration.utils.ScriptClassRootsStorage 
 OpenJDK 64-Bit Server VM warning: Option UseConcMarkSweepGC was deprecated in version 9.0 and will likely be removed in a future release.
 Already running
+OpenJDK 64-Bit Server VM warning: Option UseConcMarkSweepGC was deprecated in version 9.0 and will likely be removed in a future release.
+2020-11-27 17:54:33,080 [   2623]   WARN - llij.ide.plugins.PluginManager - Resource bundle redefinition for plugin 'com.jetbrains.pycharm.community.customization'. Old value: messages.ActionsBundle, new value: messages.PyBundle 
+2020-11-27 17:54:45,834 [  15377]   WARN - nSystem.impl.ActionManagerImpl - keymap "Visual Studio" not found [Plugin: com.intellij] 
+2020-11-27 17:54:45,838 [  15381]   WARN - nSystem.impl.ActionManagerImpl - keymap "Eclipse" not found [Plugin: com.intellij] 
+2020-11-27 17:54:45,838 [  15381]   WARN - nSystem.impl.ActionManagerImpl - keymap "NetBeans 6.5" not found [Plugin: com.intellij] 
+2020-11-27 17:54:45,838 [  15381]   WARN - nSystem.impl.ActionManagerImpl - keymap "Visual Studio" not found [Plugin: com.intellij] 
+2020-11-27 17:54:52,193 [  21736]   WARN - nSystem.impl.ActionManagerImpl - keymap "Eclipse" not found [Plugin: PythonCore] 
+2020-11-27 17:54:52,194 [  21737]   WARN - nSystem.impl.ActionManagerImpl - keymap "NetBeans 6.5" not found [Plugin: PythonCore] 
+2020-11-27 17:54:57,253 [  26796]   WARN - .diagnostic.PerformanceWatcher - UI was frozen for 10266ms, details saved to /home/ayoub/.cache/JetBrains/PyCharmCE2020.1/log/threadDumps-freeze-20201127-175451-PC-201.8538.36-ProjectUiFrameAllocator.initNewFrame-10sec 
+2020-11-27 17:55:06,357 [  35900]   WARN - Container.ComponentManagerImpl - Do not use constructor injection (requestorClass=org.jetbrains.fortran.ide.FortranCodeModificationListener) 
+2020-11-27 17:55:25,903 [  55446]   WARN - .diagnostic.PerformanceWatcher - UI was frozen for 8073ms, details saved to /home/ayoub/.cache/JetBrains/PyCharmCE2020.1/log/threadDumps-freeze-20201127-175522-PC-201.8538.36-FreetypeFontScaler.getGlyphImageNative-8sec 
+2020-11-27 17:55:40,161 [  69704]   WARN - openapi.wm.impl.ToolWindowImpl - ToolWindow icons should be 13x13. Please fix ToolWindow (ID:  Problems View) or icon jar:file:/usr/local/Programs/pycharm-community-2020.1.1/lib/icons.jar!/general/warning.svg 
+2020-11-27 17:55:45,682 [  75225]   WARN - .diagnostic.PerformanceWatcher - UI was frozen for 7744ms, details saved to /home/ayoub/.cache/JetBrains/PyCharmCE2020.1/log/threadDumps-freeze-20201127-175542-PC-201.8538.36-ClassLoader.findBootstrapClass-7sec 
+2020-11-27 17:56:16,085 [ 105628]   WARN - .skeletons.PySkeletonRefresher - Some skeletons failed to generate 
+2020-11-27 17:56:16,086 [ 105629]   WARN - .skeletons.PySkeletonRefresher - Crypto.Cipher._ARC4 
+2020-11-27 17:56:16,086 [ 105629]   WARN - .skeletons.PySkeletonRefresher - Crypto.Cipher._Salsa20 
+2020-11-27 17:56:16,086 [ 105629]   WARN - .skeletons.PySkeletonRefresher - Crypto.Cipher._chacha20 
+2020-11-27 17:56:16,086 [ 105629]   WARN - .skeletons.PySkeletonRefresher - Crypto.Cipher._raw_aes 
+2020-11-27 17:56:16,087 [ 105630]   WARN - .skeletons.PySkeletonRefresher - Crypto.Cipher._raw_aesni 
+2020-11-27 17:56:16,087 [ 105630]   WARN - .skeletons.PySkeletonRefresher - Crypto.Cipher._raw_arc2 
+2020-11-27 17:56:16,087 [ 105630]   WARN - .skeletons.PySkeletonRefresher - Crypto.Cipher._raw_blowfish 
+2020-11-27 17:56:16,087 [ 105630]   WARN - .skeletons.PySkeletonRefresher - Crypto.Cipher._raw_cast 
+2020-11-27 17:56:16,087 [ 105630]   WARN - .skeletons.PySkeletonRefresher - Crypto.Cipher._raw_cbc 
+2020-11-27 17:56:16,087 [ 105630]   WARN - .skeletons.PySkeletonRefresher - Crypto.Cipher._raw_cfb 
+2020-11-27 17:56:16,087 [ 105630]   WARN - .skeletons.PySkeletonRefresher - Crypto.Cipher._raw_ctr 
+2020-11-27 17:56:16,087 [ 105630]   WARN - .skeletons.PySkeletonRefresher - Crypto.Cipher._raw_des 
+2020-11-27 17:56:16,087 [ 105630]   WARN - .skeletons.PySkeletonRefresher - Crypto.Cipher._raw_des3 
+2020-11-27 17:56:16,087 [ 105630]   WARN - .skeletons.PySkeletonRefresher - Crypto.Cipher._raw_ecb 
+2020-11-27 17:56:16,087 [ 105630]   WARN - .skeletons.PySkeletonRefresher - Crypto.Cipher._raw_ocb 
+2020-11-27 17:56:16,087 [ 105630]   WARN - .skeletons.PySkeletonRefresher - Crypto.Cipher._raw_ofb 
+2020-11-27 17:56:16,087 [ 105630]   WARN - .skeletons.PySkeletonRefresher - Crypto.Hash._BLAKE2b 
+2020-11-27 17:56:16,087 [ 105630]   WARN - .skeletons.PySkeletonRefresher - Crypto.Hash._BLAKE2s 
+2020-11-27 17:56:16,087 [ 105630]   WARN - .skeletons.PySkeletonRefresher - Crypto.Hash._MD2 
+2020-11-27 17:56:16,087 [ 105630]   WARN - .skeletons.PySkeletonRefresher - Crypto.Hash._MD4 
+2020-11-27 17:56:16,087 [ 105630]   WARN - .skeletons.PySkeletonRefresher - Crypto.Hash._RIPEMD160 
+2020-11-27 17:56:16,087 [ 105630]   WARN - .skeletons.PySkeletonRefresher - Crypto.Hash._SHA224 
+2020-11-27 17:56:16,087 [ 105630]   WARN - .skeletons.PySkeletonRefresher - Crypto.Hash._SHA256 
+2020-11-27 17:56:16,087 [ 105630]   WARN - .skeletons.PySkeletonRefresher - Crypto.Hash._SHA384 
+2020-11-27 17:56:16,087 [ 105630]   WARN - .skeletons.PySkeletonRefresher - Crypto.Hash._SHA512 
+2020-11-27 17:56:16,087 [ 105630]   WARN - .skeletons.PySkeletonRefresher - Crypto.Hash._keccak 
+2020-11-27 17:56:16,087 [ 105630]   WARN - .skeletons.PySkeletonRefresher - Crypto.Util._cpuid 
+2020-11-27 17:56:16,087 [ 105630]   WARN - .skeletons.PySkeletonRefresher - Crypto.Util._galois 
+2020-11-27 17:56:16,087 [ 105630]   WARN - .skeletons.PySkeletonRefresher - Crypto.Util._strxor 
+2020-11-27 17:56:16,087 [ 105630]   WARN - .skeletons.PySkeletonRefresher - matplotlib.backends._tkagg 
+2020-11-27 17:56:16,087 [ 105630]   WARN - .skeletons.PySkeletonRefresher - scipy.optimize._lsap_ 
+2020-11-27 17:56:16,087 [ 105630]   WARN - .skeletons.PySkeletonRefresher - selenium.webdriver.firefox.amd64.x_ignore_nofocus 
+2020-11-27 17:56:16,088 [ 105631]   WARN - .skeletons.PySkeletonRefresher - selenium.webdriver.firefox.x86.x_ignore_nofocus 
+2020-11-27 17:56:16,088 [ 105631]   WARN - .skeletons.PySkeletonRefresher - tensorflow.compiler.tf2xla.ops._xla_ops 
+2020-11-27 17:56:16,088 [ 105631]   WARN - .skeletons.PySkeletonRefresher - tensorflow.core.kernels.libtfkernel_sobol_op 
+2020-11-27 17:56:16,088 [ 105631]   WARN - .skeletons.PySkeletonRefresher - tensorflow.lite.experimental.microfrontend.python.ops._audio_microfrontend_op 
+2020-11-27 18:00:30,997 [ 360540]   WARN - Container.ComponentManagerImpl - Do not use constructor injection (requestorClass=org.jetbrains.fortran.ide.FortranCodeModificationListener) 
+2020-11-27 18:00:31,201 [ 360744]   WARN - openapi.wm.impl.ToolWindowImpl - ToolWindow icons should be 13x13. Please fix ToolWindow (ID:  Problems View) or icon jar:file:/usr/local/Programs/pycharm-community-2020.1.1/lib/icons.jar!/general/warning.svg 
+2020-11-27 18:00:36,999 [ 366542]   WARN - .skeletons.PySkeletonRefresher - Some skeletons failed to generate 
+2020-11-27 18:00:36,999 [ 366542]   WARN - .skeletons.PySkeletonRefresher - Crypto.Cipher._ARC4 
+2020-11-27 18:00:36,999 [ 366542]   WARN - .skeletons.PySkeletonRefresher - Crypto.Cipher._Salsa20 
+2020-11-27 18:00:36,999 [ 366542]   WARN - .skeletons.PySkeletonRefresher - Crypto.Cipher._chacha20 
+2020-11-27 18:00:36,999 [ 366542]   WARN - .skeletons.PySkeletonRefresher - Crypto.Cipher._raw_aes 
+2020-11-27 18:00:36,999 [ 366542]   WARN - .skeletons.PySkeletonRefresher - Crypto.Cipher._raw_aesni 
+2020-11-27 18:00:36,999 [ 366542]   WARN - .skeletons.PySkeletonRefresher - Crypto.Cipher._raw_arc2 
+2020-11-27 18:00:36,999 [ 366542]   WARN - .skeletons.PySkeletonRefresher - Crypto.Cipher._raw_blowfish 
+2020-11-27 18:00:36,999 [ 366542]   WARN - .skeletons.PySkeletonRefresher - Crypto.Cipher._raw_cast 
+2020-11-27 18:00:36,999 [ 366542]   WARN - .skeletons.PySkeletonRefresher - Crypto.Cipher._raw_cbc 
+2020-11-27 18:00:36,999 [ 366542]   WARN - .skeletons.PySkeletonRefresher - Crypto.Cipher._raw_cfb 
+2020-11-27 18:00:36,999 [ 366542]   WARN - .skeletons.PySkeletonRefresher - Crypto.Cipher._raw_ctr 
+2020-11-27 18:00:36,999 [ 366542]   WARN - .skeletons.PySkeletonRefresher - Crypto.Cipher._raw_des 
+2020-11-27 18:00:36,999 [ 366542]   WARN - .skeletons.PySkeletonRefresher - Crypto.Cipher._raw_des3 
+2020-11-27 18:00:36,999 [ 366542]   WARN - .skeletons.PySkeletonRefresher - Crypto.Cipher._raw_ecb 
+2020-11-27 18:00:36,999 [ 366542]   WARN - .skeletons.PySkeletonRefresher - Crypto.Cipher._raw_ocb 
+2020-11-27 18:00:36,999 [ 366542]   WARN - .skeletons.PySkeletonRefresher - Crypto.Cipher._raw_ofb 
+2020-11-27 18:00:36,999 [ 366542]   WARN - .skeletons.PySkeletonRefresher - Crypto.Hash._BLAKE2b 
+2020-11-27 18:00:36,999 [ 366542]   WARN - .skeletons.PySkeletonRefresher - Crypto.Hash._BLAKE2s 
+2020-11-27 18:00:36,999 [ 366542]   WARN - .skeletons.PySkeletonRefresher - Crypto.Hash._MD2 
+2020-11-27 18:00:36,999 [ 366542]   WARN - .skeletons.PySkeletonRefresher - Crypto.Hash._MD4 
+2020-11-27 18:00:36,999 [ 366542]   WARN - .skeletons.PySkeletonRefresher - Crypto.Hash._RIPEMD160 
+2020-11-27 18:00:36,999 [ 366542]   WARN - .skeletons.PySkeletonRefresher - Crypto.Hash._SHA224 
+2020-11-27 18:00:36,999 [ 366542]   WARN - .skeletons.PySkeletonRefresher - Crypto.Hash._SHA256 
+2020-11-27 18:00:36,999 [ 366542]   WARN - .skeletons.PySkeletonRefresher - Crypto.Hash._SHA384 
+2020-11-27 18:00:36,999 [ 366542]   WARN - .skeletons.PySkeletonRefresher - Crypto.Hash._SHA512 
+2020-11-27 18:00:36,999 [ 366542]   WARN - .skeletons.PySkeletonRefresher - Crypto.Hash._keccak 
+2020-11-27 18:00:36,999 [ 366542]   WARN - .skeletons.PySkeletonRefresher - Crypto.Util._cpuid 
+2020-11-27 18:00:36,999 [ 366542]   WARN - .skeletons.PySkeletonRefresher - Crypto.Util._galois 
+2020-11-27 18:00:36,999 [ 366542]   WARN - .skeletons.PySkeletonRefresher - Crypto.Util._strxor 
+2020-11-27 18:00:36,999 [ 366542]   WARN - .skeletons.PySkeletonRefresher - matplotlib.backends._tkagg 
+2020-11-27 18:00:36,999 [ 366542]   WARN - .skeletons.PySkeletonRefresher - scipy.optimize._lsap_ 
+2020-11-27 18:00:37,000 [ 366543]   WARN - .skeletons.PySkeletonRefresher - selenium.webdriver.firefox.amd64.x_ignore_nofocus 
+2020-11-27 18:00:37,000 [ 366543]   WARN - .skeletons.PySkeletonRefresher - selenium.webdriver.firefox.x86.x_ignore_nofocus 
+2020-11-27 18:00:37,000 [ 366543]   WARN - .skeletons.PySkeletonRefresher - tensorflow.compiler.tf2xla.ops._xla_ops 
+2020-11-27 18:00:37,000 [ 366543]   WARN - .skeletons.PySkeletonRefresher - tensorflow.core.kernels.libtfkernel_sobol_op 
+2020-11-27 18:00:37,000 [ 366543]   WARN - .skeletons.PySkeletonRefresher - tensorflow.lite.experimental.microfrontend.python.ops._audio_microfrontend_op 
+2020-11-27 18:00:40,110 [ 369653]   WARN - om.intellij.util.FieldAccessor - Field not found: javafx.embed.swing.JFXPanel.scaleFactor 
+2020-11-27 18:28:48,426 [2057969]  ERROR - rm.terminal.model.JediTerminal - Unsupported erase in display mode:3 
+2020-11-27 18:28:49,375 [2058918]  ERROR - rm.terminal.model.JediTerminal - Unsupported erase in display mode:3 
+2020-11-27 18:28:49,716 [2059259]  ERROR - rm.terminal.model.JediTerminal - Unsupported erase in display mode:3 
+2020-11-27 19:01:44,407 [4033950]   WARN - a.repo.GitUntrackedFilesHolder - Ignoring untracked file under another root: /home/ayoub/Desktop/Data-Extraction/gettingstarted/__pycache__/__init__.cpython-38.pyc; root: file:///home/ayoub/Desktop/Data-Extraction; mapped root: null 
+2020-11-27 19:01:44,408 [4033951]   WARN - a.repo.GitUntrackedFilesHolder - Ignoring untracked file under another root: /home/ayoub/Desktop/Data-Extraction/gettingstarted/__pycache__/settings.cpython-38.pyc; root: file:///home/ayoub/Desktop/Data-Extraction; mapped root: null 
