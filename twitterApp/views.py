@@ -93,8 +93,6 @@ def formText(request):
             id = get_tweets_text(fields)
             type="data"
         print("id is "+id)
-        h={"time":datetime.now().strftime("%H:%M:%S"),"fields":fields,"id":id,"type":type}
-        savetohistory(request,h)
         return HttpResponse(id)
     return render(request, "f0.html")
 @csrf_exempt
@@ -104,7 +102,6 @@ def formImage(request):
         type = fields["type"]
         print(fields)
         return HttpResponse(json.dumps(downloadImages(fields)))
-
     return render(request, "fimage.html")
 
 
