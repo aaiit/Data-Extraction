@@ -95,6 +95,7 @@ def formText(request):
         print("id is "+id)
         return HttpResponse(id)
     return render(request, "f0.html")
+# ++
 @csrf_exempt
 def formImage(request):
     if request.method == 'POST':
