@@ -205,22 +205,18 @@ class Wrapper(Twitter):
 
 
 def search_for_tweets(fields, request):
-    # Get fileName from session 
-    if "myname" not in request.session:
-        request.session["h"]=[]
-        request.session["myname"] = getrandomid(10)
+    if "myname33" not in request.session:
+        request.session["myname33"] = getrandomid(10)
         twitter_wrapper = Wrapper(consumer_key, consumer_secret)
-        fileName = request.session["myname"]
+        fileName = request.session["myname33"]
     else:
-        try:
-            fileName = request.session["myname"]
-            loadfile(fileName)
-            twitter_wrapper = pickle.load(open(fileName, "rb"))
-        except:twitter_wrapper = Wrapper(consumer_key, consumer_secret)
-    twitter_wrapper.search_tweets(int(fields.pop('count', 10)), fields)
+        fileName = request.session["myname33"]
+        loadfile(fileName)
+        twitter_wrapper = pickle.load(open(fileName, "rb"))
 
+    print(">>NAME>>",request.session["myname33"])
+    twitter_wrapper.search_tweets(int(fields.pop('count', 10)), fields)
     pickle.dump(twitter_wrapper, open(fileName, "wb"))
-    # save file from firebase
     savefile(fileName)
 
     return twitter_wrapper.return_all_data()
