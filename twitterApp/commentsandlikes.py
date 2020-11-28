@@ -30,7 +30,7 @@ def comments(fields):
                     break
     if len(list) == 0:
         return '{}'
-    mx = max(l[0] for l in list)
+    mx = max(l['Favorite'] for l in list)
     if int(mx) == 0:
         return "{}"
     else:
@@ -49,10 +49,6 @@ def likes(fields):
     result_type = fields.pop('result_type', 'popular')
     type = fields.pop('type', 'json')
     keys = fields.pop('output', TWEET_KEYS)
-    # if not check_date_format(fields['since'] ):
-    #     fields.pop('since', '')
-    # if not check_date_format(fields['until']):
-    #     fields.pop('until', '')
     l = []
     print(q, lang, result_type)
     for tweet in tweepy.Cursor(api.search, q=q, **fields, lang=lang, result_type=result_type).items(100):
@@ -62,5 +58,5 @@ def likes(fields):
                   'source': tweet.source, 'text': str(tweet.text)})
     if len(l) == 0:
         return '[]'
-    l = sorted(l, key=lambda x: x[1])
+    l = sorted(l, key=lambda x: x['favorite'])
     return upload(pd.DataFrame(l[0]).to_csv(index=False))
