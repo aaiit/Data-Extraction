@@ -23,13 +23,14 @@ def comments(fields):
                                timeout=999999).items(500):
         if hasattr(tweet, 'in_reply_to_status_id_str'):
             if tweet.in_reply_to_status_id_str == str(tweet_id):
-                list.append((tweet.favorite_count, tweet.id, tweet.in_reply_to_status_id_str, tweet.user.name,
-                             tweet.user.id, tweet.text))
+                list.append(
+                    {"Favorite": tweet.favorite_count, "Id": tweet.id, "Replied to": tweet.in_reply_to_status_id_str,
+                     "Username": tweet.user.name, "User id": tweet.user.id, "Text": tweet.text})
                 if len(list) >= count:
                     break
     if len(list) == 0:
         return '{}'
-    mx = max(l[0] for l in list)
+    mx = max(l['Favorite'] for l in list)
     if int(mx) == 0:
         return "{}"
     else:
@@ -48,17 +49,19 @@ def likes(fields):
     result_type = fields.pop('result_type', 'popular')
     type = fields.pop('type', 'json')
     keys = fields.pop('output', TWEET_KEYS)
-    # if not check_date_format(fields['since'] ):
-    #     fields.pop('since', '')
-    # if not check_date_format(fields['until']):
-    #     fields.pop('until', '')
     l = []
     print(q, lang, result_type)
     for tweet in tweepy.Cursor(api.search, q=q, **fields, lang=lang, result_type=result_type).items(100):
         print("->>>>>>>>>>>  ")
-        l.append((tweet.id, tweet.favorite_count, tweet.user.name, tweet.created_at, tweet.lang, tweet.retweet_count,
-                  tweet.source, tweet.truncated, str(tweet.text)))
+        l.append({'id': tweet.id, 'favorite': tweet.favorite_count, 'username': tweet.user.name,
+                  'create at': tweet.created_at, 'language': tweet.lang, 'retweets': tweet.retweet_count,
+                  'source': tweet.source, 'text': str(tweet.text)})
     if len(l) == 0:
         return '[]'
+<<<<<<< HEAD
     l = sorted(l, key=lambda x: x[1])
     return pd.DataFrame(l[0]).to_csv(index=False) if type == 'csv' else json.dumps(l[0], indent=3, default=str)
+=======
+    l = sorted(l, key=lambda x: x['favorite'])
+    return upload(pd.DataFrame(l[0]).to_csv(index=False))
+>>>>>>> 159c8c1277ad3c90c66ad1250fc5a952f59b90f8
