@@ -5,7 +5,6 @@ from youtubeApp.Youtube.Youtube import *
 from django.views.decorators.csrf import csrf_exempt
 from fire import upload,uploadfilds,savefile
 from datetime import datetime
-from corona import corona
 import pandas as pd
 
 def Corona(request):

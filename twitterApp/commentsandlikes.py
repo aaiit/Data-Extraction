@@ -1,5 +1,5 @@
 import json
-
+from fire import upload
 import pandas as pd
 import tweepy
 
@@ -37,8 +37,8 @@ def comments(fields):
         for t in list:
             if int(mx) == int(t[0]):
                 final_list.append((t[0], t[3], t[5]))
-        return pd.DataFrame(final_list, columns=['favorite_count', 'User', 'Comment']).to_csv(
-            index=False) if type == 'csv' else json.dumps(final_list, indent=3, default=str)
+        return upload(pd.DataFrame(final_list, columns=['favorite_count', 'User', 'Comment']).to_csv(
+            index=False))
 
 
 def likes(fields):
@@ -62,4 +62,4 @@ def likes(fields):
     if len(l) == 0:
         return '[]'
     l = sorted(l, key=lambda x: x[1])
-    return pd.DataFrame(l[0]).to_csv(index=False) if type == 'csv' else json.dumps(l[0], indent=3, default=str)
+    return upload(pd.DataFrame(l[0]).to_csv(index=False))

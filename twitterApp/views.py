@@ -93,10 +93,9 @@ def formText(request):
             id = get_tweets_text(fields)
             type="data"
         print("id is "+id)
-        h={"time":datetime.now().strftime("%H:%M:%S"),"fields":fields,"id":id,"type":type}
-        savetohistory(request,h)
         return HttpResponse(id)
     return render(request, "f0.html")
+# ++
 @csrf_exempt
 def formImage(request):
     if request.method == 'POST':
@@ -104,7 +103,6 @@ def formImage(request):
         type = fields["type"]
         print(fields)
         return HttpResponse(json.dumps(downloadImages(fields)))
-
     return render(request, "fimage.html")
 
 
@@ -125,7 +123,6 @@ def f1(request):
         type = fields["type"]
         print(fields)
         id = get_comments(fields)
-        uploadfilds(json.dumps([f]), "_" + id)
         return HttpResponse(id)
     return render(request, "f1.html")
 
@@ -136,7 +133,8 @@ def f2(request):
         fields = json.loads(request.body)
         type = fields["type"]
         print(fields)
-        return HttpResponse(likes(fields))
+        id=likes(fields)
+        return HttpResponse(id)
     return render(request, "f2.html")
 
 
@@ -146,7 +144,8 @@ def f3(request):
         fields = json.loads(request.body)
         type = fields["type"]
         print(fields)
-        return HttpResponse(comments(fields))
+        id=comments(fields)
+        return HttpResponse(id)
     return render(request, "f3.html")
 
 
