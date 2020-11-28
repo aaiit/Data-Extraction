@@ -23,8 +23,9 @@ def comments(fields):
                                timeout=999999).items(500):
         if hasattr(tweet, 'in_reply_to_status_id_str'):
             if tweet.in_reply_to_status_id_str == str(tweet_id):
-                list.append((tweet.favorite_count, tweet.id, tweet.in_reply_to_status_id_str, tweet.user.name,
-                             tweet.user.id, tweet.text))
+                list.append(
+                    {"Favorite": tweet.favorite_count, "Id": tweet.id, "Replied to": tweet.in_reply_to_status_id_str,
+                     "Username": tweet.user.name, "User id": tweet.user.id, "Text": tweet.text})
                 if len(list) >= count:
                     break
     if len(list) == 0:
