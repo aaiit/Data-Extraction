@@ -53,6 +53,7 @@ def graph(request, id=""):
 def table(request, id=""):
     a = id  # request.GET.get("a")
     st = database.child("data/json/" + a).get().val()
+    print("++++",st)
     js = st
     if js == None:
         return redirect('/')
@@ -111,7 +112,8 @@ def formVideo(request):
     if request.method == 'POST':
         fields = json.loads(request.body)
         print(fields)
-        return HttpResponse(get_tweets_video(fields))
+        id=upload(json.dumps(get_tweets_video(fields)))
+        return HttpResponse(id)
     return render(request, "fvideo.html")
 
 
@@ -133,8 +135,7 @@ def f2(request):
         fields = json.loads(request.body)
         type = fields["type"]
         print(fields)
-        id=likes(fields)
-        return HttpResponse(id)
+        return HttpResponse(likes(fields))
     return render(request, "f2.html")
 
 
@@ -144,9 +145,9 @@ def f3(request):
         fields = json.loads(request.body)
         type = fields["type"]
         print(fields)
-        id=comments(fields)
-        return HttpResponse(id)
+        return HttpResponse(comments(fields))
     return render(request, "f3.html")
+
 
 
 def standardOperators(request):

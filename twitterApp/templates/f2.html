@@ -37,7 +37,7 @@
                             </div>
                         </div>
                     
-<div id="f2-wrapper1" onclick="wrapper()" style="display: none;">
+<div id="f2-wrapper1" onclick="wrapper()">
 <label for="yes_no_radio">Do you want  <strong>standard data</strong>?</label>
 <p>
 <input type="radio" name="yes_no" id="f2-ah" checked>Yes</input>
@@ -53,9 +53,9 @@
 <br>
 
 
-                    <button id="f2-csv" type="button" class="btnSubmit" onclick="ook('csv')" >Download </button>
-                   <!--  <button id="f2-json" type="button" class="btnSubmit" onclick="ook('json')">Download Json</button> -->
-                    <!-- <a href="/" class="btn btn-xs btn-warning">Back</a> -->
+                    <button id="f2-csv" type="button" class="btnSubmit" onclick="ook('csv')" >Download Csv</button>
+                    <button id="f2-json" type="button" class="btnSubmit" onclick="ook('json')">Download Json</button>
+                    <a href="/" class="btn btn-xs btn-warning">Back</a>
                 </div>
             </div>
         </div>
@@ -105,10 +105,8 @@
             dataType: 'text',
             success: function(result) {
                 // console.log(result);
-                // Exporter(result,"data."+type);
-                // $("#f2-"+type).text(type);
-
-                window.open("/data/"+result);
+                Exporter(result,"data."+type);
+                $("#f2-"+type).text(type);
             },
             error: function(XMLHttpRequest, textStatus, errorThrown) {
              alert("some error");

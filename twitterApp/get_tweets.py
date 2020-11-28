@@ -41,12 +41,12 @@ def get_tweets_video(fields):
     type = fields.pop('type', 'json')
     keys = fields.pop('output', TWEET_VIDEOS_KEYS)
     videos = t.search_tweets_videos(fields.pop('len', 10), fields, keys)
-    if type == 'json':
-        return videos
-    elif type == 'zip':
-        return json.dumps([tt['extended_entities.media.video_info.variants.url'][0] for tt in videos])
-    else:
-        return DataFrame(videos).to_csv(index=False)
+    # if type == 'json':
+    return videos
+    # elif type == 'zip':
+    #     return json.dumps([tt['extended_entities.media.video_info.variants.url'][0] for tt in videos])
+    # else:
+    #     return DataFrame(videos).to_csv(index=False)
 
 
 # with open('comments.json', 'w')as f:
