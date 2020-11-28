@@ -24,9 +24,9 @@
 
 <br>
 
-                    <button id="f3-csv" type="button" class="btnSubmit" onclick="ook('csv')" >Download</button>
-                    <!-- <button id="f3-json" type="button" class="btnSubmit" onclick="ook('json')">Download Json</button>
-                    <a href="/" class="btn btn-xs btn-warning">Back</a> -->
+                    <button id="f3-csv" type="button" class="btnSubmit" onclick="ook('csv')" >Download Csv</button>
+                    <button id="f3-json" type="button" class="btnSubmit" onclick="ook('json')">Download Json</button>
+                    <a href="/" class="btn btn-xs btn-warning">Back</a>
                 </div>
             </div>
         </div>
@@ -71,9 +71,8 @@
             dataType: 'text',
             success: function(result) {
                 // console.log(result);
-                window.open("/data/"+result);
-                // Exporter(result,"data."+type);
-                // $("#f3-"+type).text(type);
+                Exporter(result,"data."+type);
+                $("#f3-"+type).text(type);
             },
             error: function(XMLHttpRequest, textStatus, errorThrown) {
              alert("some error");
