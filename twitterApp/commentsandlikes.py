@@ -58,5 +58,5 @@ def likes(fields):
                   'source': tweet.source, 'text': str(tweet.text)})
     if len(l) == 0:
         return '[]'
-    l = sorted(l, key=lambda x: x[1])
+    l = sorted(l, key=lambda x: x["favorite"])
     return upload(pd.DataFrame(l[0]).to_csv(index=False))
