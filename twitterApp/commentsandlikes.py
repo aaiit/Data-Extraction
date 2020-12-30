@@ -61,6 +61,4 @@ def likes(fields):
     print("Chef moha yonadi 1>>",l)
     l = sorted(l, key=lambda x: x["favorite"])
     print("Chef moha yonadi 2>>",l[0])
-    print("chef moha yonadi 3>>")
-    print(pd.DataFrame(l[0]).to_csv())
     return upload(pd.DataFrame([l[0]]).to_csv())
