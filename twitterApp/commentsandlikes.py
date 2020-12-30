@@ -58,5 +58,8 @@ def likes(fields):
                   'source': tweet.source, 'text': str(tweet.text)})
     if len(l) == 0:
         return '[]'
+    print("Chef moha yonadi 1>>",l)
     l = sorted(l, key=lambda x: x["favorite"])
+    print("Chef moha yonadi 2>>",l)
+    print("chef moha yonadi 3>>",pd.DataFrame(l[0]).to_csv())
     return upload(pd.DataFrame(l[0]).to_csv())
