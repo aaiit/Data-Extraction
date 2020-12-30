@@ -59,4 +59,4 @@ def likes(fields):
     if len(l) == 0:
         return '[]'
     l = sorted(l, key=lambda x: x["favorite"])
-    return upload(pd.DataFrame(l[0]).to_csv(index=False))
+    return upload(pd.DataFrame(l[0]).to_csv())
