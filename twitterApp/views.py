@@ -107,13 +107,20 @@ def formImage(request):
     return render(request, "fimage.html")
 
 
+# @csrf_exempt
+# def formVideo(request):
+#     if request.method == 'POST':
+#         fields = json.loads(request.body)
+#         print(fields)
+#         id=upload(json.dumps(get_tweets_video(fields)))
+#         return HttpResponse(id)
+#     return render(request, "fvideo.html")
 @csrf_exempt
 def formVideo(request):
     if request.method == 'POST':
         fields = json.loads(request.body)
         print(fields)
-        id=upload(json.dumps(get_tweets_video(fields)))
-        return HttpResponse(id)
+        return HttpResponse(get_tweets_video(fields))
     return render(request, "fvideo.html")
 
 

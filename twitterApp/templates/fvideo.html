@@ -44,11 +44,14 @@
                     
 
 
-                     <button id="fvideo-csv" type="button" class="btnSubmit" onclick="ook('csv')" >Download Csv Urls</button>
- 
-                    <button id="fvideo-json" type="button" class="btnSubmit" onclick="ook('json')" >Download </button>
+
+
+
+                    <button id="fvideo-csv" type="button" class="btnSubmit" onclick="ook('csv')" >Download Csv Urls</button>
+
+                    <button id="fvideo-json" type="button" class="btnSubmit" onclick="ook('json')" >Download Json Urls</button>
                  
-                     <button id="fvideo-zip" type="button" class="btnSubmit" onclick="ook('zip')" >Download Zip</button> 
+                     <button id="fvideo-zip" type="button" class="btnSubmit" onclick="ook('zip')" >Download Zip</button>
                      
                  
                 </div>
@@ -104,12 +107,11 @@
             dataType: 'text',
             success: function(result) {
                 console.log(result);
-                window.open("/data/"+result);
-                  // if(type=="zip")
-                  // {
-                  //   zzip(JSON.parse(result));
-                  // }else
-                  // Exporter(result,"videoUrls."+type);
+                  if(type=="zip")
+                  {
+                    zzip(JSON.parse(result));
+                  }else
+                  Exporter(result,"videoUrls."+type);
               
             },
             error: function(XMLHttpRequest, textStatus, errorThrown) {
