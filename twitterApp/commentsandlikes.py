@@ -38,8 +38,8 @@ def comments(fields):
         for t in list:
             if int(mx) == int(t["Favorite"]):
                 final_list.append((t["Favorite"], t["Username"], t["Text"]))
-        return upload(pd.DataFrame(final_list, columns=['favorite_count', 'User', 'Comment']).to_csv(
-            index=False))
+        return pd.DataFrame(final_list, columns=['favorite_count', 'User', 'Comment']).to_csv(
+            index=False)
 
 
 def likes(fields):
